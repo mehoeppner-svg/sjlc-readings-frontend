@@ -1,6 +1,3 @@
-// ===== DAILY READING PAGE JAVASCRIPT =====
-// Settings, verse selection, modals, and copy functionality
-
 // ===== SETTINGS MENU =====
 const settingsBtn = document.getElementById('settingsBtn');
 const settingsMenu = document.getElementById('settingsMenu');
@@ -49,23 +46,10 @@ document.getElementById('toggleCrossrefs').addEventListener('change', (e) => {
     savePreference('showCrossrefs', e.target.checked);
 });
 
-// Verse numbers toggle
-const toggleVerseNums = document.getElementById('toggleVerseNums');
-if (toggleVerseNums) {
-    toggleVerseNums.addEventListener('change', (e) => {
-        bibleContent.classList.toggle('hide-verse-nums', !e.target.checked);
-        savePreference('showVerseNums', e.target.checked);
-    });
-}
-
-// Chapter numbers toggle
-const toggleChapterNums = document.getElementById('toggleChapterNums');
-if (toggleChapterNums) {
-    toggleChapterNums.addEventListener('change', (e) => {
-        bibleContent.classList.toggle('hide-chapter-nums', !e.target.checked);
-        savePreference('showChapterNums', e.target.checked);
-    });
-}
+// ===== SHARE FUNCTIONALITY =====
+// Disabled for now - was causing Chrome to freeze
+// TODO: Implement proper share with image + verses later
+// document.getElementById('shareBtn').addEventListener('click', async () => { ... });
 
 // ===== VERSE CARD COPY FUNCTIONALITY =====
 // The verse card image already has text baked in by Pillow - just copy the image directly
@@ -105,11 +89,11 @@ if (verseCardCopyBtn) {
             ]);
 
             // Show success feedback
-            verseCardCopyBtn.textContent = '\u2713';
+            verseCardCopyBtn.textContent = '✓';
             verseCardCopyBtn.classList.add('copied');
 
             setTimeout(() => {
-                verseCardCopyBtn.textContent = '\uD83D\uDCCB';
+                verseCardCopyBtn.textContent = '📋';
                 verseCardCopyBtn.classList.remove('copied');
             }, 2000);
 
@@ -139,7 +123,7 @@ document.querySelectorAll('.fn').forEach(link => {
     });
 });
 
-// Handle crossref clicks
+// Handle crossref clicks (example - would be populated from API)
 document.querySelectorAll('.cr').forEach(link => {
     link.addEventListener('click', (e) => {
         e.preventDefault();
@@ -149,7 +133,7 @@ document.querySelectorAll('.cr').forEach(link => {
             <span class="verse-ref">${crossrefText}</span>
             <p>In the beginning was the Word, and the Word was with God, and the Word was God.</p>
             <a href="https://www.esv.org/${crossrefText.replace(/\s+/g, '+')}" target="_blank" class="esv-link">
-                View on ESV.org \u2192
+                View on ESV.org →
             </a>
         `, 'crossref', e);
     });
@@ -194,31 +178,7 @@ const sidePanelTitle = document.getElementById('sidePanelTitle');
 const sidePanelContent = document.getElementById('sidePanelContent');
 const sidePanelClose = document.getElementById('sidePanelClose');
 
-// Check if commentary/devotional content is available
-const additionalContent = document.getElementById('additionalContent');
-const commentaryBtn = document.getElementById('commentaryBtn');
-const devotionalBtn = document.getElementById('devotionalBtn');
-
-if (additionalContent) {
-    const hasCommentary = additionalContent.dataset.hasCommentary === 'true';
-    const hasDevotional = additionalContent.dataset.hasDevotional === 'true';
-    const passage = additionalContent.dataset.passage || 'this passage';
-
-    // Hide buttons if no content available
-    if (commentaryBtn && !hasCommentary) {
-        commentaryBtn.style.display = 'none';
-    }
-    if (devotionalBtn && !hasDevotional) {
-        devotionalBtn.style.display = 'none';
-    }
-
-    // Hide entire section if neither is available
-    if (!hasCommentary && !hasDevotional) {
-        additionalContent.style.display = 'none';
-    }
-}
-
-commentaryBtn && commentaryBtn.addEventListener('click', () => {
+document.getElementById('commentaryBtn').addEventListener('click', () => {
     // Reset scroll position BEFORE opening
     sidePanel.scrollTop = 0;
 
@@ -242,7 +202,7 @@ commentaryBtn && commentaryBtn.addEventListener('click', () => {
     document.getElementById('scroll-top-anchor').scrollIntoView({ behavior: 'smooth', block: 'start' });
 });
 
-devotionalBtn && devotionalBtn.addEventListener('click', () => {
+document.getElementById('devotionalBtn').addEventListener('click', () => {
     // Reset scroll position BEFORE opening
     sidePanel.scrollTop = 0;
 
@@ -279,19 +239,17 @@ function closeSidePanel() {
 sidePanelClose.addEventListener('click', closeSidePanel);
 sidePanelOverlay.addEventListener('click', closeSidePanel);
 
-// ===== PREFERENCES (LocalStorage) =====
+// ===== PREFERENCES (Cookie/LocalStorage) =====
 function savePreference(key, value) {
-    localStorage.setItem(`sjlc_${key}`, JSON.stringify(value));
+    localStorage.setItem(`gospel_${key}`, JSON.stringify(value));
 }
 
 function loadPreferences() {
     const prefs = {
-        showImage: JSON.parse(localStorage.getItem('sjlc_showImage') ?? 'true'),
-        showAudio: JSON.parse(localStorage.getItem('sjlc_showAudio') ?? 'true'),
-        showFootnotes: JSON.parse(localStorage.getItem('sjlc_showFootnotes') ?? 'true'),
-        showCrossrefs: JSON.parse(localStorage.getItem('sjlc_showCrossrefs') ?? 'true'),
-        showVerseNums: JSON.parse(localStorage.getItem('sjlc_showVerseNums') ?? 'true'),
-        showChapterNums: JSON.parse(localStorage.getItem('sjlc_showChapterNums') ?? 'true')
+        showImage: JSON.parse(localStorage.getItem('gospel_showImage') ?? 'true'),
+        showAudio: JSON.parse(localStorage.getItem('gospel_showAudio') ?? 'true'),
+        showFootnotes: JSON.parse(localStorage.getItem('gospel_showFootnotes') ?? 'true'),
+        showCrossrefs: JSON.parse(localStorage.getItem('gospel_showCrossrefs') ?? 'true')
     };
 
     // Apply preferences
@@ -299,11 +257,6 @@ function loadPreferences() {
     document.getElementById('toggleAudio').checked = prefs.showAudio;
     document.getElementById('toggleFootnotes').checked = prefs.showFootnotes;
     document.getElementById('toggleCrossrefs').checked = prefs.showCrossrefs;
-
-    const toggleVerseNumsEl = document.getElementById('toggleVerseNums');
-    const toggleChapterNumsEl = document.getElementById('toggleChapterNums');
-    if (toggleVerseNumsEl) toggleVerseNumsEl.checked = prefs.showVerseNums;
-    if (toggleChapterNumsEl) toggleChapterNumsEl.checked = prefs.showChapterNums;
 
     verseCard.classList.toggle('hidden', !prefs.showImage);
     audioSection.classList.toggle('hidden', !prefs.showAudio);
@@ -315,14 +268,6 @@ function loadPreferences() {
 
     if (!prefs.showCrossrefs) {
         bibleContent.classList.add('hide-crossrefs');
-    }
-
-    if (!prefs.showVerseNums) {
-        bibleContent.classList.add('hide-verse-nums');
-    }
-
-    if (!prefs.showChapterNums) {
-        bibleContent.classList.add('hide-chapter-nums');
     }
 }
 
@@ -530,7 +475,7 @@ class VerseSelector {
             this.verseCountBadge.textContent = count;
             // Reset button state when showing FAB
             copyBtn.disabled = false;
-            copyBtn.innerHTML = '\uD83D\uDCCB<span class="verse-count-badge" id="verseCountBadge">' + count + '</span>';
+            copyBtn.innerHTML = '📋<span class="verse-count-badge" id="verseCountBadge">' + count + '</span>';
             clearBtn.style.display = 'flex'; // Show X button
         } else {
             this.copyFab.classList.remove('visible');
@@ -550,7 +495,7 @@ class VerseSelector {
 
         // Hide X button and change icon to checkmark (no badge)
         clearBtn.style.display = 'none';
-        copyBtn.innerHTML = '\u2713';
+        copyBtn.innerHTML = '✓';
 
         try {
             await navigator.clipboard.writeText(formattedText);
@@ -616,7 +561,7 @@ class VerseSelector {
 
         // Hide X button and change icon to checkmark (no badge)
         clearBtn.style.display = 'none';
-        copyBtn.innerHTML = '\u2713';
+        copyBtn.innerHTML = '✓';
 
         try {
             document.execCommand('copy');

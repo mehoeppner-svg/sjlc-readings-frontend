@@ -1,13 +1,27 @@
-/* ===== DAILY READING PAGE STYLES ===== */
-/* Extends the base styles.css */
+/* ===== VARIABLES ===== */
+:root {
+    --bible-serif-font: "Sentinel", "Gentium Plus", Georgia, Times, serif;
+    --bible-sans-font: "Gotham", Helvetica, Arial, sans-serif;
+    --bible-text-color: #424547;
+    --bible-secondary-color: #5e6266;
+    --bible-tertiary-color: #9a9fa3;
+    --bible-link-color: #72abbf;
+    --bible-bg-color: #fff;
+    --bible-border-color: #dce0e3;
+    --bible-serif-size: 1.1rem;
+    --bible-line-height: 1.7rem;
+    --accent-color: #72abbf;
+    --footnote-color: #c07830;
+    --crossref-color: #3a8fb7;
+}
 
 /* ===== MAIN CONTAINER ===== */
 .daily-reading-container {
     max-width: 900px;
     margin: 0 auto;
     padding: 2rem 1rem;
-    font-family: var(--font-sans);
-    color: var(--text-primary);
+    font-family: var(--bible-sans-font);
+    color: var(--bible-text-color);
 }
 
 /* ===== HEADER SECTION ===== */
@@ -21,18 +35,18 @@
 }
 
 .reading-title {
-    font-family: var(--font-serif);
+    font-family: var(--bible-serif-font);
     font-size: 1.5rem;
     font-weight: 500;
     font-style: italic;
-    color: var(--text-primary);
+    color: var(--bible-text-color);
     text-align: center;
     margin: 0;
 }
 
 .reading-date {
     font-size: 0.9rem;
-    color: var(--text-secondary);
+    color: var(--bible-secondary-color);
     text-align: center;
     margin-top: 0.3rem;
     letter-spacing: 0.5px;
@@ -44,7 +58,7 @@
     top: 0.5rem;
     right: 0.5rem;
     background: white;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--bible-border-color);
     border-radius: 4px;
     width: auto;
     height: auto;
@@ -55,7 +69,7 @@
     cursor: pointer;
     transition: all 0.2s ease;
     font-size: 1.3rem;
-    color: var(--text-secondary);
+    color: var(--bible-secondary-color);
     z-index: 100;
 }
 
@@ -84,7 +98,7 @@
     bottom: calc(100% + 0.5rem);
     right: 0;
     background: white;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--bible-border-color);
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     padding: 0.5rem 0;
@@ -102,7 +116,7 @@
     font-weight: 600;
     margin: 0 0 0.5rem 0;
     padding: 0 0.75rem;
-    color: var(--text-secondary);
+    color: var(--bible-secondary-color);
 }
 
 .settings-menu label {
@@ -126,13 +140,15 @@
 }
 
 /* ===== SHARE BUTTON ===== */
+/* Positioned above bible content box to the right */
+/* Share button disabled for now - was causing Chrome to freeze */
 .share-section {
     display: none;
 }
 
 .share-btn {
     background: white;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--bible-border-color);
     border-radius: 4px;
     padding: 0.5rem 0.7rem;
     cursor: pointer;
@@ -140,7 +156,7 @@
     align-items: center;
     gap: 0.4rem;
     font-size: 0.9rem;
-    color: var(--text-primary);
+    color: var(--bible-text-color);
     transition: all 0.2s ease;
     white-space: nowrap;
 }
@@ -187,6 +203,7 @@
     height: 225px;
     display: block;
     object-fit: cover;
+    /* No filter needed - image already has text baked in by Pillow */
 }
 
 .verse-card-copy-btn {
@@ -249,7 +266,7 @@
 }
 
 .audio-label {
-    display: none;
+    display: none; /* Hide the label to save space */
 }
 
 .bible-audio {
@@ -267,40 +284,40 @@
 }
 
 .bible-content {
-    font-family: var(--font-serif);
-    font-size: 1.1rem;
+    font-family: var(--bible-serif-font);
+    font-size: var(--bible-serif-size);
     font-weight: 300;
-    line-height: 1.7rem;
-    color: var(--text-primary);
-    background: var(--bg-white);
+    line-height: var(--bible-line-height);
+    color: var(--bible-text-color);
+    background: var(--bible-bg-color);
     padding: 2rem;
     border-radius: 8px;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--bible-border-color);
 }
 
 .bible-content h3 {
     clear: both;
-    font-family: var(--font-serif);
+    font-family: var(--bible-serif-font);
     font-size: 1.1rem;
     font-style: italic;
     font-weight: 300;
-    line-height: 1.7rem;
+    line-height: var(--bible-line-height);
     margin: 0.8rem 0 0 0;
-    color: var(--text-primary);
+    color: var(--bible-text-color);
 }
 
 .bible-content h4 {
     font-size: 0.95rem;
     font-style: italic;
-    color: var(--text-secondary);
+    color: var(--bible-secondary-color);
     margin: 0.5rem 0;
 }
 
 .bible-content p {
-    font-family: var(--font-serif);
-    font-size: 1.1rem;
+    font-family: var(--bible-serif-font);
+    font-size: var(--bible-serif-size);
     font-weight: 300;
-    line-height: 1.7rem;
+    line-height: var(--bible-line-height);
     margin: 0;
     text-indent: 2rem;
 }
@@ -319,7 +336,7 @@
 }
 
 .bible-content .verse-num {
-    font-family: var(--font-sans);
+    font-family: var(--bible-sans-font);
     font-size: 0.7rem;
     font-weight: 400;
     line-height: 0;
@@ -327,7 +344,7 @@
     vertical-align: baseline;
     top: -0.4rem;
     padding: 0 0.15rem;
-    color: var(--text-secondary);
+    color: var(--bible-secondary-color);
 }
 
 /* Footnotes - Numbers in brown/orange */
@@ -400,20 +417,6 @@
     display: none;
 }
 
-/* Hide verse/chapter numbers when toggled */
-.bible-content.hide-verse-nums .verse-num {
-    display: none;
-}
-
-.bible-content.hide-chapter-nums .chapter-num {
-    display: none;
-}
-
-/* Adjust first paragraph when chapter number is hidden */
-.bible-content.hide-chapter-nums p.starts-chapter {
-    text-indent: 2rem;
-}
-
 /* Poetry/line styling */
 .bible-content .line {
     display: block;
@@ -432,7 +435,7 @@
 
 /* Footnotes section at bottom */
 .bible-content .footnotes {
-    border-top: 1px solid var(--border-color);
+    border-top: 1px solid var(--bible-border-color);
     margin-top: 2rem;
     padding-top: 1.2rem;
 }
@@ -442,7 +445,7 @@
 }
 
 .bible-content .footnotes h3 {
-    font-family: var(--font-sans);
+    font-family: var(--bible-sans-font);
     font-size: 1.1rem;
     font-weight: 500;
     font-style: normal;
@@ -464,8 +467,8 @@
 
 /* Copyright notice */
 .bible-content .copyright {
-    color: var(--accent-color);
-    font-family: var(--font-sans);
+    color: var(--bible-link-color);
+    font-family: var(--bible-sans-font);
     font-size: 0.9rem;
     font-weight: 500;
     text-decoration: none;
@@ -511,7 +514,7 @@
     align-items: center;
     margin-bottom: 1rem;
     padding-bottom: 0.75rem;
-    border-bottom: 2px solid var(--border-color);
+    border-bottom: 2px solid var(--bible-border-color);
 }
 
 .modal-title {
@@ -532,7 +535,7 @@
     background: none;
     border: none;
     font-size: 1.5rem;
-    color: var(--text-secondary);
+    color: var(--bible-secondary-color);
     cursor: pointer;
     padding: 0;
     width: 30px;
@@ -550,7 +553,7 @@
 .modal-content {
     font-size: 0.95rem;
     line-height: 1.6;
-    color: var(--text-primary);
+    color: var(--bible-text-color);
 }
 
 .modal-content .verse-ref {
@@ -563,7 +566,7 @@
 .modal-content .esv-link {
     display: inline-block;
     margin-top: 1rem;
-    color: var(--accent-color);
+    color: var(--bible-link-color);
     text-decoration: none;
     font-weight: 500;
     transition: color 0.2s ease;
@@ -700,7 +703,7 @@
 }
 
 .side-panel-content h3 {
-    color: var(--text-primary);
+    color: var(--bible-text-color);
     margin-top: 1.5rem;
     margin-bottom: 0.75rem;
 }
@@ -714,137 +717,6 @@
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
-}
-
-/* ===== VERSE SELECTION ===== */
-.verse-wrapper {
-    cursor: pointer;
-    display: inline;
-    transition: all 0.2s ease;
-    border-bottom: 2px solid transparent;
-}
-
-.verse-wrapper:hover {
-    border-bottom: 2px dotted #c5dce5;
-}
-
-.verse-wrapper.selected {
-    border-bottom: 2px dotted var(--accent-color);
-    background-color: rgba(114, 171, 191, 0.05);
-}
-
-/* ===== FLOATING COPY BUTTON (FAB) ===== */
-.copy-fab {
-    position: absolute;
-    top: 0.5rem;
-    right: 3.5rem;
-    display: none;
-    flex-direction: row;
-    align-items: center;
-    gap: 0.3rem;
-    z-index: 101;
-    animation: fabFadeIn 0.2s ease;
-}
-
-.copy-fab.visible {
-    display: flex;
-}
-
-@keyframes fabFadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.copy-button {
-    background: white;
-    color: var(--accent-color);
-    border: 1px solid var(--border-color);
-    border-radius: 4px;
-    width: auto;
-    height: auto;
-    padding: 0.3rem 0.4rem;
-    cursor: pointer;
-    box-shadow: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.3rem;
-    transition: all 0.2s ease;
-    position: relative;
-}
-
-.copy-button:hover {
-    color: white;
-    background: var(--accent-color);
-    border-color: var(--accent-color);
-}
-
-.verse-count-badge {
-    position: absolute;
-    top: -6px;
-    right: -6px;
-    background: #e74c3c;
-    color: white;
-    border-radius: 50%;
-    width: 18px;
-    height: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.65rem;
-    font-weight: bold;
-    border: 2px solid white;
-}
-
-.clear-selection-button {
-    background: white;
-    color: var(--text-secondary);
-    border: 1px solid var(--border-color);
-    border-radius: 4px;
-    width: auto;
-    height: auto;
-    padding: 0.3rem 0.4rem;
-    cursor: pointer;
-    box-shadow: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    transition: all 0.2s ease;
-}
-
-.clear-selection-button:hover {
-    background: #e74c3c;
-    color: white;
-    border-color: #e74c3c;
-}
-
-/* ===== TOAST NOTIFICATION ===== */
-.verse-toast {
-    position: fixed;
-    bottom: 6rem;
-    right: 2rem;
-    background: #27ae60;
-    color: white;
-    padding: 1rem 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.3s ease;
-    z-index: 10003;
-    pointer-events: none;
-}
-
-.verse-toast.show {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 /* ===== RESPONSIVE ===== */
@@ -887,6 +759,18 @@
 
     .share-icon {
         font-size: 1rem;
+    }
+
+    .verse-card-text {
+        font-size: 0.85rem;
+    }
+
+    .verse-card-reference {
+        font-size: 0.7rem;
+    }
+
+    .verse-card-overlay {
+        padding: 0.8rem;
     }
 
     .audio-section {
@@ -936,10 +820,144 @@
     .share-btn {
         width: auto;
     }
+}
 
+/* ===== VERSE SELECTION ===== */
+.verse-wrapper {
+    cursor: pointer;
+    display: inline;
+    transition: all 0.2s ease;
+    border-bottom: 2px solid transparent;
+}
+
+.verse-wrapper:hover {
+    border-bottom: 2px dotted var(--accent-light, #c5dce5);
+}
+
+.verse-wrapper.selected {
+    border-bottom: 2px dotted var(--accent-color);
+    background-color: rgba(114, 171, 191, 0.05);
+}
+
+/* ===== FLOATING COPY BUTTON (FAB) ===== */
+.copy-fab {
+    position: absolute;
+    top: 0.5rem;
+    right: 3.5rem; /* Position to left of gear icon */
+    display: none;
+    flex-direction: row; /* Horizontal layout */
+    align-items: center;
+    gap: 0.3rem;
+    z-index: 101; /* Above gear icon (100) */
+    animation: fabFadeIn 0.2s ease;
+}
+
+.copy-fab.visible {
+    display: flex;
+}
+
+@keyframes fabFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.copy-button {
+    background: white;
+    color: var(--accent-color);
+    border: 1px solid var(--bible-border-color);
+    border-radius: 4px;
+    width: auto;
+    height: auto;
+    padding: 0.3rem 0.4rem;
+    cursor: pointer;
+    box-shadow: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.copy-button:hover {
+    color: white;
+    background: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.verse-count-badge {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background: #e74c3c;
+    color: white;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.65rem;
+    font-weight: bold;
+    border: 2px solid white;
+}
+
+.clear-selection-button {
+    background: white;
+    color: var(--bible-secondary-color);
+    border: 1px solid var(--bible-border-color);
+    border-radius: 4px;
+    width: auto;
+    height: auto;
+    padding: 0.3rem 0.4rem;
+    cursor: pointer;
+    box-shadow: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: all 0.2s ease;
+}
+
+.clear-selection-button:hover {
+    background: #e74c3c;
+    color: white;
+    border-color: #e74c3c;
+}
+
+/* ===== TOAST NOTIFICATION ===== */
+.verse-toast {
+    position: fixed;
+    bottom: 6rem;
+    right: 2rem;
+    background: #27ae60;
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    z-index: 10003;
+    pointer-events: none;
+}
+
+.verse-toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== RESPONSIVE (Verse Selection) ===== */
+@media (max-width: 768px) {
     .copy-fab {
         top: 0.5rem;
-        right: 3rem;
+        right: 3rem; /* Adjust for smaller gear icon on mobile */
     }
 
     .copy-button {
