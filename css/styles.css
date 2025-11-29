@@ -364,7 +364,8 @@ ul {
     background: var(--bg-light);
     border-radius: 8px;
     transition: transform var(--transition-fast), box-shadow var(--transition-fast);
-    min-width: 180px;
+    flex: 0 0 auto;
+    max-width: 200px;
 }
 
 .feature-item:hover {
