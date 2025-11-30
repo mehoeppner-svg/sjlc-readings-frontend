@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse all daily Bible readings from St. John Lutheran Church. Search by passage and navigate by month.">
+    <title>Browse Readings | St. John Lutheran Church</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/browse.css">
+</head>
+<body>
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header with Banner -->
+    <header class="site-header">
+        <div class="banner-container">
+            <img src="assets/banner.png" alt="Stained glass style artwork depicting creation, the cross, and the church" class="banner-image">
+            <div class="banner-overlay">
+                <h1 class="site-title">Daily Bible Readings</h1>
+                <p class="site-subtitle">St. John Lutheran Church &#8226; Boerne, TX</p>
+            </div>
+        </div>
+        <nav class="main-nav" aria-label="Main navigation">
+            <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="reading.html" class="nav-link">Today</a></li>
+                <li><a href="browse.html" class="nav-link active" aria-current="page">Browse</a></li>
+                <li><a href="collections.html" class="nav-link">Collections</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <section class="browse-section">
+            <h2 class="section-title">Browse Readings</h2>
+
+            <!-- Search -->
+            <div class="search-container">
+                <input type="search"
+                       id="passageSearch"
+                       class="search-input"
+                       placeholder="Search by passage (e.g., Genesis 1, Psalm 23)"
+                       aria-label="Search readings by passage">
+                <button class="search-clear" id="searchClear" aria-label="Clear search" hidden>&#x2715;</button>
+            </div>
+
+            <!-- Calendar Navigation -->
+            <div class="calendar-nav">
+                <button class="nav-btn prev-month" id="prevMonth" aria-label="Previous month">
+                    &#x2190;
+                </button>
+                <div class="nav-selects">
+                    <select id="monthSelect" aria-label="Select month">
+                        <option value="0">January</option>
+                        <option value="1">February</option>
+                        <option value="2">March</option>
+                        <option value="3">April</option>
+                        <option value="4">May</option>
+                        <option value="5">June</option>
+                        <option value="6">July</option>
+                        <option value="7">August</option>
+                        <option value="8">September</option>
+                        <option value="9">October</option>
+                        <option value="10">November</option>
+                        <option value="11">December</option>
+                    </select>
+                    <select id="yearSelect" aria-label="Select year">
+                        <!-- Years populated by JS -->
+                    </select>
+                </div>
+                <button class="nav-btn next-month" id="nextMonth" aria-label="Next month">
+                    &#x2192;
+                </button>
+            </div>
+
+            <!-- Loading State -->
+            <div class="loading-container" id="loadingState" hidden>
+                <div class="loading-spinner"></div>
+            </div>
+
+            <!-- Calendar -->
+            <div class="calendar-container" id="calendarContainer">
+                <div class="calendar-header">
+                    <span>Sun</span>
+                    <span>Mon</span>
+                    <span>Tue</span>
+                    <span>Wed</span>
+                    <span>Thu</span>
+                    <span>Fri</span>
+                    <span>Sat</span>
+                </div>
+                <div class="calendar-grid" id="calendarGrid">
+                    <!-- Days populated by JS -->
+                </div>
+            </div>
+
+            <!-- Search Results (shown when searching) -->
+            <div class="search-results" id="searchResults" hidden>
+                <h3 class="search-results-title">Search Results</h3>
+                <div class="search-results-list" id="searchResultsList">
+                    <!-- Results populated by JS -->
+                </div>
+            </div>
+
+            <!-- Legend -->
+            <div class="calendar-legend" id="calendarLegend">
+                <div class="legend-item">
+                    <span class="legend-dot legend-today"></span>
+                    <span>Today</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-dot legend-other"></span>
+                    <span>Reading Available</span>
+                </div>
+                <!-- Collection legends added dynamically by JS -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p>&copy; 2025 St. John Lutheran Church. All rights reserved.</p>
+        <p>Scripture quotations are from the ESV Bible, copyright Crossway.</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="js/browse.js"></script>
+</body>
+</html>
