@@ -150,7 +150,7 @@
 
 .calendar-day.has-reading {
     background: var(--bg-white);
-    border-left-color: var(--text-tertiary);
+    border-left-color: var(--accent-color);
     cursor: pointer;
 }
 
@@ -184,12 +184,13 @@
 }
 
 .passage-preview {
-    font-size: 0.65rem;
-    color: var(--text-tertiary);
+    font-size: 0.7rem;
+    color: var(--text-secondary);
     margin-top: auto;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    font-weight: 500;
 }
 
 /* ===== LEGEND ===== */
