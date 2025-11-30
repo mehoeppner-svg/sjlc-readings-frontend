@@ -1,6 +1,6 @@
 /**
  * SJLC Daily Bible Readings - Reading Page JavaScript
- * Handles loading daily reading content based on URL date parameter
+ * Handles loading daily reading content and initializing all features after injection
  */
 
 (function() {
@@ -8,11 +8,6 @@
 
     // ===== DATE UTILITIES =====
 
-    /**
-     * Get date string in YYYY-MM-DD format
-     * @param {Date} date - Date object
-     * @returns {string} Date in YYYY-MM-DD format
-     */
     function formatDateString(date) {
         const year = date.getFullYear();
         const month = String(date.getMonth() + 1).padStart(2, '0');
@@ -20,29 +15,18 @@
         return `${year}-${month}-${day}`;
     }
 
-    /**
-     * Parse date string (YYYY-MM-DD) to Date object
-     * @param {string} dateStr - Date string in YYYY-MM-DD format
-     * @returns {Date|null} Date object or null if invalid
-     */
     function parseDateString(dateStr) {
         if (!dateStr || !/^\d{4}-\d{2}-\d{2}$/.test(dateStr)) {
             return null;
         }
         const [year, month, day] = dateStr.split('-').map(Number);
         const date = new Date(year, month - 1, day);
-        // Validate the date is real (e.g., not Feb 30)
         if (date.getFullYear() !== year || date.getMonth() !== month - 1 || date.getDate() !== day) {
             return null;
         }
         return date;
     }
 
-    /**
-     * Format date for display (e.g., "November 29, 2025")
-     * @param {Date} date - Date object
-     * @returns {string} Formatted date string
-     */
     function formatDateDisplay(date) {
         return date.toLocaleDateString('en-US', {
             year: 'numeric',
@@ -51,34 +35,19 @@
         });
     }
 
-    /**
-     * Get today's date string
-     * @returns {string} Today's date in YYYY-MM-DD format
-     */
     function getTodayDateString() {
         return formatDateString(new Date());
     }
 
-    /**
-     * Get date from URL parameter or default to today
-     * @returns {string} Date string in YYYY-MM-DD format
-     */
     function getRequestedDate() {
         const urlParams = new URLSearchParams(window.location.search);
         const dateParam = urlParams.get('date');
-
         if (dateParam && parseDateString(dateParam)) {
             return dateParam;
         }
         return getTodayDateString();
     }
 
-    /**
-     * Get adjacent date (previous or next day)
-     * @param {string} dateStr - Current date string
-     * @param {number} offset - Days to add (negative for previous)
-     * @returns {string} Adjacent date string
-     */
     function getAdjacentDate(dateStr, offset) {
         const date = parseDateString(dateStr);
         if (!date) return dateStr;
@@ -88,27 +57,17 @@
 
     // ===== CONTENT LOADING =====
 
-    /**
-     * Build URL for reading content file
-     * @param {string} dateStr - Date string in YYYY-MM-DD format
-     * @returns {string} URL to reading content file
-     */
     function getReadingUrl(dateStr) {
         const year = dateStr.substring(0, 4);
         return `years/${year}/daily_readings/${dateStr}_reading.html`;
     }
 
-    /**
-     * Load reading content for a specific date
-     * @param {string} dateStr - Date string in YYYY-MM-DD format
-     */
     async function loadReading(dateStr) {
         const loadingState = document.getElementById('loadingState');
         const errorState = document.getElementById('errorState');
         const readingContent = document.getElementById('readingContent');
         const dayNav = document.getElementById('dayNav');
 
-        // Show loading state
         loadingState.style.display = 'flex';
         errorState.classList.remove('show');
         readingContent.classList.remove('loaded');
@@ -121,24 +80,15 @@
 
             if (response.ok) {
                 const html = await response.text();
-
-                // Inject content
                 readingContent.innerHTML = html;
                 readingContent.classList.add('loaded');
-
-                // Hide loading, show nav
                 loadingState.style.display = 'none';
                 dayNav.style.display = 'flex';
-
-                // Update navigation
                 updateDayNavigation(dateStr);
-
-                // Update page title
                 updatePageTitle(dateStr);
 
-                // Initialize reading functionality (settings, verse selection, etc.)
+                // Initialize all reading features after content injection
                 initReadingFeatures();
-
             } else {
                 showError(dateStr, "This reading is not yet available. Please check back later or browse other readings.");
             }
@@ -148,11 +98,6 @@
         }
     }
 
-    /**
-     * Show error state
-     * @param {string} dateStr - Date that was requested
-     * @param {string} message - Error message to display
-     */
     function showError(dateStr, message) {
         const loadingState = document.getElementById('loadingState');
         const errorState = document.getElementById('errorState');
@@ -162,40 +107,30 @@
         loadingState.style.display = 'none';
         errorMessage.textContent = message;
         errorState.classList.add('show');
-
-        // Still show day nav so user can navigate
         dayNav.style.display = 'flex';
         updateDayNavigation(dateStr);
     }
 
     // ===== NAVIGATION =====
 
-    /**
-     * Update day navigation buttons and display
-     * @param {string} dateStr - Current date string
-     */
     function updateDayNavigation(dateStr) {
         const date = parseDateString(dateStr);
         const today = new Date();
         today.setHours(0, 0, 0, 0);
 
-        // Update current date display
         const dateDisplay = document.getElementById('currentDateDisplay');
         if (date) {
             dateDisplay.textContent = formatDateDisplay(date);
         }
 
-        // Update prev/next buttons
         const prevBtn = document.getElementById('prevDayBtn');
         const nextBtn = document.getElementById('nextDayBtn');
-
         const prevDate = getAdjacentDate(dateStr, -1);
         const nextDate = getAdjacentDate(dateStr, 1);
 
         prevBtn.href = `reading.html?date=${prevDate}`;
         nextBtn.href = `reading.html?date=${nextDate}`;
 
-        // Disable next button if viewing today or future
         const currentDate = parseDateString(dateStr);
         if (currentDate && currentDate >= today) {
             nextBtn.classList.add('disabled');
@@ -204,14 +139,9 @@
         }
     }
 
-    /**
-     * Update page title based on date
-     * @param {string} dateStr - Current date string
-     */
     function updatePageTitle(dateStr) {
         const date = parseDateString(dateStr);
         const today = getTodayDateString();
-
         if (dateStr === today) {
             document.title = "Today's Reading - SJLC Daily Bible Readings";
         } else if (date) {
@@ -219,15 +149,11 @@
         }
     }
 
-    // ===== READING FEATURES =====
+    // ===== READING FEATURES INITIALIZATION =====
 
-    /**
-     * Initialize reading page features after content is loaded
-     * (Settings menu, verse selection, footnotes, etc.)
-     */
     function initReadingFeatures() {
         initSettingsMenu();
-        initVerseSelection();
+        initVerseSelector();
         initFootnotes();
         initCrossrefs();
         initVerseCardCopy();
@@ -235,314 +161,441 @@
         initCommentaryDevotional();
     }
 
-    /**
-     * Initialize settings menu functionality
-     */
+    // ===== SETTINGS MENU =====
+
     function initSettingsMenu() {
-        const settingsBtn = document.querySelector('.settings-btn');
-        const settingsMenu = document.querySelector('.settings-menu');
+        const settingsBtn = document.getElementById('settingsBtn');
+        const settingsMenu = document.getElementById('settingsMenu');
 
         if (!settingsBtn || !settingsMenu) return;
 
-        // Toggle menu on click
-        settingsBtn.addEventListener('click', function(e) {
+        settingsBtn.addEventListener('click', (e) => {
             e.stopPropagation();
             settingsMenu.classList.toggle('active');
         });
 
-        // Close menu when clicking outside
-        document.addEventListener('click', function(e) {
+        document.addEventListener('click', (e) => {
             if (!settingsMenu.contains(e.target) && !settingsBtn.contains(e.target)) {
                 settingsMenu.classList.remove('active');
             }
         });
 
-        // Load saved preferences
+        // Load and apply preferences
         loadDisplayPreferences();
 
-        // Handle checkbox changes
-        const checkboxes = settingsMenu.querySelectorAll('input[type="checkbox"]');
-        checkboxes.forEach(checkbox => {
-            checkbox.addEventListener('change', function() {
-                handleSettingChange(this);
+        // Settings toggle handlers
+        const toggleImage = document.getElementById('toggleImage');
+        const toggleAudio = document.getElementById('toggleAudio');
+        const toggleFootnotes = document.getElementById('toggleFootnotes');
+        const toggleCrossrefs = document.getElementById('toggleCrossrefs');
+
+        if (toggleImage) {
+            toggleImage.addEventListener('change', (e) => {
+                const verseCard = document.getElementById('verseCard');
+                const imageSection = document.getElementById('imageSection');
+                if (verseCard) verseCard.classList.toggle('hidden', !e.target.checked);
+                if (imageSection) imageSection.classList.toggle('hidden', !e.target.checked);
+                savePreference('showImage', e.target.checked);
             });
-        });
-    }
+        }
 
-    /**
-     * Load display preferences from localStorage
-     */
-    function loadDisplayPreferences() {
-        const bibleContent = document.querySelector('.bible-content');
-        const verseCard = document.querySelector('.verse-card-section');
-        const audioSection = document.querySelector('.audio-section');
-        const footnotes = document.querySelector('.footnotes');
+        if (toggleAudio) {
+            toggleAudio.addEventListener('change', (e) => {
+                const audioSection = document.getElementById('audioSection');
+                if (audioSection) audioSection.classList.toggle('hidden', !e.target.checked);
+                savePreference('showAudio', e.target.checked);
+            });
+        }
 
-        // Verse card
-        const showVerseCard = localStorage.getItem('showVerseCard') !== 'false';
-        const verseCardCheckbox = document.getElementById('toggleVerseCard');
-        if (verseCardCheckbox) verseCardCheckbox.checked = showVerseCard;
-        if (verseCard) verseCard.classList.toggle('hidden', !showVerseCard);
+        if (toggleFootnotes) {
+            toggleFootnotes.addEventListener('change', (e) => {
+                const bibleContent = document.getElementById('bibleContent');
+                const footnotesSection = document.getElementById('footnotesSection');
+                if (bibleContent) bibleContent.classList.toggle('hide-footnotes', !e.target.checked);
+                if (footnotesSection) footnotesSection.classList.toggle('hidden', !e.target.checked);
+                savePreference('showFootnotes', e.target.checked);
+            });
+        }
 
-        // Audio
-        const showAudio = localStorage.getItem('showAudio') !== 'false';
-        const audioCheckbox = document.getElementById('toggleAudio');
-        if (audioCheckbox) audioCheckbox.checked = showAudio;
-        if (audioSection) audioSection.classList.toggle('hidden', !showAudio);
-
-        // Footnotes (inline markers)
-        const showFootnotes = localStorage.getItem('showFootnotes') !== 'false';
-        const footnotesCheckbox = document.getElementById('toggleFootnotes');
-        if (footnotesCheckbox) footnotesCheckbox.checked = showFootnotes;
-        if (bibleContent) bibleContent.classList.toggle('hide-footnotes', !showFootnotes);
-        if (footnotes) footnotes.classList.toggle('hidden', !showFootnotes);
-
-        // Crossrefs
-        const showCrossrefs = localStorage.getItem('showCrossrefs') !== 'false';
-        const crossrefsCheckbox = document.getElementById('toggleCrossrefs');
-        if (crossrefsCheckbox) crossrefsCheckbox.checked = showCrossrefs;
-        if (bibleContent) bibleContent.classList.toggle('hide-crossrefs', !showCrossrefs);
-    }
-
-    /**
-     * Handle settings checkbox change
-     * @param {HTMLInputElement} checkbox - The checkbox that changed
-     */
-    function handleSettingChange(checkbox) {
-        const bibleContent = document.querySelector('.bible-content');
-        const verseCard = document.querySelector('.verse-card-section');
-        const audioSection = document.querySelector('.audio-section');
-        const footnotes = document.querySelector('.footnotes');
-
-        switch (checkbox.id) {
-            case 'toggleVerseCard':
-                localStorage.setItem('showVerseCard', checkbox.checked);
-                if (verseCard) verseCard.classList.toggle('hidden', !checkbox.checked);
-                break;
-            case 'toggleAudio':
-                localStorage.setItem('showAudio', checkbox.checked);
-                if (audioSection) audioSection.classList.toggle('hidden', !checkbox.checked);
-                break;
-            case 'toggleFootnotes':
-                localStorage.setItem('showFootnotes', checkbox.checked);
-                if (bibleContent) bibleContent.classList.toggle('hide-footnotes', !checkbox.checked);
-                if (footnotes) footnotes.classList.toggle('hidden', !checkbox.checked);
-                break;
-            case 'toggleCrossrefs':
-                localStorage.setItem('showCrossrefs', checkbox.checked);
-                if (bibleContent) bibleContent.classList.toggle('hide-crossrefs', !checkbox.checked);
-                break;
+        if (toggleCrossrefs) {
+            toggleCrossrefs.addEventListener('change', (e) => {
+                const bibleContent = document.getElementById('bibleContent');
+                if (bibleContent) bibleContent.classList.toggle('hide-crossrefs', !e.target.checked);
+                savePreference('showCrossrefs', e.target.checked);
+            });
         }
     }
 
-    /**
-     * Initialize verse selection functionality
-     */
-    function initVerseSelection() {
-        const bibleContent = document.querySelector('.bible-content');
+    function loadDisplayPreferences() {
+        const prefs = {
+            showImage: JSON.parse(localStorage.getItem('sjlc_showImage') ?? 'true'),
+            showAudio: JSON.parse(localStorage.getItem('sjlc_showAudio') ?? 'true'),
+            showFootnotes: JSON.parse(localStorage.getItem('sjlc_showFootnotes') ?? 'true'),
+            showCrossrefs: JSON.parse(localStorage.getItem('sjlc_showCrossrefs') ?? 'true')
+        };
+
+        const toggleImage = document.getElementById('toggleImage');
+        const toggleAudio = document.getElementById('toggleAudio');
+        const toggleFootnotes = document.getElementById('toggleFootnotes');
+        const toggleCrossrefs = document.getElementById('toggleCrossrefs');
+        const verseCard = document.getElementById('verseCard');
+        const imageSection = document.getElementById('imageSection');
+        const audioSection = document.getElementById('audioSection');
+        const bibleContent = document.getElementById('bibleContent');
+        const footnotesSection = document.getElementById('footnotesSection');
+
+        if (toggleImage) toggleImage.checked = prefs.showImage;
+        if (toggleAudio) toggleAudio.checked = prefs.showAudio;
+        if (toggleFootnotes) toggleFootnotes.checked = prefs.showFootnotes;
+        if (toggleCrossrefs) toggleCrossrefs.checked = prefs.showCrossrefs;
+
+        if (verseCard) verseCard.classList.toggle('hidden', !prefs.showImage);
+        if (imageSection) imageSection.classList.toggle('hidden', !prefs.showImage);
+        if (audioSection) audioSection.classList.toggle('hidden', !prefs.showAudio);
+        if (bibleContent) {
+            bibleContent.classList.toggle('hide-footnotes', !prefs.showFootnotes);
+            bibleContent.classList.toggle('hide-crossrefs', !prefs.showCrossrefs);
+        }
+        if (footnotesSection) footnotesSection.classList.toggle('hidden', !prefs.showFootnotes);
+    }
+
+    function savePreference(key, value) {
+        localStorage.setItem(`sjlc_${key}`, JSON.stringify(value));
+    }
+
+    // ===== VERSE SELECTOR (Full implementation from daily-reading.js) =====
+
+    let verseSelector = null;
+
+    function initVerseSelector() {
+        const bibleContent = document.getElementById('bibleContent');
         if (!bibleContent) return;
 
-        const verseWrappers = bibleContent.querySelectorAll('.verse-wrapper');
-        const copyFab = document.querySelector('.copy-fab');
-        const copyButton = document.querySelector('.copy-button');
-        const clearButton = document.querySelector('.clear-selection-button');
-        const verseCountBadge = document.querySelector('.verse-count-badge');
+        verseSelector = new VerseSelector(bibleContent);
+    }
 
-        if (!verseWrappers.length) return;
+    class VerseSelector {
+        constructor(bibleContentEl) {
+            this.selectedVerses = new Map();
+            this.bibleContentEl = bibleContentEl;
+            this.copyFab = document.getElementById('copyFab');
+            this.copyBtn = document.getElementById('copyVerseBtn');
+            this.clearBtn = document.getElementById('clearSelectionBtn');
+            this.verseCountBadge = document.getElementById('verseCountBadge');
+            this.init();
+        }
 
-        let selectedVerses = new Set();
+        init() {
+            this.wrapVerses();
+            this.attachEventListeners();
+        }
 
-        // Click to select/deselect verses
-        verseWrappers.forEach(wrapper => {
-            wrapper.addEventListener('click', function(e) {
-                // Don't select if clicking on footnote/crossref
-                if (e.target.closest('.footnote') || e.target.closest('.crossref')) return;
+        wrapVerses() {
+            const paragraphs = this.bibleContentEl.querySelectorAll('p[id^="p"]');
 
-                const verseNum = this.dataset.verse;
-                if (selectedVerses.has(verseNum)) {
-                    selectedVerses.delete(verseNum);
-                    this.classList.remove('selected');
-                } else {
-                    selectedVerses.add(verseNum);
-                    this.classList.add('selected');
-                }
-                updateCopyFab();
+            paragraphs.forEach(p => {
+                const verseNums = Array.from(p.querySelectorAll('.verse-num, .chapter-num'));
+
+                verseNums.forEach((verseNum, index) => {
+                    const verseId = verseNum.id;
+                    if (!verseId) return;
+
+                    const match = verseId.match(/v(\d{2})(\d{3})(\d{3})-/);
+                    if (!match) return;
+
+                    const [, bookNum, chapterNum, verseNumParsed] = match;
+                    const book = this.getBookName(parseInt(bookNum));
+                    const chapter = parseInt(chapterNum);
+                    const verse = parseInt(verseNumParsed);
+
+                    const nextVerseNum = verseNums[index + 1];
+                    const nodesToWrap = [];
+                    let currentNode = verseNum.nextSibling;
+
+                    while (currentNode && currentNode !== nextVerseNum) {
+                        if (currentNode.nodeType === Node.TEXT_NODE && currentNode.textContent.trim()) {
+                            nodesToWrap.push(currentNode);
+                        } else if (currentNode.nodeType === Node.ELEMENT_NODE &&
+                                  !currentNode.classList.contains('verse-num') &&
+                                  !currentNode.classList.contains('chapter-num')) {
+                            nodesToWrap.push(currentNode);
+                        }
+                        currentNode = currentNode.nextSibling;
+                    }
+
+                    if (nodesToWrap.length > 0) {
+                        const wrapper = document.createElement('span');
+                        wrapper.className = 'verse-wrapper';
+                        wrapper.dataset.verseId = verseId;
+                        wrapper.dataset.book = book;
+                        wrapper.dataset.chapter = chapter;
+                        wrapper.dataset.verse = verse;
+
+                        verseNum.parentNode.insertBefore(wrapper, verseNum.nextSibling);
+                        nodesToWrap.forEach(node => wrapper.appendChild(node));
+                    }
+                });
             });
-        });
+        }
 
-        function updateCopyFab() {
-            if (!copyFab) return;
-
-            if (selectedVerses.size > 0) {
-                copyFab.classList.add('visible');
-                if (verseCountBadge) {
-                    verseCountBadge.textContent = selectedVerses.size;
+        attachEventListeners() {
+            // Verse click selection
+            this.bibleContentEl.addEventListener('click', (e) => {
+                const verseWrapper = e.target.closest('.verse-wrapper');
+                if (verseWrapper && !e.target.closest('.footnote') && !e.target.closest('.crossref')) {
+                    this.toggleVerseSelection(verseWrapper);
                 }
+            });
+
+            // Copy button
+            if (this.copyBtn) {
+                this.copyBtn.addEventListener('click', () => this.copySelectedVerses());
+            }
+
+            // Clear button
+            if (this.clearBtn) {
+                this.clearBtn.addEventListener('click', () => this.clearSelection());
+            }
+
+            // Keyboard shortcuts
+            document.addEventListener('keydown', (e) => {
+                if ((e.ctrlKey || e.metaKey) && e.key === 'c' && this.selectedVerses.size > 0) {
+                    e.preventDefault();
+                    this.copySelectedVerses();
+                }
+                if (e.key === 'Escape' && this.selectedVerses.size > 0) {
+                    this.clearSelection();
+                }
+            });
+
+            // Click outside to clear
+            document.addEventListener('click', (e) => {
+                const isModalClick = e.target.closest('.modal-overlay') ||
+                                    e.target.closest('.modal-popup') ||
+                                    e.target.closest('.side-panel-overlay') ||
+                                    e.target.closest('.side-panel');
+
+                if (!isModalClick &&
+                    !this.bibleContentEl.contains(e.target) &&
+                    !this.copyFab?.contains(e.target) &&
+                    this.selectedVerses.size > 0) {
+                    this.clearSelection();
+                }
+            });
+
+            // Mobile long-press support
+            let pressTimer;
+            this.bibleContentEl.addEventListener('touchstart', (e) => {
+                const verseWrapper = e.target.closest('.verse-wrapper');
+                if (verseWrapper && !e.target.closest('.footnote') && !e.target.closest('.crossref')) {
+                    pressTimer = setTimeout(() => {
+                        this.toggleVerseSelection(verseWrapper);
+                        if (navigator.vibrate) navigator.vibrate(50);
+                    }, 500);
+                }
+            });
+
+            this.bibleContentEl.addEventListener('touchend', () => clearTimeout(pressTimer));
+            this.bibleContentEl.addEventListener('touchmove', () => clearTimeout(pressTimer));
+        }
+
+        toggleVerseSelection(verseWrapper) {
+            const verseId = verseWrapper.dataset.verseId;
+
+            if (this.selectedVerses.has(verseId)) {
+                this.selectedVerses.delete(verseId);
+                verseWrapper.classList.remove('selected');
             } else {
-                copyFab.classList.remove('visible');
+                this.selectedVerses.set(verseId, {
+                    book: verseWrapper.dataset.book,
+                    chapter: parseInt(verseWrapper.dataset.chapter),
+                    verse: parseInt(verseWrapper.dataset.verse),
+                    text: this.cleanText(verseWrapper),
+                    element: verseWrapper
+                });
+                verseWrapper.classList.add('selected');
             }
+
+            this.updateFab();
         }
 
-        // Copy button
-        if (copyButton) {
-            copyButton.addEventListener('click', function() {
-                copySelectedVerses(selectedVerses, verseWrappers);
-            });
+        cleanText(verseWrapper) {
+            const clone = verseWrapper.cloneNode(true);
+            clone.querySelectorAll('.footnote, .crossref').forEach(el => el.remove());
+            return clone.textContent
+                .replace(/\[\d+\]/g, '')
+                .replace(/\(\w+\)/g, '')
+                .replace(/\s+/g, ' ')
+                .trim();
         }
 
-        // Clear button
-        if (clearButton) {
-            clearButton.addEventListener('click', function() {
-                selectedVerses.clear();
-                verseWrappers.forEach(w => w.classList.remove('selected'));
-                updateCopyFab();
-            });
-        }
+        updateFab() {
+            const count = this.selectedVerses.size;
 
-        // Keyboard shortcuts
-        document.addEventListener('keydown', function(e) {
-            if (selectedVerses.size > 0) {
-                if ((e.ctrlKey || e.metaKey) && e.key === 'c') {
-                    copySelectedVerses(selectedVerses, verseWrappers);
+            if (count > 0) {
+                this.copyFab?.classList.add('visible');
+                if (this.verseCountBadge) this.verseCountBadge.textContent = count;
+                if (this.copyBtn) {
+                    this.copyBtn.disabled = false;
+                    this.copyBtn.innerHTML = '\uD83D\uDCCB<span class="verse-count-badge" id="verseCountBadge">' + count + '</span>';
                 }
-                if (e.key === 'Escape') {
-                    selectedVerses.clear();
-                    verseWrappers.forEach(w => w.classList.remove('selected'));
-                    updateCopyFab();
-                }
-            }
-        });
-    }
-
-    /**
-     * Copy selected verses to clipboard
-     * @param {Set} selectedVerses - Set of selected verse numbers
-     * @param {NodeList} verseWrappers - All verse wrapper elements
-     */
-    function copySelectedVerses(selectedVerses, verseWrappers) {
-        if (selectedVerses.size === 0) return;
-
-        // Get passage reference from page
-        const readingTitle = document.querySelector('.reading-title');
-        const passage = readingTitle ? readingTitle.textContent.trim() : '';
-
-        // Sort verse numbers
-        const sortedVerses = Array.from(selectedVerses).sort((a, b) => parseInt(a) - parseInt(b));
-
-        // Build verse text
-        let verseTexts = [];
-        sortedVerses.forEach(verseNum => {
-            const wrapper = Array.from(verseWrappers).find(w => w.dataset.verse === verseNum);
-            if (wrapper) {
-                // Get clean text (remove footnotes/crossrefs)
-                const clone = wrapper.cloneNode(true);
-                clone.querySelectorAll('.footnote, .crossref').forEach(el => el.remove());
-                verseTexts.push(`${verseNum} ${clone.textContent.trim()}`);
-            }
-        });
-
-        // Format reference
-        const reference = formatVerseReference(passage, sortedVerses);
-        const text = `${verseTexts.join('\n')}\n\n${reference}`;
-
-        // Copy to clipboard
-        navigator.clipboard.writeText(text).then(() => {
-            showToast('Verses copied to clipboard!');
-        }).catch(() => {
-            showToast('Failed to copy verses');
-        });
-    }
-
-    /**
-     * Format verse reference string
-     * @param {string} passage - Base passage (e.g., "John 3")
-     * @param {Array} verses - Sorted array of verse numbers
-     * @returns {string} Formatted reference
-     */
-    function formatVerseReference(passage, verses) {
-        if (verses.length === 1) {
-            return `${passage}:${verses[0]}`;
-        }
-
-        // Group consecutive verses
-        let ranges = [];
-        let start = verses[0];
-        let end = verses[0];
-
-        for (let i = 1; i < verses.length; i++) {
-            if (parseInt(verses[i]) === parseInt(end) + 1) {
-                end = verses[i];
+                if (this.clearBtn) this.clearBtn.style.display = 'flex';
             } else {
-                ranges.push(start === end ? start : `${start}-${end}`);
-                start = end = verses[i];
+                this.copyFab?.classList.remove('visible');
             }
         }
-        ranges.push(start === end ? start : `${start}-${end}`);
 
-        return `${passage}:${ranges.join(', ')}`;
-    }
+        async copySelectedVerses() {
+            if (this.selectedVerses.size === 0) return;
 
-    /**
-     * Show toast notification
-     * @param {string} message - Message to display
-     */
-    function showToast(message) {
-        let toast = document.querySelector('.verse-toast');
-        if (!toast) {
-            toast = document.createElement('div');
-            toast.className = 'verse-toast';
-            document.body.appendChild(toast);
+            const formattedText = this.formatSelectedVerses();
+
+            if (this.copyBtn) this.copyBtn.disabled = true;
+            if (this.clearBtn) this.clearBtn.style.display = 'none';
+            if (this.copyBtn) this.copyBtn.innerHTML = '\u2713';
+
+            try {
+                await navigator.clipboard.writeText(formattedText);
+                showToast('Verses copied to clipboard!');
+            } catch (err) {
+                this.fallbackCopy(formattedText);
+                return;
+            }
+
+            setTimeout(() => this.clearSelection(), 1500);
         }
-        toast.textContent = message;
-        toast.classList.add('show');
-        setTimeout(() => toast.classList.remove('show'), 2000);
+
+        formatSelectedVerses() {
+            const verses = Array.from(this.selectedVerses.values())
+                .sort((a, b) => {
+                    if (a.chapter !== b.chapter) return a.chapter - b.chapter;
+                    return a.verse - b.verse;
+                });
+
+            if (verses.length === 0) return '';
+
+            const book = verses[0].book;
+            const chapter = verses[0].chapter;
+            let reference = `${book} ${chapter}:`;
+            const verseNumbers = verses.map(v => v.verse);
+
+            const isConsecutive = verseNumbers.every((num, idx) =>
+                idx === 0 || num === verseNumbers[idx - 1] + 1
+            );
+
+            if (isConsecutive && verseNumbers.length > 1) {
+                reference += `${verseNumbers[0]}-${verseNumbers[verseNumbers.length - 1]}`;
+            } else {
+                reference += verseNumbers.join(', ');
+            }
+
+            const text = verses.map(v => v.text).join(' ');
+            return `${reference} - ${text}`;
+        }
+
+        fallbackCopy(text) {
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            textarea.style.position = 'fixed';
+            textarea.style.opacity = '0';
+            document.body.appendChild(textarea);
+            textarea.select();
+
+            if (this.copyBtn) this.copyBtn.disabled = true;
+            if (this.clearBtn) this.clearBtn.style.display = 'none';
+            if (this.copyBtn) this.copyBtn.innerHTML = '\u2713';
+
+            try {
+                document.execCommand('copy');
+                showToast('Verses copied to clipboard!');
+            } catch (err) {
+                showToast('Failed to copy verses');
+                if (this.copyBtn) this.copyBtn.disabled = false;
+                if (this.clearBtn) this.clearBtn.style.display = 'flex';
+                this.updateFab();
+            }
+
+            document.body.removeChild(textarea);
+            setTimeout(() => this.clearSelection(), 1500);
+        }
+
+        clearSelection() {
+            this.selectedVerses.forEach(verse => verse.element.classList.remove('selected'));
+            this.selectedVerses.clear();
+            this.updateFab();
+        }
+
+        getBookName(bookNum) {
+            const books = {
+                1: 'Genesis', 2: 'Exodus', 3: 'Leviticus', 4: 'Numbers', 5: 'Deuteronomy',
+                6: 'Joshua', 7: 'Judges', 8: 'Ruth', 9: '1 Samuel', 10: '2 Samuel',
+                11: '1 Kings', 12: '2 Kings', 13: '1 Chronicles', 14: '2 Chronicles',
+                15: 'Ezra', 16: 'Nehemiah', 17: 'Esther', 18: 'Job', 19: 'Psalms',
+                20: 'Proverbs', 21: 'Ecclesiastes', 22: 'Song of Solomon', 23: 'Isaiah',
+                24: 'Jeremiah', 25: 'Lamentations', 26: 'Ezekiel', 27: 'Daniel',
+                28: 'Hosea', 29: 'Joel', 30: 'Amos', 31: 'Obadiah', 32: 'Jonah',
+                33: 'Micah', 34: 'Nahum', 35: 'Habakkuk', 36: 'Zephaniah', 37: 'Haggai',
+                38: 'Zechariah', 39: 'Malachi', 40: 'Matthew', 41: 'Mark', 42: 'Luke',
+                43: 'John', 44: 'Acts', 45: 'Romans', 46: '1 Corinthians', 47: '2 Corinthians',
+                48: 'Galatians', 49: 'Ephesians', 50: 'Philippians', 51: 'Colossians',
+                52: '1 Thessalonians', 53: '2 Thessalonians', 54: '1 Timothy', 55: '2 Timothy',
+                56: 'Titus', 57: 'Philemon', 58: 'Hebrews', 59: 'James', 60: '1 Peter',
+                61: '2 Peter', 62: '1 John', 63: '2 John', 64: '3 John', 65: 'Jude',
+                66: 'Revelation'
+            };
+            return books[bookNum] || `Book ${bookNum}`;
+        }
     }
 
-    /**
-     * Initialize footnote popups
-     */
+    // ===== FOOTNOTES =====
+
     function initFootnotes() {
-        const footnoteLinks = document.querySelectorAll('.footnote a.fn');
+        const footnoteLinks = document.querySelectorAll('.fn');
 
         footnoteLinks.forEach(link => {
-            link.addEventListener('click', function(e) {
+            link.addEventListener('click', (e) => {
                 e.preventDefault();
-                const fnId = this.getAttribute('href')?.replace('#', '');
-                const footnote = document.getElementById(fnId);
-                if (footnote) {
-                    showModal('Footnote', footnote.textContent.trim(), 'footnote');
+                const footnoteText = link.getAttribute('data-footnote');
+                if (footnoteText) {
+                    // Try to get verse reference from nearby verse number
+                    const verseNum = link.closest('p')?.querySelector('.verse-num, .chapter-num');
+                    const verseRef = verseNum ? verseNum.textContent.trim() : '';
+                    const content = verseRef
+                        ? `<span class="verse-ref">Verse ${verseRef}</span><p>${footnoteText}</p>`
+                        : `<p>${footnoteText}</p>`;
+                    showModal('Footnote', content, 'footnote', e);
                 }
             });
         });
     }
 
-    /**
-     * Initialize cross-reference popups
-     */
+    // ===== CROSS-REFERENCES =====
+
     function initCrossrefs() {
-        const crossrefLinks = document.querySelectorAll('.crossref a.cr');
+        const crossrefLinks = document.querySelectorAll('.cr');
 
         crossrefLinks.forEach(link => {
-            link.addEventListener('click', function(e) {
+            link.addEventListener('click', (e) => {
                 e.preventDefault();
-                const refs = this.getAttribute('data-refs') || this.textContent;
-                showModal('Cross References', refs, 'crossref');
+                const crossrefText = link.getAttribute('data-crossref') || link.textContent;
+                const content = `
+                    <span class="verse-ref">${crossrefText}</span>
+                    <a href="https://www.esv.org/${crossrefText.replace(/\s+/g, '+')}" target="_blank" class="esv-link">
+                        View on ESV.org \u2192
+                    </a>
+                `;
+                showModal('Cross Reference', content, 'crossref', e);
             });
         });
     }
 
-    /**
-     * Show modal popup
-     * @param {string} title - Modal title
-     * @param {string} content - Modal content
-     * @param {string} type - Modal type (footnote/crossref)
-     */
-    function showModal(title, content, type) {
+    // ===== MODAL =====
+
+    function showModal(title, content, type, event) {
         // Remove existing modal
         const existingOverlay = document.querySelector('.modal-overlay');
         if (existingOverlay) existingOverlay.remove();
 
-        // Create modal
         const overlay = document.createElement('div');
         overlay.className = 'modal-overlay active';
 
@@ -556,70 +609,97 @@
             <div class="modal-content">${content}</div>
         `;
 
-        // Position modal
-        modal.style.position = 'fixed';
-        modal.style.top = '50%';
-        modal.style.left = '50%';
-        modal.style.transform = 'translate(-50%, -50%)';
+        // Position modal above click if event provided
+        if (event && event.target) {
+            const rect = event.target.getBoundingClientRect();
+            modal.style.position = 'fixed';
+            modal.style.bottom = `${window.innerHeight - rect.top + 10}px`;
+            modal.style.top = 'auto';
+            modal.style.left = `${Math.max(20, rect.left - 100)}px`;
+        } else {
+            modal.style.position = 'fixed';
+            modal.style.top = '50%';
+            modal.style.left = '50%';
+            modal.style.transform = 'translate(-50%, -50%)';
+        }
 
         overlay.appendChild(modal);
         document.body.appendChild(overlay);
 
-        // Close handlers
         const closeBtn = modal.querySelector('.modal-close');
-        closeBtn.addEventListener('click', () => overlay.remove());
+        const closeModal = () => overlay.remove();
+
+        closeBtn.addEventListener('click', closeModal);
         overlay.addEventListener('click', (e) => {
-            if (e.target === overlay) overlay.remove();
+            if (e.target === overlay) closeModal();
         });
-        document.addEventListener('keydown', function handler(e) {
+
+        const escHandler = (e) => {
             if (e.key === 'Escape') {
-                overlay.remove();
-                document.removeEventListener('keydown', handler);
+                closeModal();
+                document.removeEventListener('keydown', escHandler);
             }
-        });
+        };
+        document.addEventListener('keydown', escHandler);
     }
 
-    /**
-     * Initialize verse card copy button
-     */
+    // ===== VERSE CARD COPY =====
+
     function initVerseCardCopy() {
-        const copyBtn = document.querySelector('.verse-card-copy-btn');
-        const verseCardImg = document.querySelector('.verse-card-image');
+        const copyBtn = document.getElementById('verseCardCopyBtn');
+        const verseCardImage = document.querySelector('.verse-card-image');
 
-        if (!copyBtn || !verseCardImg) return;
+        if (!copyBtn || !verseCardImage) return;
 
-        copyBtn.addEventListener('click', async function() {
+        copyBtn.addEventListener('click', async (e) => {
+            e.stopPropagation();
+
             try {
-                const response = await fetch(verseCardImg.src);
-                const blob = await response.blob();
+                // Create canvas to convert to PNG (required by Clipboard API)
+                const canvas = document.createElement('canvas');
+                const ctx = canvas.getContext('2d');
+
+                const img = new Image();
+                img.crossOrigin = 'anonymous';
+
+                await new Promise((resolve, reject) => {
+                    img.onload = resolve;
+                    img.onerror = reject;
+                    img.src = verseCardImage.src;
+                });
+
+                canvas.width = img.naturalWidth;
+                canvas.height = img.naturalHeight;
+                ctx.drawImage(img, 0, 0);
+
+                const blob = await new Promise(resolve => canvas.toBlob(resolve, 'image/png'));
+
                 await navigator.clipboard.write([
-                    new ClipboardItem({ [blob.type]: blob })
+                    new ClipboardItem({ 'image/png': blob })
                 ]);
-                this.classList.add('copied');
-                this.textContent = 'Copied!';
+
+                copyBtn.textContent = '\u2713';
+                copyBtn.classList.add('copied');
+
                 setTimeout(() => {
-                    this.classList.remove('copied');
-                    this.innerHTML = '&#x1F4CB;';
+                    copyBtn.textContent = '\uD83D\uDCCB';
+                    copyBtn.classList.remove('copied');
                 }, 2000);
+
             } catch (err) {
-                console.error('Failed to copy image:', err);
-                showToast('Failed to copy image');
+                console.log('Copy failed:', err);
+                window.open(verseCardImage.src, '_blank');
             }
         });
     }
 
-    /**
-     * Initialize share button
-     */
+    // ===== SHARE BUTTON =====
+
     function initShareButton() {
-        const shareBtn = document.querySelector('.share-btn');
+        const shareBtn = document.getElementById('shareBtn');
         if (!shareBtn) return;
 
-        // Show share section
-        const shareSection = shareBtn.closest('.share-section');
-        if (shareSection) shareSection.style.display = 'block';
-
-        shareBtn.addEventListener('click', async function() {
+        shareBtn.addEventListener('click', async () => {
             const url = window.location.href;
             const title = document.title;
             const passage = document.querySelector('.reading-title')?.textContent || 'Daily Reading';
@@ -648,46 +728,50 @@
         }
     }
 
-    /**
-     * Initialize commentary and devotional panels
-     */
+    // ===== COMMENTARY & DEVOTIONAL =====
+
     function initCommentaryDevotional() {
-        const commentaryBtn = document.querySelector('.content-btn.commentary');
-        const devotionalBtn = document.querySelector('.content-btn.devotional');
+        const additionalContent = document.querySelector('.additional-content');
+        const commentaryBtn = document.getElementById('commentaryBtn');
+        const devotionalBtn = document.getElementById('devotionalBtn');
+
+        if (additionalContent) {
+            const container = document.querySelector('.daily-reading-container');
+            const hasCommentary = container?.dataset.hasCommentary === 'true';
+            const hasDevotional = container?.dataset.hasDevotional === 'true';
+
+            if (commentaryBtn && !hasCommentary) commentaryBtn.style.display = 'none';
+            if (devotionalBtn && !hasDevotional) devotionalBtn.style.display = 'none';
+            if (!hasCommentary && !hasDevotional) additionalContent.style.display = 'none';
+        }
 
         if (commentaryBtn) {
-            commentaryBtn.addEventListener('click', function() {
-                openSidePanel('Commentary', 'commentary');
+            commentaryBtn.addEventListener('click', () => {
+                const passage = document.querySelector('.reading-title')?.textContent || 'this passage';
+                openSidePanel(`Commentary on ${passage}`, 'commentary');
             });
         }
 
         if (devotionalBtn) {
-            devotionalBtn.addEventListener('click', function() {
-                openSidePanel('Devotional', 'devotional');
+            devotionalBtn.addEventListener('click', () => {
+                openSidePanel('Daily Devotional', 'devotional');
             });
         }
     }
 
-    /**
-     * Open side panel
-     * @param {string} title - Panel title
-     * @param {string} type - Panel type (commentary/devotional)
-     */
     function openSidePanel(title, type) {
-        // Remove existing panel
         const existingOverlay = document.querySelector('.side-panel-overlay');
         if (existingOverlay) existingOverlay.remove();
 
-        // Get content from hidden divs
+        // Get content from hidden divs if they exist
         const contentDiv = document.querySelector(`.${type}-content`);
         const content = contentDiv ? contentDiv.innerHTML : '<p>Content not available.</p>';
 
-        // Create panel
         const overlay = document.createElement('div');
-        overlay.className = 'side-panel-overlay active';
+        overlay.className = 'side-panel-overlay';
 
         const panel = document.createElement('div');
-        panel.className = `side-panel active`;
+        panel.className = 'side-panel';
         panel.innerHTML = `
             <div class="side-panel-header ${type}">
                 <h2 class="side-panel-title">${title}</h2>
@@ -700,19 +784,43 @@
         document.body.appendChild(overlay);
 
         // Animate in
-        setTimeout(() => panel.classList.add('active'), 10);
+        setTimeout(() => {
+            overlay.classList.add('active');
+            panel.classList.add('active');
+        }, 10);
 
-        // Close handlers
         const closeBtn = panel.querySelector('.side-panel-close');
+        const closeSidePanel = () => {
+            panel.classList.remove('active');
+            overlay.classList.remove('active');
+            setTimeout(() => overlay.remove(), 300);
+        };
+
         closeBtn.addEventListener('click', closeSidePanel);
         overlay.addEventListener('click', (e) => {
             if (e.target === overlay) closeSidePanel();
         });
 
-        function closeSidePanel() {
-            panel.classList.remove('active');
-            setTimeout(() => overlay.remove(), 300);
+        document.addEventListener('keydown', function handler(e) {
+            if (e.key === 'Escape') {
+                closeSidePanel();
+                document.removeEventListener('keydown', handler);
+            }
+        });
+    }
+
+    // ===== TOAST =====
+
+    function showToast(message) {
+        let toast = document.querySelector('.verse-toast');
+        if (!toast) {
+            toast = document.createElement('div');
+            toast.className = 'verse-toast';
+            document.body.appendChild(toast);
         }
+        toast.textContent = message;
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 3000);
     }
 
     // ===== INITIALIZATION =====
@@ -722,7 +830,6 @@
         loadReading(dateStr);
     }
 
-    // Run on DOM ready
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', init);
     } else {
