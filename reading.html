@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Daily Bible Readings from St. John Lutheran Church in Boerne, TX. Scripture, audio, and verse cards to deepen your walk with Christ.">
+    <title>Daily Reading - SJLC Daily Bible Readings</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/reading.css">
+</head>
+<body>
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="banner-container">
+            <img src="assets/banner.png" alt="Stained glass window depicting Jesus" class="banner-image">
+            <div class="banner-overlay">
+                <h1 class="site-title">Daily Bible Readings</h1>
+                <p class="site-subtitle">St. John Lutheran Church</p>
+            </div>
+        </div>
+
+        <nav class="main-nav" aria-label="Main navigation">
+            <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
+                <span class="hamburger"></span>
+                <span class="sr-only">Toggle navigation</span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="reading.html" class="nav-link active">Today</a></li>
+                <li><a href="browse.html" class="nav-link">Browse</a></li>
+                <li><a href="collections.html" class="nav-link">Collections</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Loading State -->
+        <div class="loading-container" id="loadingState">
+            <div class="loading-spinner"></div>
+            <p class="loading-text">Loading reading...</p>
+        </div>
+
+        <!-- Error State (hidden by default) -->
+        <div class="error-container" id="errorState">
+            <div class="error-icon">&#x1F4D6;</div>
+            <h2 class="error-title">Reading Not Found</h2>
+            <p class="error-message" id="errorMessage">This reading is not yet available.</p>
+            <a href="browse.html" class="btn btn-primary">Browse Available Readings</a>
+        </div>
+
+        <!-- Day Navigation (hidden until loaded) -->
+        <nav class="day-nav" id="dayNav" style="display: none;" aria-label="Day navigation">
+            <a href="#" class="day-nav-btn" id="prevDayBtn">
+                <span class="arrow">&#x2190;</span>
+                <span class="label">Previous</span>
+            </a>
+            <span class="day-nav-current" id="currentDateDisplay"></span>
+            <a href="#" class="day-nav-btn" id="nextDayBtn">
+                <span class="label">Next</span>
+                <span class="arrow">&#x2192;</span>
+            </a>
+        </nav>
+
+        <!-- Reading Content (injected by JS) -->
+        <div id="readingContent"></div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p>&#xA9; 2025 St. John Lutheran Church</p>
+        <p>315 Rosewood Avenue, Boerne, TX 78006</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="js/reading.js"></script>
+</body>
+</html>
