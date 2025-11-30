@@ -37,6 +37,19 @@
 
     <!-- Main Content -->
     <main id="main-content">
+        <!-- Day Navigation (always visible at top) -->
+        <nav class="day-nav" id="dayNav" aria-label="Day navigation">
+            <a href="#" class="day-nav-btn" id="prevDayBtn">
+                <span class="arrow">&#x2190;</span>
+                <span class="label">Previous</span>
+            </a>
+            <span class="day-nav-current" id="currentDateDisplay"></span>
+            <a href="#" class="day-nav-btn" id="nextDayBtn">
+                <span class="label">Next</span>
+                <span class="arrow">&#x2192;</span>
+            </a>
+        </nav>
+
         <!-- Loading State -->
         <div class="loading-container" id="loadingState">
             <div class="loading-spinner"></div>
@@ -50,19 +63,6 @@
             <p class="error-message" id="errorMessage">This reading is not yet available.</p>
             <a href="browse.html" class="btn btn-primary">Browse Available Readings</a>
         </div>
-
-        <!-- Day Navigation (always visible) -->
-        <nav class="day-nav" id="dayNav" aria-label="Day navigation">
-            <a href="#" class="day-nav-btn" id="prevDayBtn">
-                <span class="arrow">&#x2190;</span>
-                <span class="label">Previous</span>
-            </a>
-            <span class="day-nav-current" id="currentDateDisplay"></span>
-            <a href="#" class="day-nav-btn" id="nextDayBtn">
-                <span class="label">Next</span>
-                <span class="arrow">&#x2192;</span>
-            </a>
-        </nav>
 
         <!-- Reading Content (injected by JS) -->
         <div id="readingContent"></div>
