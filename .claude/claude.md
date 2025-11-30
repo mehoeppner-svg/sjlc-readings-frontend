@@ -12,6 +12,66 @@ Public-facing website for St. John Lutheran Church's daily Bible reading program
 
 ---
 
+## CRITICAL: Reading Page Architecture
+
+### Shell + Fragment Pattern (DO NOT CHANGE)
+
+The daily reading page uses a **shell + fragment injection** architecture:
+
+```
+reading.html (SHELL)              Fragment (CONTENT ONLY)
+├── <!DOCTYPE html>               ├── <div class="daily-reading-container">
+├── <html><head>                  │   ├── .reading-header
+│   └── <link href="reading.css"> │   ├── .image-section OR .verse-card-container
+├── <body>                        │   ├── .audio-section
+│   ├── .site-header (banner)     │   ├── .bible-content-container
+│   ├── .main-nav                 │   │   ├── .settings-wrapper
+│   ├── #main-content             │   │   ├── .share-section
+│   │   ├── #loadingState         │   │   └── .bible-content
+│   │   ├── #errorState           │   └── .additional-content
+│   │   ├── #dayNav               └── </div>
+│   │   └── #readingContent ◄──── FRAGMENT INJECTED HERE
+│   └── .site-footer
+└── <script src="reading.js">
+```
+
+### How It Works
+
+1. User visits `reading.html?date=2025-11-29` (or just `reading.html` for today)
+2. `reading.js` extracts date from URL query parameter
+3. `reading.js` fetches `years/2025/daily_readings/2025-11-29_reading.html`
+4. Fragment HTML is injected into `#readingContent` div
+5. `reading.js` initializes interactive features (settings, verse selection, share, etc.)
+
+### Key Rules for Generated Fragments
+
+**The backend generates FRAGMENTS, not complete HTML pages:**
+
+1. **NO DOCTYPE, html, head, body tags** - fragment starts with `<div class="daily-reading-container">`
+2. **Image paths must be ABSOLUTE from site root**: `years/{year}/images/{filename}`
+   - NOT relative like `../images/` (breaks when injected into root-level shell)
+3. **Audio section must be OUTSIDE bible-content-container** (between image and text)
+4. **NO nested `.bible-content` divs** - ESV HTML goes directly inside the one `.bible-content` div
+5. **No inline `<script>` or `<style>` tags** - all JS/CSS handled by shell
+
+### File Locations
+
+| What | Path |
+|------|------|
+| Shell page | `reading.html` |
+| Shell CSS | `css/reading.css` |
+| Shell JS | `js/reading.js` |
+| Generated fragments | `years/{year}/daily_readings/{date}_reading.html` |
+| Generated images | `years/{year}/images/{date}_verse_card.webp` |
+
+### Reference Implementation
+
+Working standalone example (old format): `years/2025/daily_readings/2025-09-08_reading.html` (Genesis)
+- Shows correct structure for the CONTENT portion
+- New fragments should match this structure but WITHOUT shell elements
+
+---
+
 ## Code Modification Rules
 
 **Can modify directly (no approval needed):**
@@ -32,23 +92,28 @@ Public-facing website for St. John Lutheran Church's daily Bible reading program
 ```
 sjlc-readings-frontend/
 ├── index.html                    # Home page
-├── daily.html                    # Daily reading page template
-├── calendar.html                 # Browse readings (calendar view)
+├── reading.html                  # Daily reading SHELL (loads fragments via JS)
+├── daily.html                    # Old standalone daily reading page
+├── browse.html                   # Browse readings (calendar view)
 ├── collections.html              # Gospel Project / collection pages
 ├── css/
-│   └── styles.css                # Main stylesheet
+│   ├── styles.css                # Main stylesheet (home, browse, collections)
+│   ├── reading.css               # Reading page styles (shell + content)
+│   └── daily-reading.css         # Old standalone page styles
 ├── js/
-│   └── app.js                    # Main JavaScript
+│   ├── app.js                    # Shared JavaScript (nav toggle, etc.)
+│   ├── reading.js                # Reading page JS (fetch, inject, features)
+│   └── daily-reading.js          # Old standalone page JS
 ├── assets/
 │   └── banner.png                # Site banner image
 ├── years/                        # Generated content (from backend)
 │   └── {year}/
-│       ├── daily_readings/       # Daily HTML files
+│       ├── daily_readings/       # HTML FRAGMENTS (not complete pages)
 │       │   └── {date}_reading.html
 │       └── images/               # Verse card images
 │           └── {date}_verse_card.webp
 └── .claude/
-    └── claude.md                 # This file
+    └── CLAUDE.md                 # This file
 ```
 
 ---
@@ -333,5 +398,5 @@ The original testing templates in `sjlc-private/testing/` serve as the reference
 
 ---
 
-**Last Updated:** 2025-11-28
-**Status:** Initial Setup - Building from testing templates
+**Last Updated:** 2025-11-29
+**Status:** Fragment injection architecture in progress - see plan file for remaining issues
