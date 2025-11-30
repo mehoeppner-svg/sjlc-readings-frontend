@@ -539,10 +539,16 @@
         footnoteLinks.forEach(link => {
             link.addEventListener('click', (e) => {
                 e.preventDefault();
-                const footnoteText = link.getAttribute('data-footnote');
+                // Check data-footnote first, then fall back to title attribute (ESV API format)
+                let footnoteText = link.getAttribute('data-footnote') || link.getAttribute('title');
                 if (footnoteText) {
+                    // Clean up ESV title format: decode HTML entities and strip XML/HTML tags
+                    footnoteText = decodeHTMLEntities(footnoteText);
+                    footnoteText = footnoteText.replace(/<[^>]+>/g, '').trim();
+
                     // Try to get verse reference from nearby verse number
-                    const verseNum = link.closest('p')?.querySelector('.verse-num, .chapter-num');
+                    const verseNum = link.closest('p, .line')?.querySelector('.verse-num, .chapter-num') ||
+                                    link.closest('.line')?.previousElementSibling?.querySelector('.verse-num, .chapter-num');
                     const verseRef = verseNum ? verseNum.textContent.trim() : '';
                     const content = verseRef
                         ? `<span class="verse-ref">Verse ${verseRef}</span><p>${footnoteText}</p>`
@@ -551,6 +557,12 @@
                 }
             });
         });
+    }
+
+    function decodeHTMLEntities(text) {
+        const textarea = document.createElement('textarea');
+        textarea.innerHTML = text;
+        return textarea.value;
     }
 
     // ===== CROSS-REFERENCES =====
