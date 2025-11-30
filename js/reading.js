@@ -66,12 +66,10 @@
         const loadingState = document.getElementById('loadingState');
         const errorState = document.getElementById('errorState');
         const readingContent = document.getElementById('readingContent');
-        const dayNav = document.getElementById('dayNav');
 
         loadingState.style.display = 'flex';
         errorState.classList.remove('show');
         readingContent.classList.remove('loaded');
-        dayNav.style.display = 'none';
 
         const url = getReadingUrl(dateStr);
 
@@ -83,40 +81,33 @@
                 readingContent.innerHTML = html;
                 readingContent.classList.add('loaded');
                 loadingState.style.display = 'none';
-                dayNav.style.display = 'flex';
-                updateDayNavigation(dateStr);
                 updatePageTitle(dateStr);
 
                 // Initialize all reading features after content injection
                 initReadingFeatures();
             } else {
-                showError(dateStr, "This reading is not yet available. Please check back later or browse other readings.");
+                showError("This reading is not yet available. Please check back later or browse other readings.");
             }
         } catch (error) {
             console.error('Error loading reading:', error);
-            showError(dateStr, "Unable to load this reading. Please check your connection or browse other readings.");
+            showError("Unable to load this reading. Please check your connection or browse other readings.");
         }
     }
 
-    function showError(dateStr, message) {
+    function showError(message) {
         const loadingState = document.getElementById('loadingState');
         const errorState = document.getElementById('errorState');
         const errorMessage = document.getElementById('errorMessage');
-        const dayNav = document.getElementById('dayNav');
 
         loadingState.style.display = 'none';
         errorMessage.textContent = message;
         errorState.classList.add('show');
-        dayNav.style.display = 'flex';
-        updateDayNavigation(dateStr);
     }
 
     // ===== NAVIGATION =====
 
     function updateDayNavigation(dateStr) {
         const date = parseDateString(dateStr);
-        const today = new Date();
-        today.setHours(0, 0, 0, 0);
 
         const dateDisplay = document.getElementById('currentDateDisplay');
         if (date) {
@@ -130,13 +121,6 @@
 
         prevBtn.href = `reading.html?date=${prevDate}`;
         nextBtn.href = `reading.html?date=${nextDate}`;
-
-        const currentDate = parseDateString(dateStr);
-        if (currentDate && currentDate >= today) {
-            nextBtn.classList.add('disabled');
-        } else {
-            nextBtn.classList.remove('disabled');
-        }
     }
 
     function updatePageTitle(dateStr) {
@@ -827,6 +811,8 @@
 
     function init() {
         const dateStr = getRequestedDate();
+        // Set up navigation immediately (before content loads)
+        updateDayNavigation(dateStr);
         loadReading(dateStr);
     }
 
