@@ -97,17 +97,20 @@ sjlc-readings-frontend/
 ├── browse.html                   # Browse readings (calendar view)
 ├── collections.html              # Gospel Project / collection pages
 ├── css/
-│   ├── styles.css                # Main stylesheet (home, browse, collections)
+│   ├── styles.css                # Main stylesheet (home, collections)
 │   ├── reading.css               # Reading page styles (shell + content)
+│   ├── browse.css                # Browse page styles (calendar, search)
 │   └── daily-reading.css         # Old standalone page styles
 ├── js/
 │   ├── app.js                    # Shared JavaScript (nav toggle, etc.)
 │   ├── reading.js                # Reading page JS (fetch, inject, features)
+│   ├── browse.js                 # Browse page JS (calendar, search)
 │   └── daily-reading.js          # Old standalone page JS
 ├── assets/
 │   └── banner.png                # Site banner image
 ├── years/                        # Generated content (from backend)
 │   └── {year}/
+│       ├── readings.json         # Metadata for browse page (passages, dates, collections)
 │       ├── daily_readings/       # HTML FRAGMENTS (not complete pages)
 │       │   └── {date}_reading.html
 │       └── images/               # Verse card images
@@ -191,12 +194,16 @@ sjlc-readings-frontend/
 - Commentary & devotional (slide-out panels)
 - Verse selection and copy feature
 
-### 3. Calendar/Browse Page (calendar.html)
-- Full-text search across all readings
+### 3. Browse Page (browse.html) - IMPLEMENTED
 - Interactive monthly calendar with color-coded days
-- Month/year navigation dropdowns
-- Search results with date, passage, type badges
-- Legend: Gospel Project (teal), Other (purple), Today (border)
+- Month/year navigation (arrows + dropdowns)
+- Passage search (searches all years on Enter/button click)
+- Search results with date, passage, collection badges
+- Dynamic legend from collections data
+- Days with readings have accent-colored left border
+- Today highlighted with accent border ring
+- Clicking a day navigates to reading.html?date=YYYY-MM-DD
+- Data source: `years/{year}/readings.json` (one per year)
 
 ### 4. Collections Page (collections.html)
 - Collection description and timeline
@@ -287,6 +294,28 @@ sjlc-readings-frontend/
 ## Content Generation (from Backend)
 
 The backend (sjlc-private) generates content and pushes to this repo:
+
+### Readings Metadata (per year)
+```
+years/{year}/readings.json
+```
+Contains: List of all readings for that year with metadata for browse page.
+
+**Schema:**
+```json
+{
+  "year": 2025,
+  "lastUpdated": "2025-11-30T00:00:00Z",
+  "collections": [
+    { "id": "gospel-project", "name": "The Gospel Project", "color": "#20b2aa" }
+  ],
+  "readings": [
+    { "date": "2025-09-08", "passage": "Genesis 1:1-13", "title": null, "collection": "gospel-project" }
+  ]
+}
+```
+
+**Note:** Backend should regenerate this file whenever readings are added/modified. Consider adding a "reverify" admin command.
 
 ### Daily Reading Files
 ```
@@ -398,5 +427,5 @@ The original testing templates in `sjlc-private/testing/` serve as the reference
 
 ---
 
-**Last Updated:** 2025-11-29
-**Status:** Fragment injection architecture in progress - see plan file for remaining issues
+**Last Updated:** 2025-11-30
+**Status:** Browse page implemented with calendar and search. Collections page still needs implementation.
