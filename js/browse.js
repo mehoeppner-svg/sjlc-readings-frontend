@@ -18,10 +18,15 @@ const calendarGrid = document.getElementById('calendarGrid');
 const calendarContainer = document.getElementById('calendarContainer');
 const loadingState = document.getElementById('loadingState');
 const passageSearch = document.getElementById('passageSearch');
+const searchBtn = document.getElementById('searchBtn');
 const searchClear = document.getElementById('searchClear');
 const searchResults = document.getElementById('searchResults');
 const searchResultsList = document.getElementById('searchResultsList');
 const calendarLegend = document.getElementById('calendarLegend');
+
+// Search state
+let allYearsFetched = false;
+let isSearching = false;
 
 // Initialize
 document.addEventListener('DOMContentLoaded', init);
@@ -72,13 +77,16 @@ function setupEventListeners() {
         await handleMonthYearChange();
     });
 
-    // Search
-    passageSearch.addEventListener('input', handleSearchInput);
+    // Search - trigger on button click or Enter key
+    searchBtn.addEventListener('click', performSearch);
     searchClear.addEventListener('click', clearSearch);
 
     // Keyboard support
     passageSearch.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            performSearch();
+        } else if (e.key === 'Escape') {
             clearSearch();
         }
     });
@@ -301,20 +309,58 @@ function getCollectionColor(collectionId) {
 }
 
 /**
- * Handle search input
+ * Fetch all years' data for comprehensive search
  */
-function handleSearchInput(e) {
-    const query = e.target.value.trim();
+async function fetchAllYears() {
+    if (allYearsFetched) return;
+
+    const currentYearNum = new Date().getFullYear();
+    const startYear = 2020;
+    const endYear = currentYearNum + 1;
+
+    // Fetch all years in parallel
+    const fetchPromises = [];
+    for (let year = startYear; year <= endYear; year++) {
+        if (!yearDataCache[year]) {
+            fetchPromises.push(loadYearData(year));
+        }
+    }
+
+    await Promise.all(fetchPromises);
+    allYearsFetched = true;
+}
+
+/**
+ * Perform search (triggered by button click or Enter)
+ */
+async function performSearch() {
+    const query = passageSearch.value.trim();
 
     if (query.length === 0) {
-        clearSearch();
         return;
     }
 
+    if (isSearching) return;
+    isSearching = true;
+
+    // Show searching state
+    searchBtn.disabled = true;
+    searchBtn.textContent = 'Searching...';
     searchClear.hidden = false;
+    calendarContainer.hidden = true;
+    searchResults.hidden = false;
+    searchResultsList.innerHTML = '<p class="searching-message">Searching all readings...</p>';
+
+    // Fetch all years if not already done
+    await fetchAllYears();
 
     // Search across all cached years
     const results = searchReadings(query);
+
+    // Reset button state
+    searchBtn.disabled = false;
+    searchBtn.textContent = 'Search';
+    isSearching = false;
 
     if (results.length > 0) {
         showSearchResults(results);
