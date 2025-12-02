@@ -763,6 +763,7 @@
 
         /**
          * Calculate progress and update timeline
+         * Progress is based on WHERE in the Bible we are (era), not reading count
          */
         function calculateProgress() {
             if (readings.length === 0) {
@@ -773,29 +774,44 @@
             const today = new Date();
             today.setHours(0, 0, 0, 0);
 
-            // Find current reading (latest where date <= today)
-            let currentIndex = -1;
-            for (let i = 0; i < readings.length; i++) {
+            // Find the latest reading (on or before today) that ISN'T Psalms
+            let latestNonPsalmReading = null;
+            for (let i = readings.length - 1; i >= 0; i--) {
                 const readingDate = parseDate(readings[i].date);
-                if (readingDate <= today) {
-                    currentIndex = i;
-                } else {
+                // Skip future readings
+                if (readingDate > today) continue;
+
+                const book = extractBook(readings[i].passage);
+                if (book !== 'Psalm' && book !== 'Psalms') {
+                    latestNonPsalmReading = readings[i];
                     break;
                 }
             }
 
-            // Calculate progress percentage
-            const progress = currentIndex >= 0
-                ? ((currentIndex + 1) / readings.length) * 100
+            if (!latestNonPsalmReading) {
+                progressText.textContent = 'The journey begins soon!';
+                return;
+            }
+
+            // Determine which era this reading belongs to
+            const book = extractBook(latestNonPsalmReading.passage);
+            const era = BIBLE_ERAS[book];
+            const eraIndex = era ? ERA_ORDER.indexOf(era) : -1;
+
+            // Calculate progress as position on timeline (based on era)
+            // Each era is evenly spaced, so era 0 = 0%, era 6 = 100%
+            const progress = eraIndex >= 0
+                ? (eraIndex / (ERA_ORDER.length - 1)) * 100
                 : 0;
 
             // Update progress bar
             timelineFill.style.width = `${progress}%`;
 
             // Update progress text
-            if (currentIndex >= 0) {
+            if (eraIndex >= 0) {
                 const percentage = Math.round(progress);
-                progressText.innerHTML = `You are <strong>${percentage}% through</strong> the journey (${currentIndex + 1} of ${readings.length} readings)`;
+                const eraName = ERA_ORDER[eraIndex];
+                progressText.innerHTML = `You are <strong>${percentage}% through</strong> the journey (currently in ${eraName})`;
             } else {
                 progressText.textContent = 'The journey begins soon!';
             }
@@ -803,7 +819,7 @@
 
         /**
          * Render timeline milestones
-         * Shows ALL eras as fixed milestones, with state based on current progress
+         * Shows ALL eras as fixed milestones, with state based on latest non-Psalm reading (on or before today)
          */
         function renderMilestones() {
             milestonesContainer.innerHTML = '';
@@ -811,26 +827,23 @@
             const today = new Date();
             today.setHours(0, 0, 0, 0);
 
-            // Find the current reading's era
+            // Find the current era based on latest non-Psalm reading (on or before today)
             let currentEraIndex = -1;
 
             if (readings.length > 0) {
-                // Find the most recent reading (date <= today)
-                let currentReading = null;
-                for (let i = 0; i < readings.length; i++) {
+                // Find the latest reading (on or before today) that ISN'T Psalms
+                for (let i = readings.length - 1; i >= 0; i--) {
                     const readingDate = parseDate(readings[i].date);
-                    if (readingDate <= today) {
-                        currentReading = readings[i];
-                    } else {
-                        break;
-                    }
-                }
+                    // Skip future readings
+                    if (readingDate > today) continue;
 
-                if (currentReading) {
-                    const book = extractBook(currentReading.passage);
-                    const era = BIBLE_ERAS[book];
-                    if (era) {
-                        currentEraIndex = ERA_ORDER.indexOf(era);
+                    const book = extractBook(readings[i].passage);
+                    if (book !== 'Psalm' && book !== 'Psalms') {
+                        const era = BIBLE_ERAS[book];
+                        if (era) {
+                            currentEraIndex = ERA_ORDER.indexOf(era);
+                        }
+                        break;
                     }
                 }
             }
