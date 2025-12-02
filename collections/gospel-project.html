@@ -803,74 +803,74 @@
 
         /**
          * Render timeline milestones
+         * Shows ALL eras as fixed milestones, with state based on current progress
          */
         function renderMilestones() {
             milestonesContainer.innerHTML = '';
 
-            if (readings.length === 0) return;
-
             const today = new Date();
             today.setHours(0, 0, 0, 0);
 
-            // Find which eras are represented in our readings
-            const eraFirstIndex = {};
-            const eraLastIndex = {};
+            // Find the current reading's era
+            let currentEraIndex = -1;
 
-            readings.forEach((reading, index) => {
-                const book = extractBook(reading.passage);
-                const era = BIBLE_ERAS[book];
-
-                if (era) {
-                    if (eraFirstIndex[era] === undefined) {
-                        eraFirstIndex[era] = index;
+            if (readings.length > 0) {
+                // Find the most recent reading (date <= today)
+                let currentReading = null;
+                for (let i = 0; i < readings.length; i++) {
+                    const readingDate = parseDate(readings[i].date);
+                    if (readingDate <= today) {
+                        currentReading = readings[i];
+                    } else {
+                        break;
                     }
-                    eraLastIndex[era] = index;
                 }
-            });
 
-            // Get eras in order
-            const presentEras = ERA_ORDER.filter(era => eraFirstIndex[era] !== undefined);
-
-            if (presentEras.length === 0) return;
-
-            // Find current reading index
-            let currentIndex = -1;
-            for (let i = 0; i < readings.length; i++) {
-                const readingDate = parseDate(readings[i].date);
-                if (readingDate <= today) {
-                    currentIndex = i;
-                } else {
-                    break;
+                if (currentReading) {
+                    const book = extractBook(currentReading.passage);
+                    const era = BIBLE_ERAS[book];
+                    if (era) {
+                        currentEraIndex = ERA_ORDER.indexOf(era);
+                    }
                 }
             }
 
-            // Calculate milestone positions and states
-            presentEras.forEach((era, i) => {
-                const firstIndex = eraFirstIndex[era];
-                const lastIndex = eraLastIndex[era];
+            // Render ALL eras as milestones, evenly spaced
+            ERA_ORDER.forEach((era, i) => {
+                // Position evenly across the timeline (0% to 100%)
+                const position = (i / (ERA_ORDER.length - 1)) * 100;
 
-                // Position based on first reading in era
-                const position = (firstIndex / (readings.length - 1)) * 100;
-
-                // Determine state
+                // Determine state based on current era
                 let state = 'upcoming';
-                if (currentIndex >= lastIndex) {
-                    state = 'completed';
-                } else if (currentIndex >= firstIndex) {
-                    state = 'current';
+                if (currentEraIndex >= 0) {
+                    if (i < currentEraIndex) {
+                        state = 'completed';
+                    } else if (i === currentEraIndex) {
+                        state = 'current';
+                    }
                 }
 
                 // Create milestone element
                 const milestone = document.createElement('div');
                 milestone.className = `timeline-milestone ${state}`;
-                milestone.style.left = `${Math.min(position, 100)}%`;
+                milestone.style.left = `${position}%`;
 
                 const dot = document.createElement('div');
                 dot.className = 'milestone-dot';
 
                 const label = document.createElement('div');
                 label.className = 'milestone-label';
-                label.textContent = era.split(' & ')[0]; // Shorten labels
+                // Shorten labels for display
+                const shortLabels = {
+                    'Creation & Patriarchs': 'Creation',
+                    'Exodus & Law': 'Exodus',
+                    'Conquest & Judges': 'Judges',
+                    'Kingdom': 'Kingdom',
+                    'Exile & Return': 'Exile',
+                    'Jesus': 'Jesus',
+                    'Church': 'Church'
+                };
+                label.textContent = shortLabels[era] || era;
 
                 milestone.appendChild(dot);
                 milestone.appendChild(label);
