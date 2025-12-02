@@ -82,11 +82,23 @@
         });
     }
 
+    // ===== SHARED FOOTER =====
+    function initFooter() {
+        const footer = document.querySelector('.site-footer');
+        if (!footer) return;
+
+        footer.innerHTML = `
+            <p>Scripture quotations are from the ESV Bible, copyright Crossway.</p>
+            <p class="disclaimer">This site is a personal project created as a resource for our church community and is not endorsed or supported by St. John Lutheran Church.</p>
+        `;
+    }
+
     // ===== INITIALIZE =====
     function init() {
         initMobileNav();
         setActiveNavLink();
         initSmoothScroll();
+        initFooter();
     }
 
     // Run on DOM ready
