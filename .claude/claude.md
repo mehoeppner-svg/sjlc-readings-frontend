@@ -95,22 +95,26 @@ sjlc-readings-frontend/
 ├── reading.html                  # Daily reading SHELL (loads fragments via JS)
 ├── daily.html                    # Old standalone daily reading page
 ├── browse.html                   # Browse readings (calendar view)
-├── collections.html              # Gospel Project / collection pages
+├── collections.html              # Collections listing page (year selector + cards)
+├── collections/                  # Individual collection pages
+│   └── gospel-project.html       # The Gospel Project (dynamic timeline/themes)
 ├── css/
-│   ├── styles.css                # Main stylesheet (home, collections)
+│   ├── styles.css                # Main stylesheet (home, shared)
 │   ├── reading.css               # Reading page styles (shell + content)
 │   ├── browse.css                # Browse page styles (calendar, search)
+│   ├── collections.css           # Collections page styles (cards, year nav)
 │   └── daily-reading.css         # Old standalone page styles
 ├── js/
 │   ├── app.js                    # Shared JavaScript (nav toggle, etc.)
 │   ├── reading.js                # Reading page JS (fetch, inject, features)
 │   ├── browse.js                 # Browse page JS (calendar, search)
+│   ├── collections.js            # Collections listing JS (year filter, cards)
 │   └── daily-reading.js          # Old standalone page JS
 ├── assets/
 │   └── banner.png                # Site banner image
 ├── years/                        # Generated content (from backend)
 │   └── {year}/
-│       ├── readings.json         # Metadata for browse page (passages, dates, collections)
+│       ├── readings.json         # Metadata (passages, dates, collections, themes)
 │       ├── daily_readings/       # HTML FRAGMENTS (not complete pages)
 │       │   └── {date}_reading.html
 │       └── images/               # Verse card images
@@ -205,12 +209,21 @@ sjlc-readings-frontend/
 - Clicking a day navigates to reading.html?date=YYYY-MM-DD
 - Data source: `years/{year}/readings.json` (one per year)
 
-### 4. Collections Page (collections.html)
-- Collection description and timeline
-- Visual progress indicator
-- Collapsible accordion for themes
+### 4. Collections Listing Page (collections.html)
+- Year selector with ◄ ► navigation
+- Collection cards showing name, date range, description
+- Cards link to individual collection pages
+- Multi-year collections appear in all years they span
+- Data calculated from readings in readings.json
+
+### 5. Gospel Project Page (collections/gospel-project.html)
+- Back navigation to collections listing
+- Hero section with title and description
+- **Dynamic timeline** with milestones derived from Bible book → era mapping
+- Progress bar calculated from today's date vs. readings
+- **Themes accordion** grouped by `theme` field in readings.json
 - Status indicators (completed, current, upcoming)
-- Daily reading links within each theme
+- Zero maintenance - updates automatically from readings.json
 
 ---
 
@@ -307,13 +320,39 @@ Contains: List of all readings for that year with metadata for browse page.
   "year": 2025,
   "lastUpdated": "2025-11-30T00:00:00Z",
   "collections": [
-    { "id": "gospel-project", "name": "The Gospel Project", "color": "#20b2aa" }
+    {
+      "id": "gospel-project",
+      "name": "The Gospel Project",
+      "color": "#20b2aa",
+      "description": "Journey through the grand narrative of Scripture...",
+      "url": "collections/gospel-project.html"
+    }
   ],
   "readings": [
-    { "date": "2025-09-08", "passage": "Genesis 1:1-13", "title": null, "collection": "gospel-project" }
+    {
+      "date": "2025-09-08",
+      "passage": "Genesis 1:1-13",
+      "title": null,
+      "collection": "gospel-project",
+      "theme": "Creation"
+    }
   ]
 }
 ```
+
+**Collection Fields:**
+- `id` - Unique identifier (kebab-case)
+- `name` - Display name
+- `color` - Hex color for visual indicators
+- `description` - Short description for listing page
+- `url` - Path to individual collection page (e.g., `collections/gospel-project.html`)
+
+**Reading Fields:**
+- `date` - YYYY-MM-DD format
+- `passage` - Scripture reference (e.g., "Genesis 1:1-13")
+- `title` - Optional title override
+- `collection` - Collection ID this reading belongs to (null if none)
+- `theme` - Theme/unit name for grouping in collection pages (e.g., "Creation", "The Fall")
 
 **Note:** Backend should regenerate this file whenever readings are added/modified. Consider adding a "reverify" admin command.
 
@@ -428,4 +467,4 @@ The original testing templates in `sjlc-private/testing/` serve as the reference
 ---
 
 **Last Updated:** 2025-11-30
-**Status:** Browse page implemented with calendar and search. Collections page still needs implementation.
+**Status:** All main pages implemented (Home, Browse, Collections, Gospel Project). Reading page shell working with fragment injection.
