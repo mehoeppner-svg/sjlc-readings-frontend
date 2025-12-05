@@ -2,7 +2,14 @@
   "permissions": {
     "allow": [
       "Bash(cat:*)",
-      "Bash(git -C \"c:\\pyApps\\sjlc-readings-frontend\" log --all --format=\"%H %s\")"
+      "Bash(git -C \"c:\\pyApps\\sjlc-readings-frontend\" log --all --format=\"%H %s\")",
+      "Bash(grep:*)",
+      "Bash(sqlite3:*)",
+      "Bash(python:*)",
+      "Bash(dir:*)",
+      "Bash(findstr:*)",
+      "Bash(git -C \"c:\\pyApps\\sjlc-private\" ls-files --others --cached)",
+      "Bash(powershell -Command:*)"
     ],
     "deny": [],
     "ask": [],
