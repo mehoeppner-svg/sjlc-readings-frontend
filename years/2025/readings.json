@@ -1,610 +1,344 @@
 {
   "year": 2025,
-  "lastUpdated": "2025-12-05T21:10:26Z",
+  "lastUpdated": "2025-12-08T06:06:25Z",
   "collections": [
     {
-      "id": "gospel-project",
-      "name": "Gospel Project",
+      "id": "gospel-project-year-one",
+      "name": "Gospel Project Year One",
       "color": "#72abbf",
       "description": "",
-      "url": "collections/gospel-project.html"
-    },
-    {
-      "id": "gospel-project2",
-      "name": "Gospel Project2",
-      "color": "#ffd700",
-      "description": "",
-      "url": "collections/gospel-project2.html"
-    },
-    {
-      "id": "testcol",
-      "name": "TestCol",
-      "color": "#128ab5",
-      "description": "",
-      "url": "collections/testcol.html"
+      "url": "collections/gospel-project-year-one.html"
     }
   ],
   "readings": [
     {
-      "date": "2025-09-06",
-      "passage": "Romans 2:4-6",
-      "title": null,
-      "collection": null,
-      "theme": null
-    },
-    {
-      "date": "2025-09-07",
-      "passage": "Luke 4:10",
-      "title": null,
-      "collection": null,
-      "theme": null
-    },
-    {
       "date": "2025-09-08",
       "passage": "Genesis 1:1-13",
       "title": null,
-      "collection": "gospel-project",
-      "theme": null
+      "collection": "gospel-project-year-one",
+      "theme": "Creation"
     },
     {
       "date": "2025-09-09",
       "passage": "Genesis 1:14-2:3",
       "title": null,
-      "collection": null,
-      "theme": null
+      "collection": "gospel-project-year-one",
+      "theme": "Creation"
     },
     {
       "date": "2025-09-10",
       "passage": "Psalms 8:1-9",
       "title": null,
-      "collection": null,
-      "theme": null
+      "collection": "gospel-project-year-one",
+      "theme": "Creation"
     },
     {
       "date": "2025-09-11",
       "passage": "Genesis 2:4-17",
       "title": null,
-      "collection": null,
-      "theme": null
+      "collection": "gospel-project-year-one",
+      "theme": "Creation"
     },
     {
       "date": "2025-09-12",
       "passage": "Genesis 2:18-25",
       "title": null,
-      "collection": null,
-      "theme": null
+      "collection": "gospel-project-year-one",
+      "theme": "Creation"
     },
     {
       "date": "2025-09-13",
       "passage": "Psalms 148:1-14",
       "title": null,
-      "collection": null,
-      "theme": null
+      "collection": "gospel-project-year-one",
+      "theme": "Creation"
     },
     {
       "date": "2025-09-15",
       "passage": "Genesis 3:1-7",
       "title": null,
-      "collection": null,
-      "theme": null
+      "collection": "gospel-project-year-one",
+      "theme": "The Fall"
     },
     {
       "date": "2025-09-16",
       "passage": "Genesis 3:8-13",
       "title": null,
-      "collection": "gospel-project2",
-      "theme": "Yahoo!"
+      "collection": "gospel-project-year-one",
+      "theme": "The Fall"
     },
     {
       "date": "2025-09-17",
       "passage": "Genesis 3:14-16",
       "title": null,
-      "collection": "gospel-project2",
-      "theme": "Yahoo!"
+      "collection": "gospel-project-year-one",
+      "theme": "The Fall"
     },
     {
       "date": "2025-09-18",
       "passage": "Genesis 3:17-19",
       "title": null,
-      "collection": "gospel-project2",
-      "theme": "Yahoo!"
+      "collection": "gospel-project-year-one",
+      "theme": "The Fall"
     },
     {
       "date": "2025-09-19",
       "passage": "Genesis 3:20-24",
       "title": null,
-      "collection": null,
-      "theme": null
+      "collection": "gospel-project-year-one",
+      "theme": "The Fall"
     },
     {
       "date": "2025-09-20",
       "passage": "Psalms 6:1-10",
       "title": null,
-      "collection": "gospel-project2",
-      "theme": null
+      "collection": "gospel-project-year-one",
+      "theme": "The Fall"
     },
     {
       "date": "2025-09-22",
       "passage": "Genesis 4:1-5",
       "title": null,
-      "collection": "gospel-project2",
-      "theme": null
+      "collection": "gospel-project-year-one",
+      "theme": "The First Family"
     },
     {
       "date": "2025-09-23",
       "passage": "Genesis 4:6-8",
       "title": null,
-      "collection": "gospel-project2",
-      "theme": null
+      "collection": "gospel-project-year-one",
+      "theme": "The First Family"
     },
     {
       "date": "2025-09-24",
       "passage": "Genesis 4:9-12",
       "title": null,
-      "collection": "gospel-project2",
-      "theme": null
+      "collection": "gospel-project-year-one",
+      "theme": "The First Family"
     },
     {
       "date": "2025-09-25",
       "passage": "Genesis 4:13-16",
       "title": null,
-      "collection": "gospel-project2",
-      "theme": null
+      "collection": "gospel-project-year-one",
+      "theme": "The First Family"
     },
     {
       "date": "2025-09-26",
       "passage": "Genesis 4:17-26",
       "title": null,
-      "collection": "gospel-project2",
-      "theme": null
+      "collection": "gospel-project-year-one",
+      "theme": "The First Family"
     },
     {
       "date": "2025-09-27",
       "passage": "Psalms 75:1-10",
       "title": null,
-      "collection": "gospel-project2",
-      "theme": null
+      "collection": "gospel-project-year-one",
+      "theme": "The First Family"
     },
     {
       "date": "2025-09-29",
       "passage": "Genesis 5:1-32",
       "title": null,
-      "collection": null,
+      "collection": "gospel-project-year-one",
       "theme": "The Flood"
     },
     {
       "date": "2025-09-30",
       "passage": "Genesis 6:1-7:24",
       "title": null,
-      "collection": "gospel-project2",
-      "theme": null
+      "collection": "gospel-project-year-one",
+      "theme": "The Flood"
     },
     {
       "date": "2025-10-01",
       "passage": "Genesis 8:1-22",
       "title": null,
-      "collection": null,
+      "collection": "gospel-project-year-one",
       "theme": "The Flood"
     },
     {
       "date": "2025-10-02",
       "passage": "Genesis 9:1-17",
       "title": null,
-      "collection": null,
+      "collection": "gospel-project-year-one",
       "theme": "The Flood"
     },
     {
       "date": "2025-10-03",
       "passage": "Genesis 9:18-29",
       "title": null,
-      "collection": "gospel-project2",
-      "theme": null
+      "collection": "gospel-project-year-one",
+      "theme": "The Flood"
     },
     {
       "date": "2025-10-04",
       "passage": "Psalms 53:1-6",
       "title": null,
-      "collection": null,
+      "collection": "gospel-project-year-one",
       "theme": "The Flood"
     },
     {
       "date": "2025-10-06",
       "passage": "Genesis 10:1-20",
       "title": null,
-      "collection": "gospel-project2",
-      "theme": null
+      "collection": "gospel-project-year-one",
+      "theme": "The Tower of Babel"
     },
     {
       "date": "2025-10-07",
       "passage": "Genesis 10:21-32",
       "title": null,
-      "collection": "gospel-project2",
-      "theme": null
+      "collection": "gospel-project-year-one",
+      "theme": "The Tower of Babel"
     },
     {
       "date": "2025-10-08",
       "passage": "Genesis 11:1-4",
       "title": null,
-      "collection": "gospel-project2",
-      "theme": null
+      "collection": "gospel-project-year-one",
+      "theme": "The Tower of Babel"
     },
     {
       "date": "2025-10-09",
       "passage": "Genesis 11:5-9",
       "title": null,
-      "collection": null,
+      "collection": "gospel-project-year-one",
       "theme": "The Tower of Babel"
     },
     {
       "date": "2025-10-10",
       "passage": "Genesis 11:10-26",
       "title": null,
-      "collection": null,
+      "collection": "gospel-project-year-one",
       "theme": "The Tower of Babel"
     },
     {
       "date": "2025-10-11",
       "passage": "Psalms 96:1-13",
       "title": null,
-      "collection": "gospel-project2",
-      "theme": null
+      "collection": "gospel-project-year-one",
+      "theme": "The Tower of Babel"
     },
     {
       "date": "2025-10-13",
       "passage": "Genesis 11:27-32",
       "title": null,
-      "collection": "gospel-project2",
+      "collection": "gospel-project-year-one",
       "theme": "Abram's Call"
     },
     {
       "date": "2025-10-14",
       "passage": "Genesis 12:1-9",
       "title": null,
-      "collection": "gospel-project2",
+      "collection": "gospel-project-year-one",
       "theme": "Abram's Call"
     },
     {
       "date": "2025-10-15",
       "passage": "Genesis 12:10-20",
       "title": null,
-      "collection": null,
-      "theme": null
+      "collection": "gospel-project-year-one",
+      "theme": "Abram's Call"
     },
     {
       "date": "2025-10-16",
       "passage": "Genesis 13:1-18",
       "title": null,
-      "collection": null,
-      "theme": null
+      "collection": "gospel-project-year-one",
+      "theme": "Abram's Call"
     },
     {
       "date": "2025-10-17",
       "passage": "Genesis 14:1-24",
       "title": null,
-      "collection": null,
-      "theme": null
+      "collection": "gospel-project-year-one",
+      "theme": "Abram's Call"
     },
     {
       "date": "2025-10-18",
       "passage": "Psalms 128:1-6",
       "title": null,
-      "collection": "gospel-project2",
+      "collection": "gospel-project-year-one",
       "theme": "Abram's Call"
     },
     {
       "date": "2025-10-20",
       "passage": "Genesis 15:1-21",
       "title": null,
-      "collection": "gospel-project2",
+      "collection": "gospel-project-year-one",
       "theme": "Abraham's Covenant"
     },
     {
       "date": "2025-10-21",
       "passage": "Genesis 16:1-16",
       "title": null,
-      "collection": "gospel-project2",
+      "collection": "gospel-project-year-one",
       "theme": "Abraham's Covenant"
     },
     {
       "date": "2025-10-22",
       "passage": "Genesis 17:1-27",
       "title": null,
-      "collection": "gospel-project2",
+      "collection": "gospel-project-year-one",
       "theme": "Abraham's Covenant"
     },
     {
       "date": "2025-10-23",
       "passage": "Genesis 18:1-15",
       "title": null,
-      "collection": null,
-      "theme": "Abraham's Covenants"
+      "collection": "gospel-project-year-one",
+      "theme": "Abraham's Covenant"
     },
     {
       "date": "2025-10-24",
       "passage": "Genesis 18:16-19:38",
       "title": null,
-      "collection": null,
-      "theme": "Abraham's Covenants"
+      "collection": "gospel-project-year-one",
+      "theme": "Abraham's Covenant"
     },
     {
       "date": "2025-10-25",
       "passage": "Psalms 105:1-45",
       "title": null,
-      "collection": null,
-      "theme": "Abraham's Covenants"
+      "collection": "gospel-project-year-one",
+      "theme": "Abraham's Covenant"
     },
     {
       "date": "2025-10-27",
       "passage": "Genesis 20:1-18",
       "title": null,
-      "collection": null,
+      "collection": "gospel-project-year-one",
       "theme": "Abraham's Test"
     },
     {
       "date": "2025-10-28",
       "passage": "Genesis 21:1-17",
       "title": null,
-      "collection": "gospel-project2",
+      "collection": "gospel-project-year-one",
       "theme": "Abraham's Test"
     },
     {
       "date": "2025-10-29",
       "passage": "Genesis 21:8-21",
       "title": null,
-      "collection": "gospel-project2",
+      "collection": "gospel-project-year-one",
       "theme": "Abraham's Test"
     },
     {
       "date": "2025-10-30",
       "passage": "Genesis 29:1-10",
       "title": null,
-      "collection": null,
-      "theme": null
+      "collection": "gospel-project-year-one",
+      "theme": "Abraham's Test"
     },
     {
       "date": "2025-10-31",
       "passage": "Genesis 30:1-5",
       "title": null,
-      "collection": "gospel-project2",
+      "collection": "gospel-project-year-one",
       "theme": "Abraham's Test"
-    },
-    {
-      "date": "2025-11-01",
-      "passage": "Test",
-      "title": null,
-      "collection": null,
-      "theme": null
-    },
-    {
-      "date": "2025-11-02",
-      "passage": "Test",
-      "title": null,
-      "collection": null,
-      "theme": null
-    },
-    {
-      "date": "2025-11-03",
-      "passage": "Genesis 19:2-7",
-      "title": null,
-      "collection": "testcol",
-      "theme": "Themee"
-    },
-    {
-      "date": "2025-11-04",
-      "passage": "Genesis 14:5-9",
-      "title": null,
-      "collection": "gospel-project2",
-      "theme": null
-    },
-    {
-      "date": "2025-11-05",
-      "passage": "Genesis 13:1-10",
-      "title": null,
-      "collection": "testcol",
-      "theme": null
-    },
-    {
-      "date": "2025-11-06",
-      "passage": "Genesis 24:28-67",
-      "title": null,
-      "collection": null,
-      "theme": null
-    },
-    {
-      "date": "2025-11-07",
-      "passage": "Genesis 25:1-18",
-      "title": null,
-      "collection": null,
-      "theme": null
-    },
-    {
-      "date": "2025-11-08",
-      "passage": "Psalms 111:1-10",
-      "title": null,
-      "collection": null,
-      "theme": null
-    },
-    {
-      "date": "2025-11-09",
-      "passage": "Genesis 3:1-20",
-      "title": null,
-      "collection": "gospel-project",
-      "theme": "Jacob and Esau"
-    },
-    {
-      "date": "2025-11-10",
-      "passage": "Genesis 25:19-34",
-      "title": null,
-      "collection": "gospel-project",
-      "theme": "Jacob and Esau"
-    },
-    {
-      "date": "2025-11-11",
-      "passage": "Genesis 26:1-6",
-      "title": null,
-      "collection": "gospel-project",
-      "theme": "Jacob and Esau"
-    },
-    {
-      "date": "2025-11-12",
-      "passage": "Genesis 3:1-10",
-      "title": null,
-      "collection": "gospel-project",
-      "theme": "Jacob and Esau"
-    },
-    {
-      "date": "2025-11-13",
-      "passage": "Genesis 27:1-29",
-      "title": null,
-      "collection": "gospel-project",
-      "theme": "Jacob and Esau"
-    },
-    {
-      "date": "2025-11-14",
-      "passage": "Genesis 27:30-46",
-      "title": null,
-      "collection": "gospel-project",
-      "theme": "Jacob and Esau"
-    },
-    {
-      "date": "2025-11-15",
-      "passage": "Psalms 15:1-5",
-      "title": null,
-      "collection": "gospel-project",
-      "theme": "Jacob and Esau"
-    },
-    {
-      "date": "2025-11-16",
-      "passage": "Genesis 2:1-14",
-      "title": null,
-      "collection": "gospel-project",
-      "theme": "Wrestles with God"
-    },
-    {
-      "date": "2025-11-17",
-      "passage": "Genesis 28:1-22",
-      "title": null,
-      "collection": "gospel-project",
-      "theme": "Wrestles with God"
-    },
-    {
-      "date": "2025-11-18",
-      "passage": "Genesis 29:1-30:24",
-      "title": null,
-      "collection": "gospel-project",
-      "theme": "Wrestles with God"
-    },
-    {
-      "date": "2025-11-19",
-      "passage": "Genesis 30:25-31:55",
-      "title": null,
-      "collection": "gospel-project",
-      "theme": "Wrestles with God"
-    },
-    {
-      "date": "2025-11-20",
-      "passage": "Genesis 32:1-33:20",
-      "title": null,
-      "collection": "gospel-project",
-      "theme": "Wrestles with God"
-    },
-    {
-      "date": "2025-11-21",
-      "passage": "Genesis 34:1-36:43",
-      "title": null,
-      "collection": "gospel-project",
-      "theme": "Wrestles with God"
-    },
-    {
-      "date": "2025-11-22",
-      "passage": "Psalms 27:1-14",
-      "title": null,
-      "collection": "gospel-project",
-      "theme": "Wrestles with God"
-    },
-    {
-      "date": "2025-11-23",
-      "passage": "Mark 4:1-30",
-      "title": null,
-      "collection": "gospel-project",
-      "theme": "Joseph"
-    },
-    {
-      "date": "2025-11-24",
-      "passage": "Genesis 37:1-38:30",
-      "title": null,
-      "collection": "gospel-project",
-      "theme": "Joseph"
-    },
-    {
-      "date": "2025-11-25",
-      "passage": "Genesis 39:1-41:57",
-      "title": null,
-      "collection": "gospel-project",
-      "theme": "Joseph"
-    },
-    {
-      "date": "2025-11-26",
-      "passage": "Genesis 1:1-11",
-      "title": null,
-      "collection": "gospel-project",
-      "theme": "Joseph"
-    },
-    {
-      "date": "2025-11-27",
-      "passage": "Genesis 46:1-47:31",
-      "title": null,
-      "collection": "gospel-project",
-      "theme": "Joseph"
-    },
-    {
-      "date": "2025-11-28",
-      "passage": "Matthew 4:10-12",
-      "title": null,
-      "collection": "gospel-project",
-      "theme": "Joseph"
-    },
-    {
-      "date": "2025-11-29",
-      "passage": "Psalms 17:1-15",
-      "title": null,
-      "collection": "gospel-project",
-      "theme": "Joseph"
-    },
-    {
-      "date": "2025-11-30",
-      "passage": "Genesis 4:1-10",
-      "title": null,
-      "collection": null,
-      "theme": null
-    },
-    {
-      "date": "2025-12-01",
-      "passage": "Matthew 3:1-5",
-      "title": null,
-      "collection": "gospel-project",
-      "theme": null
-    },
-    {
-      "date": "2025-12-03",
-      "passage": "Genesis 3:11-14",
-      "title": null,
-      "collection": "gospel-project",
-      "theme": "God's Promises"
-    },
-    {
-      "date": "2025-12-11",
-      "passage": "Genesis 4:12",
-      "title": null,
-      "collection": "gospel-project",
-      "theme": null
-    },
-    {
-      "date": "2025-12-12",
-      "passage": "Luke 4:1",
-      "title": null,
-      "collection": null,
-      "theme": null
     }
   ]
 }
