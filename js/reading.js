@@ -62,6 +62,16 @@
         return `years/${year}/daily_readings/${dateStr}_reading.html`;
     }
 
+    function getReadingsJsonUrl(dateStr) {
+        const year = dateStr.substring(0, 4);
+        return `years/${year}/readings.json`;
+    }
+
+    function isDateInFuture(dateStr) {
+        const today = getTodayDateString();
+        return dateStr > today;
+    }
+
     async function loadReading(dateStr) {
         const loadingState = document.getElementById('loadingState');
         const errorState = document.getElementById('errorState');
@@ -71,6 +81,27 @@
         errorState.classList.remove('show');
         readingContent.classList.remove('loaded');
 
+        // For future dates, check if this is a fallback reading
+        if (isDateInFuture(dateStr)) {
+            try {
+                const jsonUrl = getReadingsJsonUrl(dateStr);
+                const jsonResponse = await fetch(jsonUrl);
+                if (jsonResponse.ok) {
+                    const data = await jsonResponse.json();
+                    const reading = data.readings?.find(r => r.date === dateStr);
+                    if (reading && reading.isFallback) {
+                        // Future date with only fallback reading - show "not available"
+                        showError("This reading is not yet available. Please check back later or browse other readings.");
+                        return;
+                    }
+                }
+            } catch (e) {
+                // If we can't fetch JSON, just try loading the HTML
+                console.log('Could not check readings.json:', e);
+            }
+        }
+
+        // Load the HTML content
         const url = getReadingUrl(dateStr);
 
         try {
