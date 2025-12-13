@@ -1166,6 +1166,7 @@ ul {
 .day-nav-btn {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 0.5rem;
     background: white;
     border: 1px solid var(--border-color);
@@ -1176,6 +1177,7 @@ ul {
     color: var(--text-primary);
     text-decoration: none;
     transition: all 0.2s ease;
+    min-width: 110px;
 }
 
 .day-nav-btn:hover {
