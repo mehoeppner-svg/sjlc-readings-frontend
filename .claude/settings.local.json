@@ -20,7 +20,10 @@
       "Bash(git -C \"c:\\Users\\comal\\Downloads\\hoeppner\\python\\sjlc-private\" branch:*)",
       "Bash(git -C \"c:\\Users\\comal\\Downloads\\hoeppner\\python\\sjlc-private\" config --local --list)",
       "Bash(find:*)",
-      "Bash(node --check:*)"
+      "Bash(node --check:*)",
+      "Bash(git -C \"c:\\pyApps\\sjlc-private\" log --oneline -10)",
+      "Bash(git -C \"c:\\pyApps\\sjlc-private\" diff HEAD~2 --stat)",
+      "Bash(echo:*)"
     ],
     "deny": [],
     "ask": [],
