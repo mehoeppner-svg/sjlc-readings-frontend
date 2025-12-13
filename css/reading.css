@@ -253,9 +253,6 @@ ul {
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     margin-bottom: 1.5rem;
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .reading-title {
@@ -1161,9 +1158,9 @@ ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 400px;
+    max-width: 900px;
     margin: 0 auto 1rem auto;
-    padding: 0;
+    padding: 0 1rem;
 }
 
 .day-nav-btn {
@@ -1266,7 +1263,6 @@ ul {
 
     .reading-header {
         padding: 0.75rem 1rem;
-        max-width: 360px;
     }
 
     .reading-title {
@@ -1274,10 +1270,6 @@ ul {
     }
 
     .verse-card-container {
-        max-width: 360px;
-    }
-
-    .audio-section {
         max-width: 360px;
     }
 
@@ -1383,8 +1375,7 @@ ul {
 
     /* Day Navigation - Mobile */
     .day-nav {
-        max-width: 360px;
-        padding: 0;
+        padding: 0 0.5rem;
     }
 
     .day-nav-btn {
