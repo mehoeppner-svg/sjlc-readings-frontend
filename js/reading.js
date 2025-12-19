@@ -113,6 +113,7 @@
                 readingContent.classList.add('loaded');
                 loadingState.style.display = 'none';
                 updatePageTitle(dateStr);
+                updateOpenGraphMeta(dateStr);
 
                 // Initialize all reading features after content injection
                 initReadingFeatures();
@@ -162,6 +163,44 @@
         } else if (date) {
             document.title = `${formatDateDisplay(date)} - SJLC Daily Bible Readings`;
         }
+    }
+
+    function updateOpenGraphMeta(dateStr) {
+        const passage = document.querySelector('.reading-title')?.textContent || 'Daily Reading';
+        const verseCardImage = document.querySelector('.verse-card-image');
+        const baseUrl = window.location.origin;
+        const pageUrl = `${baseUrl}/reading.html?date=${dateStr}`;
+
+        // Build image URL
+        let imageUrl = '';
+        if (verseCardImage && verseCardImage.src) {
+            // Convert relative path to absolute
+            const imgSrc = verseCardImage.getAttribute('src');
+            imageUrl = imgSrc.startsWith('http') ? imgSrc : `${baseUrl}/${imgSrc}`;
+        }
+
+        const title = `Daily Reading: ${passage}`;
+        const description = `Read ${passage} - Daily Bible Readings from St. John Lutheran Church`;
+
+        // Update Open Graph meta tags
+        const ogTitle = document.getElementById('og-title');
+        const ogDescription = document.getElementById('og-description');
+        const ogImage = document.getElementById('og-image');
+        const ogUrl = document.getElementById('og-url');
+
+        if (ogTitle) ogTitle.setAttribute('content', title);
+        if (ogDescription) ogDescription.setAttribute('content', description);
+        if (ogImage) ogImage.setAttribute('content', imageUrl);
+        if (ogUrl) ogUrl.setAttribute('content', pageUrl);
+
+        // Update Twitter Card meta tags
+        const twitterTitle = document.getElementById('twitter-title');
+        const twitterDescription = document.getElementById('twitter-description');
+        const twitterImage = document.getElementById('twitter-image');
+
+        if (twitterTitle) twitterTitle.setAttribute('content', title);
+        if (twitterDescription) twitterDescription.setAttribute('content', description);
+        if (twitterImage) twitterImage.setAttribute('content', imageUrl);
     }
 
     // ===== READING FEATURES INITIALIZATION =====
@@ -726,47 +765,130 @@
 
     function initShareButton() {
         const shareBtn = document.getElementById('shareBtn');
-        if (!shareBtn) return;
+        const shareSection = shareBtn?.closest('.share-section');
+        if (!shareBtn || !shareSection) return;
 
-        shareBtn.addEventListener('click', async () => {
+        // Create share dropdown menu
+        const dropdown = document.createElement('div');
+        dropdown.className = 'share-dropdown';
+        dropdown.innerHTML = `
+            <a href="#" class="share-option" data-platform="facebook">
+                <span class="share-option-icon">f</span>
+                <span class="share-option-label">Facebook</span>
+            </a>
+            <a href="#" class="share-option" data-platform="twitter">
+                <span class="share-option-icon">𝕏</span>
+                <span class="share-option-label">X / Twitter</span>
+            </a>
+            <a href="#" class="share-option" data-platform="whatsapp">
+                <span class="share-option-icon">💬</span>
+                <span class="share-option-label">WhatsApp</span>
+            </a>
+            <a href="#" class="share-option" data-platform="email">
+                <span class="share-option-icon">✉</span>
+                <span class="share-option-label">Email</span>
+            </a>
+            <a href="#" class="share-option" data-platform="copy">
+                <span class="share-option-icon">🔗</span>
+                <span class="share-option-label">Copy Link</span>
+            </a>
+            ${navigator.share ? `
+            <a href="#" class="share-option" data-platform="native">
+                <span class="share-option-icon">↱</span>
+                <span class="share-option-label">More...</span>
+            </a>
+            ` : ''}
+        `;
+        shareSection.appendChild(dropdown);
+
+        // Toggle dropdown on button click
+        shareBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            dropdown.classList.toggle('active');
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!shareSection.contains(e.target)) {
+                dropdown.classList.remove('active');
+            }
+        });
+
+        // Handle share option clicks
+        dropdown.addEventListener('click', async (e) => {
+            const option = e.target.closest('.share-option');
+            if (!option) return;
+
+            e.preventDefault();
+            const platform = option.dataset.platform;
+            const url = encodeURIComponent(window.location.href);
+            const passage = document.querySelector('.reading-title')?.textContent || 'Daily Reading';
+            const text = encodeURIComponent(`Check out today's reading: ${passage}`);
+            const title = encodeURIComponent(document.title);
+
+            dropdown.classList.remove('active');
+
+            switch (platform) {
+                case 'facebook':
+                    window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank', 'width=600,height=400');
+                    break;
+                case 'twitter':
+                    window.open(`https://twitter.com/intent/tweet?url=${url}&text=${text}`, '_blank', 'width=600,height=400');
+                    break;
+                case 'whatsapp':
+                    window.open(`https://wa.me/?text=${text}%20${url}`, '_blank');
+                    break;
+                case 'email':
+                    window.location.href = `mailto:?subject=${title}&body=${text}%0A%0A${url}`;
+                    break;
+                case 'copy':
+                    try {
+                        await navigator.clipboard.writeText(decodeURIComponent(url));
+                        showToast('Link copied to clipboard!');
+                    } catch (err) {
+                        showToast('Failed to copy link');
+                    }
+                    break;
+                case 'native':
+                    await handleNativeShare();
+                    break;
+            }
+        });
+
+        async function handleNativeShare() {
             const url = window.location.href;
             const title = document.title;
             const passage = document.querySelector('.reading-title')?.textContent || 'Daily Reading';
             const verseCardImage = document.querySelector('.verse-card-image');
 
-            if (navigator.share) {
-                try {
-                    // Try to include verse card image if file sharing is supported
-                    let shareData = {
-                        title: title,
-                        text: `Check out today's reading: ${passage}`,
-                        url: url
-                    };
+            try {
+                let shareData = {
+                    title: title,
+                    text: `Check out today's reading: ${passage}`,
+                    url: url
+                };
 
-                    if (verseCardImage) {
-                        try {
-                            const imageBlob = await getVerseCardBlob(verseCardImage);
-                            if (imageBlob) {
-                                const file = new File([imageBlob], 'verse-card.png', { type: 'image/png' });
-                                if (navigator.canShare && navigator.canShare({ files: [file] })) {
-                                    shareData.files = [file];
-                                }
+                if (verseCardImage) {
+                    try {
+                        const imageBlob = await getVerseCardBlob(verseCardImage);
+                        if (imageBlob) {
+                            const file = new File([imageBlob], 'verse-card.png', { type: 'image/png' });
+                            if (navigator.canShare && navigator.canShare({ files: [file] })) {
+                                shareData.files = [file];
                             }
-                        } catch (imgErr) {
-                            console.log('Could not include image in share:', imgErr);
                         }
-                    }
-
-                    await navigator.share(shareData);
-                } catch (err) {
-                    if (err.name !== 'AbortError') {
-                        copyToClipboard(url);
+                    } catch (imgErr) {
+                        console.log('Could not include image in share:', imgErr);
                     }
                 }
-            } else {
-                copyToClipboard(url);
+
+                await navigator.share(shareData);
+            } catch (err) {
+                if (err.name !== 'AbortError') {
+                    console.log('Share failed:', err);
+                }
             }
-        });
+        }
 
         async function getVerseCardBlob(imgElement) {
             const canvas = document.createElement('canvas');
@@ -785,12 +907,6 @@
             ctx.drawImage(img, 0, 0);
 
             return new Promise(resolve => canvas.toBlob(resolve, 'image/png'));
-        }
-
-        function copyToClipboard(text) {
-            navigator.clipboard.writeText(text).then(() => {
-                showToast('Link copied to clipboard!');
-            });
         }
     }
 
