@@ -8,7 +8,8 @@
       "color": "#dc143c",
       "description": "",
       "url": "collections/christmas-2025.html",
-      "isFallback": false
+      "isFallback": false,
+      "active": false
     },
     {
       "id": "daily-lectionary",
@@ -16,7 +17,8 @@
       "color": "#708090",
       "description": "",
       "url": "collections/daily-lectionary.html",
-      "isFallback": true
+      "isFallback": true,
+      "active": false
     }
   ],
   "readings": [

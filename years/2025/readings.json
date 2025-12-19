@@ -8,7 +8,8 @@
       "color": "#dc143c",
       "description": "",
       "url": "collections/christmas-2025.html",
-      "isFallback": false
+      "isFallback": false,
+      "active": false
     },
     {
       "id": "gospel-project-year-one",
@@ -16,7 +17,8 @@
       "color": "#800080",
       "description": "",
       "url": "collections/gospel-project-year-one.html",
-      "isFallback": false
+      "isFallback": false,
+      "active": true
     }
   ],
   "readings": [

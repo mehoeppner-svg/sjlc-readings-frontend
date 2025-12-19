@@ -186,6 +186,8 @@ function getCollectionsForYear(year) {
 
     return Object.values(collectionsData)
         .filter(col => {
+            // Only show active collections (active defaults to true if not specified)
+            if (col.active === false) return false;
             // Check if any readings fall in this year
             return col.readings.some(r => r.date.startsWith(yearStr));
         })
