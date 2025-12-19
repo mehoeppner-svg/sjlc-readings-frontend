@@ -362,8 +362,10 @@ ul {
 
 /* ===== SHARE BUTTON ===== */
 .share-section {
-    position: relative;
-    display: inline-block;
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    z-index: 100;
 }
 
 .share-btn {
@@ -402,7 +404,7 @@ ul {
 .share-dropdown {
     position: absolute;
     top: 100%;
-    right: 0;
+    left: 0;
     margin-top: 0.5rem;
     background: white;
     border: 1px solid var(--border-color);
@@ -1337,11 +1339,6 @@ ul {
         height: 203px;
     }
 
-    .share-section {
-        right: 0.5rem;
-        top: -2.5rem;
-    }
-
     .settings-btn {
         font-size: 1.1rem;
         padding: 0.25rem 0.35rem;
@@ -1394,7 +1391,7 @@ ul {
     }
 
     .share-section {
-        position: relative;
+        position: static;
         margin: 0.5rem auto 0 auto;
         display: flex;
         justify-content: center;
@@ -1405,12 +1402,12 @@ ul {
     }
 
     .share-dropdown {
-        right: 50%;
-        transform: translateX(50%) translateY(-10px);
+        left: 50%;
+        transform: translateX(-50%) translateY(-10px);
     }
 
     .share-dropdown.active {
-        transform: translateX(50%) translateY(0);
+        transform: translateX(-50%) translateY(0);
     }
 
     .copy-fab {
