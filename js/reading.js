@@ -505,7 +505,7 @@
             }
 
             const text = verses.map(v => v.text).join(' ');
-            return `${reference} - ${text}`;
+            return `${text} - ${reference}`;
         }
 
         fallbackCopy(text) {
@@ -707,6 +707,7 @@
 
                 copyBtn.textContent = '\u2713';
                 copyBtn.classList.add('copied');
+                showToast('Image copied to clipboard!');
 
                 setTimeout(() => {
                     copyBtn.textContent = '\uD83D\uDCCB';
@@ -715,7 +716,8 @@
 
             } catch (err) {
                 console.log('Copy failed:', err);
-                window.open(verseCardImage.src, '_blank');
+                // On mobile, clipboard API for images often fails - guide user to native method
+                showToast('Long-press image to save or share');
             }
         });
     }
@@ -730,14 +732,32 @@
             const url = window.location.href;
             const title = document.title;
             const passage = document.querySelector('.reading-title')?.textContent || 'Daily Reading';
+            const verseCardImage = document.querySelector('.verse-card-image');
 
             if (navigator.share) {
                 try {
-                    await navigator.share({
+                    // Try to include verse card image if file sharing is supported
+                    let shareData = {
                         title: title,
                         text: `Check out today's reading: ${passage}`,
                         url: url
-                    });
+                    };
+
+                    if (verseCardImage) {
+                        try {
+                            const imageBlob = await getVerseCardBlob(verseCardImage);
+                            if (imageBlob) {
+                                const file = new File([imageBlob], 'verse-card.png', { type: 'image/png' });
+                                if (navigator.canShare && navigator.canShare({ files: [file] })) {
+                                    shareData.files = [file];
+                                }
+                            }
+                        } catch (imgErr) {
+                            console.log('Could not include image in share:', imgErr);
+                        }
+                    }
+
+                    await navigator.share(shareData);
                 } catch (err) {
                     if (err.name !== 'AbortError') {
                         copyToClipboard(url);
@@ -747,6 +767,25 @@
                 copyToClipboard(url);
             }
         });
+
+        async function getVerseCardBlob(imgElement) {
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            const img = new Image();
+            img.crossOrigin = 'anonymous';
+
+            await new Promise((resolve, reject) => {
+                img.onload = resolve;
+                img.onerror = reject;
+                img.src = imgElement.src;
+            });
+
+            canvas.width = img.naturalWidth;
+            canvas.height = img.naturalHeight;
+            ctx.drawImage(img, 0, 0);
+
+            return new Promise(resolve => canvas.toBlob(resolve, 'image/png'));
+        }
 
         function copyToClipboard(text) {
             navigator.clipboard.writeText(text).then(() => {
