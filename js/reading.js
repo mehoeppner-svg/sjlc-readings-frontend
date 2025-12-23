@@ -1007,11 +1007,37 @@
 
     // ===== INITIALIZATION =====
 
+    function isFullPageMode() {
+        // Full page mode: content is already embedded (has .loaded class and children)
+        const readingContent = document.getElementById('readingContent');
+        return readingContent &&
+               readingContent.classList.contains('loaded') &&
+               readingContent.children.length > 0;
+    }
+
     function init() {
-        const dateStr = getRequestedDate();
-        // Set up navigation immediately (before content loads)
-        updateDayNavigation(dateStr);
-        loadReading(dateStr);
+        if (isFullPageMode()) {
+            // Full page mode - content already embedded, just initialize features
+            // Day navigation links are already set in the HTML
+            initReadingFeatures();
+        } else {
+            // Shell mode - check if we should redirect to full page
+            const urlParams = new URLSearchParams(window.location.search);
+            const dateParam = urlParams.get('date');
+
+            if (!dateParam) {
+                // No date param - redirect to today's full page
+                const todayStr = getTodayDateString();
+                const year = todayStr.substring(0, 4);
+                window.location.replace(`years/${year}/daily_readings/${todayStr}_reading.html`);
+                return;
+            }
+
+            // Has date param - fetch and inject (legacy support)
+            const dateStr = getRequestedDate();
+            updateDayNavigation(dateStr);
+            loadReading(dateStr);
+        }
     }
 
     if (document.readyState === 'loading') {

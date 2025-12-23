@@ -224,16 +224,16 @@ function renderCalendar(year, month) {
                 dayCell.style.borderLeftColor = color;
             }
 
-            // Click to navigate
+            // Click to navigate (link to full page file)
             dayCell.addEventListener('click', () => {
-                window.location.href = `reading.html?date=${dateStr}`;
+                window.location.href = `years/${year}/daily_readings/${dateStr}_reading.html`;
             });
 
             // Keyboard support
             dayCell.addEventListener('keydown', (e) => {
                 if (e.key === 'Enter' || e.key === ' ') {
                     e.preventDefault();
-                    window.location.href = `reading.html?date=${dateStr}`;
+                    window.location.href = `years/${year}/daily_readings/${dateStr}_reading.html`;
                 }
             });
 
@@ -404,7 +404,9 @@ function showSearchResults(results) {
 
     results.forEach(reading => {
         const item = document.createElement('a');
-        item.href = `reading.html?date=${reading.date}`;
+        // Link to full page file
+        const year = reading.date.substring(0, 4);
+        item.href = `years/${year}/daily_readings/${reading.date}_reading.html`;
         item.className = 'search-result-item';
 
         const date = document.createElement('span');
