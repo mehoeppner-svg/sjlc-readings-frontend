@@ -1391,7 +1391,7 @@ ul {
     }
 
     .share-section {
-        position: static;
+        position: relative;
         margin: 0.5rem auto 0 auto;
         display: flex;
         justify-content: center;
