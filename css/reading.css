@@ -296,16 +296,12 @@ ul {
 
 /* Settings button wrapper for positioning context */
 .settings-wrapper {
-    position: absolute;
-    top: 0.5rem;
-    right: 0.5rem;
+    position: relative;
     z-index: 100;
 }
 
 .settings-wrapper .settings-btn {
     position: relative;
-    top: 0;
-    right: 0;
 }
 
 .settings-btn:hover {
@@ -362,9 +358,7 @@ ul {
 
 /* ===== SHARE BUTTON ===== */
 .share-section {
-    position: absolute;
-    top: 0.5rem;
-    left: 0.5rem;
+    position: relative;
     z-index: 100;
 }
 
@@ -557,7 +551,25 @@ ul {
 .bible-content-container {
     position: relative;
     max-width: 900px;
-    margin: 3rem auto 2rem auto;
+    margin: 1rem auto 2rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+/* Share on left, Settings on right, Bible content full width below */
+.bible-content-container .share-section {
+    order: 1;
+}
+
+.bible-content-container .settings-wrapper {
+    order: 2;
+    margin-left: auto;
+}
+
+.bible-content-container .bible-content {
+    order: 3;
+    width: 100%;
 }
 
 .bible-content {
@@ -1390,29 +1402,13 @@ ul {
         right: 5%;
     }
 
-    .share-section {
-        position: relative;
-        margin: 0.5rem auto 0 auto;
-        display: flex;
-        justify-content: center;
-    }
-
-    .share-btn {
-        width: auto;
-    }
-
     .share-dropdown {
-        left: 50%;
-        transform: translateX(-50%) translateY(-10px);
+        left: 0;
+        transform: translateY(-10px);
     }
 
     .share-dropdown.active {
-        transform: translateX(-50%) translateY(0);
-    }
-
-    .copy-fab {
-        top: 0.5rem;
-        right: 3rem;
+        transform: translateY(0);
     }
 
     .copy-button {
