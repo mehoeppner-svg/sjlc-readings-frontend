@@ -2,7 +2,6 @@ title: Daily Bible Readings
 description: St. John Lutheran Church Daily Bible Reading Program
 url: https://sjlcdailybible.org
 baseurl: ""
-permalink: pretty
 
 exclude:
   - README.md
