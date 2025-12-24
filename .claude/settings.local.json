@@ -18,7 +18,9 @@
       "Bash(python:*)",
       "Bash(claude:*)",
       "Read(c:\\pyApps\\sjlc-private\\**)",
-      "Read(c:\\pyApps\\sjlc-readings-frontend\\**)"
+      "Read(c:\\pyApps\\sjlc-readings-frontend\\**)",
+      "Skill(commit)",
+      "Skill(commit:*)"
     ],
     "deny": []
   }
