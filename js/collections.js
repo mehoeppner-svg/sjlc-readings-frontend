@@ -9,6 +9,7 @@ let collectionsData = {}; // collectionId -> { ...collection, readings: [], star
 let currentYear = new Date().getFullYear();
 let minYear = currentYear;
 let maxYear = currentYear;
+let validCollectionUrls = new Set();
 
 // DOM Elements
 const yearDisplay = document.getElementById('yearDisplay');
@@ -25,6 +26,7 @@ async function init() {
     setupEventListeners();
     await loadAllYearData();
     buildCollectionsData();
+    await validateCollectionUrls();
     updateYearDisplay();
     renderCollections();
 }
@@ -120,6 +122,32 @@ async function loadYearData(year) {
 }
 
 /**
+ * Check if a URL exists (returns 200)
+ */
+async function checkUrlExists(url) {
+    try {
+        const response = await fetch(url, { method: 'HEAD' });
+        return response.ok;
+    } catch {
+        return false;
+    }
+}
+
+/**
+ * Validate which collection pages actually exist
+ */
+async function validateCollectionUrls() {
+    const checks = Object.values(collectionsData).map(async col => {
+        const url = col.url || `collections/${col.id}.html`;
+        const exists = await checkUrlExists(url);
+        if (exists) {
+            validCollectionUrls.add(col.id);
+        }
+    });
+    await Promise.all(checks);
+}
+
+/**
  * Build collections data from all year caches
  */
 function buildCollectionsData() {
@@ -188,6 +216,8 @@ function getCollectionsForYear(year) {
         .filter(col => {
             // Only show active collections (active defaults to true if not specified)
             if (col.active === false) return false;
+            // Only show collections with existing pages
+            if (!validCollectionUrls.has(col.id)) return false;
             // Check if any readings fall in this year
             return col.readings.some(r => r.date.startsWith(yearStr));
         })
