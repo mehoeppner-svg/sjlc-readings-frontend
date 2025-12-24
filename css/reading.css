@@ -1037,6 +1037,7 @@ ul {
 .verse-wrapper.selected {
     border-bottom: 2px dotted var(--accent-color);
     background-color: rgba(114, 171, 191, 0.05);
+    width: fit-content;
 }
 
 /* ===== FLOATING COPY BUTTON (FAB) ===== */
