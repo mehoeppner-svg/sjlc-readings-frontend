@@ -1,149 +1,111 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Daily Bible Readings from St. John Lutheran Church in Boerne, TX. Scripture, audio, and verse cards to deepen your walk with Christ.">
-    <title>Daily Bible Readings | St. John Lutheran Church</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-    <!-- Skip Link for Accessibility -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
+---
+layout: default
+title: Home
+description: Daily Bible Readings from St. John Lutheran Church in Boerne, TX. Scripture, audio, and verse cards to deepen your walk with Christ.
+og_image: /assets/banner.png
+---
 
-    <!-- Header with Banner -->
-    <header class="site-header">
-        <div class="banner-container">
-            <img src="assets/banner.png" alt="Stained glass style artwork depicting creation, the cross, and the church" class="banner-image">
-            <div class="banner-overlay">
-                <h1 class="site-title">Daily Bible Readings</h1>
-                <p class="site-subtitle">St. John Lutheran Church &#8226; Boerne, TX</p>
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="hero-content">
+        <p class="hero-tagline">Know Jesus ... Make Jesus Known</p>
+        <p class="hero-description">
+            Join us each day as we journey through Scripture together. Whether you're at home,
+            on your lunch break, or winding down in the evening, find today's reading beautifully
+            presented with images, audio, and reflections to deepen your walk with Christ.
+        </p>
+        <div class="hero-buttons">
+            <a href="{{ '/reading.html' | relative_url }}" class="btn btn-primary">Today's Reading</a>
+            <a href="{{ '/browse.html' | relative_url }}" class="btn btn-secondary">Browse All Readings</a>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="features-section">
+    <h2 class="section-title">What You'll Find Each Day</h2>
+    <div class="features-row">
+        <div class="feature-item">
+            <span class="feature-icon">&#x1F4D6;</span>
+            <div class="feature-text">
+                <strong>Scripture</strong>
+                <span>Full ESV text with footnotes</span>
             </div>
         </div>
-        <nav class="main-nav" aria-label="Main navigation">
-            <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
-                <span class="hamburger"></span>
-            </button>
-            <ul class="nav-menu" id="nav-menu">
-                <li><a href="index.html" class="nav-link active" aria-current="page">Home</a></li>
-                <li><a href="reading.html" class="nav-link">Today</a></li>
-                <li><a href="browse.html" class="nav-link">Browse</a></li>
-                <li><a href="collections.html" class="nav-link">Collections</a></li>
+        <div class="feature-item">
+            <span class="feature-icon">&#x1F5BC;</span>
+            <div class="feature-text">
+                <strong>Image</strong>
+                <span>Themed art to reflect on</span>
+            </div>
+        </div>
+        <div class="feature-item">
+            <span class="feature-icon">&#x1F3B5;</span>
+            <div class="feature-text">
+                <strong>Audio</strong>
+                <span>Listen on your commute</span>
+            </div>
+        </div>
+        <div class="feature-item">
+            <span class="feature-icon">&#x1F4CB;</span>
+            <div class="feature-text">
+                <strong>Share</strong>
+                <span>Copy favorite verses to share</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Worship Section -->
+<section class="worship-section">
+    <h2 class="section-title">Join Us for Worship</h2>
+    <div class="worship-content">
+        <div class="worship-card">
+            <h3>Worship with Us</h3>
+            <ul class="worship-times">
+                <li><strong>Sunday Services:</strong></li>
+                <li>8:00 AM - Traditional Worship</li>
+                <li>9:30 AM - Praise Worship</li>
+                <li>11:00 AM - Traditional Worship</li>
             </ul>
-        </nav>
-    </header>
-
-    <!-- Main Content -->
-    <main id="main-content">
-        <!-- Hero Section -->
-        <section class="hero-section">
-            <div class="hero-content">
-                <p class="hero-tagline">Know Jesus ... Make Jesus Known</p>
-                <p class="hero-description">
-                    Join us each day as we journey through Scripture together. Whether you're at home,
-                    on your lunch break, or winding down in the evening, find today's reading beautifully
-                    presented with images, audio, and reflections to deepen your walk with Christ.
-                </p>
-                <div class="hero-buttons">
-                    <a href="reading.html" class="btn btn-primary">Today's Reading</a>
-                    <a href="browse.html" class="btn btn-secondary">Browse All Readings</a>
-                </div>
+            <p class="worship-note">
+                Can't make it in person? Join us online for our livestreamed services.
+            </p>
+            <div class="worship-buttons">
+                <a href="https://www.stjohnlutheran.com/livestream/" target="_blank" rel="noopener" class="btn btn-small btn-primary">Watch Online</a>
+                <a href="https://www.stjohnlutheran.com/" target="_blank" rel="noopener" class="btn btn-small btn-secondary">Website</a>
             </div>
-        </section>
+        </div>
 
-        <!-- Features Section -->
-        <section class="features-section">
-            <h2 class="section-title">What You'll Find Each Day</h2>
-            <div class="features-row">
-                <div class="feature-item">
-                    <span class="feature-icon">&#x1F4D6;</span>
-                    <div class="feature-text">
-                        <strong>Scripture</strong>
-                        <span>Full ESV text with footnotes</span>
-                    </div>
-                </div>
-                <div class="feature-item">
-                    <span class="feature-icon">&#x1F5BC;</span>
-                    <div class="feature-text">
-                        <strong>Image</strong>
-                        <span>Themed art to reflect on</span>
-                    </div>
-                </div>
-                <div class="feature-item">
-                    <span class="feature-icon">&#x1F3B5;</span>
-                    <div class="feature-text">
-                        <strong>Audio</strong>
-                        <span>Listen on your commute</span>
-                    </div>
-                </div>
-                <div class="feature-item">
-                    <span class="feature-icon">&#x1F4CB;</span>
-                    <div class="feature-text">
-                        <strong>Share</strong>
-                        <span>Copy favorite verses to share</span>
-                    </div>
-                </div>
+        <div class="worship-card map-card">
+            <h3>Find Us</h3>
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3474.8!2d-98.7317!3d29.7947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x865c8a15a5f5b5b5%3A0x5b5b5b5b5b5b5b5b!2s315%20Rosewood%20Ave%2C%20Boerne%2C%20TX%2078006!5e0!3m2!1sen!2sus!4v1699999999999!5m2!1sen!2sus"
+                    width="100%"
+                    height="200"
+                    style="border:0; border-radius: 8px;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Map showing St. John Lutheran Church location">
+                </iframe>
             </div>
-        </section>
-
-        <!-- Worship Section -->
-        <section class="worship-section">
-            <h2 class="section-title">Join Us for Worship</h2>
-            <div class="worship-content">
-                <div class="worship-card">
-                    <h3>Worship with Us</h3>
-                    <ul class="worship-times">
-                        <li><strong>Sunday Services:</strong></li>
-                        <li>8:00 AM - Traditional Worship</li>
-                        <li>9:30 AM - Praise Worship</li>
-                        <li>11:00 AM - Traditional Worship</li>
-                    </ul>
-                    <p class="worship-note">
-                        Can't make it in person? Join us online for our livestreamed services.
-                    </p>
-                    <div class="worship-buttons">
-                        <a href="https://www.stjohnlutheran.com/livestream/" target="_blank" rel="noopener" class="btn btn-small btn-primary">Watch Online</a>
-                        <a href="https://www.stjohnlutheran.com/" target="_blank" rel="noopener" class="btn btn-small btn-secondary">Website</a>
-                    </div>
-                </div>
-
-                <div class="worship-card map-card">
-                    <h3>Find Us</h3>
-                    <div class="map-container">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3474.8!2d-98.7317!3d29.7947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x865c8a15a5f5b5b5%3A0x5b5b5b5b5b5b5b5b!2s315%20Rosewood%20Ave%2C%20Boerne%2C%20TX%2078006!5e0!3m2!1sen!2sus!4v1699999999999!5m2!1sen!2sus"
-                            width="100%"
-                            height="200"
-                            style="border:0; border-radius: 8px;"
-                            allowfullscreen=""
-                            loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"
-                            title="Map showing St. John Lutheran Church location">
-                        </iframe>
-                    </div>
-                    <div class="location-info">
-                        <p>315 Rosewood Avenue, Boerne, TX 78006</p>
-                        <p>(830) 249-3651 &#8226; info@stjohnlutheran.com</p>
-                    </div>
-                </div>
+            <div class="location-info">
+                <p>315 Rosewood Avenue, Boerne, TX 78006</p>
+                <p>(830) 249-3651 &#8226; info@stjohnlutheran.com</p>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
 
-        <!-- CTA Section -->
-        <section class="cta-section">
-            <div class="cta-content">
-                <h2 class="cta-title">Ready to Begin?</h2>
-                <p class="cta-description">
-                    Start today and make God's Word a daily priority in your life.
-                </p>
-                <a href="reading.html" class="btn btn-primary">Go to Today's Reading</a>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="site-footer"></footer>
-
-    <script src="js/app.js"></script>
-</body>
-</html>
+<!-- CTA Section -->
+<section class="cta-section">
+    <div class="cta-content">
+        <h2 class="cta-title">Ready to Begin?</h2>
+        <p class="cta-description">
+            Start today and make God's Word a daily priority in your life.
+        </p>
+        <a href="{{ '/reading.html' | relative_url }}" class="btn btn-primary">Go to Today's Reading</a>
+    </div>
+</section>

@@ -1,0 +1,28 @@
+---
+layout: default
+extra_js: /js/reading.js
+---
+
+{% assign prev_year = page.prev_date | slice: 0, 4 %}
+{% assign next_year = page.next_date | slice: 0, 4 %}
+
+<nav class="day-nav" id="dayNav" aria-label="Day navigation">
+    <a href="{{ site.baseurl }}/years/{{ prev_year }}/daily_readings/{{ page.prev_date }}_reading.html" class="nav-btn prev-btn" id="prevDayBtn" aria-label="Previous day">
+        <span class="nav-arrow">&#8249;</span>
+    </a>
+    <span class="current-date" id="currentDateDisplay">{{ page.date }}</span>
+    <a href="{{ site.baseurl }}/years/{{ next_year }}/daily_readings/{{ page.next_date }}_reading.html" class="nav-btn next-btn" id="nextDayBtn" aria-label="Next day">
+        <span class="nav-arrow">&#8250;</span>
+    </a>
+</nav>
+
+<div id="readingContent" class="loaded">
+    {{ content }}
+</div>
+
+<div class="copy-fab" id="copyFab">
+    <button class="copy-verse-btn" id="copyVerseBtn" aria-label="Copy selected verses">
+        &#128203;<span class="verse-count-badge" id="verseCountBadge">0</span>
+    </button>
+    <button class="clear-selection-btn" id="clearSelectionBtn" aria-label="Clear selection" style="display: none;">&#10005;</button>
+</div>

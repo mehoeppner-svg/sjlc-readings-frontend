@@ -1,0 +1,19 @@
+title: Daily Bible Readings
+description: St. John Lutheran Church Daily Bible Reading Program
+url: https://mehoeppner-svg.github.io
+baseurl: /sjlc-readings-frontend
+permalink: pretty
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - JEKYLL_MIGRATION_PLAN.md
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
