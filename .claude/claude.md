@@ -6,7 +6,7 @@ Public-facing website for St. John Lutheran Church's daily Bible reading program
 
 **Purpose:** Help St. John Lutheran Church congregation engage with daily Bible readings through visual and audio content.
 
-**Live URL:** https://mehoeppner-svg.github.io/sjlc-readings-frontend/
+**Live URL:** https://sjlcdailybible.org/
 
 **Repository:** Public GitHub Pages site (sjlc-readings-frontend)
 
@@ -495,6 +495,35 @@ The original testing templates in `sjlc-private/testing/` serve as the reference
 - Keyboard shortcuts: Ctrl+C to copy, ESC to clear
 - Mobile: long-press to select with vibration
 
+**ESV HTML Structure (Prose vs Poetry):**
+
+The ESV API returns different HTML structures depending on the passage type. `reading.js` detects and handles both:
+
+| Type | Structure | Example Books |
+|------|-----------|---------------|
+| Prose | `<p id="p...">` paragraphs containing verse numbers | Genesis, Exodus, Gospels |
+| Poetry | `<span class="line">` elements with verse numbers inside | Psalms, Isaiah, Proverbs |
+
+**Prose HTML:**
+```html
+<p id="p01001001_06-1">
+  <b class="verse-num" id="v01001001-1">1</b>In the beginning...
+  <b class="verse-num" id="v01001002-1">2</b>The earth was...
+</p>
+```
+
+**Poetry HTML:**
+```html
+<p class="block-indent">
+  <span id="p23052007_01-1" class="line">
+    <b class="verse-num" id="v23052007-1">7</b>How beautiful upon the mountains
+  </span><br/>
+  <span id="p23052007_01-1" class="indent line">are the feet of him who brings good news,</span><br/>
+</p>
+```
+
+**Key difference:** Poetry verses span multiple `<span class="line">` elements with the same `id` prefix. The verse selection code groups these together so clicking any line selects/deselects the entire verse.
+
 ### Display Settings
 - Toggle verse card visibility
 - Toggle audio player
@@ -542,7 +571,7 @@ The original testing templates in `sjlc-private/testing/` serve as the reference
 
 ---
 
-**Last Updated:** 2025-12-01
+**Last Updated:** 2025-12-24
 **Status:** All frontend pages complete and working:
 - Home page with hero, features, church info
 - Browse page with calendar and search
@@ -550,5 +579,7 @@ The original testing templates in `sjlc-private/testing/` serve as the reference
 - Gospel Project page with dynamic timeline and themes
 - Reading shell with fragment injection
 - Shared footer via app.js injection
+- Verse selection works for both prose and poetry passages
+- Custom domain configured (sjlcdailybible.org)
 
 **Ready for backend:** Content generation should populate readings.json with proper collection/theme fields.
