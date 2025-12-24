@@ -539,21 +539,39 @@
         toggleVerseSelection(verseWrapper) {
             const verseId = verseWrapper.dataset.verseId;
 
+            // Find ALL elements with this verseId (for poetry with multiple lines per verse)
+            const allVerseElements = this.bibleContentEl.querySelectorAll(`[data-verse-id="${verseId}"]`);
+
             if (this.selectedVerses.has(verseId)) {
                 this.selectedVerses.delete(verseId);
-                verseWrapper.classList.remove('selected');
+                allVerseElements.forEach(el => el.classList.remove('selected'));
             } else {
                 this.selectedVerses.set(verseId, {
                     book: verseWrapper.dataset.book,
                     chapter: parseInt(verseWrapper.dataset.chapter),
                     verse: parseInt(verseWrapper.dataset.verse),
-                    text: this.cleanText(verseWrapper),
-                    element: verseWrapper
+                    text: this.cleanTextFromElements(allVerseElements),
+                    elements: Array.from(allVerseElements)
                 });
-                verseWrapper.classList.add('selected');
+                allVerseElements.forEach(el => el.classList.add('selected'));
             }
 
             this.updateFab();
+        }
+
+        cleanTextFromElements(elements) {
+            // Gather text from all elements (for poetry with multiple lines)
+            let text = '';
+            elements.forEach(el => {
+                const clone = el.cloneNode(true);
+                clone.querySelectorAll('.footnote, .crossref').forEach(fn => fn.remove());
+                text += clone.textContent + ' ';
+            });
+            return text
+                .replace(/\[\d+\]/g, '')
+                .replace(/\(\w+\)/g, '')
+                .replace(/\s+/g, ' ')
+                .trim();
         }
 
         cleanText(verseWrapper) {
@@ -657,7 +675,14 @@
         }
 
         clearSelection() {
-            this.selectedVerses.forEach(verse => verse.element.classList.remove('selected'));
+            this.selectedVerses.forEach(verse => {
+                // Handle both single element and array of elements (for poetry)
+                if (verse.elements) {
+                    verse.elements.forEach(el => el.classList.remove('selected'));
+                } else if (verse.element) {
+                    verse.element.classList.remove('selected');
+                }
+            });
             this.selectedVerses.clear();
             this.updateFab();
         }
