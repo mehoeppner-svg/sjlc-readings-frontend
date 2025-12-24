@@ -125,18 +125,21 @@ sjlc-readings-frontend/
 ├── browse.html                   # Browse readings (calendar view)
 ├── collections.html              # Collections listing page (year selector + cards)
 ├── collections/                  # Individual collection pages
-│   └── gospel-project.html       # The Gospel Project (dynamic timeline/themes)
+│   ├── gospel-project.html       # The Gospel Project (dynamic timeline/themes)
+│   └── christmas-2025.html       # Christmas 2025 (countdown/themes)
 ├── css/
 │   ├── styles.css                # Main stylesheet (home, shared)
 │   ├── reading.css               # Reading page styles (shell + content)
 │   ├── browse.css                # Browse page styles (calendar, search)
 │   ├── collections.css           # Collections page styles (cards, year nav)
+│   ├── christmas-2025.css        # Christmas 2025 page styles
 │   └── daily-reading.css         # Old standalone page styles
 ├── js/
 │   ├── app.js                    # Shared JavaScript (nav toggle, etc.)
 │   ├── reading.js                # Reading page JS (fetch, inject, features)
 │   ├── browse.js                 # Browse page JS (calendar, search)
 │   ├── collections.js            # Collections listing JS (year filter, cards)
+│   ├── christmas-2025.js         # Christmas 2025 page JS
 │   └── daily-reading.js          # Old standalone page JS
 ├── assets/
 │   └── banner.png                # Site banner image
@@ -581,6 +584,7 @@ The ESV API returns different HTML structures depending on the passage type. `re
 - Browse page with calendar and search
 - Collections listing with year navigation
 - Gospel Project page with dynamic timeline and themes
+- Christmas 2025 page with countdown and themed reading list
 - Reading shell with fragment injection
 - Shared footer via app.js injection
 - Verse selection works for both prose and poetry passages
