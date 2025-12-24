@@ -130,13 +130,15 @@
      */
     function updateCountdown() {
         // Find Christmas day in this collection's year
-        const christmasDate = readings.find(r => r.date.endsWith('-12-25'));
-        if (!christmasDate) {
+        const christmasReading = readings.find(r => r.date.endsWith('-12-25'));
+        if (!christmasReading) {
             countdownSection.hidden = true;
             return;
         }
 
-        const christmas = parseDate(christmasDate.date);
+        const christmasYear = parseInt(christmasReading.date.substring(0, 4));
+        const christmas = parseDate(christmasReading.date);
+        const epiphany = new Date(christmasYear + 1, 0, 6); // Jan 6 of next year
         const today = new Date();
         today.setHours(0, 0, 0, 0);
 
@@ -144,16 +146,17 @@
         const startDate = readings.length > 0 ? parseDate(readings[0].date) : today;
 
         const daysUntilChristmas = Math.ceil((christmas - today) / (1000 * 60 * 60 * 24));
-        const totalDays = Math.ceil((christmas - startDate) / (1000 * 60 * 60 * 24));
-        const daysPassed = totalDays - daysUntilChristmas;
+        const daysUntilEpiphany = Math.ceil((epiphany - today) / (1000 * 60 * 60 * 24));
+        const totalDaysToChristmas = Math.ceil((christmas - startDate) / (1000 * 60 * 60 * 24));
+        const daysPassed = totalDaysToChristmas - daysUntilChristmas;
 
         if (daysUntilChristmas > 0) {
             // Before Christmas
             countdownLabel.textContent = 'Days until Christmas';
             countdownNumber.textContent = daysUntilChristmas;
 
-            // Progress bar: how far through the collection we are
-            const progress = Math.max(0, Math.min(100, (daysPassed / totalDays) * 100));
+            // Progress bar: how far through to Christmas
+            const progress = Math.max(0, Math.min(100, (daysPassed / totalDaysToChristmas) * 100));
             countdownFill.style.width = `${progress}%`;
         } else if (daysUntilChristmas === 0) {
             // Christmas Day!
@@ -161,18 +164,29 @@
             countdownLabel.textContent = 'Merry Christmas!';
             countdownNumber.innerHTML = '&#127876;'; // Christmas tree
             countdownFill.style.width = '100%';
-        } else {
-            // After Christmas
+        } else if (daysUntilEpiphany > 0) {
+            // After Christmas, before Epiphany
             countdownSection.classList.add('christmas-passed');
-            countdownLabel.textContent = 'Days of Christmastide';
-            countdownNumber.textContent = Math.abs(daysUntilChristmas);
+            countdownLabel.textContent = 'Days until Epiphany';
+            countdownNumber.textContent = daysUntilEpiphany;
 
-            // Continue progress through the collection
-            const endDate = readings.length > 0 ? parseDate(readings[readings.length - 1].date) : christmas;
-            const totalCollectionDays = Math.ceil((endDate - startDate) / (1000 * 60 * 60 * 24));
-            const currentDaysPassed = Math.ceil((today - startDate) / (1000 * 60 * 60 * 24));
-            const progress = Math.max(0, Math.min(100, (currentDaysPassed / totalCollectionDays) * 100));
+            // Progress bar: Christmas to Epiphany
+            const totalChristmastide = 12; // 12 days of Christmas
+            const daysIntoChristmastide = 12 - daysUntilEpiphany;
+            const progress = Math.max(0, Math.min(100, (daysIntoChristmastide / totalChristmastide) * 100));
             countdownFill.style.width = `${progress}%`;
+        } else if (daysUntilEpiphany === 0) {
+            // Epiphany!
+            countdownSection.classList.add('christmas-passed');
+            countdownLabel.textContent = 'Happy Epiphany!';
+            countdownNumber.innerHTML = '&#11088;'; // Star
+            countdownFill.style.width = '100%';
+        } else {
+            // After Epiphany - season complete
+            countdownSection.classList.add('christmas-passed');
+            countdownLabel.textContent = 'Season Complete';
+            countdownNumber.innerHTML = '&#10003;'; // Checkmark
+            countdownFill.style.width = '100%';
         }
     }
 
