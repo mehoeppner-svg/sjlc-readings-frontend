@@ -1,7 +1,7 @@
 title: Daily Bible Readings
 description: St. John Lutheran Church Daily Bible Reading Program
-url: https://mehoeppner-svg.github.io
-baseurl: /sjlc-readings-frontend
+url: https://sjlcdailybible.org
+baseurl: ""
 permalink: pretty
 
 exclude:
