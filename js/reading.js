@@ -347,6 +347,15 @@
         wrapVerses() {
             const paragraphs = this.bibleContentEl.querySelectorAll('p[id^="p"]');
 
+            // Check if this is prose (paragraphs with IDs) or poetry (line spans)
+            if (paragraphs.length > 0) {
+                this.wrapProseVerses(paragraphs);
+            } else {
+                this.wrapPoetryVerses();
+            }
+        }
+
+        wrapProseVerses(paragraphs) {
             paragraphs.forEach(p => {
                 const verseNums = Array.from(p.querySelectorAll('.verse-num, .chapter-num'));
 
@@ -389,6 +398,80 @@
                         nodesToWrap.forEach(node => wrapper.appendChild(node));
                     }
                 });
+            });
+        }
+
+        wrapPoetryVerses() {
+            // Poetry uses spans with class "line" - group lines by their verse
+            const allVerseNums = this.bibleContentEl.querySelectorAll('.verse-num, .chapter-num');
+
+            allVerseNums.forEach(verseNum => {
+                const verseId = verseNum.id;
+                if (!verseId) return;
+
+                const match = verseId.match(/v(\d{2})(\d{3})(\d{3})-/);
+                if (!match) return;
+
+                const [, bookNum, chapterNum, verseNumParsed] = match;
+                const book = this.getBookName(parseInt(bookNum));
+                const chapter = parseInt(chapterNum);
+                const verse = parseInt(verseNumParsed);
+
+                // For poetry, the verse number is inside a line span
+                // We need to wrap the text that follows the verse number within the same line
+                const lineSpan = verseNum.closest('.line');
+                if (lineSpan) {
+                    // Mark this line span as part of a verse
+                    lineSpan.classList.add('verse-wrapper');
+                    lineSpan.dataset.verseId = verseId;
+                    lineSpan.dataset.book = book;
+                    lineSpan.dataset.chapter = chapter;
+                    lineSpan.dataset.verse = verse;
+
+                    // Also find continuation lines (same verse, multiple lines)
+                    // These have the same id pattern on the line span
+                    const versePattern = verseId.replace('v', 'p').replace(/-\d+$/, '');
+                    const relatedLines = this.bibleContentEl.querySelectorAll(`[id^="${versePattern}"]`);
+                    relatedLines.forEach(line => {
+                        if (line !== lineSpan && line.classList.contains('line') && !line.dataset.verseId) {
+                            line.classList.add('verse-wrapper');
+                            line.dataset.verseId = verseId;
+                            line.dataset.book = book;
+                            line.dataset.chapter = chapter;
+                            line.dataset.verse = verse;
+                        }
+                    });
+                } else {
+                    // Fallback: wrap text nodes directly after the verse number
+                    const nodesToWrap = [];
+                    let currentNode = verseNum.nextSibling;
+
+                    while (currentNode) {
+                        if (currentNode.nodeType === Node.ELEMENT_NODE &&
+                            (currentNode.classList.contains('verse-num') ||
+                             currentNode.classList.contains('chapter-num'))) {
+                            break;
+                        }
+                        if (currentNode.nodeType === Node.TEXT_NODE && currentNode.textContent.trim()) {
+                            nodesToWrap.push(currentNode);
+                        } else if (currentNode.nodeType === Node.ELEMENT_NODE) {
+                            nodesToWrap.push(currentNode);
+                        }
+                        currentNode = currentNode.nextSibling;
+                    }
+
+                    if (nodesToWrap.length > 0) {
+                        const wrapper = document.createElement('span');
+                        wrapper.className = 'verse-wrapper';
+                        wrapper.dataset.verseId = verseId;
+                        wrapper.dataset.book = book;
+                        wrapper.dataset.chapter = chapter;
+                        wrapper.dataset.verse = verse;
+
+                        verseNum.parentNode.insertBefore(wrapper, verseNum.nextSibling);
+                        nodesToWrap.forEach(node => wrapper.appendChild(node));
+                    }
+                }
             });
         }
 
