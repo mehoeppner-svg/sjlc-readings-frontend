@@ -121,26 +121,24 @@ Working standalone example (old format): `years/2025/daily_readings/2025-09-08_r
 sjlc-readings-frontend/
 ├── index.html                    # Home page
 ├── reading.html                  # Daily reading SHELL (loads fragments via JS)
-├── daily.html                    # Old standalone daily reading page
 ├── browse.html                   # Browse readings (calendar view)
 ├── collections.html              # Collections listing page (year selector + cards)
 ├── collections/                  # Individual collection pages
-│   ├── gospel-project.html       # The Gospel Project (dynamic timeline/themes)
+│   ├── gospel-project-year-one.html  # The Gospel Project Year One (dynamic timeline/themes)
 │   └── christmas-2025.html       # Christmas 2025 (countdown/themes)
 ├── css/
 │   ├── styles.css                # Main stylesheet (home, shared)
 │   ├── reading.css               # Reading page styles (shell + content)
 │   ├── browse.css                # Browse page styles (calendar, search)
 │   ├── collections.css           # Collections page styles (cards, year nav)
-│   ├── christmas-2025.css        # Christmas 2025 page styles
-│   └── daily-reading.css         # Old standalone page styles
+│   └── christmas-2025.css        # Christmas 2025 page styles
 ├── js/
 │   ├── app.js                    # Shared JavaScript (nav toggle, etc.)
 │   ├── reading.js                # Reading page JS (fetch, inject, features)
 │   ├── browse.js                 # Browse page JS (calendar, search)
 │   ├── collections.js            # Collections listing JS (year filter, cards)
-│   ├── christmas-2025.js         # Christmas 2025 page JS
-│   └── daily-reading.js          # Old standalone page JS
+│   ├── gospel-project.js         # Gospel Project page JS (shared across years)
+│   └── christmas-2025.js         # Christmas 2025 page JS
 ├── assets/
 │   └── banner.png                # Site banner image
 ├── years/                        # Generated content (from backend)
@@ -247,7 +245,7 @@ sjlc-readings-frontend/
 - Multi-year collections appear in all years they span
 - Data calculated from readings in readings.json
 
-### 5. Gospel Project Page (collections/gospel-project.html)
+### 5. Gospel Project Page (collections/gospel-project-year-one.html)
 - Back navigation to collections listing
 - Hero section with title and description
 - **Dynamic timeline** with milestones derived from Bible book → era mapping
@@ -255,6 +253,7 @@ sjlc-readings-frontend/
 - **Themes accordion** grouped by `theme` field in readings.json
 - Status indicators (completed, current, upcoming)
 - Zero maintenance - updates automatically from readings.json
+- Shared JS: `js/gospel-project.js` works for all Gospel Project year pages
 
 ---
 
@@ -352,11 +351,11 @@ Contains: List of all readings for that year with metadata for browse page.
   "lastUpdated": "2025-11-30T00:00:00Z",
   "collections": [
     {
-      "id": "gospel-project",
-      "name": "The Gospel Project",
+      "id": "gospel-project-year-one",
+      "name": "The Gospel Project: Year One",
       "color": "#20b2aa",
       "description": "Journey through the grand narrative of Scripture...",
-      "url": "collections/gospel-project.html"
+      "url": "collections/gospel-project-year-one.html"
     }
   ],
   "readings": [
@@ -364,7 +363,7 @@ Contains: List of all readings for that year with metadata for browse page.
       "date": "2025-09-08",
       "passage": "Genesis 1:1-13",
       "title": null,
-      "collection": "gospel-project",
+      "collection": "gospel-project-year-one",
       "theme": "Creation"
     }
   ]
@@ -376,7 +375,7 @@ Contains: List of all readings for that year with metadata for browse page.
 - `name` - Display name
 - `color` - Hex color for visual indicators
 - `description` - Short description for listing page
-- `url` - Path to individual collection page (e.g., `collections/gospel-project.html`)
+- `url` - Path to individual collection page (e.g., `collections/gospel-project-year-one.html`)
 
 **Reading Fields:**
 - `date` - YYYY-MM-DD format
@@ -393,7 +392,7 @@ When generating/updating readings.json from the backend:
 
 1. **Collections array** - Must include all collections that have readings in that year
    - Each collection needs: `id`, `name`, `color`, `description`, `url`
-   - The `url` field points to the static collection page (e.g., `collections/gospel-project.html`)
+   - The `url` field points to the static collection page (e.g., `collections/gospel-project-year-one.html`)
 
 2. **Readings array** - Each reading must have:
    - `date` - YYYY-MM-DD format (required)
