@@ -37,9 +37,11 @@
 .gospel-page-container .hero-section {
     text-align: center;
     padding: var(--spacing-lg);
-    background: linear-gradient(135deg, rgba(114, 171, 191, 0.08) 0%, rgba(242, 243, 245, 0.9) 100%);
     border-radius: 12px;
     margin-bottom: var(--spacing-lg);
+    background:
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.92) 0%, rgba(255, 255, 255, 0.75) 100%),
+        url('/assets/gospel_project_year_one.png') center/cover no-repeat;
 }
 
 .gospel-page-container .hero-section.compact {
@@ -80,15 +82,11 @@
 
 /* ===== YEAR PROGRESS SECTION ===== */
 .year-progress-section {
-    position: relative;
+    background: var(--bg-white);
     border-radius: 12px;
     padding: var(--spacing-sm) var(--spacing-md);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     margin-bottom: var(--spacing-md);
-    background:
-        linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)),
-        url('/assets/gospel_project_year_one.png') center/cover no-repeat;
-    overflow: hidden;
 }
 
 .section-title {
