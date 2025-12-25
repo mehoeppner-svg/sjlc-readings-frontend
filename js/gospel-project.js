@@ -28,10 +28,12 @@
     };
 
     // Year One volume configuration (4 volumes/seasons)
+    // Short names used for milestone labels to avoid truncation
     const YEAR_ONE_VOLUMES = [
         {
             number: 1,
-            name: 'Creation & Patriarchs',
+            name: 'Creation',
+            fullName: 'Creation & Patriarchs',
             season: 'Fall',
             books: ['Genesis'],
             startPercent: 0,
@@ -39,7 +41,8 @@
         },
         {
             number: 2,
-            name: 'God Delivers',
+            name: 'Exodus',
+            fullName: 'God Delivers',
             season: 'Winter',
             books: ['Exodus', 'Leviticus', 'Numbers', 'Deuteronomy'],
             startPercent: 25,
@@ -47,7 +50,8 @@
         },
         {
             number: 3,
-            name: 'The Promised Land',
+            name: 'Judges',
+            fullName: 'The Promised Land',
             season: 'Spring',
             books: ['Joshua', 'Judges', 'Ruth', '1 Samuel'],
             startPercent: 50,
@@ -55,7 +59,8 @@
         },
         {
             number: 4,
-            name: 'Kingdom Established',
+            name: 'Kingdom',
+            fullName: 'Kingdom Established',
             season: 'Summer',
             books: ['2 Samuel', '1 Kings', 'Proverbs', 'Ecclesiastes', 'Job'],
             startPercent: 75,
@@ -279,9 +284,9 @@
             yearTimelineFill.style.width = `${progressPercent}%`;
         }
 
-        // Update progress text
+        // Update progress text (use fullName for more context)
         if (yearProgressText) {
-            yearProgressText.innerHTML = `<strong>Volume ${volume.number}:</strong> ${volume.name}`;
+            yearProgressText.innerHTML = `<strong>Volume ${volume.number}:</strong> ${volume.fullName}`;
         }
 
         return { progressPercent, currentVolume: volume };

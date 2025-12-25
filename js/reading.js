@@ -518,8 +518,13 @@
         const footnoteLinks = document.querySelectorAll('.fn');
 
         footnoteLinks.forEach(link => {
+            // Remove href to prevent browser scroll (ESV HTML has anchor links to footnotes section)
+            link.removeAttribute('href');
+            link.style.cursor = 'pointer';
+
             link.addEventListener('click', (e) => {
                 e.preventDefault();
+                e.stopPropagation();
                 // Check data-footnote first, then fall back to title attribute (ESV API format)
                 let footnoteText = link.getAttribute('data-footnote') || link.getAttribute('title');
                 if (footnoteText) {
@@ -552,8 +557,13 @@
         const crossrefLinks = document.querySelectorAll('.cr');
 
         crossrefLinks.forEach(link => {
+            // Remove href to prevent browser scroll (ESV HTML has anchor links)
+            link.removeAttribute('href');
+            link.style.cursor = 'pointer';
+
             link.addEventListener('click', (e) => {
                 e.preventDefault();
+                e.stopPropagation();
                 const crossrefText = link.getAttribute('data-crossref') || link.textContent;
                 const content = `
                     <span class="verse-ref">${crossrefText}</span>

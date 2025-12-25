@@ -1,16 +1,24 @@
 <meta property="og:type" content="{{ page.og_type | default: 'website' }}">
+<meta property="og:site_name" content="St. John Lutheran Church Daily Bible Readings">
+<meta property="og:locale" content="en_US">
 <meta property="og:title" content="{{ page.og_title | default: page.title | default: site.title }}">
 <meta property="og:description" content="{{ page.og_description | default: page.description | default: site.description }}">
 {% if page.og_image %}
 <meta property="og:image" content="{{ page.og_image | absolute_url }}">
+<meta property="og:image:alt" content="{{ page.title | default: 'Daily Bible Reading' }}">
 {% else %}
 <meta property="og:image" content="{{ '/assets/banner.png' | absolute_url }}">
+<meta property="og:image:alt" content="St. John Lutheran Church Daily Bible Readings">
 {% endif %}
 <meta property="og:url" content="{{ page.url | absolute_url }}">
+{% if page.og_type == 'article' and page.date %}
+<meta property="article:published_time" content="{{ page.date }}T06:00:00-06:00">
+{% endif %}
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{ page.og_title | default: page.title | default: site.title }}">
 <meta name="twitter:description" content="{{ page.og_description | default: page.description | default: site.description }}">
 {% if page.og_image %}
 <meta name="twitter:image" content="{{ page.og_image | absolute_url }}">
+<meta name="twitter:image:alt" content="{{ page.title | default: 'Daily Bible Reading' }}">
 {% endif %}
