@@ -39,13 +39,33 @@
     padding: var(--spacing-lg);
     border-radius: 12px;
     margin-bottom: var(--spacing-lg);
-    background:
-        linear-gradient(to bottom, rgba(255, 255, 255, 0.92) 0%, rgba(255, 255, 255, 0.75) 100%),
-        url('/assets/gospel_project_year_one.png') center/cover no-repeat;
+    background: url('/assets/gospel_project_year_one.png') center/cover no-repeat;
+    position: relative;
 }
 
 .gospel-page-container .hero-section.compact {
     padding: var(--spacing-md) var(--spacing-lg);
+}
+
+/* Text container with semi-transparent background */
+.gospel-page-container .hero-section .hero-title,
+.gospel-page-container .hero-section .hero-tagline,
+.gospel-page-container .hero-section .hero-description {
+    position: relative;
+    z-index: 1;
+}
+
+.gospel-page-container .hero-section::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 85%;
+    background: rgba(255, 255, 255, 0.88);
+    border-radius: 8px;
+    z-index: 0;
 }
 
 .hero-title {
