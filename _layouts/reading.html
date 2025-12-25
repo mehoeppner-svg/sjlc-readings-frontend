@@ -1,19 +1,29 @@
 ---
 layout: default
 extra_js: /js/reading.js
+extra_css: /css/reading.css
 ---
 
-{% assign prev_year = page.prev_date | slice: 0, 4 %}
-{% assign next_year = page.next_date | slice: 0, 4 %}
-
 <nav class="day-nav" id="dayNav" aria-label="Day navigation">
-    <a href="{{ site.baseurl }}/years/{{ prev_year }}/daily_readings/{{ page.prev_date }}_reading.html" class="nav-btn prev-btn" id="prevDayBtn" aria-label="Previous day">
+    {% if page.prev_date %}
+    <a href="{{ site.baseurl }}/readings/{{ page.prev_date }}/" class="nav-btn prev-btn" id="prevDayBtn" aria-label="Previous day">
         <span class="nav-arrow">&#8249;</span>
     </a>
+    {% else %}
+    <span class="nav-btn prev-btn disabled" aria-hidden="true">
+        <span class="nav-arrow">&#8249;</span>
+    </span>
+    {% endif %}
     <span class="current-date" id="currentDateDisplay">{{ page.date }}</span>
-    <a href="{{ site.baseurl }}/years/{{ next_year }}/daily_readings/{{ page.next_date }}_reading.html" class="nav-btn next-btn" id="nextDayBtn" aria-label="Next day">
+    {% if page.next_date %}
+    <a href="{{ site.baseurl }}/readings/{{ page.next_date }}/" class="nav-btn next-btn" id="nextDayBtn" aria-label="Next day">
         <span class="nav-arrow">&#8250;</span>
     </a>
+    {% else %}
+    <span class="nav-btn next-btn disabled" aria-hidden="true">
+        <span class="nav-arrow">&#8250;</span>
+    </span>
+    {% endif %}
 </nav>
 
 <div id="readingContent" class="loaded">

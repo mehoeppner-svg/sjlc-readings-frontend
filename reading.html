@@ -2,45 +2,40 @@
 layout: default
 title: Today's Reading
 description: Daily Bible Readings from St. John Lutheran Church in Boerne, TX. Scripture, audio, and verse cards to deepen your walk with Christ.
-extra_css: /css/reading.css
 ---
 
-<!-- Day Navigation (always visible at top) -->
-<nav class="day-nav" id="dayNav" aria-label="Day navigation">
-    <a href="#" class="day-nav-btn" id="prevDayBtn">
-        <span class="arrow">&#x2190;</span>
-        <span class="label">Previous</span>
-    </a>
-    <span class="day-nav-current" id="currentDateDisplay"></span>
-    <a href="#" class="day-nav-btn" id="nextDayBtn">
-        <span class="label">Next</span>
-        <span class="arrow">&#x2192;</span>
-    </a>
-</nav>
-
-<!-- Loading State -->
-<div class="loading-container" id="loadingState">
+<!-- Redirect page - automatically navigates to the correct reading URL -->
+<div class="loading-container" style="display: flex;">
     <div class="loading-spinner"></div>
     <p class="loading-text">Loading reading...</p>
 </div>
 
-<!-- Error State (hidden by default) -->
-<div class="error-container" id="errorState">
-    <div class="error-icon">&#x1F4D6;</div>
-    <h2 class="error-title">Reading Not Found</h2>
-    <p class="error-message" id="errorMessage">This reading is not yet available.</p>
-    <a href="{{ '/browse.html' | relative_url }}" class="btn btn-primary">Browse Available Readings</a>
-</div>
+<script>
+(function() {
+    'use strict';
 
-<!-- Reading Content (injected by JS for today's reading, or redirect to static page) -->
-<div id="readingContent"></div>
+    function formatDate(date) {
+        const year = date.getFullYear();
+        const month = String(date.getMonth() + 1).padStart(2, '0');
+        const day = String(date.getDate()).padStart(2, '0');
+        return `${year}-${month}-${day}`;
+    }
 
-<!-- Copy FAB -->
-<div class="copy-fab" id="copyFab">
-    <button class="copy-verse-btn" id="copyVerseBtn" aria-label="Copy selected verses">
-        &#128203;<span class="verse-count-badge" id="verseCountBadge">0</span>
-    </button>
-    <button class="clear-selection-btn" id="clearSelectionBtn" aria-label="Clear selection" style="display: none;">&#10005;</button>
-</div>
+    function getTargetDate() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const dateParam = urlParams.get('date');
 
-<script src="{{ '/js/reading.js' | relative_url }}"></script>
+        // Validate date parameter format (YYYY-MM-DD)
+        if (dateParam && /^\d{4}-\d{2}-\d{2}$/.test(dateParam)) {
+            return dateParam;
+        }
+
+        // Default to today
+        return formatDate(new Date());
+    }
+
+    // Redirect to the reading page
+    const targetDate = getTargetDate();
+    window.location.replace(`/readings/${targetDate}/`);
+})();
+</script>

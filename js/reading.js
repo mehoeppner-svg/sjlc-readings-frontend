@@ -1,207 +1,10 @@
 /**
  * SJLC Daily Bible Readings - Reading Page JavaScript
- * Handles loading daily reading content and initializing all features after injection
+ * Handles interactive features for pre-rendered reading pages
  */
 
 (function() {
     'use strict';
-
-    // ===== DATE UTILITIES =====
-
-    function formatDateString(date) {
-        const year = date.getFullYear();
-        const month = String(date.getMonth() + 1).padStart(2, '0');
-        const day = String(date.getDate()).padStart(2, '0');
-        return `${year}-${month}-${day}`;
-    }
-
-    function parseDateString(dateStr) {
-        if (!dateStr || !/^\d{4}-\d{2}-\d{2}$/.test(dateStr)) {
-            return null;
-        }
-        const [year, month, day] = dateStr.split('-').map(Number);
-        const date = new Date(year, month - 1, day);
-        if (date.getFullYear() !== year || date.getMonth() !== month - 1 || date.getDate() !== day) {
-            return null;
-        }
-        return date;
-    }
-
-    function formatDateDisplay(date) {
-        return date.toLocaleDateString('en-US', {
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric'
-        });
-    }
-
-    function getTodayDateString() {
-        return formatDateString(new Date());
-    }
-
-    function getRequestedDate() {
-        const urlParams = new URLSearchParams(window.location.search);
-        const dateParam = urlParams.get('date');
-        if (dateParam && parseDateString(dateParam)) {
-            return dateParam;
-        }
-        return getTodayDateString();
-    }
-
-    function getAdjacentDate(dateStr, offset) {
-        const date = parseDateString(dateStr);
-        if (!date) return dateStr;
-        date.setDate(date.getDate() + offset);
-        return formatDateString(date);
-    }
-
-    // ===== CONTENT LOADING =====
-
-    function getReadingUrl(dateStr) {
-        const year = dateStr.substring(0, 4);
-        return `years/${year}/daily_readings/${dateStr}_reading.html`;
-    }
-
-    function getReadingsJsonUrl(dateStr) {
-        const year = dateStr.substring(0, 4);
-        return `years/${year}/readings.json`;
-    }
-
-    function isDateInFuture(dateStr) {
-        const today = getTodayDateString();
-        return dateStr > today;
-    }
-
-    async function loadReading(dateStr) {
-        const loadingState = document.getElementById('loadingState');
-        const errorState = document.getElementById('errorState');
-        const readingContent = document.getElementById('readingContent');
-
-        loadingState.style.display = 'flex';
-        errorState.classList.remove('show');
-        readingContent.classList.remove('loaded');
-
-        // For future dates, check if this is a fallback reading
-        if (isDateInFuture(dateStr)) {
-            try {
-                const jsonUrl = getReadingsJsonUrl(dateStr);
-                const jsonResponse = await fetch(jsonUrl);
-                if (jsonResponse.ok) {
-                    const data = await jsonResponse.json();
-                    const reading = data.readings?.find(r => r.date === dateStr);
-                    if (reading && reading.isFallback) {
-                        // Future date with only fallback reading - show "not available"
-                        showError("This reading is not yet available. Please check back later or browse other readings.");
-                        return;
-                    }
-                }
-            } catch (e) {
-                // If we can't fetch JSON, just try loading the HTML
-                console.log('Could not check readings.json:', e);
-            }
-        }
-
-        // Load the HTML content
-        const url = getReadingUrl(dateStr);
-
-        try {
-            const response = await fetch(url);
-
-            if (response.ok) {
-                const html = await response.text();
-                readingContent.innerHTML = html;
-                readingContent.classList.add('loaded');
-                loadingState.style.display = 'none';
-                updatePageTitle(dateStr);
-                updateOpenGraphMeta(dateStr);
-
-                // Initialize all reading features after content injection
-                initReadingFeatures();
-            } else {
-                showError("This reading is not yet available. Please check back later or browse other readings.");
-            }
-        } catch (error) {
-            console.error('Error loading reading:', error);
-            showError("Unable to load this reading. Please check your connection or browse other readings.");
-        }
-    }
-
-    function showError(message) {
-        const loadingState = document.getElementById('loadingState');
-        const errorState = document.getElementById('errorState');
-        const errorMessage = document.getElementById('errorMessage');
-
-        loadingState.style.display = 'none';
-        errorMessage.textContent = message;
-        errorState.classList.add('show');
-    }
-
-    // ===== NAVIGATION =====
-
-    function updateDayNavigation(dateStr) {
-        const date = parseDateString(dateStr);
-
-        const dateDisplay = document.getElementById('currentDateDisplay');
-        if (date) {
-            dateDisplay.textContent = formatDateDisplay(date);
-        }
-
-        const prevBtn = document.getElementById('prevDayBtn');
-        const nextBtn = document.getElementById('nextDayBtn');
-        const prevDate = getAdjacentDate(dateStr, -1);
-        const nextDate = getAdjacentDate(dateStr, 1);
-
-        prevBtn.href = `reading.html?date=${prevDate}`;
-        nextBtn.href = `reading.html?date=${nextDate}`;
-    }
-
-    function updatePageTitle(dateStr) {
-        const date = parseDateString(dateStr);
-        const today = getTodayDateString();
-        if (dateStr === today) {
-            document.title = "Today's Reading - SJLC Daily Bible Readings";
-        } else if (date) {
-            document.title = `${formatDateDisplay(date)} - SJLC Daily Bible Readings`;
-        }
-    }
-
-    function updateOpenGraphMeta(dateStr) {
-        const passage = document.querySelector('.reading-title')?.textContent || 'Daily Reading';
-        const verseCardImage = document.querySelector('.verse-card-image');
-        const baseUrl = window.location.origin;
-        const pageUrl = `${baseUrl}/reading.html?date=${dateStr}`;
-
-        // Build image URL
-        let imageUrl = '';
-        if (verseCardImage && verseCardImage.src) {
-            // Convert relative path to absolute
-            const imgSrc = verseCardImage.getAttribute('src');
-            imageUrl = imgSrc.startsWith('http') ? imgSrc : `${baseUrl}/${imgSrc}`;
-        }
-
-        const title = `Daily Reading: ${passage}`;
-        const description = `Read ${passage} - Daily Bible Readings from St. John Lutheran Church`;
-
-        // Update Open Graph meta tags
-        const ogTitle = document.getElementById('og-title');
-        const ogDescription = document.getElementById('og-description');
-        const ogImage = document.getElementById('og-image');
-        const ogUrl = document.getElementById('og-url');
-
-        if (ogTitle) ogTitle.setAttribute('content', title);
-        if (ogDescription) ogDescription.setAttribute('content', description);
-        if (ogImage) ogImage.setAttribute('content', imageUrl);
-        if (ogUrl) ogUrl.setAttribute('content', pageUrl);
-
-        // Update Twitter Card meta tags
-        const twitterTitle = document.getElementById('twitter-title');
-        const twitterDescription = document.getElementById('twitter-description');
-        const twitterImage = document.getElementById('twitter-image');
-
-        if (twitterTitle) twitterTitle.setAttribute('content', title);
-        if (twitterDescription) twitterDescription.setAttribute('content', description);
-        if (twitterImage) twitterImage.setAttribute('content', imageUrl);
-    }
 
     // ===== READING FEATURES INITIALIZATION =====
 
@@ -317,7 +120,7 @@
         localStorage.setItem(`sjlc_${key}`, JSON.stringify(value));
     }
 
-    // ===== VERSE SELECTOR (Full implementation from daily-reading.js) =====
+    // ===== VERSE SELECTOR =====
 
     let verseSelector = null;
 
@@ -1116,10 +919,8 @@
     // ===== INITIALIZATION =====
 
     function init() {
-        const dateStr = getRequestedDate();
-        // Set up navigation immediately (before content loads)
-        updateDayNavigation(dateStr);
-        loadReading(dateStr);
+        // Content is pre-rendered, just initialize interactive features
+        initReadingFeatures();
     }
 
     if (document.readyState === 'loading') {
