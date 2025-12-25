@@ -28,12 +28,10 @@
     };
 
     // Year One volume configuration (4 volumes/seasons)
-    // Short names used for milestone labels to avoid truncation
     const YEAR_ONE_VOLUMES = [
         {
             number: 1,
-            name: 'Creation',
-            fullName: 'Creation & Patriarchs',
+            name: 'Creation & Patriarchs',
             season: 'Fall',
             books: ['Genesis'],
             startPercent: 0,
@@ -41,8 +39,7 @@
         },
         {
             number: 2,
-            name: 'Exodus',
-            fullName: 'God Delivers',
+            name: 'God Delivers',
             season: 'Winter',
             books: ['Exodus', 'Leviticus', 'Numbers', 'Deuteronomy'],
             startPercent: 25,
@@ -50,8 +47,7 @@
         },
         {
             number: 3,
-            name: 'Judges',
-            fullName: 'The Promised Land',
+            name: 'The Promised Land',
             season: 'Spring',
             books: ['Joshua', 'Judges', 'Ruth', '1 Samuel'],
             startPercent: 50,
@@ -59,8 +55,7 @@
         },
         {
             number: 4,
-            name: 'Kingdom',
-            fullName: 'Kingdom Established',
+            name: 'Kingdom Established',
             season: 'Summer',
             books: ['2 Samuel', '1 Kings', 'Proverbs', 'Ecclesiastes', 'Job'],
             startPercent: 75,
@@ -79,7 +74,6 @@
     const pageContent = document.getElementById('pageContent');
     const yearTimelineFill = document.getElementById('yearTimelineFill');
     const volumeMilestones = document.getElementById('volumeMilestones');
-    const yearProgressText = document.getElementById('yearProgressText');
     const themesList = document.getElementById('themesList');
 
     // Get collection ID from data attribute
@@ -228,7 +222,6 @@
      */
     function calculateYearProgress() {
         if (readings.length === 0) {
-            if (yearProgressText) yearProgressText.textContent = 'No readings available yet.';
             return { progressPercent: 0, currentVolume: null };
         }
 
@@ -249,7 +242,6 @@
         }
 
         if (!latestReading) {
-            if (yearProgressText) yearProgressText.textContent = 'The journey begins soon!';
             return { progressPercent: 0, currentVolume: null };
         }
 
@@ -263,7 +255,6 @@
 
         if (!volume) {
             // Book not in Year One config - show at 0%
-            if (yearProgressText) yearProgressText.textContent = `Currently reading: ${book}`;
             return { progressPercent: 0, currentVolume: null };
         }
 
@@ -284,11 +275,6 @@
             yearTimelineFill.style.width = `${progressPercent}%`;
         }
 
-        // Update progress text (use fullName for more context)
-        if (yearProgressText) {
-            yearProgressText.innerHTML = `<strong>Volume ${volume.number}:</strong> ${volume.fullName}`;
-        }
-
         return { progressPercent, currentVolume: volume };
     }
 
@@ -300,8 +286,8 @@
         volumeMilestones.innerHTML = '';
 
         YEAR_ONE_VOLUMES.forEach((volume, i) => {
-            // Position at volume start (0%, 25%, 50%, 75%)
-            const position = volume.startPercent;
+            // Position at center of each quarter (12.5%, 37.5%, 62.5%, 87.5%)
+            const position = volume.startPercent + 12.5;
 
             // Determine state based on current volume
             let state = 'upcoming';

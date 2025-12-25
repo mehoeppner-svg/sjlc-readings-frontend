@@ -13,7 +13,6 @@
         initVerseSelector();
         initFootnotes();
         initCrossrefs();
-        initVerseCardCopy();
         initShareButton();
         initCommentaryDevotional();
     }
@@ -630,58 +629,6 @@
         document.addEventListener('keydown', escHandler);
     }
 
-    // ===== VERSE CARD COPY =====
-
-    function initVerseCardCopy() {
-        const copyBtn = document.getElementById('verseCardCopyBtn');
-        const verseCardImage = document.querySelector('.verse-card-image');
-
-        if (!copyBtn || !verseCardImage) return;
-
-        copyBtn.addEventListener('click', async (e) => {
-            e.stopPropagation();
-
-            try {
-                // Create canvas to convert to PNG (required by Clipboard API)
-                const canvas = document.createElement('canvas');
-                const ctx = canvas.getContext('2d');
-
-                const img = new Image();
-                img.crossOrigin = 'anonymous';
-
-                await new Promise((resolve, reject) => {
-                    img.onload = resolve;
-                    img.onerror = reject;
-                    img.src = verseCardImage.src;
-                });
-
-                canvas.width = img.naturalWidth;
-                canvas.height = img.naturalHeight;
-                ctx.drawImage(img, 0, 0);
-
-                const blob = await new Promise(resolve => canvas.toBlob(resolve, 'image/png'));
-
-                await navigator.clipboard.write([
-                    new ClipboardItem({ 'image/png': blob })
-                ]);
-
-                copyBtn.textContent = '\u2713';
-                copyBtn.classList.add('copied');
-                showToast('Image copied to clipboard!');
-
-                setTimeout(() => {
-                    copyBtn.textContent = '\uD83D\uDCCB';
-                    copyBtn.classList.remove('copied');
-                }, 2000);
-
-            } catch (err) {
-                console.log('Copy failed:', err);
-                // On mobile, clipboard API for images often fails - guide user to native method
-                showToast('Long-press image to save or share');
-            }
-        });
-    }
-
     // ===== SHARE BUTTON =====
 
     function initShareButton() {
@@ -689,92 +636,107 @@
         const shareSection = shareBtn?.closest('.share-section');
         if (!shareBtn || !shareSection) return;
 
-        // Create share dropdown menu
-        const dropdown = document.createElement('div');
-        dropdown.className = 'share-dropdown';
-        dropdown.innerHTML = `
-            <a href="#" class="share-option" data-platform="facebook">
-                <span class="share-option-icon">f</span>
-                <span class="share-option-label">Facebook</span>
-            </a>
-            <a href="#" class="share-option" data-platform="twitter">
-                <span class="share-option-icon">𝕏</span>
-                <span class="share-option-label">X / Twitter</span>
-            </a>
-            <a href="#" class="share-option" data-platform="whatsapp">
-                <span class="share-option-icon">💬</span>
-                <span class="share-option-label">WhatsApp</span>
-            </a>
-            <a href="#" class="share-option" data-platform="email">
-                <span class="share-option-icon">✉</span>
-                <span class="share-option-label">Email</span>
-            </a>
-            <a href="#" class="share-option" data-platform="copy">
-                <span class="share-option-icon">🔗</span>
-                <span class="share-option-label">Copy Link</span>
-            </a>
-            ${navigator.share ? `
-            <a href="#" class="share-option" data-platform="native">
-                <span class="share-option-icon">↱</span>
-                <span class="share-option-label">More...</span>
-            </a>
-            ` : ''}
-        `;
-        shareSection.appendChild(dropdown);
+        // Detect if mobile device (touch + native share available)
+        const isMobile = navigator.share && ('ontouchstart' in window || navigator.maxTouchPoints > 0);
 
-        // Toggle dropdown on button click
-        shareBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            dropdown.classList.toggle('active');
-        });
+        if (isMobile) {
+            // Mobile: Single tap opens native share sheet
+            shareBtn.addEventListener('click', async (e) => {
+                e.stopPropagation();
+                await handleNativeShare();
+            });
+        } else {
+            // Desktop: Show dropdown menu
+            const dropdown = document.createElement('div');
+            dropdown.className = 'share-dropdown';
+            dropdown.innerHTML = `
+                <a href="#" class="share-option" data-platform="facebook">
+                    <span class="share-option-icon">f</span>
+                    <span class="share-option-label">Facebook</span>
+                </a>
+                <a href="#" class="share-option" data-platform="twitter">
+                    <span class="share-option-icon">𝕏</span>
+                    <span class="share-option-label">X / Twitter</span>
+                </a>
+                <a href="#" class="share-option" data-platform="pinterest">
+                    <span class="share-option-icon">P</span>
+                    <span class="share-option-label">Pinterest</span>
+                </a>
+                <a href="#" class="share-option" data-platform="copy">
+                    <span class="share-option-icon">🔗</span>
+                    <span class="share-option-label">Copy Link</span>
+                </a>
+            `;
+            shareSection.appendChild(dropdown);
 
-        // Close dropdown when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!shareSection.contains(e.target)) {
+            // Toggle dropdown on button click
+            shareBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                dropdown.classList.toggle('active');
+            });
+
+            // Close dropdown when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!shareSection.contains(e.target)) {
+                    dropdown.classList.remove('active');
+                }
+            });
+
+            // Handle share option clicks
+            dropdown.addEventListener('click', async (e) => {
+                const option = e.target.closest('.share-option');
+                if (!option) return;
+
+                e.preventDefault();
+                const platform = option.dataset.platform;
+                const url = window.location.href;
+                const encodedUrl = encodeURIComponent(url);
+                const passage = document.querySelector('.reading-title')?.textContent || 'Daily Reading';
+                const text = encodeURIComponent(`Check out today's reading: ${passage}`);
+                const verseCardImage = document.querySelector('.verse-card-image');
+                const imageUrl = verseCardImage ? encodeURIComponent(verseCardImage.src) : '';
+
                 dropdown.classList.remove('active');
-            }
-        });
 
-        // Handle share option clicks
-        dropdown.addEventListener('click', async (e) => {
-            const option = e.target.closest('.share-option');
-            if (!option) return;
-
-            e.preventDefault();
-            const platform = option.dataset.platform;
-            const url = encodeURIComponent(window.location.href);
-            const passage = document.querySelector('.reading-title')?.textContent || 'Daily Reading';
-            const text = encodeURIComponent(`Check out today's reading: ${passage}`);
-            const title = encodeURIComponent(document.title);
-
-            dropdown.classList.remove('active');
-
-            switch (platform) {
-                case 'facebook':
-                    window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank', 'width=600,height=400');
-                    break;
-                case 'twitter':
-                    window.open(`https://twitter.com/intent/tweet?url=${url}&text=${text}`, '_blank', 'width=600,height=400');
-                    break;
-                case 'whatsapp':
-                    window.open(`https://wa.me/?text=${text}%20${url}`, '_blank');
-                    break;
-                case 'email':
-                    window.location.href = `mailto:?subject=${title}&body=${text}%0A%0A${url}`;
-                    break;
-                case 'copy':
-                    try {
-                        await navigator.clipboard.writeText(decodeURIComponent(url));
-                        showToast('Link copied to clipboard!');
-                    } catch (err) {
-                        showToast('Failed to copy link');
-                    }
-                    break;
-                case 'native':
-                    await handleNativeShare();
-                    break;
-            }
-        });
+                switch (platform) {
+                    case 'facebook':
+                        window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`, '_blank', 'width=600,height=400');
+                        break;
+                    case 'twitter':
+                        window.open(`https://twitter.com/intent/tweet?url=${encodedUrl}&text=${text}`, '_blank', 'width=600,height=400');
+                        break;
+                    case 'pinterest':
+                        // Pinterest requires an image URL
+                        if (imageUrl) {
+                            window.open(`https://pinterest.com/pin/create/button/?url=${encodedUrl}&media=${imageUrl}&description=${text}`, '_blank', 'width=600,height=400');
+                        } else {
+                            window.open(`https://pinterest.com/pin/create/button/?url=${encodedUrl}&description=${text}`, '_blank', 'width=600,height=400');
+                        }
+                        break;
+                    case 'copy':
+                        try {
+                            await navigator.clipboard.writeText(url);
+                            showToast('Link copied to clipboard!');
+                        } catch (err) {
+                            // Fallback for older browsers
+                            const textarea = document.createElement('textarea');
+                            textarea.value = url;
+                            textarea.style.position = 'fixed';
+                            textarea.style.opacity = '0';
+                            document.body.appendChild(textarea);
+                            textarea.select();
+                            try {
+                                document.execCommand('copy');
+                                showToast('Link copied to clipboard!');
+                            } catch (copyErr) {
+                                showToast('Failed to copy link');
+                            }
+                            document.body.removeChild(textarea);
+                        }
+                        break;
+                }
+            });
+        }
 
         async function handleNativeShare() {
             const url = window.location.href;
@@ -789,6 +751,7 @@
                     url: url
                 };
 
+                // Try to include the verse card image if available
                 if (verseCardImage) {
                     try {
                         const imageBlob = await getVerseCardBlob(verseCardImage);
@@ -799,14 +762,14 @@
                             }
                         }
                     } catch (imgErr) {
-                        console.log('Could not include image in share:', imgErr);
+                        // Continue without image if it fails
                     }
                 }
 
                 await navigator.share(shareData);
             } catch (err) {
                 if (err.name !== 'AbortError') {
-                    console.log('Share failed:', err);
+                    // User cancelled - that's fine, do nothing
                 }
             }
         }
