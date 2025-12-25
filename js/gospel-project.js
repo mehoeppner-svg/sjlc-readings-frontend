@@ -63,13 +63,6 @@
         }
     ];
 
-    // Season icons for visual display
-    const SEASON_ICONS = {
-        'Fall': '\uD83C\uDF42',    // Fallen leaf
-        'Winter': '\u2744\uFE0F',  // Snowflake
-        'Spring': '\uD83C\uDF3C',  // Blossom
-        'Summer': '\u2600\uFE0F'   // Sun
-    };
 
     // State
     let yearDataCache = {};
@@ -82,13 +75,10 @@
     const yearTimelineFill = document.getElementById('yearTimelineFill');
     const volumeMilestones = document.getElementById('volumeMilestones');
     const yearProgressText = document.getElementById('yearProgressText');
-    const threeYearOverview = document.getElementById('threeYearOverview');
-    const threeYearText = document.getElementById('threeYearText');
     const themesList = document.getElementById('themesList');
 
-    // Get collection ID and year number from data attributes
+    // Get collection ID from data attribute
     const collectionId = pageContent?.dataset.collectionId || 'gospel-project-year-one';
-    const yearNumber = parseInt(pageContent?.dataset.yearNumber) || 1;
 
     // Initialize
     document.addEventListener('DOMContentLoaded', init);
@@ -98,7 +88,6 @@
         extractReadings();
         const progressResult = calculateYearProgress();
         renderVolumeMilestones(progressResult.currentVolume);
-        renderThreeYearOverview();
         renderThemes();
         showContent();
     }
@@ -329,47 +318,12 @@
 
             const label = document.createElement('div');
             label.className = 'milestone-label';
+            label.textContent = volume.name;
 
-            const icon = document.createElement('span');
-            icon.className = 'season-icon';
-            icon.textContent = SEASON_ICONS[volume.season] || '';
-
-            const name = document.createElement('span');
-            name.className = 'volume-name';
-            name.textContent = volume.name;
-
-            label.appendChild(icon);
-            label.appendChild(name);
             milestone.appendChild(dot);
             milestone.appendChild(label);
             volumeMilestones.appendChild(milestone);
         });
-    }
-
-    /**
-     * Render the 3-year overview section
-     */
-    function renderThreeYearOverview() {
-        if (!threeYearOverview) return;
-
-        const indicators = threeYearOverview.querySelectorAll('.year-indicator');
-
-        indicators.forEach(indicator => {
-            const year = parseInt(indicator.dataset.year);
-            const dot = indicator.querySelector('.year-dot');
-
-            if (year < yearNumber) {
-                dot.className = 'year-dot completed';
-            } else if (year === yearNumber) {
-                dot.className = 'year-dot current';
-            } else {
-                dot.className = 'year-dot upcoming';
-            }
-        });
-
-        if (threeYearText) {
-            threeYearText.textContent = `Year ${yearNumber} of 3 in The Gospel Project`;
-        }
     }
 
     /**
