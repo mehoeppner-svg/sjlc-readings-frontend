@@ -21,7 +21,8 @@
       "Read(c:\\pyApps\\sjlc-readings-frontend\\**)",
       "Skill(commit)",
       "Skill(commit:*)",
-      "Bash(more:*)"
+      "Bash(more:*)",
+      "Bash(curl:*)"
     ],
     "deny": []
   }

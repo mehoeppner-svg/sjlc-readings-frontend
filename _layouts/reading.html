@@ -6,33 +6,26 @@ extra_css: /css/reading.css
 
 <nav class="day-nav" id="dayNav" aria-label="Day navigation">
     {% if page.prev_date %}
-    <a href="{{ site.baseurl }}/readings/{{ page.prev_date }}/" class="nav-btn prev-btn" id="prevDayBtn" aria-label="Previous day">
-        <span class="nav-arrow">&#8249;</span>
+    <a href="{{ site.baseurl }}/readings/{{ page.prev_date }}/" class="day-nav-btn" id="prevDayBtn" aria-label="Previous day">
+        <span class="arrow">&#8249;</span>
     </a>
     {% else %}
-    <span class="nav-btn prev-btn disabled" aria-hidden="true">
-        <span class="nav-arrow">&#8249;</span>
+    <span class="day-nav-btn disabled" aria-hidden="true">
+        <span class="arrow">&#8249;</span>
     </span>
     {% endif %}
-    <span class="current-date" id="currentDateDisplay">{{ page.date }}</span>
+    <span class="day-nav-current" id="currentDateDisplay">{{ page.date }}</span>
     {% if page.next_date %}
-    <a href="{{ site.baseurl }}/readings/{{ page.next_date }}/" class="nav-btn next-btn" id="nextDayBtn" aria-label="Next day">
-        <span class="nav-arrow">&#8250;</span>
+    <a href="{{ site.baseurl }}/readings/{{ page.next_date }}/" class="day-nav-btn" id="nextDayBtn" aria-label="Next day">
+        <span class="arrow">&#8250;</span>
     </a>
     {% else %}
-    <span class="nav-btn next-btn disabled" aria-hidden="true">
-        <span class="nav-arrow">&#8250;</span>
+    <span class="day-nav-btn disabled" aria-hidden="true">
+        <span class="arrow">&#8250;</span>
     </span>
     {% endif %}
 </nav>
 
 <div id="readingContent" class="loaded">
     {{ content }}
-</div>
-
-<div class="copy-fab" id="copyFab">
-    <button class="copy-verse-btn" id="copyVerseBtn" aria-label="Copy selected verses">
-        &#128203;<span class="verse-count-badge" id="verseCountBadge">0</span>
-    </button>
-    <button class="clear-selection-btn" id="clearSelectionBtn" aria-label="Clear selection" style="display: none;">&#10005;</button>
 </div>
