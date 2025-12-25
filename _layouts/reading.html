@@ -14,7 +14,7 @@ extra_css: /css/reading.css
         <span class="arrow">&#8249;</span>
     </span>
     {% endif %}
-    <span class="day-nav-current" id="currentDateDisplay">{{ page.date }}</span>
+    <span class="day-nav-current" id="currentDateDisplay">{{ page.date | date: "%B %-d, %Y" }}</span>
     {% if page.next_date %}
     <a href="{{ site.baseurl }}/readings/{{ page.next_date }}/" class="day-nav-btn" id="nextDayBtn" aria-label="Next day">
         <span class="arrow">&#8250;</span>
