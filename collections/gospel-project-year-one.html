@@ -16,7 +16,7 @@ extra_js: /js/gospel-project.js
     <div class="loading-spinner"></div>
 </div>
 
-<div class="gospel-page-container" id="pageContent" hidden data-collection-id="gospel-project-year-one">
+<div class="gospel-page-container" id="pageContent" hidden data-collection-id="gospel-project-year-one" data-year-number="1">
     <!-- Hero Section -->
     <section class="hero-section">
         <h2 class="hero-title">The Gospel Project</h2>
@@ -27,20 +27,39 @@ extra_js: /js/gospel-project.js
         </p>
     </section>
 
-    <!-- Timeline Section -->
-    <section class="timeline-section">
-        <h3 class="timeline-title">Your Journey Through Scripture</h3>
-        <div class="timeline-progress">
+    <!-- Year Progress Section (Primary) -->
+    <section class="year-progress-section">
+        <h3 class="section-title">Year One Progress</h3>
+        <div class="volume-timeline">
             <div class="timeline-bar">
-                <div class="timeline-bar-fill" id="timelineFill"></div>
+                <div class="timeline-bar-fill" id="yearTimelineFill"></div>
             </div>
-            <div id="milestonesContainer">
-                <!-- Milestones populated by JS -->
+            <div class="volume-milestones" id="volumeMilestones">
+                <!-- 4 volume milestones rendered by JS -->
             </div>
         </div>
-        <p class="progress-text" id="progressText">
-            Loading progress...
-        </p>
+        <p class="progress-text" id="yearProgressText">Loading progress...</p>
+    </section>
+
+    <!-- 3-Year Overview Section (Secondary) -->
+    <section class="three-year-section">
+        <div class="three-year-overview" id="threeYearOverview">
+            <div class="year-indicator" data-year="1">
+                <div class="year-dot"></div>
+                <span class="year-label">Year 1</span>
+            </div>
+            <div class="year-connector"></div>
+            <div class="year-indicator" data-year="2">
+                <div class="year-dot"></div>
+                <span class="year-label">Year 2</span>
+            </div>
+            <div class="year-connector"></div>
+            <div class="year-indicator" data-year="3">
+                <div class="year-dot"></div>
+                <span class="year-label">Year 3</span>
+            </div>
+        </div>
+        <p class="three-year-text" id="threeYearText">Year 1 of 3 in The Gospel Project</p>
     </section>
 
     <!-- Themes Section -->

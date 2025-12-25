@@ -1,107 +1,75 @@
 /**
  * Gospel Project Page - Dynamic timeline and themes
  * All data loaded from readings.json
+ *
+ * Progress is calculated based on Bible book and chapter position,
+ * not reading count, to handle schedule variations gracefully.
  */
 
 (function() {
     'use strict';
 
-    // Bible book to era mapping
-    const BIBLE_ERAS = {
-        // Era 1: Creation & Patriarchs
-        'Genesis': 'Creation & Patriarchs',
-
-        // Era 2: Exodus & Law
-        'Exodus': 'Exodus & Law',
-        'Leviticus': 'Exodus & Law',
-        'Numbers': 'Exodus & Law',
-        'Deuteronomy': 'Exodus & Law',
-
-        // Era 3: Conquest & Judges
-        'Joshua': 'Conquest & Judges',
-        'Judges': 'Conquest & Judges',
-        'Ruth': 'Conquest & Judges',
-
-        // Era 4: Kingdom
-        '1 Samuel': 'Kingdom',
-        '2 Samuel': 'Kingdom',
-        '1 Kings': 'Kingdom',
-        '2 Kings': 'Kingdom',
-        '1 Chronicles': 'Kingdom',
-        '2 Chronicles': 'Kingdom',
-
-        // Era 5: Exile & Return
-        'Ezra': 'Exile & Return',
-        'Nehemiah': 'Exile & Return',
-        'Esther': 'Exile & Return',
-        'Job': 'Exile & Return',
-        'Proverbs': 'Exile & Return',
-        'Ecclesiastes': 'Exile & Return',
-        'Song of Solomon': 'Exile & Return',
-        'Isaiah': 'Exile & Return',
-        'Jeremiah': 'Exile & Return',
-        'Lamentations': 'Exile & Return',
-        'Ezekiel': 'Exile & Return',
-        'Daniel': 'Exile & Return',
-        'Hosea': 'Exile & Return',
-        'Joel': 'Exile & Return',
-        'Amos': 'Exile & Return',
-        'Obadiah': 'Exile & Return',
-        'Jonah': 'Exile & Return',
-        'Micah': 'Exile & Return',
-        'Nahum': 'Exile & Return',
-        'Habakkuk': 'Exile & Return',
-        'Zephaniah': 'Exile & Return',
-        'Haggai': 'Exile & Return',
-        'Zechariah': 'Exile & Return',
-        'Malachi': 'Exile & Return',
-
-        // Era 6: Jesus
-        'Matthew': 'Jesus',
-        'Mark': 'Jesus',
-        'Luke': 'Jesus',
-        'John': 'Jesus',
-
-        // Era 7: Church
-        'Acts': 'Church',
-        'Romans': 'Church',
-        '1 Corinthians': 'Church',
-        '2 Corinthians': 'Church',
-        'Galatians': 'Church',
-        'Ephesians': 'Church',
-        'Philippians': 'Church',
-        'Colossians': 'Church',
-        '1 Thessalonians': 'Church',
-        '2 Thessalonians': 'Church',
-        '1 Timothy': 'Church',
-        '2 Timothy': 'Church',
-        'Titus': 'Church',
-        'Philemon': 'Church',
-        'Hebrews': 'Church',
-        'James': 'Church',
-        '1 Peter': 'Church',
-        '2 Peter': 'Church',
-        '1 John': 'Church',
-        '2 John': 'Church',
-        '3 John': 'Church',
-        'Jude': 'Church',
-        'Revelation': 'Church',
-
-        // Psalms - scattered throughout, don't affect era calculation
-        'Psalms': null,
-        'Psalm': null
+    // Bible book chapter counts (for progress calculation)
+    const BOOK_CHAPTERS = {
+        'Genesis': 50, 'Exodus': 40, 'Leviticus': 27, 'Numbers': 36, 'Deuteronomy': 34,
+        'Joshua': 24, 'Judges': 21, 'Ruth': 4, '1 Samuel': 31, '2 Samuel': 24,
+        '1 Kings': 22, '2 Kings': 25, 'Proverbs': 31, 'Ecclesiastes': 12, 'Job': 42,
+        '1 Chronicles': 29, '2 Chronicles': 36, 'Ezra': 10, 'Nehemiah': 13, 'Esther': 10,
+        'Isaiah': 66, 'Jeremiah': 52, 'Lamentations': 5, 'Ezekiel': 48, 'Daniel': 12,
+        'Hosea': 14, 'Joel': 3, 'Amos': 9, 'Obadiah': 1, 'Jonah': 4,
+        'Micah': 7, 'Nahum': 3, 'Habakkuk': 3, 'Zephaniah': 3, 'Haggai': 2,
+        'Zechariah': 14, 'Malachi': 4, 'Matthew': 28, 'Mark': 16, 'Luke': 24, 'John': 21,
+        'Acts': 28, 'Romans': 16, '1 Corinthians': 16, '2 Corinthians': 13,
+        'Galatians': 6, 'Ephesians': 6, 'Philippians': 4, 'Colossians': 4,
+        '1 Thessalonians': 5, '2 Thessalonians': 3, '1 Timothy': 6, '2 Timothy': 4,
+        'Titus': 3, 'Philemon': 1, 'Hebrews': 13, 'James': 5,
+        '1 Peter': 5, '2 Peter': 3, '1 John': 5, '2 John': 1, '3 John': 1,
+        'Jude': 1, 'Revelation': 22
     };
 
-    // Era order for milestone display
-    const ERA_ORDER = [
-        'Creation & Patriarchs',
-        'Exodus & Law',
-        'Conquest & Judges',
-        'Kingdom',
-        'Exile & Return',
-        'Jesus',
-        'Church'
+    // Year One volume configuration (4 volumes/seasons)
+    const YEAR_ONE_VOLUMES = [
+        {
+            number: 1,
+            name: 'Creation & Patriarchs',
+            season: 'Fall',
+            books: ['Genesis'],
+            startPercent: 0,
+            endPercent: 25
+        },
+        {
+            number: 2,
+            name: 'God Delivers',
+            season: 'Winter',
+            books: ['Exodus', 'Leviticus', 'Numbers', 'Deuteronomy'],
+            startPercent: 25,
+            endPercent: 50
+        },
+        {
+            number: 3,
+            name: 'The Promised Land',
+            season: 'Spring',
+            books: ['Joshua', 'Judges', 'Ruth', '1 Samuel'],
+            startPercent: 50,
+            endPercent: 75
+        },
+        {
+            number: 4,
+            name: 'Kingdom Established',
+            season: 'Summer',
+            books: ['2 Samuel', '1 Kings', 'Proverbs', 'Ecclesiastes', 'Job'],
+            startPercent: 75,
+            endPercent: 100
+        }
     ];
+
+    // Season icons for visual display
+    const SEASON_ICONS = {
+        'Fall': '\uD83C\uDF42',    // Fallen leaf
+        'Winter': '\u2744\uFE0F',  // Snowflake
+        'Spring': '\uD83C\uDF3C',  // Blossom
+        'Summer': '\u2600\uFE0F'   // Sun
+    };
 
     // State
     let yearDataCache = {};
@@ -111,13 +79,16 @@
     // DOM Elements
     const pageLoading = document.getElementById('pageLoading');
     const pageContent = document.getElementById('pageContent');
-    const timelineFill = document.getElementById('timelineFill');
-    const milestonesContainer = document.getElementById('milestonesContainer');
-    const progressText = document.getElementById('progressText');
+    const yearTimelineFill = document.getElementById('yearTimelineFill');
+    const volumeMilestones = document.getElementById('volumeMilestones');
+    const yearProgressText = document.getElementById('yearProgressText');
+    const threeYearOverview = document.getElementById('threeYearOverview');
+    const threeYearText = document.getElementById('threeYearText');
     const themesList = document.getElementById('themesList');
 
-    // Get collection ID from data attribute on pageContent or default
+    // Get collection ID and year number from data attributes
     const collectionId = pageContent?.dataset.collectionId || 'gospel-project-year-one';
+    const yearNumber = parseInt(pageContent?.dataset.yearNumber) || 1;
 
     // Initialize
     document.addEventListener('DOMContentLoaded', init);
@@ -125,8 +96,9 @@
     async function init() {
         await loadAllYearData();
         extractReadings();
-        calculateProgress();
-        renderMilestones();
+        const progressResult = calculateYearProgress();
+        renderVolumeMilestones(progressResult.currentVolume);
+        renderThreeYearOverview();
         renderThemes();
         showContent();
     }
@@ -233,110 +205,123 @@
     }
 
     /**
-     * Calculate progress and update timeline
-     * Progress is based on WHERE in the Bible we are (era), not reading count
+     * Extract ending chapter from passage (e.g., "Genesis 42:1-45:28" -> 45)
      */
-    function calculateProgress() {
+    function extractEndingChapter(passage) {
+        // Handle various passage formats:
+        // "Genesis 1:1-13" -> 1
+        // "Genesis 42:1-45:28" -> 45
+        // "Genesis 1:1-2:3" -> 2
+        // "Genesis 50:1-26" -> 50
+
+        // Look for the last chapter reference (before last colon or at end)
+        // Pattern: find all chapter:verse references
+        const matches = passage.match(/(\d+):\d+/g);
+        if (matches && matches.length > 0) {
+            // Get the last match and extract the chapter number
+            const lastMatch = matches[matches.length - 1];
+            return parseInt(lastMatch.split(':')[0]);
+        }
+
+        // Fallback: look for any number after the book name
+        const simpleMatch = passage.match(/\s(\d+)/);
+        return simpleMatch ? parseInt(simpleMatch[1]) : 1;
+    }
+
+    /**
+     * Calculate year progress based on Bible book and chapter
+     * Progress is gradual within volumes, not discrete jumps
+     */
+    function calculateYearProgress() {
         if (readings.length === 0) {
-            progressText.textContent = 'No readings available yet.';
-            return;
+            if (yearProgressText) yearProgressText.textContent = 'No readings available yet.';
+            return { progressPercent: 0, currentVolume: null };
         }
 
         const today = new Date();
         today.setHours(0, 0, 0, 0);
 
         // Find the latest reading (on or before today) that ISN'T Psalms
-        let latestNonPsalmReading = null;
+        let latestReading = null;
         for (let i = readings.length - 1; i >= 0; i--) {
             const readingDate = parseDate(readings[i].date);
-            // Skip future readings
             if (readingDate > today) continue;
 
             const book = extractBook(readings[i].passage);
             if (book !== 'Psalm' && book !== 'Psalms') {
-                latestNonPsalmReading = readings[i];
+                latestReading = readings[i];
                 break;
             }
         }
 
-        if (!latestNonPsalmReading) {
-            progressText.textContent = 'The journey begins soon!';
-            return;
+        if (!latestReading) {
+            if (yearProgressText) yearProgressText.textContent = 'The journey begins soon!';
+            return { progressPercent: 0, currentVolume: null };
         }
 
-        // Determine which era this reading belongs to
-        const book = extractBook(latestNonPsalmReading.passage);
-        const era = BIBLE_ERAS[book];
-        const eraIndex = era ? ERA_ORDER.indexOf(era) : -1;
+        // Extract book and chapter
+        const book = extractBook(latestReading.passage);
+        const chapter = extractEndingChapter(latestReading.passage);
+        const totalChapters = BOOK_CHAPTERS[book] || 50;
 
-        // Calculate progress as position on timeline (based on era)
-        // Each era is evenly spaced, so era 0 = 0%, era 6 = 100%
-        const progress = eraIndex >= 0
-            ? (eraIndex / (ERA_ORDER.length - 1)) * 100
-            : 0;
+        // Find which volume this book belongs to
+        const volume = YEAR_ONE_VOLUMES.find(v => v.books.includes(book));
+
+        if (!volume) {
+            // Book not in Year One config - show at 0%
+            if (yearProgressText) yearProgressText.textContent = `Currently reading: ${book}`;
+            return { progressPercent: 0, currentVolume: null };
+        }
+
+        // Calculate position within volume based on book index + chapter progress
+        const bookIndex = volume.books.indexOf(book);
+        const booksInVolume = volume.books.length;
+        const volumeWidth = volume.endPercent - volume.startPercent;
+
+        // Each book gets equal share of volume width
+        const bookWidth = volumeWidth / booksInVolume;
+        const bookStart = volume.startPercent + (bookIndex * bookWidth);
+        const chapterProgress = chapter / totalChapters;
+
+        const progressPercent = bookStart + (chapterProgress * bookWidth);
 
         // Update progress bar
-        timelineFill.style.width = `${progress}%`;
+        if (yearTimelineFill) {
+            yearTimelineFill.style.width = `${progressPercent}%`;
+        }
 
         // Update progress text
-        if (eraIndex >= 0) {
-            const percentage = Math.round(progress);
-            const eraName = ERA_ORDER[eraIndex];
-            progressText.innerHTML = `You are <strong>${percentage}% through</strong> the journey (currently in ${eraName})`;
-        } else {
-            progressText.textContent = 'The journey begins soon!';
+        if (yearProgressText) {
+            yearProgressText.innerHTML = `<strong>Volume ${volume.number}:</strong> ${volume.name}`;
         }
+
+        return { progressPercent, currentVolume: volume };
     }
 
     /**
-     * Render timeline milestones
-     * Shows ALL eras as fixed milestones, with state based on latest non-Psalm reading (on or before today)
+     * Render volume milestones (4 volumes for Year One)
      */
-    function renderMilestones() {
-        milestonesContainer.innerHTML = '';
+    function renderVolumeMilestones(currentVolume) {
+        if (!volumeMilestones) return;
+        volumeMilestones.innerHTML = '';
 
-        const today = new Date();
-        today.setHours(0, 0, 0, 0);
+        YEAR_ONE_VOLUMES.forEach((volume, i) => {
+            // Position at volume start (0%, 25%, 50%, 75%)
+            const position = volume.startPercent;
 
-        // Find the current era based on latest non-Psalm reading (on or before today)
-        let currentEraIndex = -1;
-
-        if (readings.length > 0) {
-            // Find the latest reading (on or before today) that ISN'T Psalms
-            for (let i = readings.length - 1; i >= 0; i--) {
-                const readingDate = parseDate(readings[i].date);
-                // Skip future readings
-                if (readingDate > today) continue;
-
-                const book = extractBook(readings[i].passage);
-                if (book !== 'Psalm' && book !== 'Psalms') {
-                    const era = BIBLE_ERAS[book];
-                    if (era) {
-                        currentEraIndex = ERA_ORDER.indexOf(era);
-                    }
-                    break;
-                }
-            }
-        }
-
-        // Render ALL eras as milestones, evenly spaced
-        ERA_ORDER.forEach((era, i) => {
-            // Position evenly across the timeline (0% to 100%)
-            const position = (i / (ERA_ORDER.length - 1)) * 100;
-
-            // Determine state based on current era
+            // Determine state based on current volume
             let state = 'upcoming';
-            if (currentEraIndex >= 0) {
-                if (i < currentEraIndex) {
+            if (currentVolume) {
+                if (volume.number < currentVolume.number) {
                     state = 'completed';
-                } else if (i === currentEraIndex) {
+                } else if (volume.number === currentVolume.number) {
                     state = 'current';
                 }
             }
 
             // Create milestone element
             const milestone = document.createElement('div');
-            milestone.className = `timeline-milestone ${state}`;
+            milestone.className = `volume-milestone ${state}`;
             milestone.style.left = `${position}%`;
 
             const dot = document.createElement('div');
@@ -344,22 +329,47 @@
 
             const label = document.createElement('div');
             label.className = 'milestone-label';
-            // Shorten labels for display
-            const shortLabels = {
-                'Creation & Patriarchs': 'Creation',
-                'Exodus & Law': 'Exodus',
-                'Conquest & Judges': 'Judges',
-                'Kingdom': 'Kingdom',
-                'Exile & Return': 'Exile',
-                'Jesus': 'Jesus',
-                'Church': 'Church'
-            };
-            label.textContent = shortLabels[era] || era;
 
+            const icon = document.createElement('span');
+            icon.className = 'season-icon';
+            icon.textContent = SEASON_ICONS[volume.season] || '';
+
+            const name = document.createElement('span');
+            name.className = 'volume-name';
+            name.textContent = volume.name;
+
+            label.appendChild(icon);
+            label.appendChild(name);
             milestone.appendChild(dot);
             milestone.appendChild(label);
-            milestonesContainer.appendChild(milestone);
+            volumeMilestones.appendChild(milestone);
         });
+    }
+
+    /**
+     * Render the 3-year overview section
+     */
+    function renderThreeYearOverview() {
+        if (!threeYearOverview) return;
+
+        const indicators = threeYearOverview.querySelectorAll('.year-indicator');
+
+        indicators.forEach(indicator => {
+            const year = parseInt(indicator.dataset.year);
+            const dot = indicator.querySelector('.year-dot');
+
+            if (year < yearNumber) {
+                dot.className = 'year-dot completed';
+            } else if (year === yearNumber) {
+                dot.className = 'year-dot current';
+            } else {
+                dot.className = 'year-dot upcoming';
+            }
+        });
+
+        if (threeYearText) {
+            threeYearText.textContent = `Year ${yearNumber} of 3 in The Gospel Project`;
+        }
     }
 
     /**

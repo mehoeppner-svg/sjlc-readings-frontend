@@ -58,16 +58,16 @@
     margin: 0 auto;
 }
 
-/* Timeline Section */
-.timeline-section {
+/* ===== YEAR PROGRESS SECTION ===== */
+.year-progress-section {
     background: var(--bg-white);
     border-radius: 12px;
     padding: var(--spacing-lg);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    margin-bottom: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
 }
 
-.timeline-title {
+.section-title {
     font-family: var(--font-serif);
     font-size: 1.5rem;
     font-weight: 600;
@@ -76,9 +76,9 @@
     text-align: center;
 }
 
-.timeline-progress {
+.volume-timeline {
     position: relative;
-    height: 80px;
+    height: 90px;
     margin-bottom: var(--spacing-sm);
 }
 
@@ -100,14 +100,16 @@
     width: 0%;
 }
 
-.timeline-milestone {
+/* Volume Milestones */
+.volume-milestone {
     position: absolute;
     top: 20px;
     transform: translateX(-50%);
     text-align: center;
+    width: 90px;
 }
 
-.milestone-dot {
+.volume-milestone .milestone-dot {
     width: 16px;
     height: 16px;
     border-radius: 50%;
@@ -117,12 +119,12 @@
     transition: all 0.3s ease;
 }
 
-.timeline-milestone.completed .milestone-dot {
+.volume-milestone.completed .milestone-dot {
     background: var(--success-color);
     border-color: var(--success-color);
 }
 
-.timeline-milestone.current .milestone-dot {
+.volume-milestone.current .milestone-dot {
     background: var(--accent-color);
     border-color: var(--accent-color);
     box-shadow: 0 0 0 4px rgba(114, 171, 191, 0.2);
@@ -134,14 +136,28 @@
     50% { box-shadow: 0 0 0 8px rgba(114, 171, 191, 0.1); }
 }
 
-.milestone-label {
-    font-size: 0.8rem;
+.volume-milestone .milestone-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.15rem;
+}
+
+.volume-milestone .season-icon {
+    font-size: 1rem;
+}
+
+.volume-milestone .volume-name {
+    font-size: 0.7rem;
     font-weight: 500;
     color: var(--text-secondary);
     white-space: nowrap;
+    max-width: 85px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.timeline-milestone.current .milestone-label {
+.volume-milestone.current .volume-name {
     color: var(--accent-color);
     font-weight: 600;
 }
@@ -156,6 +172,85 @@
 .progress-text strong {
     color: var(--accent-color);
     font-weight: 600;
+}
+
+/* ===== THREE-YEAR OVERVIEW SECTION ===== */
+.three-year-section {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+    padding: var(--spacing-md);
+}
+
+.three-year-overview {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0;
+}
+
+.year-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.year-dot {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 3px solid var(--border-color);
+    background: var(--bg-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.year-dot.completed {
+    background: var(--success-color);
+    border-color: var(--success-color);
+    color: white;
+}
+
+.year-dot.current {
+    background: var(--accent-color);
+    border-color: var(--accent-color);
+    color: white;
+    box-shadow: 0 0 0 4px rgba(114, 171, 191, 0.2);
+}
+
+.year-dot.upcoming {
+    background: var(--bg-light);
+    border-color: var(--border-color);
+    color: var(--text-tertiary);
+}
+
+.year-connector {
+    width: 50px;
+    height: 3px;
+    background: var(--border-color);
+    margin: 0 var(--spacing-xs);
+    margin-top: 14px; /* Align with center of dots */
+}
+
+.year-label {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.year-indicator:has(.year-dot.current) .year-label {
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+.three-year-text {
+    font-size: 0.9rem;
+    color: var(--text-tertiary);
+    margin: var(--spacing-sm) 0 0;
 }
 
 /* Themes Section */
@@ -406,16 +501,35 @@
         font-size: 1rem;
     }
 
-    .timeline-section {
+    .year-progress-section {
         padding: var(--spacing-md);
     }
 
-    .timeline-progress {
+    .volume-timeline {
         height: 100px;
     }
 
-    .milestone-label {
-        font-size: 0.7rem;
+    .volume-milestone {
+        width: 70px;
+    }
+
+    .volume-milestone .volume-name {
+        font-size: 0.6rem;
+        max-width: 65px;
+    }
+
+    .volume-milestone .season-icon {
+        font-size: 0.9rem;
+    }
+
+    .year-connector {
+        width: 30px;
+    }
+
+    .year-dot {
+        width: 28px;
+        height: 28px;
+        font-size: 0.8rem;
     }
 
     .theme-header {
