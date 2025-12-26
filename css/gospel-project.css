@@ -48,31 +48,13 @@
     padding: var(--spacing-lg) var(--spacing-xl);
 }
 
-/* Frosted glass text panel */
-.gospel-page-container .hero-section::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 75%;
-    height: 70%;
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-radius: 12px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
-    z-index: 0;
-}
-
 .hero-title {
     font-family: var(--font-serif);
     font-size: 2.5rem;
     font-weight: 600;
     color: var(--text-primary);
     margin: 0 0 var(--spacing-xs);
-    position: relative;
-    z-index: 1;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
 }
 
 .hero-section.compact .hero-title {
@@ -84,18 +66,20 @@
     color: var(--text-primary);
     font-style: italic;
     margin: 0 0 var(--spacing-md);
-    position: relative;
-    z-index: 1;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
 }
 
 .hero-description {
     font-size: 1.1rem;
     line-height: 2;
-    color: var(--text-secondary);
+    color: var(--text-primary);
     max-width: 800px;
     margin: 0 auto;
-    position: relative;
-    z-index: 1;
+    padding: var(--spacing-md) var(--spacing-lg);
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 10px;
 }
 
 .hero-section.compact .hero-description {
