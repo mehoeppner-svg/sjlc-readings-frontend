@@ -39,11 +39,30 @@
     padding: var(--spacing-lg);
     border-radius: 12px;
     margin-bottom: var(--spacing-lg);
-    background: linear-gradient(135deg, rgba(114, 171, 191, 0.08) 0%, rgba(242, 243, 245, 0.9) 100%);
+    background: url('/assets/gospel_project_year_one.png') center/cover no-repeat;
+    position: relative;
+    overflow: hidden;
 }
 
 .gospel-page-container .hero-section.compact {
     padding: var(--spacing-md) var(--spacing-lg);
+}
+
+/* Frosted glass text panel */
+.gospel-page-container .hero-section::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 92%;
+    height: 88%;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    z-index: 0;
 }
 
 .hero-title {
@@ -52,6 +71,8 @@
     font-weight: 600;
     color: var(--text-primary);
     margin: 0 0 var(--spacing-xs);
+    position: relative;
+    z-index: 1;
 }
 
 .hero-section.compact .hero-title {
@@ -60,22 +81,26 @@
 
 .hero-tagline {
     font-size: 0.95rem;
-    color: var(--text-tertiary);
+    color: var(--text-primary);
     font-style: italic;
-    margin: 0 0 var(--spacing-sm);
+    margin: 0 0 var(--spacing-md);
+    position: relative;
+    z-index: 1;
 }
 
 .hero-description {
     font-size: 1.1rem;
-    line-height: 1.8;
+    line-height: 2;
     color: var(--text-secondary);
     max-width: 800px;
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
 }
 
 .hero-section.compact .hero-description {
     font-size: 1rem;
-    line-height: 1.7;
+    line-height: 1.9;
 }
 
 /* ===== YEAR PROGRESS SECTION ===== */
