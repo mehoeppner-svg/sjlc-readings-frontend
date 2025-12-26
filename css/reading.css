@@ -666,15 +666,15 @@ ul {
     content: "]";
 }
 
-/* Crossrefs - Letters in blue */
-.bible-content .crossref {
+/* Crossrefs - Letters in blue (ESV uses sup > a.cf structure) */
+.bible-content sup:has(> a.cf) {
     position: relative;
     top: -0.4rem;
     font-size: 0.75rem;
     line-height: 0;
 }
 
-.bible-content .crossref a.cr {
+.bible-content a.cf {
     color: var(--crossref-color);
     text-decoration: none;
     font-weight: 600;
@@ -684,16 +684,16 @@ ul {
     transition: all 0.2s ease;
 }
 
-.bible-content .crossref a.cr:hover {
+.bible-content a.cf:hover {
     color: #2a6f97;
     text-decoration: underline;
 }
 
-.bible-content .crossref a.cr::before {
+.bible-content a.cf::before {
     content: "(";
 }
 
-.bible-content .crossref a.cr::after {
+.bible-content a.cf::after {
     content: ")";
 }
 
@@ -702,7 +702,7 @@ ul {
     display: none;
 }
 
-.bible-content.hide-crossrefs .crossref {
+.bible-content.hide-crossrefs sup:has(> a.cf) {
     display: none;
 }
 
@@ -878,6 +878,53 @@ ul {
 .modal-content .esv-link:hover {
     color: #5e9aac;
     text-decoration: underline;
+}
+
+/* ===== CROSSREF POPUP LIST ===== */
+.crossref-list {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.crossref-item {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.crossref-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.crossref-reference {
+    font-weight: 600;
+    color: var(--crossref-color);
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 0.25rem;
+}
+
+.crossref-reference:hover {
+    text-decoration: underline;
+}
+
+.crossref-reference .esv-arrow {
+    font-size: 0.85em;
+    opacity: 0.7;
+}
+
+.crossref-text {
+    font-family: var(--bible-serif-font);
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin: 0.25rem 0;
+    line-height: 1.5;
+    font-style: italic;
+}
+
+.crossref-version {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
 }
 
 /* ===== COMMENTARY & DEVOTIONAL SECTION ===== */

@@ -553,26 +553,70 @@
     // ===== CROSS-REFERENCES =====
 
     function initCrossrefs() {
-        const crossrefLinks = document.querySelectorAll('.cr');
+        // ESV API uses .cf class for crossref links
+        const crossrefLinks = document.querySelectorAll('.cf');
 
         crossrefLinks.forEach(link => {
-            // Remove href to prevent browser scroll (ESV HTML has anchor links)
+            // Remove href to prevent browser navigation (ESV puts refs in href)
             link.removeAttribute('href');
             link.style.cursor = 'pointer';
 
             link.addEventListener('click', (e) => {
                 e.preventDefault();
                 e.stopPropagation();
-                const crossrefText = link.getAttribute('data-crossref') || link.textContent;
-                const content = `
-                    <span class="verse-ref">${crossrefText}</span>
-                    <a href="https://www.esv.org/${crossrefText.replace(/\s+/g, '+')}" target="_blank" class="esv-link">
-                        View on ESV.org \u2192
-                    </a>
-                `;
-                showModal('Cross Reference', content, 'crossref', e);
+
+                // Get enriched crossref data if available (from backend processing)
+                const dataAttr = link.getAttribute('data-crossrefs');
+                let crossrefs = [];
+
+                if (dataAttr) {
+                    try {
+                        crossrefs = JSON.parse(dataAttr);
+                    } catch (err) {
+                        console.warn('Could not parse crossref data', err);
+                    }
+                }
+
+                // Fallback: parse from title attribute if no data-crossrefs
+                if (crossrefs.length === 0) {
+                    const title = link.getAttribute('title') || '';
+                    // Parse refs from title (format: "Gen. 1:1; [Col. 1:17; 1 John 1:1]")
+                    const refs = title.split(';').map(r => r.trim().replace(/[\[\]]/g, '')).filter(r => r);
+                    crossrefs = refs.map(ref => ({
+                        reference: ref,
+                        text: null,
+                        esv_url: `https://www.esv.org/${encodeURIComponent(ref)}`
+                    }));
+                }
+
+                // Build popup content
+                const content = buildCrossrefContent(crossrefs);
+                showModal('Cross References', content, 'crossref', e);
             });
         });
+    }
+
+    function buildCrossrefContent(crossrefs) {
+        if (!crossrefs || crossrefs.length === 0) {
+            return '<p>No cross-references available.</p>';
+        }
+
+        let html = '<div class="crossref-list">';
+
+        crossrefs.forEach(cr => {
+            html += '<div class="crossref-item">';
+            html += `<a href="${cr.esv_url}" target="_blank" rel="noopener" class="crossref-reference">${cr.reference} <span class="esv-arrow">→</span></a>`;
+
+            if (cr.text) {
+                html += `<p class="crossref-text">${cr.text}</p>`;
+                html += `<span class="crossref-version">(ASV)</span>`;
+            }
+
+            html += '</div>';
+        });
+
+        html += '</div>';
+        return html;
     }
 
     // ===== MODAL =====

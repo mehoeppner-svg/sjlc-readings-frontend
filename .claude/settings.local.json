@@ -23,7 +23,8 @@
       "Skill(commit:*)",
       "Bash(more:*)",
       "Bash(curl:*)",
-      "Bash(gh:*)"
+      "Bash(gh:*)",
+      "Bash(pip install:*)"
     ],
     "deny": []
   }
