@@ -153,11 +153,15 @@
 
         wrapVerses() {
             const paragraphs = this.bibleContentEl.querySelectorAll('p[id^="p"]');
+            const lines = this.bibleContentEl.querySelectorAll('.line');
 
-            // Check if this is prose (paragraphs with IDs) or poetry (line spans)
+            // Handle prose paragraphs if present
             if (paragraphs.length > 0) {
                 this.wrapProseVerses(paragraphs);
-            } else {
+            }
+
+            // Always handle poetry lines if present (mixed content like Hebrews)
+            if (lines.length > 0) {
                 this.wrapPoetryVerses();
             }
         }
@@ -876,7 +880,7 @@
             });
         }
 
-        // Extract all verse text from the bible content (strips footnotes/crossrefs)
+        // Extract all verse text from the bible content (strips footnotes/crossrefs/verse numbers)
         function extractAllVerseText() {
             const bibleContent = document.querySelector('.bible-content');
             if (!bibleContent) return null;
@@ -884,8 +888,8 @@
             // Clone the content to avoid modifying the DOM
             const clone = bibleContent.cloneNode(true);
 
-            // Remove footnotes and cross-references
-            clone.querySelectorAll('.footnote, .fn, .cf, sup:has(.fn), sup:has(.cf), .crossrefs').forEach(el => el.remove());
+            // Remove footnotes, cross-references, and verse numbers
+            clone.querySelectorAll('.footnote, .fn, .cf, sup:has(.fn), sup:has(.cf), .crossrefs, .verse-num, .chapter-num').forEach(el => el.remove());
 
             // Get the text content
             let text = clone.textContent || '';
