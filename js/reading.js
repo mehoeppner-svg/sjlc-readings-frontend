@@ -77,7 +77,7 @@
         if (toggleCrossrefs) {
             toggleCrossrefs.addEventListener('change', (e) => {
                 const bibleContent = document.getElementById('bibleContent');
-                const crossrefsSection = document.getElementById('crossrefsSection');
+                const crossrefsSection = document.querySelector('.crossrefs');
                 if (bibleContent) bibleContent.classList.toggle('hide-crossrefs', !e.target.checked);
                 if (crossrefsSection) crossrefsSection.classList.toggle('hidden', !e.target.checked);
                 savePreference('showCrossrefs', e.target.checked);
@@ -102,7 +102,7 @@
         const audioSection = document.getElementById('audioSection');
         const bibleContent = document.getElementById('bibleContent');
         const footnotesSection = document.getElementById('footnotesSection');
-        const crossrefsSection = document.getElementById('crossrefsSection');
+        const crossrefsSection = document.querySelector('.crossrefs');
 
         if (toggleImage) toggleImage.checked = prefs.showImage;
         if (toggleAudio) toggleAudio.checked = prefs.showAudio;
