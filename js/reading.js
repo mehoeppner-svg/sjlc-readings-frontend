@@ -15,6 +15,7 @@
         initCrossrefs();
         initShareButton();
         initCommentaryDevotional();
+        initImageLightbox();
     }
 
     // ===== SETTINGS MENU =====
@@ -735,21 +736,33 @@
             const dropdown = document.createElement('div');
             dropdown.className = 'share-dropdown';
             dropdown.innerHTML = `
+                <a href="#" class="share-option" data-platform="copy">
+                    <span class="share-option-icon">🔗</span>
+                    <span class="share-option-label">Copy Link</span>
+                </a>
+                <a href="#" class="share-option" data-platform="email">
+                    <span class="share-option-icon">✉</span>
+                    <span class="share-option-label">Email</span>
+                </a>
                 <a href="#" class="share-option" data-platform="facebook">
                     <span class="share-option-icon">f</span>
                     <span class="share-option-label">Facebook</span>
-                </a>
-                <a href="#" class="share-option" data-platform="twitter">
-                    <span class="share-option-icon">𝕏</span>
-                    <span class="share-option-label">X / Twitter</span>
                 </a>
                 <a href="#" class="share-option" data-platform="pinterest">
                     <span class="share-option-icon">P</span>
                     <span class="share-option-label">Pinterest</span>
                 </a>
-                <a href="#" class="share-option" data-platform="copy">
-                    <span class="share-option-icon">🔗</span>
-                    <span class="share-option-label">Copy Link</span>
+                <a href="#" class="share-option" data-platform="twitter">
+                    <span class="share-option-icon">𝕏</span>
+                    <span class="share-option-label">X / Twitter</span>
+                </a>
+                <a href="#" class="share-option" data-platform="download">
+                    <span class="share-option-icon">⬇</span>
+                    <span class="share-option-label">Download Image</span>
+                </a>
+                <a href="#" class="share-option" data-platform="copyverses">
+                    <span class="share-option-icon">📋</span>
+                    <span class="share-option-label">Copy All Verses</span>
                 </a>
             `;
             shareSection.appendChild(dropdown);
@@ -777,27 +790,12 @@
                 const url = window.location.href;
                 const encodedUrl = encodeURIComponent(url);
                 const passage = document.querySelector('.reading-title')?.textContent || 'Daily Reading';
-                const text = encodeURIComponent(`Check out today's reading: ${passage}`);
                 const verseCardImage = document.querySelector('.verse-card-image');
                 const imageUrl = verseCardImage ? encodeURIComponent(verseCardImage.src) : '';
 
                 dropdown.classList.remove('active');
 
                 switch (platform) {
-                    case 'facebook':
-                        window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`, '_blank', 'width=600,height=400');
-                        break;
-                    case 'twitter':
-                        window.open(`https://twitter.com/intent/tweet?url=${encodedUrl}&text=${text}`, '_blank', 'width=600,height=400');
-                        break;
-                    case 'pinterest':
-                        // Pinterest requires an image URL
-                        if (imageUrl) {
-                            window.open(`https://pinterest.com/pin/create/button/?url=${encodedUrl}&media=${imageUrl}&description=${text}`, '_blank', 'width=600,height=400');
-                        } else {
-                            window.open(`https://pinterest.com/pin/create/button/?url=${encodedUrl}&description=${text}`, '_blank', 'width=600,height=400');
-                        }
-                        break;
                     case 'copy':
                         try {
                             await navigator.clipboard.writeText(url);
@@ -819,39 +817,99 @@
                             document.body.removeChild(textarea);
                         }
                         break;
+                    case 'email':
+                        const subject = encodeURIComponent(passage);
+                        const body = encodeURIComponent(`Check out today's reading: ${passage}\n\n${url}`);
+                        window.location.href = `mailto:?subject=${subject}&body=${body}`;
+                        break;
+                    case 'facebook':
+                        window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`, '_blank', 'width=600,height=400');
+                        break;
+                    case 'pinterest':
+                        // Pinterest requires an image URL
+                        if (imageUrl) {
+                            const pinterestText = encodeURIComponent(passage);
+                            window.open(`https://pinterest.com/pin/create/button/?url=${encodedUrl}&media=${imageUrl}&description=${pinterestText}`, '_blank', 'width=600,height=400');
+                        } else {
+                            window.open(`https://pinterest.com/pin/create/button/?url=${encodedUrl}&description=${encodeURIComponent(passage)}`, '_blank', 'width=600,height=400');
+                        }
+                        break;
+                    case 'twitter':
+                        const tweetText = encodeURIComponent(passage);
+                        window.open(`https://twitter.com/intent/tweet?url=${encodedUrl}&text=${tweetText}`, '_blank', 'width=600,height=400');
+                        break;
+                    case 'download':
+                        if (verseCardImage) {
+                            try {
+                                const response = await fetch(verseCardImage.src);
+                                const blob = await response.blob();
+                                const blobUrl = URL.createObjectURL(blob);
+                                const link = document.createElement('a');
+                                link.href = blobUrl;
+                                link.download = `verse-card-${passage.replace(/[^a-zA-Z0-9]/g, '-')}.webp`;
+                                document.body.appendChild(link);
+                                link.click();
+                                document.body.removeChild(link);
+                                URL.revokeObjectURL(blobUrl);
+                                showToast('Image downloaded!');
+                            } catch (err) {
+                                showToast('Failed to download image');
+                            }
+                        } else {
+                            showToast('No image available');
+                        }
+                        break;
+                    case 'copyverses':
+                        try {
+                            const verseText = extractAllVerseText();
+                            if (verseText) {
+                                await navigator.clipboard.writeText(verseText);
+                                showToast('Verses copied to clipboard!');
+                            } else {
+                                showToast('No verse text found');
+                            }
+                        } catch (err) {
+                            showToast('Failed to copy verses');
+                        }
+                        break;
                 }
             });
         }
 
+        // Extract all verse text from the bible content (strips footnotes/crossrefs)
+        function extractAllVerseText() {
+            const bibleContent = document.querySelector('.bible-content');
+            if (!bibleContent) return null;
+
+            // Clone the content to avoid modifying the DOM
+            const clone = bibleContent.cloneNode(true);
+
+            // Remove footnotes and cross-references
+            clone.querySelectorAll('.footnote, .fn, .cf, sup:has(.fn), sup:has(.cf), .crossrefs').forEach(el => el.remove());
+
+            // Get the text content
+            let text = clone.textContent || '';
+
+            // Clean up whitespace (multiple spaces, newlines)
+            text = text.replace(/\s+/g, ' ').trim();
+
+            // Get the passage reference
+            const passage = document.querySelector('.reading-title')?.textContent || '';
+
+            // Append reference at the end
+            if (passage && text) {
+                text = `${text}\n\n— ${passage} (ESV)`;
+            }
+
+            return text;
+        }
+
         async function handleNativeShare() {
             const url = window.location.href;
-            const title = document.title;
-            const passage = document.querySelector('.reading-title')?.textContent || 'Daily Reading';
-            const verseCardImage = document.querySelector('.verse-card-image');
 
             try {
-                let shareData = {
-                    title: title,
-                    text: `Check out today's reading: ${passage}`,
-                    url: url
-                };
-
-                // Try to include the verse card image if available
-                if (verseCardImage) {
-                    try {
-                        const imageBlob = await getVerseCardBlob(verseCardImage);
-                        if (imageBlob) {
-                            const file = new File([imageBlob], 'verse-card.png', { type: 'image/png' });
-                            if (navigator.canShare && navigator.canShare({ files: [file] })) {
-                                shareData.files = [file];
-                            }
-                        }
-                    } catch (imgErr) {
-                        // Continue without image if it fails
-                    }
-                }
-
-                await navigator.share(shareData);
+                // Only pass URL - OG tags handle preview (title, description, image)
+                await navigator.share({ url: url });
             } catch (err) {
                 if (err.name !== 'AbortError') {
                     // User cancelled - that's fine, do nothing
@@ -956,6 +1014,88 @@
             if (e.key === 'Escape') {
                 closeSidePanel();
                 document.removeEventListener('keydown', handler);
+            }
+        });
+    }
+
+    // ===== IMAGE LIGHTBOX =====
+
+    function initImageLightbox() {
+        const verseCardImage = document.querySelector('.verse-card-image');
+        if (!verseCardImage) return;
+
+        // Add cursor pointer to indicate clickable
+        verseCardImage.style.cursor = 'pointer';
+
+        verseCardImage.addEventListener('click', () => {
+            openImageLightbox(verseCardImage.src);
+        });
+    }
+
+    function openImageLightbox(imageSrc) {
+        // Remove existing lightbox if any
+        const existingLightbox = document.querySelector('.image-lightbox-overlay');
+        if (existingLightbox) existingLightbox.remove();
+
+        const passage = document.querySelector('.reading-title')?.textContent || 'verse-card';
+
+        const overlay = document.createElement('div');
+        overlay.className = 'image-lightbox-overlay';
+        overlay.innerHTML = `
+            <div class="image-lightbox">
+                <button class="lightbox-close" aria-label="Close">&times;</button>
+                <img src="${imageSrc}" alt="Verse Card" class="lightbox-image">
+                <div class="lightbox-actions">
+                    <button class="lightbox-download-btn">
+                        <span>⬇</span> Download Image
+                    </button>
+                </div>
+            </div>
+        `;
+
+        document.body.appendChild(overlay);
+
+        // Animate in
+        setTimeout(() => overlay.classList.add('active'), 10);
+
+        const closeLightbox = () => {
+            overlay.classList.remove('active');
+            setTimeout(() => overlay.remove(), 200);
+        };
+
+        // Close button
+        overlay.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
+
+        // Click outside to close
+        overlay.addEventListener('click', (e) => {
+            if (e.target === overlay) closeLightbox();
+        });
+
+        // Escape key to close
+        const escHandler = (e) => {
+            if (e.key === 'Escape') {
+                closeLightbox();
+                document.removeEventListener('keydown', escHandler);
+            }
+        };
+        document.addEventListener('keydown', escHandler);
+
+        // Download button
+        overlay.querySelector('.lightbox-download-btn').addEventListener('click', async () => {
+            try {
+                const response = await fetch(imageSrc);
+                const blob = await response.blob();
+                const blobUrl = URL.createObjectURL(blob);
+                const link = document.createElement('a');
+                link.href = blobUrl;
+                link.download = `verse-card-${passage.replace(/[^a-zA-Z0-9]/g, '-')}.webp`;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                URL.revokeObjectURL(blobUrl);
+                showToast('Image downloaded!');
+            } catch (err) {
+                showToast('Failed to download image');
             }
         });
     }
