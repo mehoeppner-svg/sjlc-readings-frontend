@@ -209,10 +209,11 @@
 
         wrapPoetryVerses() {
             // Poetry uses spans with class "line" - group lines by their verse
-            // First, build a map of verse data from verse numbers
-            const verseDataMap = new Map();
+            // Build a map of verse patterns to verse data
+            const versePatternMap = new Map();
             const allVerseNums = this.bibleContentEl.querySelectorAll('.verse-num, .chapter-num');
 
+            // First pass: collect all verse patterns and their data
             allVerseNums.forEach(verseNum => {
                 const verseId = verseNum.id;
                 if (!verseId) return;
@@ -225,17 +226,14 @@
                 const chapter = parseInt(chapterNum);
                 const verse = parseInt(verseNumParsed);
 
-                // For poetry, the verse number is inside a line span
+                // Extract the verse pattern (e.g., "v58001005-1" -> "58001005")
+                // This pattern appears in both verse IDs and line span IDs
+                const versePattern = `${bookNum}${chapterNum}${verseNumParsed}`;
+                versePatternMap.set(versePattern, { verseId, book, chapter, verse });
+
+                // If verse number is inside a .line span, mark it directly
                 const lineSpan = verseNum.closest('.line');
                 if (lineSpan) {
-                    // Get the line ID and extract the pattern (continuation lines share the same ID)
-                    const lineId = lineSpan.id;
-                    if (lineId) {
-                        // Store verse data keyed by line ID pattern
-                        verseDataMap.set(lineId, { verseId, book, chapter, verse });
-                    }
-
-                    // Mark this line span as part of a verse
                     lineSpan.classList.add('verse-wrapper');
                     lineSpan.dataset.verseId = verseId;
                     lineSpan.dataset.book = book;
@@ -244,8 +242,7 @@
                 }
             });
 
-            // Now iterate through ALL .line elements to catch continuation lines
-            // Continuation lines in ESV poetry have the same ID as the first line (duplicate IDs)
+            // Second pass: find ALL .line elements and match them to verses by ID pattern
             const allLines = this.bibleContentEl.querySelectorAll('.line');
             allLines.forEach(line => {
                 // Skip lines that already have verse-wrapper
@@ -254,14 +251,18 @@
                 const lineId = line.id;
                 if (!lineId) return;
 
-                // Check if we have verse data for this line ID
-                const verseData = verseDataMap.get(lineId);
-                if (verseData) {
-                    line.classList.add('verse-wrapper');
-                    line.dataset.verseId = verseData.verseId;
-                    line.dataset.book = verseData.book;
-                    line.dataset.chapter = verseData.chapter;
-                    line.dataset.verse = verseData.verse;
+                // Try to extract verse pattern from line ID (e.g., "p58001005_06-1" -> "58001005")
+                const lineMatch = lineId.match(/p(\d{8})/);
+                if (lineMatch) {
+                    const linePattern = lineMatch[1];
+                    const verseData = versePatternMap.get(linePattern);
+                    if (verseData) {
+                        line.classList.add('verse-wrapper');
+                        line.dataset.verseId = verseData.verseId;
+                        line.dataset.book = verseData.book;
+                        line.dataset.chapter = verseData.chapter;
+                        line.dataset.verse = verseData.verse;
+                    }
                 }
             });
 
