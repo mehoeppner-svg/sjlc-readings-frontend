@@ -42,7 +42,7 @@ async function init() {
     // Load current year and render
     await loadYearData(currentYear);
     renderCalendar(currentYear, currentMonth);
-    renderLegend();
+    renderLegend(currentYear, currentMonth);
 }
 
 /**
@@ -103,6 +103,7 @@ async function handleMonthYearChange() {
         showLoading(false);
     }
     renderCalendar(currentYear, currentMonth);
+    renderLegend(currentYear, currentMonth);
 }
 
 /**
@@ -132,6 +133,7 @@ async function navigateMonth(delta) {
     }
 
     renderCalendar(currentYear, currentMonth);
+    renderLegend(currentYear, currentMonth);
 }
 
 /**
@@ -260,16 +262,34 @@ function renderCalendar(year, month) {
 }
 
 /**
- * Render the legend based on collections
+ * Get collections that have readings in the specified month
  */
-function renderLegend() {
-    // Keep the static "Today" and "Reading Available" items
+function getCollectionsForMonth(year, month) {
+    const monthReadings = getReadingsForMonth(year, month);
+    const collectionsInMonth = new Set();
+
+    monthReadings.forEach(reading => {
+        if (reading.collection) {
+            collectionsInMonth.add(reading.collection);
+        }
+    });
+
+    return allCollections.filter(col => collectionsInMonth.has(col.id));
+}
+
+/**
+ * Render the legend based on collections in the current month
+ */
+function renderLegend(year, month) {
     // Remove any dynamically added collection items
     const dynamicItems = calendarLegend.querySelectorAll('.legend-item-dynamic');
     dynamicItems.forEach(item => item.remove());
 
+    // Get only collections that have readings in this month
+    const collectionsInMonth = getCollectionsForMonth(year, month);
+
     // Add collection items
-    allCollections.forEach(collection => {
+    collectionsInMonth.forEach(collection => {
         const item = document.createElement('div');
         item.className = 'legend-item legend-item-dynamic';
 

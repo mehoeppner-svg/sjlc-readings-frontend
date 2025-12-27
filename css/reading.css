@@ -768,6 +768,48 @@ ul {
     font-weight: 600;
 }
 
+/* Cross-references section at bottom */
+.bible-content .crossrefs {
+    border-top: 1px solid var(--border-color);
+    margin-top: 2rem;
+    padding-top: 1.2rem;
+}
+
+.bible-content .crossrefs.hidden {
+    display: none;
+}
+
+.bible-content .crossrefs h3 {
+    font-family: var(--font-sans);
+    font-size: 1.1rem;
+    font-weight: 500;
+    font-style: normal;
+    margin-bottom: 0.6rem;
+    color: var(--crossref-color);
+}
+
+.bible-content .crossrefs p {
+    font-size: 0.95rem;
+    line-height: 1.8rem;
+    text-indent: 0;
+    margin-bottom: 0.5rem;
+}
+
+.bible-content .crossrefs .crossref-link {
+    color: var(--crossref-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.bible-content .crossrefs .crossref-link:hover {
+    text-decoration: underline;
+}
+
+.bible-content .crossrefs .crossref-ref {
+    color: var(--crossref-color);
+    font-weight: 500;
+}
+
 /* Copyright notice */
 .bible-content .copyright {
     color: var(--accent-color);
