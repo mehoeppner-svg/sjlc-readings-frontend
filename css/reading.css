@@ -383,8 +383,8 @@ ul {
 }
 
 .share-icon {
-    width: 16px;
-    height: 16px;
+    height: 1em;
+    width: auto;
     display: inline-block;
     order: 1;
     vertical-align: middle;
@@ -1538,8 +1538,8 @@ ul {
     }
 
     .share-icon {
-        width: 14px;
-        height: 14px;
+        height: 0.9em;
+        width: auto;
     }
 
     .audio-section {
