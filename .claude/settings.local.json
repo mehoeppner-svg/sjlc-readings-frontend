@@ -24,7 +24,8 @@
       "Bash(more:*)",
       "Bash(curl:*)",
       "Bash(gh:*)",
-      "Bash(pip install:*)"
+      "Bash(pip install:*)",
+      "Bash(wc:*)"
     ],
     "deny": []
   }
