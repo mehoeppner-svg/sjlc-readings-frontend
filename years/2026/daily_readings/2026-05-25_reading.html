@@ -1,127 +1,111 @@
-<div class="daily-reading-container"
-     data-passage="Psalm 15-16; John 9:1-23"
-     data-has-commentary="false"
-     data-has-devotional="false"
-     data-is-verse-card="false">
-
-    <!-- Header -->
-    <div class="reading-header">
-        <h1 class="reading-title">Psalm 15-16; John 9:1-23</h1>
-        <div class="reading-date">May 25, 2026</div>
-    </div>
-
-
-    <!-- Audio Player -->
-    <div class="audio-section" id="audioSection">
-        <audio controls preload="metadata" class="bible-audio">
-            <source src="https://audio.esv.org/david-cochran-heath/mq/19015001-19016011.mp3" type="audio/mpeg">
-        </audio>
-    </div>
-
-    <!-- Bible Content Container -->
-    <div class="bible-content-container">
-
-        <!-- Settings Wrapper -->
-        <div class="settings-wrapper">
-            <!-- Floating Copy Button (FAB) for Verse Selection -->
-            <div class="copy-fab" id="copyFab">
-                <button class="clear-selection-button" id="clearSelectionBtn" title="Clear selection">×</button>
-                <button class="copy-button" id="copyVerseBtn" title="Copy selected verses">
+<div class="daily-reading-container" data-has-commentary="false" data-has-devotional="false" data-is-verse-card="false" data-passage="Psalm 15-16; John 9:1-23">
+<!-- Header -->
+<div class="reading-header">
+<h1 class="reading-title">Psalm 15-16; John 9:1-23</h1>
+<div class="reading-date">May 25, 2026</div>
+</div>
+<!-- Audio Player -->
+<div class="audio-section" id="audioSection">
+<audio class="bible-audio" controls="" preload="metadata">
+<source src="https://audio.esv.org/david-cochran-heath/mq/19015001-19016011.mp3" type="audio/mpeg"/>
+</audio>
+</div>
+<!-- Bible Content Container -->
+<div class="bible-content-container">
+<!-- Settings Wrapper -->
+<div class="settings-wrapper">
+<!-- Floating Copy Button (FAB) for Verse Selection -->
+<div class="copy-fab" id="copyFab">
+<button class="clear-selection-button" id="clearSelectionBtn" title="Clear selection">×</button>
+<button class="copy-button" id="copyVerseBtn" title="Copy selected verses">
                     📋
                     <span class="verse-count-badge" id="verseCountBadge">0</span>
-                </button>
-            </div>
+</button>
+</div>
+<!-- Settings Button -->
+<button class="settings-btn" id="settingsBtn" title="Display Settings">⚙️</button>
+<!-- Settings Menu -->
+<div class="settings-menu" id="settingsMenu">
+<h4>Display Settings</h4>
+<label>
+<input checked="" id="toggleImage" type="checkbox"/>
+<span>Image</span>
+</label>
+<label>
+<input checked="" id="toggleAudio" type="checkbox"/>
+<span>Audio Player</span>
+</label>
+<label>
+<input checked="" id="toggleFootnotes" type="checkbox"/>
+<span>Footnotes</span>
+</label>
+<label>
+<input checked="" id="toggleCrossrefs" type="checkbox"/>
+<span>Cross-References</span>
+</label>
+</div>
+</div>
+<!-- Share Button -->
+<div class="share-section">
+<button class="share-btn" id="shareBtn" title="Share this reading">
+<img alt="Share" class="share-icon" src="/assets/share.png"/>
 
-            <!-- Settings Button -->
-            <button class="settings-btn" id="settingsBtn" title="Display Settings">⚙️</button>
-
-            <!-- Settings Menu -->
-            <div class="settings-menu" id="settingsMenu">
-                <h4>Display Settings</h4>
-                <label>
-                    <input type="checkbox" id="toggleImage" checked>
-                    <span>Image</span>
-                </label>
-                <label>
-                    <input type="checkbox" id="toggleAudio" checked>
-                    <span>Audio Player</span>
-                </label>
-                <label>
-                    <input type="checkbox" id="toggleFootnotes" checked>
-                    <span>Footnotes</span>
-                </label>
-                <label>
-                    <input type="checkbox" id="toggleCrossrefs" checked>
-                    <span>Cross-References</span>
-                </label>
-            </div>
-        </div>
-
-        <!-- Share Button -->
-        <div class="share-section">
-            <button class="share-btn" id="shareBtn" title="Share this reading">
-                <span class="share-icon">↱</span>
-                <span class="share-text">Share</span>
-            </button>
-        </div>
-
-        <!-- Bible Content -->
-        <div class="bible-content" id="bibleContent">
+</button>
+</div>
+<!-- Bible Content -->
+<div class="bible-content" id="bibleContent">
 <h3 id="p19015001_01-1">Who Shall Dwell on Your Holy Hill?</h3>
-<h4 id="p19015001_08-1" class="psalm-title">A Psalm of David.</h4>
+<h4 class="psalm-title" id="p19015001_08-1">A Psalm of David.</h4>
 <p class="block-indent"><span class="begin-line-group"></span>
-<span id="p19015001_08-1" class="line"><b class="chapter-num" id="v19015001-1">15&nbsp;</b>&nbsp;&nbsp;O LORD, who shall sojourn in your tent?</span><br /><span id="p19015001_08-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;Who shall dwell on your holy hill?</span><br /><span class="end-line-group"></span>
+<span class="line" id="p19015001_08-1"><b class="chapter-num" id="v19015001-1">15 </b>  O LORD, who shall sojourn in your tent?</span><br/><span class="indent line" id="p19015001_08-1">    Who shall dwell on your holy hill?</span><br/><span class="end-line-group"></span>
 <span class="begin-line-group"></span>
-<span id="p19015002_08-1" class="line"><b class="verse-num inline" id="v19015002-1">2&nbsp;</b>&nbsp;&nbsp;He who walks blamelessly and does what is right</span><br /><span id="p19015002_08-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;and speaks truth in his heart;</span><br /><span id="p19015003_08-1" class="line"><b class="verse-num inline" id="v19015003-1">3&nbsp;</b>&nbsp;&nbsp;who does not slander with his tongue</span><br /><span id="p19015003_08-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;and does no evil to his neighbor,</span><br /><span id="p19015003_08-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;nor takes up a reproach against his friend;</span><br /><span id="p19015004_08-1" class="line"><b class="verse-num inline" id="v19015004-1">4&nbsp;</b>&nbsp;&nbsp;in whose eyes a vile person is despised,</span><br /><span id="p19015004_08-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;but who honors those who fear the LORD;</span><br /><span id="p19015004_08-1" class="line">&nbsp;&nbsp;who swears to his own hurt and does not change;</span><br /><span id="p19015005_08-1" class="line"><b class="verse-num inline" id="v19015005-1">5&nbsp;</b>&nbsp;&nbsp;who does not put out his money at interest</span><br /><span id="p19015005_08-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;and does not take a bribe against the innocent.</span><br /><span id="p19015005_08-1" class="line">&nbsp;&nbsp;He who does these things shall never be moved.</span><br /><span class="end-line-group"></span>
+<span class="line" id="p19015002_08-1"><b class="verse-num inline" id="v19015002-1">2 </b>  He who walks blamelessly and does what is right</span><br/><span class="indent line" id="p19015002_08-1">    and speaks truth in his heart;</span><br/><span class="line" id="p19015003_08-1"><b class="verse-num inline" id="v19015003-1">3 </b>  who does not slander with his tongue</span><br/><span class="indent line" id="p19015003_08-1">    and does no evil to his neighbor,</span><br/><span class="indent line" id="p19015003_08-1">    nor takes up a reproach against his friend;</span><br/><span class="line" id="p19015004_08-1"><b class="verse-num inline" id="v19015004-1">4 </b>  in whose eyes a vile person is despised,</span><br/><span class="indent line" id="p19015004_08-1">    but who honors those who fear the LORD;</span><br/><span class="line" id="p19015004_08-1">  who swears to his own hurt and does not change;</span><br/><span class="line" id="p19015005_08-1"><b class="verse-num inline" id="v19015005-1">5 </b>  who does not put out his money at interest</span><br/><span class="indent line" id="p19015005_08-1">    and does not take a bribe against the innocent.</span><br/><span class="line" id="p19015005_08-1">  He who does these things shall never be moved.</span><br/><span class="end-line-group"></span>
 </p><h3 id="p19016001_08-1">You Will Not Abandon My Soul</h3>
-<h4 id="p19016001_14-1" class="psalm-title">A Miktam<sup class="footnote"><a class="fn" href="#f1-1" id="fb1-1" title="&lt;note class=&quot;explanation&quot; sub-class=&quot;musical-term&quot;&gt;Probably a musical or liturgical term&lt;/note&gt;">1</a></sup> of David.</h4>
+<h4 class="psalm-title" id="p19016001_14-1">A Miktam<sup class="footnote"><a class="fn" href="#f1-1" id="fb1-1" title='&lt;note class="explanation" sub-class="musical-term"&gt;Probably a musical or liturgical term&lt;/note&gt;'>1</a></sup> of David.</h4>
 <p class="block-indent"><span class="begin-line-group"></span>
-<span id="p19016001_14-1" class="line"><b class="chapter-num" id="v19016001-1">16&nbsp;</b>&nbsp;&nbsp;Preserve me, O God, for in you I take refuge.</span><br /><span id="p19016002_14-1" class="line"><b class="verse-num inline" id="v19016002-1">2&nbsp;</b>&nbsp;&nbsp;I say to the LORD, “You are my Lord;</span><br /><span id="p19016002_14-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;I have no good apart from you.”</span><br /><span class="end-line-group"></span>
+<span class="line" id="p19016001_14-1"><b class="chapter-num" id="v19016001-1">16 </b>  Preserve me, O God, for in you I take refuge.</span><br/><span class="line" id="p19016002_14-1"><b class="verse-num inline" id="v19016002-1">2 </b>  I say to the LORD, “You are my Lord;</span><br/><span class="indent line" id="p19016002_14-1">    I have no good apart from you.”</span><br/><span class="end-line-group"></span>
 <span class="begin-line-group"></span>
-<span id="p19016003_14-1" class="line"><b class="verse-num inline" id="v19016003-1">3&nbsp;</b>&nbsp;&nbsp;As for the saints in the land, they are the excellent ones,</span><br /><span id="p19016003_14-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;in whom is all my delight.<sup class="footnote"><a class="fn" href="#f2-1" id="fb2-1" title="&lt;note class=&quot;alternative&quot;&gt;Or &lt;i&gt;To the saints in the land, the excellent in whom is all my delight, I say:&lt;/i&gt;&lt;/note&gt;">2</a></sup></span><br /><span class="end-line-group"></span>
+<span class="line" id="p19016003_14-1"><b class="verse-num inline" id="v19016003-1">3 </b>  As for the saints in the land, they are the excellent ones,</span><br/><span class="indent line" id="p19016003_14-1">    in whom is all my delight.<sup class="footnote"><a class="fn" href="#f2-1" id="fb2-1" title='&lt;note class="alternative"&gt;Or &lt;i&gt;To the saints in the land, the excellent in whom is all my delight, I say:&lt;/i&gt;&lt;/note&gt;'>2</a></sup></span><br/><span class="end-line-group"></span>
 <span class="begin-line-group"></span>
-<span id="p19016004_14-1" class="line"><b class="verse-num inline" id="v19016004-1">4&nbsp;</b>&nbsp;&nbsp;The sorrows of those who run after<sup class="footnote"><a class="fn" href="#f3-1" id="fb3-1" title="&lt;note class=&quot;alternative&quot;&gt;Or &lt;i&gt;&lt;span class=&quot;catch-word&quot;&gt;who&lt;/span&gt; acquire&lt;/i&gt;&lt;/note&gt;">3</a></sup> another god shall multiply;</span><br /><span id="p19016004_14-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;their drink offerings of blood I will not pour out</span><br /><span id="p19016004_14-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;or take their names on my lips.</span><br /><span class="end-line-group"></span>
+<span class="line" id="p19016004_14-1"><b class="verse-num inline" id="v19016004-1">4 </b>  The sorrows of those who run after<sup class="footnote"><a class="fn" href="#f3-1" id="fb3-1" title='&lt;note class="alternative"&gt;Or &lt;i&gt;&lt;span class="catch-word"&gt;who&lt;/span&gt; acquire&lt;/i&gt;&lt;/note&gt;'>3</a></sup> another god shall multiply;</span><br/><span class="indent line" id="p19016004_14-1">    their drink offerings of blood I will not pour out</span><br/><span class="indent line" id="p19016004_14-1">    or take their names on my lips.</span><br/><span class="end-line-group"></span>
 <span class="begin-line-group"></span>
-<span id="p19016005_14-1" class="line"><b class="verse-num inline" id="v19016005-1">5&nbsp;</b>&nbsp;&nbsp;The LORD is my chosen portion and my cup;</span><br /><span id="p19016005_14-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;you hold my lot.</span><br /><span id="p19016006_14-1" class="line"><b class="verse-num inline" id="v19016006-1">6&nbsp;</b>&nbsp;&nbsp;The lines have fallen for me in pleasant places;</span><br /><span id="p19016006_14-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;indeed, I have a beautiful inheritance.</span><br /><span class="end-line-group"></span>
+<span class="line" id="p19016005_14-1"><b class="verse-num inline" id="v19016005-1">5 </b>  The LORD is my chosen portion and my cup;</span><br/><span class="indent line" id="p19016005_14-1">    you hold my lot.</span><br/><span class="line" id="p19016006_14-1"><b class="verse-num inline" id="v19016006-1">6 </b>  The lines have fallen for me in pleasant places;</span><br/><span class="indent line" id="p19016006_14-1">    indeed, I have a beautiful inheritance.</span><br/><span class="end-line-group"></span>
 <span class="begin-line-group"></span>
-<span id="p19016007_14-1" class="line"><b class="verse-num inline" id="v19016007-1">7&nbsp;</b>&nbsp;&nbsp;I bless the LORD who gives me counsel;</span><br /><span id="p19016007_14-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;in the night also my heart instructs me.<sup class="footnote"><a class="fn" href="#f4-1" id="fb4-1" title="&lt;note class=&quot;translation&quot; sub-class=&quot;original&quot;&gt;Hebrew &lt;i&gt;&lt;span class=&quot;catch-word&quot;&gt;my&lt;/span&gt; kidneys instruct me&lt;/i&gt;&lt;/note&gt;">4</a></sup></span><br /><span id="p19016008_14-1" class="line"><b class="verse-num inline" id="v19016008-1">8&nbsp;</b>&nbsp;&nbsp;I have set the LORD always before me;</span><br /><span id="p19016008_14-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;because he is at my right hand, I shall not be shaken.</span><br /><span class="end-line-group"></span>
+<span class="line" id="p19016007_14-1"><b class="verse-num inline" id="v19016007-1">7 </b>  I bless the LORD who gives me counsel;</span><br/><span class="indent line" id="p19016007_14-1">    in the night also my heart instructs me.<sup class="footnote"><a class="fn" href="#f4-1" id="fb4-1" title='&lt;note class="translation" sub-class="original"&gt;Hebrew &lt;i&gt;&lt;span class="catch-word"&gt;my&lt;/span&gt; kidneys instruct me&lt;/i&gt;&lt;/note&gt;'>4</a></sup></span><br/><span class="line" id="p19016008_14-1"><b class="verse-num inline" id="v19016008-1">8 </b>  I have set the LORD always before me;</span><br/><span class="indent line" id="p19016008_14-1">    because he is at my right hand, I shall not be shaken.</span><br/><span class="end-line-group"></span>
 <span class="begin-line-group"></span>
-<span id="p19016009_14-1" class="line"><b class="verse-num inline" id="v19016009-1">9&nbsp;</b>&nbsp;&nbsp;Therefore my heart is glad, and my whole being<sup class="footnote"><a class="fn" href="#f5-1" id="fb5-1" title="&lt;note class=&quot;translation&quot; sub-class=&quot;original&quot;&gt;Hebrew &lt;i&gt;&lt;span class=&quot;catch-word&quot;&gt;my&lt;/span&gt; glory&lt;/i&gt;&lt;/note&gt;">5</a></sup> rejoices;</span><br /><span id="p19016009_14-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;my flesh also dwells secure.</span><br /><span id="p19016010_14-1" class="line"><b class="verse-num inline" id="v19016010-1">10&nbsp;</b>&nbsp;&nbsp;For you will not abandon my soul to Sheol,</span><br /><span id="p19016010_14-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;or let your holy one see corruption.<sup class="footnote"><a class="fn" href="#f6-1" id="fb6-1" title="&lt;note class=&quot;alternative&quot;&gt;Or &lt;i&gt;&lt;span class=&quot;catch-word&quot;&gt;see&lt;/span&gt; the pit&lt;/i&gt;&lt;/note&gt;">6</a></sup></span><br /><span class="end-line-group"></span>
+<span class="line" id="p19016009_14-1"><b class="verse-num inline" id="v19016009-1">9 </b>  Therefore my heart is glad, and my whole being<sup class="footnote"><a class="fn" href="#f5-1" id="fb5-1" title='&lt;note class="translation" sub-class="original"&gt;Hebrew &lt;i&gt;&lt;span class="catch-word"&gt;my&lt;/span&gt; glory&lt;/i&gt;&lt;/note&gt;'>5</a></sup> rejoices;</span><br/><span class="indent line" id="p19016009_14-1">    my flesh also dwells secure.</span><br/><span class="line" id="p19016010_14-1"><b class="verse-num inline" id="v19016010-1">10 </b>  For you will not abandon my soul to Sheol,</span><br/><span class="indent line" id="p19016010_14-1">    or let your holy one see corruption.<sup class="footnote"><a class="fn" href="#f6-1" id="fb6-1" title='&lt;note class="alternative"&gt;Or &lt;i&gt;&lt;span class="catch-word"&gt;see&lt;/span&gt; the pit&lt;/i&gt;&lt;/note&gt;'>6</a></sup></span><br/><span class="end-line-group"></span>
 <span class="begin-line-group"></span>
-<span id="p19016011_14-1" class="line"><b class="verse-num inline" id="v19016011-1">11&nbsp;</b>&nbsp;&nbsp;You make known to me the path of life;</span><br /><span id="p19016011_14-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;in your presence there is fullness of joy;</span><br /><span id="p19016011_14-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;at your right hand are pleasures forevermore.</span><br /></p><span class="end-line-group"></span>
+<span class="line" id="p19016011_14-1"><b class="verse-num inline" id="v19016011-1">11 </b>  You make known to me the path of life;</span><br/><span class="indent line" id="p19016011_14-1">    in your presence there is fullness of joy;</span><br/><span class="indent line" id="p19016011_14-1">    at your right hand are pleasures forevermore.</span><br/></p><span class="end-line-group"></span>
 <div class="footnotes extra_text">
 <h3>Footnotes</h3>
 <p><span class="footnote"><a href="#fb1-1" id="f1-1">[1]</a></span> <span class="footnote-ref">16:1</span> <note class="explanation" sub-class="musical-term">Probably a musical or liturgical term</note>
-<br />
+<br/>
 <span class="footnote"><a href="#fb2-1" id="f2-1">[2]</a></span> <span class="footnote-ref">16:3</span> <note class="alternative">Or <i>To the saints in the land, the excellent in whom is all my delight, I say:</i></note>
-<br />
+<br/>
 <span class="footnote"><a href="#fb3-1" id="f3-1">[3]</a></span> <span class="footnote-ref">16:4</span> <note class="alternative">Or <i><span class="catch-word">who</span> acquire</i></note>
-<br />
+<br/>
 <span class="footnote"><a href="#fb4-1" id="f4-1">[4]</a></span> <span class="footnote-ref">16:7</span> <note class="translation" sub-class="original">Hebrew <i><span class="catch-word">my</span> kidneys instruct me</i></note>
-<br />
+<br/>
 <span class="footnote"><a href="#fb5-1" id="f5-1">[5]</a></span> <span class="footnote-ref">16:9</span> <note class="translation" sub-class="original">Hebrew <i><span class="catch-word">my</span> glory</i></note>
-<br />
+<br/>
 <span class="footnote"><a href="#fb6-1" id="f6-1">[6]</a></span> <span class="footnote-ref">16:10</span> <note class="alternative">Or <i><span class="catch-word">see</span> the pit</i></note>
 </p>
 </div>
-<a href="http://www.esv.org" class="copyright">ESV</a>
-<hr class='passage-divider'>
-
+<a class="copyright" href="http://www.esv.org">ESV</a>
+<hr class="passage-divider"/>
 <h3 id="p43009001_01-1">Jesus Heals a Man Born Blind</h3>
-<p id="p43009001_07-1" class="starts-chapter"><b class="chapter-num" id="v43009001-1">9&nbsp;</b>As he passed by, he saw a man blind from birth. <b class="verse-num" id="v43009002-1">2&nbsp;</b>And his disciples asked him, “Rabbi, who sinned, this man or his parents, that he was born blind?” <b class="verse-num" id="v43009003-1">3&nbsp;</b>Jesus answered, <span class="woc">“It was not that this man sinned, or his parents, but that the works of God might be displayed in him.</span> <b class="verse-num woc" id="v43009004-1">4&nbsp;</b><span class="woc">We must work the works of him who sent me while it is day; night is coming, when no one can work.</span> <b class="verse-num woc" id="v43009005-1">5&nbsp;</b><span class="woc">As long as I am in the world, I am the light of the world.”</span> <b class="verse-num" id="v43009006-1">6&nbsp;</b>Having said these things, he spit on the ground and made mud with the saliva. Then he anointed the man’s eyes with the mud <b class="verse-num" id="v43009007-1">7&nbsp;</b>and said to him, <span class="woc">“Go, wash in the pool of Siloam”</span> (which means Sent). So he went and washed and came back seeing.</p>
-<p id="p43009007_07-1"><b class="verse-num" id="v43009008-1">8&nbsp;</b>The neighbors and those who had seen him before as a beggar were saying, “Is this not the man who used to sit and beg?” <b class="verse-num" id="v43009009-1">9&nbsp;</b>Some said, “It is he.” Others said, “No, but he is like him.” He kept saying, “I am the man.” <b class="verse-num" id="v43009010-1">10&nbsp;</b>So they said to him, “Then how were your eyes opened?” <b class="verse-num" id="v43009011-1">11&nbsp;</b>He answered, “The man called Jesus made mud and anointed my eyes and said to me, <span class="woc">‘Go to Siloam and wash.’</span> So I went and washed and received my sight.” <b class="verse-num" id="v43009012-1">12&nbsp;</b>They said to him, “Where is he?” He said, “I do not know.”</p>
-<p id="p43009012_07-1"><b class="verse-num" id="v43009013-1">13&nbsp;</b>They brought to the Pharisees the man who had formerly been blind. <b class="verse-num" id="v43009014-1">14&nbsp;</b>Now it was a Sabbath day when Jesus made the mud and opened his eyes. <b class="verse-num" id="v43009015-1">15&nbsp;</b>So the Pharisees again asked him how he had received his sight. And he said to them, “He put mud on my eyes, and I washed, and I see.” <b class="verse-num" id="v43009016-1">16&nbsp;</b>Some of the Pharisees said, “This man is not from God, for he does not keep the Sabbath.” But others said, “How can a man who is a sinner do such signs?” And there was a division among them. <b class="verse-num" id="v43009017-1">17&nbsp;</b>So they said again to the blind man, “What do you say about him, since he has opened your eyes?” He said, “He is a prophet.”</p>
-<p id="p43009017_07-1"><b class="verse-num" id="v43009018-1">18&nbsp;</b>The Jews<sup class="footnote"><a class="fn" href="#f1-1" id="fb1-1" title="&lt;note class=&quot;explanation&quot;&gt;Greek &lt;i language=&quot;Greek&quot;&gt;Ioudaioi&lt;/i&gt; probably refers here to Jewish religious leaders, and others under their influence, in that time; also verse 22&lt;/note&gt;">1</a></sup> did not believe that he had been blind and had received his sight, until they called the parents of the man who had received his sight <b class="verse-num" id="v43009019-1">19&nbsp;</b>and asked them, “Is this your son, who you say was born blind? How then does he now see?” <b class="verse-num" id="v43009020-1">20&nbsp;</b>His parents answered, “We know that this is our son and that he was born blind. <b class="verse-num" id="v43009021-1">21&nbsp;</b>But how he now sees we do not know, nor do we know who opened his eyes. Ask him; he is of age. He will speak for himself.” <b class="verse-num" id="v43009022-1">22&nbsp;</b>(His parents said these things because they feared the Jews, for the Jews had already agreed that if anyone should confess Jesus<sup class="footnote"><a class="fn" href="#f2-1" id="fb2-1" title="&lt;note class=&quot;translation&quot; sub-class=&quot;original&quot;&gt;Greek &lt;i&gt;him&lt;/i&gt;&lt;/note&gt;">2</a></sup> to be Christ, he was to be put out of the synagogue. <b class="verse-num" id="v43009023-1">23&nbsp;</b>Therefore his parents said, “He is of age; ask him.”)</p>
+<p class="starts-chapter" id="p43009001_07-1"><b class="chapter-num" id="v43009001-1">9 </b>As he passed by, he saw a man blind from birth. <b class="verse-num" id="v43009002-1">2 </b>And his disciples asked him, “Rabbi, who sinned, this man or his parents, that he was born blind?” <b class="verse-num" id="v43009003-1">3 </b>Jesus answered, <span class="woc">“It was not that this man sinned, or his parents, but that the works of God might be displayed in him.</span> <b class="verse-num woc" id="v43009004-1">4 </b><span class="woc">We must work the works of him who sent me while it is day; night is coming, when no one can work.</span> <b class="verse-num woc" id="v43009005-1">5 </b><span class="woc">As long as I am in the world, I am the light of the world.”</span> <b class="verse-num" id="v43009006-1">6 </b>Having said these things, he spit on the ground and made mud with the saliva. Then he anointed the man’s eyes with the mud <b class="verse-num" id="v43009007-1">7 </b>and said to him, <span class="woc">“Go, wash in the pool of Siloam”</span> (which means Sent). So he went and washed and came back seeing.</p>
+<p id="p43009007_07-1"><b class="verse-num" id="v43009008-1">8 </b>The neighbors and those who had seen him before as a beggar were saying, “Is this not the man who used to sit and beg?” <b class="verse-num" id="v43009009-1">9 </b>Some said, “It is he.” Others said, “No, but he is like him.” He kept saying, “I am the man.” <b class="verse-num" id="v43009010-1">10 </b>So they said to him, “Then how were your eyes opened?” <b class="verse-num" id="v43009011-1">11 </b>He answered, “The man called Jesus made mud and anointed my eyes and said to me, <span class="woc">‘Go to Siloam and wash.’</span> So I went and washed and received my sight.” <b class="verse-num" id="v43009012-1">12 </b>They said to him, “Where is he?” He said, “I do not know.”</p>
+<p id="p43009012_07-1"><b class="verse-num" id="v43009013-1">13 </b>They brought to the Pharisees the man who had formerly been blind. <b class="verse-num" id="v43009014-1">14 </b>Now it was a Sabbath day when Jesus made the mud and opened his eyes. <b class="verse-num" id="v43009015-1">15 </b>So the Pharisees again asked him how he had received his sight. And he said to them, “He put mud on my eyes, and I washed, and I see.” <b class="verse-num" id="v43009016-1">16 </b>Some of the Pharisees said, “This man is not from God, for he does not keep the Sabbath.” But others said, “How can a man who is a sinner do such signs?” And there was a division among them. <b class="verse-num" id="v43009017-1">17 </b>So they said again to the blind man, “What do you say about him, since he has opened your eyes?” He said, “He is a prophet.”</p>
+<p id="p43009017_07-1"><b class="verse-num" id="v43009018-1">18 </b>The Jews<sup class="footnote"><a class="fn" href="#f1-1" id="fb1-1" title='&lt;note class="explanation"&gt;Greek &lt;i language="Greek"&gt;Ioudaioi&lt;/i&gt; probably refers here to Jewish religious leaders, and others under their influence, in that time; also verse 22&lt;/note&gt;'>1</a></sup> did not believe that he had been blind and had received his sight, until they called the parents of the man who had received his sight <b class="verse-num" id="v43009019-1">19 </b>and asked them, “Is this your son, who you say was born blind? How then does he now see?” <b class="verse-num" id="v43009020-1">20 </b>His parents answered, “We know that this is our son and that he was born blind. <b class="verse-num" id="v43009021-1">21 </b>But how he now sees we do not know, nor do we know who opened his eyes. Ask him; he is of age. He will speak for himself.” <b class="verse-num" id="v43009022-1">22 </b>(His parents said these things because they feared the Jews, for the Jews had already agreed that if anyone should confess Jesus<sup class="footnote"><a class="fn" href="#f2-1" id="fb2-1" title='&lt;note class="translation" sub-class="original"&gt;Greek &lt;i&gt;him&lt;/i&gt;&lt;/note&gt;'>2</a></sup> to be Christ, he was to be put out of the synagogue. <b class="verse-num" id="v43009023-1">23 </b>Therefore his parents said, “He is of age; ask him.”)</p>
 <div class="footnotes extra_text">
 <h3>Footnotes</h3>
 <p><span class="footnote"><a href="#fb1-1" id="f1-1">[1]</a></span> <span class="footnote-ref">9:18</span> <note class="explanation">Greek <i language="Greek">Ioudaioi</i> probably refers here to Jewish religious leaders, and others under their influence, in that time; also verse 22</note>
-<br />
+<br/>
 <span class="footnote"><a href="#fb2-1" id="f2-1">[2]</a></span> <span class="footnote-ref">9:22</span> <note class="translation" sub-class="original">Greek <i>him</i></note>
 </p>
 </div>
-<a href="http://www.esv.org" class="copyright">ESV</a>
-        </div>
-
-    </div>
-
+<a class="copyright" href="http://www.esv.org">ESV</a>
+</div>
+</div>
 </div>

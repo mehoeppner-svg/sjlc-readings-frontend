@@ -892,6 +892,37 @@ ul {
     font-weight: 500;
 }
 
+/* New grouped cross-refs section (at bottom of page) */
+.bible-content .crossrefs .crossrefs-label {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.4rem;
+}
+
+.bible-content .crossrefs .crossrefs-list {
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+
+.bible-content .crossrefs .crossref-group {
+    display: block;
+    margin-bottom: 0.25rem;
+    color: var(--text-secondary);
+}
+
+.bible-content .crossrefs .crossref-group a {
+    color: var(--crossref-color);
+    text-decoration: none;
+}
+
+.bible-content .crossrefs .crossref-group a:hover {
+    text-decoration: underline;
+}
+
 /* Copyright notice */
 .bible-content .copyright {
     color: var(--accent-color);

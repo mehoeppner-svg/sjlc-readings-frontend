@@ -1,132 +1,116 @@
-<div class="daily-reading-container"
-     data-passage="2Samuel 1-2; Luke 24:36-53"
-     data-has-commentary="false"
-     data-has-devotional="false"
-     data-is-verse-card="false">
-
-    <!-- Header -->
-    <div class="reading-header">
-        <h1 class="reading-title">2Samuel 1-2; Luke 24:36-53</h1>
-        <div class="reading-date">May 8, 2026</div>
-    </div>
-
-
-    <!-- Audio Player -->
-    <div class="audio-section" id="audioSection">
-        <audio controls preload="metadata" class="bible-audio">
-            <source src="https://audio.esv.org/david-cochran-heath/mq/10001001-10002032.mp3" type="audio/mpeg">
-        </audio>
-    </div>
-
-    <!-- Bible Content Container -->
-    <div class="bible-content-container">
-
-        <!-- Settings Wrapper -->
-        <div class="settings-wrapper">
-            <!-- Floating Copy Button (FAB) for Verse Selection -->
-            <div class="copy-fab" id="copyFab">
-                <button class="clear-selection-button" id="clearSelectionBtn" title="Clear selection">×</button>
-                <button class="copy-button" id="copyVerseBtn" title="Copy selected verses">
+<div class="daily-reading-container" data-has-commentary="false" data-has-devotional="false" data-is-verse-card="false" data-passage="2Samuel 1-2; Luke 24:36-53">
+<!-- Header -->
+<div class="reading-header">
+<h1 class="reading-title">2Samuel 1-2; Luke 24:36-53</h1>
+<div class="reading-date">May 8, 2026</div>
+</div>
+<!-- Audio Player -->
+<div class="audio-section" id="audioSection">
+<audio class="bible-audio" controls="" preload="metadata">
+<source src="https://audio.esv.org/david-cochran-heath/mq/10001001-10002032.mp3" type="audio/mpeg"/>
+</audio>
+</div>
+<!-- Bible Content Container -->
+<div class="bible-content-container">
+<!-- Settings Wrapper -->
+<div class="settings-wrapper">
+<!-- Floating Copy Button (FAB) for Verse Selection -->
+<div class="copy-fab" id="copyFab">
+<button class="clear-selection-button" id="clearSelectionBtn" title="Clear selection">×</button>
+<button class="copy-button" id="copyVerseBtn" title="Copy selected verses">
                     📋
                     <span class="verse-count-badge" id="verseCountBadge">0</span>
-                </button>
-            </div>
+</button>
+</div>
+<!-- Settings Button -->
+<button class="settings-btn" id="settingsBtn" title="Display Settings">⚙️</button>
+<!-- Settings Menu -->
+<div class="settings-menu" id="settingsMenu">
+<h4>Display Settings</h4>
+<label>
+<input checked="" id="toggleImage" type="checkbox"/>
+<span>Image</span>
+</label>
+<label>
+<input checked="" id="toggleAudio" type="checkbox"/>
+<span>Audio Player</span>
+</label>
+<label>
+<input checked="" id="toggleFootnotes" type="checkbox"/>
+<span>Footnotes</span>
+</label>
+<label>
+<input checked="" id="toggleCrossrefs" type="checkbox"/>
+<span>Cross-References</span>
+</label>
+</div>
+</div>
+<!-- Share Button -->
+<div class="share-section">
+<button class="share-btn" id="shareBtn" title="Share this reading">
+<img alt="Share" class="share-icon" src="/assets/share.png"/>
 
-            <!-- Settings Button -->
-            <button class="settings-btn" id="settingsBtn" title="Display Settings">⚙️</button>
-
-            <!-- Settings Menu -->
-            <div class="settings-menu" id="settingsMenu">
-                <h4>Display Settings</h4>
-                <label>
-                    <input type="checkbox" id="toggleImage" checked>
-                    <span>Image</span>
-                </label>
-                <label>
-                    <input type="checkbox" id="toggleAudio" checked>
-                    <span>Audio Player</span>
-                </label>
-                <label>
-                    <input type="checkbox" id="toggleFootnotes" checked>
-                    <span>Footnotes</span>
-                </label>
-                <label>
-                    <input type="checkbox" id="toggleCrossrefs" checked>
-                    <span>Cross-References</span>
-                </label>
-            </div>
-        </div>
-
-        <!-- Share Button -->
-        <div class="share-section">
-            <button class="share-btn" id="shareBtn" title="Share this reading">
-                <span class="share-icon">↱</span>
-                <span class="share-text">Share</span>
-            </button>
-        </div>
-
-        <!-- Bible Content -->
-        <div class="bible-content" id="bibleContent">
+</button>
+</div>
+<!-- Bible Content -->
+<div class="bible-content" id="bibleContent">
 <h3 id="p10001001_01-1">David Hears of Saul’s Death</h3>
-<p id="p10001001_06-1" class="starts-chapter"><b class="chapter-num" id="v10001001-1">1&nbsp;</b>After the death of Saul, when David had returned from striking down the Amalekites, David remained two days in Ziklag. <b class="verse-num" id="v10001002-1">2&nbsp;</b>And on the third day, behold, a man came from Saul’s camp, with his clothes torn and dirt on his head. And when he came to David, he fell to the ground and paid homage. <b class="verse-num" id="v10001003-1">3&nbsp;</b>David said to him, “Where do you come from?” And he said to him, “I have escaped from the camp of Israel.” <b class="verse-num" id="v10001004-1">4&nbsp;</b>And David said to him, “How did it go? Tell me.” And he answered, “The people fled from the battle, and also many of the people have fallen and are dead, and Saul and his son Jonathan are also dead.” <b class="verse-num" id="v10001005-1">5&nbsp;</b>Then David said to the young man who told him, “How do you know that Saul and his son Jonathan are dead?” <b class="verse-num" id="v10001006-1">6&nbsp;</b>And the young man who told him said, “By chance I happened to be on Mount Gilboa, and there was Saul leaning on his spear, and behold, the chariots and the horsemen were close upon him. <b class="verse-num" id="v10001007-1">7&nbsp;</b>And when he looked behind him, he saw me, and called to me. And I answered, ‘Here I am.’ <b class="verse-num" id="v10001008-1">8&nbsp;</b>And he said to me, ‘Who are you?’ I answered him, ‘I am an Amalekite.’ <b class="verse-num" id="v10001009-1">9&nbsp;</b>And he said to me, ‘Stand beside me and kill me, for anguish has seized me, and yet my life still lingers.’ <b class="verse-num" id="v10001010-1">10&nbsp;</b>So I stood beside him and killed him, because I was sure that he could not live after he had fallen. And I took the crown that was on his head and the armlet that was on his arm, and I have brought them here to my lord.”</p>
-<p id="p10001010_06-1"><b class="verse-num" id="v10001011-1">11&nbsp;</b>Then David took hold of his clothes and tore them, and so did all the men who were with him. <b class="verse-num" id="v10001012-1">12&nbsp;</b>And they mourned and wept and fasted until evening for Saul and for Jonathan his son and for the people of the LORD and for the house of Israel, because they had fallen by the sword. <b class="verse-num" id="v10001013-1">13&nbsp;</b>And David said to the young man who told him, “Where do you come from?” And he answered, “I am the son of a sojourner, an Amalekite.” <b class="verse-num" id="v10001014-1">14&nbsp;</b>David said to him, “How is it you were not afraid to put out your hand to destroy the LORD’s anointed?” <b class="verse-num" id="v10001015-1">15&nbsp;</b>Then David called one of the young men and said, “Go, execute him.” And he struck him down so that he died. <b class="verse-num" id="v10001016-1">16&nbsp;</b>And David said to him, “Your blood be on your head, for your own mouth has testified against you, saying, ‘I have killed the LORD’s anointed.’”</p>
+<p class="starts-chapter" id="p10001001_06-1"><b class="chapter-num" id="v10001001-1">1 </b>After the death of Saul, when David had returned from striking down the Amalekites, David remained two days in Ziklag. <b class="verse-num" id="v10001002-1">2 </b>And on the third day, behold, a man came from Saul’s camp, with his clothes torn and dirt on his head. And when he came to David, he fell to the ground and paid homage. <b class="verse-num" id="v10001003-1">3 </b>David said to him, “Where do you come from?” And he said to him, “I have escaped from the camp of Israel.” <b class="verse-num" id="v10001004-1">4 </b>And David said to him, “How did it go? Tell me.” And he answered, “The people fled from the battle, and also many of the people have fallen and are dead, and Saul and his son Jonathan are also dead.” <b class="verse-num" id="v10001005-1">5 </b>Then David said to the young man who told him, “How do you know that Saul and his son Jonathan are dead?” <b class="verse-num" id="v10001006-1">6 </b>And the young man who told him said, “By chance I happened to be on Mount Gilboa, and there was Saul leaning on his spear, and behold, the chariots and the horsemen were close upon him. <b class="verse-num" id="v10001007-1">7 </b>And when he looked behind him, he saw me, and called to me. And I answered, ‘Here I am.’ <b class="verse-num" id="v10001008-1">8 </b>And he said to me, ‘Who are you?’ I answered him, ‘I am an Amalekite.’ <b class="verse-num" id="v10001009-1">9 </b>And he said to me, ‘Stand beside me and kill me, for anguish has seized me, and yet my life still lingers.’ <b class="verse-num" id="v10001010-1">10 </b>So I stood beside him and killed him, because I was sure that he could not live after he had fallen. And I took the crown that was on his head and the armlet that was on his arm, and I have brought them here to my lord.”</p>
+<p id="p10001010_06-1"><b class="verse-num" id="v10001011-1">11 </b>Then David took hold of his clothes and tore them, and so did all the men who were with him. <b class="verse-num" id="v10001012-1">12 </b>And they mourned and wept and fasted until evening for Saul and for Jonathan his son and for the people of the LORD and for the house of Israel, because they had fallen by the sword. <b class="verse-num" id="v10001013-1">13 </b>And David said to the young man who told him, “Where do you come from?” And he answered, “I am the son of a sojourner, an Amalekite.” <b class="verse-num" id="v10001014-1">14 </b>David said to him, “How is it you were not afraid to put out your hand to destroy the LORD’s anointed?” <b class="verse-num" id="v10001015-1">15 </b>Then David called one of the young men and said, “Go, execute him.” And he struck him down so that he died. <b class="verse-num" id="v10001016-1">16 </b>And David said to him, “Your blood be on your head, for your own mouth has testified against you, saying, ‘I have killed the LORD’s anointed.’”</p>
 <h3 id="p10001016_06-1">David’s Lament for Saul and Jonathan</h3>
-<p id="p10001016_12-1"><b class="verse-num" id="v10001017-1">17&nbsp;</b>And David lamented with this lamentation over Saul and Jonathan his son, <b class="verse-num" id="v10001018-1">18&nbsp;</b>and he said it<sup class="footnote"><a class="fn" href="#f1-1" id="fb1-1" title="&lt;note class=&quot;variant&quot;&gt;Septuagint; Hebrew &lt;i&gt;the Bow&lt;/i&gt;, which may be the name of the lament’s tune&lt;/note&gt;">1</a></sup> should be taught to the people of Judah; behold, it is written in the Book of Jashar.<sup class="footnote"><a class="fn" href="#f2-1" id="fb2-1" title="&lt;note class=&quot;alternative&quot;&gt;Or &lt;i&gt;&lt;span class=&quot;catch-word&quot;&gt;of&lt;/span&gt; the upright&lt;/i&gt;&lt;/note&gt;">2</a></sup> He said:</p>
+<p id="p10001016_12-1"><b class="verse-num" id="v10001017-1">17 </b>And David lamented with this lamentation over Saul and Jonathan his son, <b class="verse-num" id="v10001018-1">18 </b>and he said it<sup class="footnote"><a class="fn" href="#f1-1" id="fb1-1" title='&lt;note class="variant"&gt;Septuagint; Hebrew &lt;i&gt;the Bow&lt;/i&gt;, which may be the name of the lament’s tune&lt;/note&gt;'>1</a></sup> should be taught to the people of Judah; behold, it is written in the Book of Jashar.<sup class="footnote"><a class="fn" href="#f2-1" id="fb2-1" title='&lt;note class="alternative"&gt;Or &lt;i&gt;&lt;span class="catch-word"&gt;of&lt;/span&gt; the upright&lt;/i&gt;&lt;/note&gt;'>2</a></sup> He said:</p>
 <p class="block-indent"><span class="begin-line-group"></span>
-<span id="p10001019_12-1" class="line"><b class="verse-num inline" id="v10001019-1">19&nbsp;</b>&nbsp;&nbsp;“Your glory, O Israel, is slain on your high places!</span><br /><span id="p10001019_12-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;How the mighty have fallen!</span><br /><span id="p10001020_12-1" class="line"><b class="verse-num inline" id="v10001020-1">20&nbsp;</b>&nbsp;&nbsp;Tell it not in Gath,</span><br /><span id="p10001020_12-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;publish it not in the streets of Ashkelon,</span><br /><span id="p10001020_12-1" class="line">&nbsp;&nbsp;lest the daughters of the Philistines rejoice,</span><br /><span id="p10001020_12-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;lest the daughters of the uncircumcised exult.</span><br /><span class="end-line-group"></span>
+<span class="line" id="p10001019_12-1"><b class="verse-num inline" id="v10001019-1">19 </b>  “Your glory, O Israel, is slain on your high places!</span><br/><span class="indent line" id="p10001019_12-1">    How the mighty have fallen!</span><br/><span class="line" id="p10001020_12-1"><b class="verse-num inline" id="v10001020-1">20 </b>  Tell it not in Gath,</span><br/><span class="indent line" id="p10001020_12-1">    publish it not in the streets of Ashkelon,</span><br/><span class="line" id="p10001020_12-1">  lest the daughters of the Philistines rejoice,</span><br/><span class="indent line" id="p10001020_12-1">    lest the daughters of the uncircumcised exult.</span><br/><span class="end-line-group"></span>
 <span class="begin-line-group"></span>
-<span id="p10001021_12-1" class="line"><b class="verse-num inline" id="v10001021-1">21&nbsp;</b>&nbsp;&nbsp;“You mountains of Gilboa,</span><br /><span id="p10001021_12-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;let there be no dew or rain upon you,</span><br /><span id="p10001021_12-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;nor fields of offerings!<sup class="footnote"><a class="fn" href="#f3-1" id="fb3-1" title="&lt;note class=&quot;variant&quot;&gt;Septuagint &lt;i&gt;firstfruits&lt;/i&gt;&lt;/note&gt;">3</a></sup></span><br /><span id="p10001021_12-1" class="line">&nbsp;&nbsp;For there the shield of the mighty was defiled,</span><br /><span id="p10001021_12-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;the shield of Saul, not anointed with oil.</span><br /><span class="end-line-group"></span>
+<span class="line" id="p10001021_12-1"><b class="verse-num inline" id="v10001021-1">21 </b>  “You mountains of Gilboa,</span><br/><span class="indent line" id="p10001021_12-1">    let there be no dew or rain upon you,</span><br/><span class="indent line" id="p10001021_12-1">    nor fields of offerings!<sup class="footnote"><a class="fn" href="#f3-1" id="fb3-1" title='&lt;note class="variant"&gt;Septuagint &lt;i&gt;firstfruits&lt;/i&gt;&lt;/note&gt;'>3</a></sup></span><br/><span class="line" id="p10001021_12-1">  For there the shield of the mighty was defiled,</span><br/><span class="indent line" id="p10001021_12-1">    the shield of Saul, not anointed with oil.</span><br/><span class="end-line-group"></span>
 <span class="begin-line-group"></span>
-<span id="p10001022_12-1" class="line"><b class="verse-num inline" id="v10001022-1">22&nbsp;</b>&nbsp;&nbsp;“From the blood of the slain,</span><br /><span id="p10001022_12-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;from the fat of the mighty,</span><br /><span id="p10001022_12-1" class="line">&nbsp;&nbsp;the bow of Jonathan turned not back,</span><br /><span id="p10001022_12-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;and the sword of Saul returned not empty.</span><br /><span class="end-line-group"></span>
+<span class="line" id="p10001022_12-1"><b class="verse-num inline" id="v10001022-1">22 </b>  “From the blood of the slain,</span><br/><span class="indent line" id="p10001022_12-1">    from the fat of the mighty,</span><br/><span class="line" id="p10001022_12-1">  the bow of Jonathan turned not back,</span><br/><span class="indent line" id="p10001022_12-1">    and the sword of Saul returned not empty.</span><br/><span class="end-line-group"></span>
 <span class="begin-line-group"></span>
-<span id="p10001023_12-1" class="line"><b class="verse-num inline" id="v10001023-1">23&nbsp;</b>&nbsp;&nbsp;“Saul and Jonathan, beloved and lovely!</span><br /><span id="p10001023_12-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;In life and in death they were not divided;</span><br /><span id="p10001023_12-1" class="line">&nbsp;&nbsp;they were swifter than eagles;</span><br /><span id="p10001023_12-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;they were stronger than lions.</span><br /><span class="end-line-group"></span>
+<span class="line" id="p10001023_12-1"><b class="verse-num inline" id="v10001023-1">23 </b>  “Saul and Jonathan, beloved and lovely!</span><br/><span class="indent line" id="p10001023_12-1">    In life and in death they were not divided;</span><br/><span class="line" id="p10001023_12-1">  they were swifter than eagles;</span><br/><span class="indent line" id="p10001023_12-1">    they were stronger than lions.</span><br/><span class="end-line-group"></span>
 <span class="begin-line-group"></span>
-<span id="p10001024_12-1" class="line"><b class="verse-num inline" id="v10001024-1">24&nbsp;</b>&nbsp;&nbsp;“You daughters of Israel, weep over Saul,</span><br /><span id="p10001024_12-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;who clothed you luxuriously in scarlet,</span><br /><span id="p10001024_12-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;who put ornaments of gold on your apparel.</span><br /><span class="end-line-group"></span>
+<span class="line" id="p10001024_12-1"><b class="verse-num inline" id="v10001024-1">24 </b>  “You daughters of Israel, weep over Saul,</span><br/><span class="indent line" id="p10001024_12-1">    who clothed you luxuriously in scarlet,</span><br/><span class="indent line" id="p10001024_12-1">    who put ornaments of gold on your apparel.</span><br/><span class="end-line-group"></span>
 <span class="begin-line-group"></span>
-<span id="p10001025_12-1" class="line"><b class="verse-num inline" id="v10001025-1">25&nbsp;</b>&nbsp;&nbsp;“How the mighty have fallen</span><br /><span id="p10001025_12-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;in the midst of the battle!</span><br /><span class="end-line-group"></span>
+<span class="line" id="p10001025_12-1"><b class="verse-num inline" id="v10001025-1">25 </b>  “How the mighty have fallen</span><br/><span class="indent line" id="p10001025_12-1">    in the midst of the battle!</span><br/><span class="end-line-group"></span>
 <span class="begin-line-group"></span>
-<span id="p10001025_12-1" class="line">&nbsp;&nbsp;“Jonathan lies slain on your high places.</span><br /><span id="p10001026_12-1" class="indent line"><b class="verse-num inline" id="v10001026-1">26&nbsp;</b>&nbsp;&nbsp;&nbsp;&nbsp;I am distressed for you, my brother Jonathan;</span><br /><span id="p10001026_12-1" class="line">&nbsp;&nbsp;very pleasant have you been to me;</span><br /><span id="p10001026_12-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;your love to me was extraordinary,</span><br /><span id="p10001026_12-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;surpassing the love of women.</span><br /><span class="end-line-group"></span>
+<span class="line" id="p10001025_12-1">  “Jonathan lies slain on your high places.</span><br/><span class="indent line" id="p10001026_12-1"><b class="verse-num inline" id="v10001026-1">26 </b>    I am distressed for you, my brother Jonathan;</span><br/><span class="line" id="p10001026_12-1">  very pleasant have you been to me;</span><br/><span class="indent line" id="p10001026_12-1">    your love to me was extraordinary,</span><br/><span class="indent line" id="p10001026_12-1">    surpassing the love of women.</span><br/><span class="end-line-group"></span>
 <span class="begin-line-group"></span>
-<span id="p10001027_12-1" class="line"><b class="verse-num inline" id="v10001027-1">27&nbsp;</b>&nbsp;&nbsp;“How the mighty have fallen,</span><br /><span id="p10001027_12-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;and the weapons of war perished!”</span><br /><span class="end-line-group"></span>
+<span class="line" id="p10001027_12-1"><b class="verse-num inline" id="v10001027-1">27 </b>  “How the mighty have fallen,</span><br/><span class="indent line" id="p10001027_12-1">    and the weapons of war perished!”</span><br/><span class="end-line-group"></span>
 </p><h3 id="p10002001_12-1">David Anointed King of Judah</h3>
-<p id="p10002001_17-1" class="starts-chapter"><b class="chapter-num" id="v10002001-1">2&nbsp;</b>After this David inquired of the LORD, “Shall I go up into any of the cities of Judah?” And the LORD said to him, “Go up.” David said, “To which shall I go up?” And he said, “To Hebron.” <b class="verse-num" id="v10002002-1">2&nbsp;</b>So David went up there, and his two wives also, Ahinoam of Jezreel and Abigail the widow of Nabal of Carmel. <b class="verse-num" id="v10002003-1">3&nbsp;</b>And David brought up his men who were with him, everyone with his household, and they lived in the towns of Hebron. <b class="verse-num" id="v10002004-1">4&nbsp;</b>And the men of Judah came, and there they anointed David king over the house of Judah.</p>
-<p id="p10002004_17-1">When they told David, “It was the men of Jabesh-gilead who buried Saul,” <b class="verse-num" id="v10002005-1">5&nbsp;</b>David sent messengers to the men of Jabesh-gilead and said to them, “May you be blessed by the LORD, because you showed this loyalty to Saul your lord and buried him. <b class="verse-num" id="v10002006-1">6&nbsp;</b>Now may the LORD show steadfast love and faithfulness to you. And I will do good to you because you have done this thing. <b class="verse-num" id="v10002007-1">7&nbsp;</b>Now therefore let your hands be strong, and be valiant, for Saul your lord is dead, and the house of Judah has anointed me king over them.”</p>
+<p class="starts-chapter" id="p10002001_17-1"><b class="chapter-num" id="v10002001-1">2 </b>After this David inquired of the LORD, “Shall I go up into any of the cities of Judah?” And the LORD said to him, “Go up.” David said, “To which shall I go up?” And he said, “To Hebron.” <b class="verse-num" id="v10002002-1">2 </b>So David went up there, and his two wives also, Ahinoam of Jezreel and Abigail the widow of Nabal of Carmel. <b class="verse-num" id="v10002003-1">3 </b>And David brought up his men who were with him, everyone with his household, and they lived in the towns of Hebron. <b class="verse-num" id="v10002004-1">4 </b>And the men of Judah came, and there they anointed David king over the house of Judah.</p>
+<p id="p10002004_17-1">When they told David, “It was the men of Jabesh-gilead who buried Saul,” <b class="verse-num" id="v10002005-1">5 </b>David sent messengers to the men of Jabesh-gilead and said to them, “May you be blessed by the LORD, because you showed this loyalty to Saul your lord and buried him. <b class="verse-num" id="v10002006-1">6 </b>Now may the LORD show steadfast love and faithfulness to you. And I will do good to you because you have done this thing. <b class="verse-num" id="v10002007-1">7 </b>Now therefore let your hands be strong, and be valiant, for Saul your lord is dead, and the house of Judah has anointed me king over them.”</p>
 <h3 id="p10002007_17-1">Ish-bosheth Made King of Israel</h3>
-<p id="p10002007_22-1"><b class="verse-num" id="v10002008-1">8&nbsp;</b>But Abner the son of Ner, commander of Saul’s army, took Ish-bosheth the son of Saul and brought him over to Mahanaim, <b class="verse-num" id="v10002009-1">9&nbsp;</b>and he made him king over Gilead and the Ashurites and Jezreel and Ephraim and Benjamin and all Israel. <b class="verse-num" id="v10002010-1">10&nbsp;</b>Ish-bosheth, Saul’s son, was forty years old when he began to reign over Israel, and he reigned two years. But the house of Judah followed David. <b class="verse-num" id="v10002011-1">11&nbsp;</b>And the time that David was king in Hebron over the house of Judah was seven years and six months.</p>
+<p id="p10002007_22-1"><b class="verse-num" id="v10002008-1">8 </b>But Abner the son of Ner, commander of Saul’s army, took Ish-bosheth the son of Saul and brought him over to Mahanaim, <b class="verse-num" id="v10002009-1">9 </b>and he made him king over Gilead and the Ashurites and Jezreel and Ephraim and Benjamin and all Israel. <b class="verse-num" id="v10002010-1">10 </b>Ish-bosheth, Saul’s son, was forty years old when he began to reign over Israel, and he reigned two years. But the house of Judah followed David. <b class="verse-num" id="v10002011-1">11 </b>And the time that David was king in Hebron over the house of Judah was seven years and six months.</p>
 <h3 id="p10002011_22-1">The Battle of Gibeon</h3>
-<p id="p10002011_26-1"><b class="verse-num" id="v10002012-1">12&nbsp;</b>Abner the son of Ner, and the servants of Ish-bosheth the son of Saul, went out from Mahanaim to Gibeon. <b class="verse-num" id="v10002013-1">13&nbsp;</b>And Joab the son of Zeruiah and the servants of David went out and met them at the pool of Gibeon. And they sat down, the one on the one side of the pool, and the other on the other side of the pool. <b class="verse-num" id="v10002014-1">14&nbsp;</b>And Abner said to Joab, “Let the young men arise and compete before us.” And Joab said, “Let them arise.” <b class="verse-num" id="v10002015-1">15&nbsp;</b>Then they arose and passed over by number, twelve for Benjamin and Ish-bosheth the son of Saul, and twelve of the servants of David. <b class="verse-num" id="v10002016-1">16&nbsp;</b>And each caught his opponent by the head and thrust his sword in his opponent’s side, so they fell down together. Therefore that place was called Helkath-hazzurim,<sup class="footnote"><a class="fn" href="#f4-1" id="fb4-1" title="&lt;note class=&quot;explanation&quot; sub-class=&quot;name-meaning&quot;&gt;&lt;i class=&quot;catch-word&quot;&gt;Helkath-hazzurim&lt;/i&gt; means &lt;i&gt;the field of sword-edges&lt;/i&gt;&lt;/note&gt;">4</a></sup> which is at Gibeon. <b class="verse-num" id="v10002017-1">17&nbsp;</b>And the battle was very fierce that day. And Abner and the men of Israel were beaten before the servants of David.</p>
-<p id="p10002017_26-1"><b class="verse-num" id="v10002018-1">18&nbsp;</b>And the three sons of Zeruiah were there, Joab, Abishai, and Asahel. Now Asahel was as swift of foot as a wild gazelle. <b class="verse-num" id="v10002019-1">19&nbsp;</b>And Asahel pursued Abner, and as he went, he turned neither to the right hand nor to the left from following Abner. <b class="verse-num" id="v10002020-1">20&nbsp;</b>Then Abner looked behind him and said, “Is it you, Asahel?” And he answered, “It is I.” <b class="verse-num" id="v10002021-1">21&nbsp;</b>Abner said to him, “Turn aside to your right hand or to your left, and seize one of the young men and take his spoil.” But Asahel would not turn aside from following him. <b class="verse-num" id="v10002022-1">22&nbsp;</b>And Abner said again to Asahel, “Turn aside from following me. Why should I strike you to the ground? How then could I lift up my face to your brother Joab?” <b class="verse-num" id="v10002023-1">23&nbsp;</b>But he refused to turn aside. Therefore Abner struck him in the stomach with the butt of his spear, so that the spear came out at his back. And he fell there and died where he was. And all who came to the place where Asahel had fallen and died, stood still.</p>
-<p id="p10002023_26-1"><b class="verse-num" id="v10002024-1">24&nbsp;</b>But Joab and Abishai pursued Abner. And as the sun was going down they came to the hill of Ammah, which lies before Giah on the way to the wilderness of Gibeon. <b class="verse-num" id="v10002025-1">25&nbsp;</b>And the people of Benjamin gathered themselves together behind Abner and became one group and took their stand on the top of a hill. <b class="verse-num" id="v10002026-1">26&nbsp;</b>Then Abner called to Joab, “Shall the sword devour forever? Do you not know that the end will be bitter? How long will it be before you tell your people to turn from the pursuit of their brothers?” <b class="verse-num" id="v10002027-1">27&nbsp;</b>And Joab said, “As God lives, if you had not spoken, surely the men would not have given up the pursuit of their brothers until the morning.” <b class="verse-num" id="v10002028-1">28&nbsp;</b>So Joab blew the trumpet, and all the men stopped and pursued Israel no more, nor did they fight anymore.</p>
-<p id="p10002028_26-1"><b class="verse-num" id="v10002029-1">29&nbsp;</b>And Abner and his men went all that night through the Arabah. They crossed the Jordan, and marching the whole morning, they came to Mahanaim. <b class="verse-num" id="v10002030-1">30&nbsp;</b>Joab returned from the pursuit of Abner. And when he had gathered all the people together, there were missing from David’s servants nineteen men besides Asahel. <b class="verse-num" id="v10002031-1">31&nbsp;</b>But the servants of David had struck down of Benjamin 360 of Abner’s men. <b class="verse-num" id="v10002032-1">32&nbsp;</b>And they took up Asahel and buried him in the tomb of his father, which was at Bethlehem. And Joab and his men marched all night, and the day broke upon them at Hebron.</p>
+<p id="p10002011_26-1"><b class="verse-num" id="v10002012-1">12 </b>Abner the son of Ner, and the servants of Ish-bosheth the son of Saul, went out from Mahanaim to Gibeon. <b class="verse-num" id="v10002013-1">13 </b>And Joab the son of Zeruiah and the servants of David went out and met them at the pool of Gibeon. And they sat down, the one on the one side of the pool, and the other on the other side of the pool. <b class="verse-num" id="v10002014-1">14 </b>And Abner said to Joab, “Let the young men arise and compete before us.” And Joab said, “Let them arise.” <b class="verse-num" id="v10002015-1">15 </b>Then they arose and passed over by number, twelve for Benjamin and Ish-bosheth the son of Saul, and twelve of the servants of David. <b class="verse-num" id="v10002016-1">16 </b>And each caught his opponent by the head and thrust his sword in his opponent’s side, so they fell down together. Therefore that place was called Helkath-hazzurim,<sup class="footnote"><a class="fn" href="#f4-1" id="fb4-1" title='&lt;note class="explanation" sub-class="name-meaning"&gt;&lt;i class="catch-word"&gt;Helkath-hazzurim&lt;/i&gt; means &lt;i&gt;the field of sword-edges&lt;/i&gt;&lt;/note&gt;'>4</a></sup> which is at Gibeon. <b class="verse-num" id="v10002017-1">17 </b>And the battle was very fierce that day. And Abner and the men of Israel were beaten before the servants of David.</p>
+<p id="p10002017_26-1"><b class="verse-num" id="v10002018-1">18 </b>And the three sons of Zeruiah were there, Joab, Abishai, and Asahel. Now Asahel was as swift of foot as a wild gazelle. <b class="verse-num" id="v10002019-1">19 </b>And Asahel pursued Abner, and as he went, he turned neither to the right hand nor to the left from following Abner. <b class="verse-num" id="v10002020-1">20 </b>Then Abner looked behind him and said, “Is it you, Asahel?” And he answered, “It is I.” <b class="verse-num" id="v10002021-1">21 </b>Abner said to him, “Turn aside to your right hand or to your left, and seize one of the young men and take his spoil.” But Asahel would not turn aside from following him. <b class="verse-num" id="v10002022-1">22 </b>And Abner said again to Asahel, “Turn aside from following me. Why should I strike you to the ground? How then could I lift up my face to your brother Joab?” <b class="verse-num" id="v10002023-1">23 </b>But he refused to turn aside. Therefore Abner struck him in the stomach with the butt of his spear, so that the spear came out at his back. And he fell there and died where he was. And all who came to the place where Asahel had fallen and died, stood still.</p>
+<p id="p10002023_26-1"><b class="verse-num" id="v10002024-1">24 </b>But Joab and Abishai pursued Abner. And as the sun was going down they came to the hill of Ammah, which lies before Giah on the way to the wilderness of Gibeon. <b class="verse-num" id="v10002025-1">25 </b>And the people of Benjamin gathered themselves together behind Abner and became one group and took their stand on the top of a hill. <b class="verse-num" id="v10002026-1">26 </b>Then Abner called to Joab, “Shall the sword devour forever? Do you not know that the end will be bitter? How long will it be before you tell your people to turn from the pursuit of their brothers?” <b class="verse-num" id="v10002027-1">27 </b>And Joab said, “As God lives, if you had not spoken, surely the men would not have given up the pursuit of their brothers until the morning.” <b class="verse-num" id="v10002028-1">28 </b>So Joab blew the trumpet, and all the men stopped and pursued Israel no more, nor did they fight anymore.</p>
+<p id="p10002028_26-1"><b class="verse-num" id="v10002029-1">29 </b>And Abner and his men went all that night through the Arabah. They crossed the Jordan, and marching the whole morning, they came to Mahanaim. <b class="verse-num" id="v10002030-1">30 </b>Joab returned from the pursuit of Abner. And when he had gathered all the people together, there were missing from David’s servants nineteen men besides Asahel. <b class="verse-num" id="v10002031-1">31 </b>But the servants of David had struck down of Benjamin 360 of Abner’s men. <b class="verse-num" id="v10002032-1">32 </b>And they took up Asahel and buried him in the tomb of his father, which was at Bethlehem. And Joab and his men marched all night, and the day broke upon them at Hebron.</p>
 <div class="footnotes extra_text">
 <h3>Footnotes</h3>
 <p><span class="footnote"><a href="#fb1-1" id="f1-1">[1]</a></span> <span class="footnote-ref">1:18</span> <note class="variant">Septuagint; Hebrew <i>the Bow</i>, which may be the name of the lament’s tune</note>
-<br />
+<br/>
 <span class="footnote"><a href="#fb2-1" id="f2-1">[2]</a></span> <span class="footnote-ref">1:18</span> <note class="alternative">Or <i><span class="catch-word">of</span> the upright</i></note>
-<br />
+<br/>
 <span class="footnote"><a href="#fb3-1" id="f3-1">[3]</a></span> <span class="footnote-ref">1:21</span> <note class="variant">Septuagint <i>firstfruits</i></note>
-<br />
+<br/>
 <span class="footnote"><a href="#fb4-1" id="f4-1">[4]</a></span> <span class="footnote-ref">2:16</span> <note class="explanation" sub-class="name-meaning"><i class="catch-word">Helkath-hazzurim</i> means <i>the field of sword-edges</i></note>
 </p>
 </div>
-<a href="http://www.esv.org" class="copyright">ESV</a>
-<hr class='passage-divider'>
-
+<a class="copyright" href="http://www.esv.org">ESV</a>
+<hr class="passage-divider"/>
 <h3 id="p42024036_01-1">Jesus Appears to His Disciples</h3>
-<p id="p42024036_06-1"><b class="verse-num" id="v42024036-1">36&nbsp;</b>As they were talking about these things, Jesus himself stood among them, and said to them, <span class="woc">“Peace to you!”</span> <b class="verse-num" id="v42024037-1">37&nbsp;</b>But they were startled and frightened and thought they saw a spirit. <b class="verse-num" id="v42024038-1">38&nbsp;</b>And he said to them, <span class="woc">“Why are you troubled, and why do doubts arise in your hearts?</span> <b class="verse-num woc" id="v42024039-1">39&nbsp;</b><span class="woc">See my hands and my feet, that it is I myself. Touch me, and see. For a spirit does not have flesh and bones as you see that I have.”</span> <b class="verse-num" id="v42024040-1">40&nbsp;</b>And when he had said this, he showed them his hands and his feet. <b class="verse-num" id="v42024041-1">41&nbsp;</b>And while they still disbelieved for joy and were marveling, he said to them, <span class="woc">“Have you anything here to eat?”</span> <b class="verse-num" id="v42024042-1">42&nbsp;</b>They gave him a piece of broiled fish,<sup class="footnote"><a class="fn" href="#f1-1" id="fb1-1" title="&lt;note class=&quot;variant&quot; sub-class=&quot;variant-adds&quot;&gt;Some manuscripts add &lt;i&gt;and some honeycomb&lt;/i&gt;&lt;/note&gt;">1</a></sup> <b class="verse-num" id="v42024043-1">43&nbsp;</b>and he took it and ate before them.</p>
-<p id="p42024043_06-1"><b class="verse-num" id="v42024044-1">44&nbsp;</b>Then he said to them, <span class="woc">“These are my words that I spoke to you while I was still with you, that everything written about me in the Law of Moses and the Prophets and the Psalms must be fulfilled.”</span> <b class="verse-num" id="v42024045-1">45&nbsp;</b>Then he opened their minds to understand the Scriptures, <b class="verse-num" id="v42024046-1">46&nbsp;</b>and said to them, <span class="woc">“Thus it is written, that the Christ should suffer and on the third day rise from the dead,</span> <b class="verse-num woc" id="v42024047-1">47&nbsp;</b><span class="woc">and that repentance for<sup class="footnote"><a class="fn" href="#f2-1" id="fb2-1" title="&lt;note class=&quot;variant&quot;&gt;Some manuscripts &lt;i&gt;and&lt;/i&gt;&lt;/note&gt;">2</a></sup> the forgiveness of sins should be proclaimed in his name to all nations, beginning from Jerusalem.</span> <b class="verse-num woc" id="v42024048-1">48&nbsp;</b><span class="woc">You are witnesses of these things.</span> <b class="verse-num woc" id="v42024049-1">49&nbsp;</b><span class="woc">And behold, I am sending the promise of my Father upon you. But stay in the city until you are clothed with power from on high.”</span></p>
+<p id="p42024036_06-1"><b class="verse-num" id="v42024036-1">36 </b>As they were talking about these things, Jesus himself stood among them, and said to them, <span class="woc">“Peace to you!”</span> <b class="verse-num" id="v42024037-1">37 </b>But they were startled and frightened and thought they saw a spirit. <b class="verse-num" id="v42024038-1">38 </b>And he said to them, <span class="woc">“Why are you troubled, and why do doubts arise in your hearts?</span> <b class="verse-num woc" id="v42024039-1">39 </b><span class="woc">See my hands and my feet, that it is I myself. Touch me, and see. For a spirit does not have flesh and bones as you see that I have.”</span> <b class="verse-num" id="v42024040-1">40 </b>And when he had said this, he showed them his hands and his feet. <b class="verse-num" id="v42024041-1">41 </b>And while they still disbelieved for joy and were marveling, he said to them, <span class="woc">“Have you anything here to eat?”</span> <b class="verse-num" id="v42024042-1">42 </b>They gave him a piece of broiled fish,<sup class="footnote"><a class="fn" href="#f1-1" id="fb1-1" title='&lt;note class="variant" sub-class="variant-adds"&gt;Some manuscripts add &lt;i&gt;and some honeycomb&lt;/i&gt;&lt;/note&gt;'>1</a></sup> <b class="verse-num" id="v42024043-1">43 </b>and he took it and ate before them.</p>
+<p id="p42024043_06-1"><b class="verse-num" id="v42024044-1">44 </b>Then he said to them, <span class="woc">“These are my words that I spoke to you while I was still with you, that everything written about me in the Law of Moses and the Prophets and the Psalms must be fulfilled.”</span> <b class="verse-num" id="v42024045-1">45 </b>Then he opened their minds to understand the Scriptures, <b class="verse-num" id="v42024046-1">46 </b>and said to them, <span class="woc">“Thus it is written, that the Christ should suffer and on the third day rise from the dead,</span> <b class="verse-num woc" id="v42024047-1">47 </b><span class="woc">and that repentance for<sup class="footnote"><a class="fn" href="#f2-1" id="fb2-1" title='&lt;note class="variant"&gt;Some manuscripts &lt;i&gt;and&lt;/i&gt;&lt;/note&gt;'>2</a></sup> the forgiveness of sins should be proclaimed in his name to all nations, beginning from Jerusalem.</span> <b class="verse-num woc" id="v42024048-1">48 </b><span class="woc">You are witnesses of these things.</span> <b class="verse-num woc" id="v42024049-1">49 </b><span class="woc">And behold, I am sending the promise of my Father upon you. But stay in the city until you are clothed with power from on high.”</span></p>
 <h3 id="p42024049_06-1">The Ascension</h3>
-<p id="p42024049_08-1"><b class="verse-num" id="v42024050-1">50&nbsp;</b>And he led them out as far as Bethany, and lifting up his hands he blessed them. <b class="verse-num" id="v42024051-1">51&nbsp;</b>While he blessed them, he parted from them and was carried up into heaven. <b class="verse-num" id="v42024052-1">52&nbsp;</b>And they worshiped him and returned to Jerusalem with great joy, <b class="verse-num" id="v42024053-1">53&nbsp;</b>and were continually in the temple blessing God.</p>
+<p id="p42024049_08-1"><b class="verse-num" id="v42024050-1">50 </b>And he led them out as far as Bethany, and lifting up his hands he blessed them. <b class="verse-num" id="v42024051-1">51 </b>While he blessed them, he parted from them and was carried up into heaven. <b class="verse-num" id="v42024052-1">52 </b>And they worshiped him and returned to Jerusalem with great joy, <b class="verse-num" id="v42024053-1">53 </b>and were continually in the temple blessing God.</p>
 <div class="footnotes extra_text">
 <h3>Footnotes</h3>
 <p><span class="footnote"><a href="#fb1-1" id="f1-1">[1]</a></span> <span class="footnote-ref">24:42</span> <note class="variant" sub-class="variant-adds">Some manuscripts add <i>and some honeycomb</i></note>
-<br />
+<br/>
 <span class="footnote"><a href="#fb2-1" id="f2-1">[2]</a></span> <span class="footnote-ref">24:47</span> <note class="variant">Some manuscripts <i>and</i></note>
 </p>
 </div>
-<a href="http://www.esv.org" class="copyright">ESV</a>
-        </div>
-
-    </div>
-
+<a class="copyright" href="http://www.esv.org">ESV</a>
+</div>
+</div>
 </div>

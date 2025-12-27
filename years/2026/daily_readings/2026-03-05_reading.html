@@ -1,142 +1,126 @@
-<div class="daily-reading-container"
-     data-passage="Leviticus 19-20; Mark 9:30-50"
-     data-has-commentary="false"
-     data-has-devotional="false"
-     data-is-verse-card="false">
-
-    <!-- Header -->
-    <div class="reading-header">
-        <h1 class="reading-title">Leviticus 19-20; Mark 9:30-50</h1>
-        <div class="reading-date">March 5, 2026</div>
-    </div>
-
-
-    <!-- Audio Player -->
-    <div class="audio-section" id="audioSection">
-        <audio controls preload="metadata" class="bible-audio">
-            <source src="https://audio.esv.org/david-cochran-heath/mq/03019001-03020027.mp3" type="audio/mpeg">
-        </audio>
-    </div>
-
-    <!-- Bible Content Container -->
-    <div class="bible-content-container">
-
-        <!-- Settings Wrapper -->
-        <div class="settings-wrapper">
-            <!-- Floating Copy Button (FAB) for Verse Selection -->
-            <div class="copy-fab" id="copyFab">
-                <button class="clear-selection-button" id="clearSelectionBtn" title="Clear selection">×</button>
-                <button class="copy-button" id="copyVerseBtn" title="Copy selected verses">
+<div class="daily-reading-container" data-has-commentary="false" data-has-devotional="false" data-is-verse-card="false" data-passage="Leviticus 19-20; Mark 9:30-50">
+<!-- Header -->
+<div class="reading-header">
+<h1 class="reading-title">Leviticus 19-20; Mark 9:30-50</h1>
+<div class="reading-date">March 5, 2026</div>
+</div>
+<!-- Audio Player -->
+<div class="audio-section" id="audioSection">
+<audio class="bible-audio" controls="" preload="metadata">
+<source src="https://audio.esv.org/david-cochran-heath/mq/03019001-03020027.mp3" type="audio/mpeg"/>
+</audio>
+</div>
+<!-- Bible Content Container -->
+<div class="bible-content-container">
+<!-- Settings Wrapper -->
+<div class="settings-wrapper">
+<!-- Floating Copy Button (FAB) for Verse Selection -->
+<div class="copy-fab" id="copyFab">
+<button class="clear-selection-button" id="clearSelectionBtn" title="Clear selection">×</button>
+<button class="copy-button" id="copyVerseBtn" title="Copy selected verses">
                     📋
                     <span class="verse-count-badge" id="verseCountBadge">0</span>
-                </button>
-            </div>
+</button>
+</div>
+<!-- Settings Button -->
+<button class="settings-btn" id="settingsBtn" title="Display Settings">⚙️</button>
+<!-- Settings Menu -->
+<div class="settings-menu" id="settingsMenu">
+<h4>Display Settings</h4>
+<label>
+<input checked="" id="toggleImage" type="checkbox"/>
+<span>Image</span>
+</label>
+<label>
+<input checked="" id="toggleAudio" type="checkbox"/>
+<span>Audio Player</span>
+</label>
+<label>
+<input checked="" id="toggleFootnotes" type="checkbox"/>
+<span>Footnotes</span>
+</label>
+<label>
+<input checked="" id="toggleCrossrefs" type="checkbox"/>
+<span>Cross-References</span>
+</label>
+</div>
+</div>
+<!-- Share Button -->
+<div class="share-section">
+<button class="share-btn" id="shareBtn" title="Share this reading">
+<img alt="Share" class="share-icon" src="/assets/share.png"/>
 
-            <!-- Settings Button -->
-            <button class="settings-btn" id="settingsBtn" title="Display Settings">⚙️</button>
-
-            <!-- Settings Menu -->
-            <div class="settings-menu" id="settingsMenu">
-                <h4>Display Settings</h4>
-                <label>
-                    <input type="checkbox" id="toggleImage" checked>
-                    <span>Image</span>
-                </label>
-                <label>
-                    <input type="checkbox" id="toggleAudio" checked>
-                    <span>Audio Player</span>
-                </label>
-                <label>
-                    <input type="checkbox" id="toggleFootnotes" checked>
-                    <span>Footnotes</span>
-                </label>
-                <label>
-                    <input type="checkbox" id="toggleCrossrefs" checked>
-                    <span>Cross-References</span>
-                </label>
-            </div>
-        </div>
-
-        <!-- Share Button -->
-        <div class="share-section">
-            <button class="share-btn" id="shareBtn" title="Share this reading">
-                <span class="share-icon">↱</span>
-                <span class="share-text">Share</span>
-            </button>
-        </div>
-
-        <!-- Bible Content -->
-        <div class="bible-content" id="bibleContent">
+</button>
+</div>
+<!-- Bible Content -->
+<div class="bible-content" id="bibleContent">
 <h3 id="p03019001_01-1">The <span class="divine-name">Lord</span> Is Holy</h3>
-<p id="p03019001_05-1" class="starts-chapter"><b class="chapter-num" id="v03019001-1">19&nbsp;</b>And the LORD spoke to Moses, saying, <b class="verse-num" id="v03019002-1">2&nbsp;</b>“Speak to all the congregation of the people of Israel and say to them, You shall be holy, for I the LORD your God am holy. <b class="verse-num" id="v03019003-1">3&nbsp;</b>Every one of you shall revere his mother and his father, and you shall keep my Sabbaths: I am the LORD your God. <b class="verse-num" id="v03019004-1">4&nbsp;</b>Do not turn to idols or make for yourselves any gods of cast metal: I am the LORD your God.</p>
-<p id="p03019004_05-1"><b class="verse-num" id="v03019005-1">5&nbsp;</b>“When you offer a sacrifice of peace offerings to the LORD, you shall offer it so that you may be accepted. <b class="verse-num" id="v03019006-1">6&nbsp;</b>It shall be eaten the same day you offer it or on the day after, and anything left over until the third day shall be burned up with fire. <b class="verse-num" id="v03019007-1">7&nbsp;</b>If it is eaten at all on the third day, it is tainted; it will not be accepted, <b class="verse-num" id="v03019008-1">8&nbsp;</b>and everyone who eats it shall bear his iniquity, because he has profaned what is holy to the LORD, and that person shall be cut off from his people.</p>
+<p class="starts-chapter" id="p03019001_05-1"><b class="chapter-num" id="v03019001-1">19 </b>And the LORD spoke to Moses, saying, <b class="verse-num" id="v03019002-1">2 </b>“Speak to all the congregation of the people of Israel and say to them, You shall be holy, for I the LORD your God am holy. <b class="verse-num" id="v03019003-1">3 </b>Every one of you shall revere his mother and his father, and you shall keep my Sabbaths: I am the LORD your God. <b class="verse-num" id="v03019004-1">4 </b>Do not turn to idols or make for yourselves any gods of cast metal: I am the LORD your God.</p>
+<p id="p03019004_05-1"><b class="verse-num" id="v03019005-1">5 </b>“When you offer a sacrifice of peace offerings to the LORD, you shall offer it so that you may be accepted. <b class="verse-num" id="v03019006-1">6 </b>It shall be eaten the same day you offer it or on the day after, and anything left over until the third day shall be burned up with fire. <b class="verse-num" id="v03019007-1">7 </b>If it is eaten at all on the third day, it is tainted; it will not be accepted, <b class="verse-num" id="v03019008-1">8 </b>and everyone who eats it shall bear his iniquity, because he has profaned what is holy to the LORD, and that person shall be cut off from his people.</p>
 <h3 id="p03019008_05-1">Love Your Neighbor as Yourself</h3>
-<p id="p03019008_10-1"><b class="verse-num" id="v03019009-1">9&nbsp;</b>“When you reap the harvest of your land, you shall not reap your field right up to its edge, neither shall you gather the gleanings after your harvest. <b class="verse-num" id="v03019010-1">10&nbsp;</b>And you shall not strip your vineyard bare, neither shall you gather the fallen grapes of your vineyard. You shall leave them for the poor and for the sojourner: I am the LORD your God.</p>
-<p id="p03019010_10-1"><b class="verse-num" id="v03019011-1">11&nbsp;</b>“You shall not steal; you shall not deal falsely; you shall not lie to one another. <b class="verse-num" id="v03019012-1">12&nbsp;</b>You shall not swear by my name falsely, and so profane the name of your God: I am the LORD.</p>
-<p id="p03019012_10-1"><b class="verse-num" id="v03019013-1">13&nbsp;</b>“You shall not oppress your neighbor or rob him. The wages of a hired worker shall not remain with you all night until the morning. <b class="verse-num" id="v03019014-1">14&nbsp;</b>You shall not curse the deaf or put a stumbling block before the blind, but you shall fear your God: I am the LORD.</p>
-<p id="p03019014_10-1"><b class="verse-num" id="v03019015-1">15&nbsp;</b>“You shall do no injustice in court. You shall not be partial to the poor or defer to the great, but in righteousness shall you judge your neighbor. <b class="verse-num" id="v03019016-1">16&nbsp;</b>You shall not go around as a slanderer among your people, and you shall not stand up against the life<sup class="footnote"><a class="fn" href="#f1-1" id="fb1-1" title="&lt;note class=&quot;translation&quot; sub-class=&quot;original&quot;&gt;Hebrew &lt;i&gt;blood&lt;/i&gt;&lt;/note&gt;">1</a></sup> of your neighbor: I am the LORD.</p>
-<p id="p03019016_10-1"><b class="verse-num" id="v03019017-1">17&nbsp;</b>“You shall not hate your brother in your heart, but you shall reason frankly with your neighbor, lest you incur sin because of him. <b class="verse-num" id="v03019018-1">18&nbsp;</b>You shall not take vengeance or bear a grudge against the sons of your own people, but you shall love your neighbor as yourself: I am the LORD.</p>
+<p id="p03019008_10-1"><b class="verse-num" id="v03019009-1">9 </b>“When you reap the harvest of your land, you shall not reap your field right up to its edge, neither shall you gather the gleanings after your harvest. <b class="verse-num" id="v03019010-1">10 </b>And you shall not strip your vineyard bare, neither shall you gather the fallen grapes of your vineyard. You shall leave them for the poor and for the sojourner: I am the LORD your God.</p>
+<p id="p03019010_10-1"><b class="verse-num" id="v03019011-1">11 </b>“You shall not steal; you shall not deal falsely; you shall not lie to one another. <b class="verse-num" id="v03019012-1">12 </b>You shall not swear by my name falsely, and so profane the name of your God: I am the LORD.</p>
+<p id="p03019012_10-1"><b class="verse-num" id="v03019013-1">13 </b>“You shall not oppress your neighbor or rob him. The wages of a hired worker shall not remain with you all night until the morning. <b class="verse-num" id="v03019014-1">14 </b>You shall not curse the deaf or put a stumbling block before the blind, but you shall fear your God: I am the LORD.</p>
+<p id="p03019014_10-1"><b class="verse-num" id="v03019015-1">15 </b>“You shall do no injustice in court. You shall not be partial to the poor or defer to the great, but in righteousness shall you judge your neighbor. <b class="verse-num" id="v03019016-1">16 </b>You shall not go around as a slanderer among your people, and you shall not stand up against the life<sup class="footnote"><a class="fn" href="#f1-1" id="fb1-1" title='&lt;note class="translation" sub-class="original"&gt;Hebrew &lt;i&gt;blood&lt;/i&gt;&lt;/note&gt;'>1</a></sup> of your neighbor: I am the LORD.</p>
+<p id="p03019016_10-1"><b class="verse-num" id="v03019017-1">17 </b>“You shall not hate your brother in your heart, but you shall reason frankly with your neighbor, lest you incur sin because of him. <b class="verse-num" id="v03019018-1">18 </b>You shall not take vengeance or bear a grudge against the sons of your own people, but you shall love your neighbor as yourself: I am the LORD.</p>
 <h3 id="p03019018_10-1">You Shall Keep My Statutes</h3>
-<p id="p03019018_15-1"><b class="verse-num" id="v03019019-1">19&nbsp;</b>“You shall keep my statutes. You shall not let your cattle breed with a different kind. You shall not sow your field with two kinds of seed, nor shall you wear a garment of cloth made of two kinds of material.</p>
-<p id="p03019019_15-1"><b class="verse-num" id="v03019020-1">20&nbsp;</b>“If a man lies sexually with a woman who is a slave, assigned to another man and not yet ransomed or given her freedom, a distinction shall be made. They shall not be put to death, because she was not free; <b class="verse-num" id="v03019021-1">21&nbsp;</b>but he shall bring his compensation to the LORD, to the entrance of the tent of meeting, a ram for a guilt offering. <b class="verse-num" id="v03019022-1">22&nbsp;</b>And the priest shall make atonement for him with the ram of the guilt offering before the LORD for his sin that he has committed, and he shall be forgiven for the sin that he has committed.</p>
-<p id="p03019022_15-1"><b class="verse-num" id="v03019023-1">23&nbsp;</b>“When you come into the land and plant any kind of tree for food, then you shall regard its fruit as forbidden.<sup class="footnote"><a class="fn" href="#f2-1" id="fb2-1" title="&lt;note class=&quot;translation&quot; sub-class=&quot;original&quot;&gt;Hebrew &lt;i&gt;&lt;span class=&quot;catch-word&quot;&gt;as&lt;/span&gt; its uncircumcision&lt;/i&gt;&lt;/note&gt;">2</a></sup> Three years it shall be forbidden to you; it must not be eaten. <b class="verse-num" id="v03019024-1">24&nbsp;</b>And in the fourth year all its fruit shall be holy, an offering of praise to the LORD. <b class="verse-num" id="v03019025-1">25&nbsp;</b>But in the fifth year you may eat of its fruit, to increase its yield for you: I am the LORD your God.</p>
-<p id="p03019025_15-1"><b class="verse-num" id="v03019026-1">26&nbsp;</b>“You shall not eat any flesh with the blood in it. You shall not interpret omens or tell fortunes. <b class="verse-num" id="v03019027-1">27&nbsp;</b>You shall not round off the hair on your temples or mar the edges of your beard. <b class="verse-num" id="v03019028-1">28&nbsp;</b>You shall not make any cuts on your body for the dead or tattoo yourselves: I am the LORD.</p>
-<p id="p03019028_15-1"><b class="verse-num" id="v03019029-1">29&nbsp;</b>“Do not profane your daughter by making her a prostitute, lest the land fall into prostitution and the land become full of depravity. <b class="verse-num" id="v03019030-1">30&nbsp;</b>You shall keep my Sabbaths and reverence my sanctuary: I am the LORD.</p>
-<p id="p03019030_15-1"><b class="verse-num" id="v03019031-1">31&nbsp;</b>“Do not turn to mediums or necromancers; do not seek them out, and so make yourselves unclean by them: I am the LORD your God.</p>
-<p id="p03019031_15-1"><b class="verse-num" id="v03019032-1">32&nbsp;</b>“You shall stand up before the gray head and honor the face of an old man, and you shall fear your God: I am the LORD.</p>
-<p id="p03019032_15-1"><b class="verse-num" id="v03019033-1">33&nbsp;</b>“When a stranger sojourns with you in your land, you shall not do him wrong. <b class="verse-num" id="v03019034-1">34&nbsp;</b>You shall treat the stranger who sojourns with you as the native among you, and you shall love him as yourself, for you were strangers in the land of Egypt: I am the LORD your God.</p>
-<p id="p03019034_15-1"><b class="verse-num" id="v03019035-1">35&nbsp;</b>“You shall do no wrong in judgment, in measures of length or weight or quantity. <b class="verse-num" id="v03019036-1">36&nbsp;</b>You shall have just balances, just weights, a just ephah, and a just hin:<sup class="footnote"><a class="fn" href="#f3-1" id="fb3-1" title="&lt;note class=&quot;background&quot; sub-class=&quot;measurement&quot;&gt;An &lt;i class=&quot;catch-word&quot;&gt;ephah&lt;/i&gt; was about 3/5 bushel or 22 liters; a &lt;i class=&quot;catch-word&quot;&gt;hin&lt;/i&gt; was about 4 quarts or 3.5 liters&lt;/note&gt;">3</a></sup> I am the LORD your God, who brought you out of the land of Egypt. <b class="verse-num" id="v03019037-1">37&nbsp;</b>And you shall observe all my statutes and all my rules, and do them: I am the LORD.”</p>
+<p id="p03019018_15-1"><b class="verse-num" id="v03019019-1">19 </b>“You shall keep my statutes. You shall not let your cattle breed with a different kind. You shall not sow your field with two kinds of seed, nor shall you wear a garment of cloth made of two kinds of material.</p>
+<p id="p03019019_15-1"><b class="verse-num" id="v03019020-1">20 </b>“If a man lies sexually with a woman who is a slave, assigned to another man and not yet ransomed or given her freedom, a distinction shall be made. They shall not be put to death, because she was not free; <b class="verse-num" id="v03019021-1">21 </b>but he shall bring his compensation to the LORD, to the entrance of the tent of meeting, a ram for a guilt offering. <b class="verse-num" id="v03019022-1">22 </b>And the priest shall make atonement for him with the ram of the guilt offering before the LORD for his sin that he has committed, and he shall be forgiven for the sin that he has committed.</p>
+<p id="p03019022_15-1"><b class="verse-num" id="v03019023-1">23 </b>“When you come into the land and plant any kind of tree for food, then you shall regard its fruit as forbidden.<sup class="footnote"><a class="fn" href="#f2-1" id="fb2-1" title='&lt;note class="translation" sub-class="original"&gt;Hebrew &lt;i&gt;&lt;span class="catch-word"&gt;as&lt;/span&gt; its uncircumcision&lt;/i&gt;&lt;/note&gt;'>2</a></sup> Three years it shall be forbidden to you; it must not be eaten. <b class="verse-num" id="v03019024-1">24 </b>And in the fourth year all its fruit shall be holy, an offering of praise to the LORD. <b class="verse-num" id="v03019025-1">25 </b>But in the fifth year you may eat of its fruit, to increase its yield for you: I am the LORD your God.</p>
+<p id="p03019025_15-1"><b class="verse-num" id="v03019026-1">26 </b>“You shall not eat any flesh with the blood in it. You shall not interpret omens or tell fortunes. <b class="verse-num" id="v03019027-1">27 </b>You shall not round off the hair on your temples or mar the edges of your beard. <b class="verse-num" id="v03019028-1">28 </b>You shall not make any cuts on your body for the dead or tattoo yourselves: I am the LORD.</p>
+<p id="p03019028_15-1"><b class="verse-num" id="v03019029-1">29 </b>“Do not profane your daughter by making her a prostitute, lest the land fall into prostitution and the land become full of depravity. <b class="verse-num" id="v03019030-1">30 </b>You shall keep my Sabbaths and reverence my sanctuary: I am the LORD.</p>
+<p id="p03019030_15-1"><b class="verse-num" id="v03019031-1">31 </b>“Do not turn to mediums or necromancers; do not seek them out, and so make yourselves unclean by them: I am the LORD your God.</p>
+<p id="p03019031_15-1"><b class="verse-num" id="v03019032-1">32 </b>“You shall stand up before the gray head and honor the face of an old man, and you shall fear your God: I am the LORD.</p>
+<p id="p03019032_15-1"><b class="verse-num" id="v03019033-1">33 </b>“When a stranger sojourns with you in your land, you shall not do him wrong. <b class="verse-num" id="v03019034-1">34 </b>You shall treat the stranger who sojourns with you as the native among you, and you shall love him as yourself, for you were strangers in the land of Egypt: I am the LORD your God.</p>
+<p id="p03019034_15-1"><b class="verse-num" id="v03019035-1">35 </b>“You shall do no wrong in judgment, in measures of length or weight or quantity. <b class="verse-num" id="v03019036-1">36 </b>You shall have just balances, just weights, a just ephah, and a just hin:<sup class="footnote"><a class="fn" href="#f3-1" id="fb3-1" title='&lt;note class="background" sub-class="measurement"&gt;An &lt;i class="catch-word"&gt;ephah&lt;/i&gt; was about 3/5 bushel or 22 liters; a &lt;i class="catch-word"&gt;hin&lt;/i&gt; was about 4 quarts or 3.5 liters&lt;/note&gt;'>3</a></sup> I am the LORD your God, who brought you out of the land of Egypt. <b class="verse-num" id="v03019037-1">37 </b>And you shall observe all my statutes and all my rules, and do them: I am the LORD.”</p>
 <h3 id="p03020001_15-1">Punishment for Child Sacrifice</h3>
-<p id="p03020001_19-1" class="starts-chapter"><b class="chapter-num" id="v03020001-1">20&nbsp;</b>The LORD spoke to Moses, saying, <b class="verse-num" id="v03020002-1">2&nbsp;</b>“Say to the people of Israel, Any one of the people of Israel or of the strangers who sojourn in Israel who gives any of his children to Molech shall surely be put to death. The people of the land shall stone him with stones. <b class="verse-num" id="v03020003-1">3&nbsp;</b>I myself will set my face against that man and will cut him off from among his people, because he has given one of his children to Molech, to make my sanctuary unclean and to profane my holy name. <b class="verse-num" id="v03020004-1">4&nbsp;</b>And if the people of the land do at all close their eyes to that man when he gives one of his children to Molech, and do not put him to death, <b class="verse-num" id="v03020005-1">5&nbsp;</b>then I will set my face against that man and against his clan and will cut them off from among their people, him and all who follow him in whoring after Molech.</p>
-<p id="p03020005_19-1"><b class="verse-num" id="v03020006-1">6&nbsp;</b>“If a person turns to mediums and necromancers, whoring after them, I will set my face against that person and will cut him off from among his people. <b class="verse-num" id="v03020007-1">7&nbsp;</b>Consecrate yourselves, therefore, and be holy, for I am the LORD your God. <b class="verse-num" id="v03020008-1">8&nbsp;</b>Keep my statutes and do them; I am the LORD who sanctifies you. <b class="verse-num" id="v03020009-1">9&nbsp;</b>For anyone who curses his father or his mother shall surely be put to death; he has cursed his father or his mother; his blood is upon him.</p>
+<p class="starts-chapter" id="p03020001_19-1"><b class="chapter-num" id="v03020001-1">20 </b>The LORD spoke to Moses, saying, <b class="verse-num" id="v03020002-1">2 </b>“Say to the people of Israel, Any one of the people of Israel or of the strangers who sojourn in Israel who gives any of his children to Molech shall surely be put to death. The people of the land shall stone him with stones. <b class="verse-num" id="v03020003-1">3 </b>I myself will set my face against that man and will cut him off from among his people, because he has given one of his children to Molech, to make my sanctuary unclean and to profane my holy name. <b class="verse-num" id="v03020004-1">4 </b>And if the people of the land do at all close their eyes to that man when he gives one of his children to Molech, and do not put him to death, <b class="verse-num" id="v03020005-1">5 </b>then I will set my face against that man and against his clan and will cut them off from among their people, him and all who follow him in whoring after Molech.</p>
+<p id="p03020005_19-1"><b class="verse-num" id="v03020006-1">6 </b>“If a person turns to mediums and necromancers, whoring after them, I will set my face against that person and will cut him off from among his people. <b class="verse-num" id="v03020007-1">7 </b>Consecrate yourselves, therefore, and be holy, for I am the LORD your God. <b class="verse-num" id="v03020008-1">8 </b>Keep my statutes and do them; I am the LORD who sanctifies you. <b class="verse-num" id="v03020009-1">9 </b>For anyone who curses his father or his mother shall surely be put to death; he has cursed his father or his mother; his blood is upon him.</p>
 <h3 id="p03020009_19-1">Punishments for Sexual Immorality</h3>
-<p id="p03020009_23-1"><b class="verse-num" id="v03020010-1">10&nbsp;</b>“If a man commits adultery with the wife of<sup class="footnote"><a class="fn" href="#f4-1" id="fb4-1" title="&lt;note class=&quot;translation&quot;&gt;Hebrew repeats &lt;i&gt;if a man commits adultery with the wife of&lt;/i&gt;&lt;/note&gt;">4</a></sup> his neighbor, both the adulterer and the adulteress shall surely be put to death. <b class="verse-num" id="v03020011-1">11&nbsp;</b>If a man lies with his father’s wife, he has uncovered his father’s nakedness; both of them shall surely be put to death; their blood is upon them. <b class="verse-num" id="v03020012-1">12&nbsp;</b>If a man lies with his daughter-in-law, both of them shall surely be put to death; they have committed perversion; their blood is upon them. <b class="verse-num" id="v03020013-1">13&nbsp;</b>If a man lies with a male as with a woman, both of them have committed an abomination; they shall surely be put to death; their blood is upon them. <b class="verse-num" id="v03020014-1">14&nbsp;</b>If a man takes a woman and her mother also, it is depravity; he and they shall be burned with fire, that there may be no depravity among you. <b class="verse-num" id="v03020015-1">15&nbsp;</b>If a man lies with an animal, he shall surely be put to death, and you shall kill the animal. <b class="verse-num" id="v03020016-1">16&nbsp;</b>If a woman approaches any animal and lies with it, you shall kill the woman and the animal; they shall surely be put to death; their blood is upon them.</p>
-<p id="p03020016_23-1"><b class="verse-num" id="v03020017-1">17&nbsp;</b>“If a man takes his sister, a daughter of his father or a daughter of his mother, and sees her nakedness, and she sees his nakedness, it is a disgrace, and they shall be cut off in the sight of the children of their people. He has uncovered his sister’s nakedness, and he shall bear his iniquity. <b class="verse-num" id="v03020018-1">18&nbsp;</b>If a man lies with a woman during her menstrual period and uncovers her nakedness, he has made naked her fountain, and she has uncovered the fountain of her blood. Both of them shall be cut off from among their people. <b class="verse-num" id="v03020019-1">19&nbsp;</b>You shall not uncover the nakedness of your mother’s sister or of your father’s sister, for that is to make naked one’s relative; they shall bear their iniquity. <b class="verse-num" id="v03020020-1">20&nbsp;</b>If a man lies with his uncle’s wife, he has uncovered his uncle’s nakedness; they shall bear their sin; they shall die childless. <b class="verse-num" id="v03020021-1">21&nbsp;</b>If a man takes his brother’s wife, it is impurity.<sup class="footnote"><a class="fn" href="#f5-1" id="fb5-1" title="&lt;note class=&quot;translation&quot; sub-class=&quot;original&quot;&gt;Hebrew &lt;i&gt;menstrual impurity&lt;/i&gt;&lt;/note&gt;">5</a></sup> He has uncovered his brother’s nakedness; they shall be childless.</p>
+<p id="p03020009_23-1"><b class="verse-num" id="v03020010-1">10 </b>“If a man commits adultery with the wife of<sup class="footnote"><a class="fn" href="#f4-1" id="fb4-1" title='&lt;note class="translation"&gt;Hebrew repeats &lt;i&gt;if a man commits adultery with the wife of&lt;/i&gt;&lt;/note&gt;'>4</a></sup> his neighbor, both the adulterer and the adulteress shall surely be put to death. <b class="verse-num" id="v03020011-1">11 </b>If a man lies with his father’s wife, he has uncovered his father’s nakedness; both of them shall surely be put to death; their blood is upon them. <b class="verse-num" id="v03020012-1">12 </b>If a man lies with his daughter-in-law, both of them shall surely be put to death; they have committed perversion; their blood is upon them. <b class="verse-num" id="v03020013-1">13 </b>If a man lies with a male as with a woman, both of them have committed an abomination; they shall surely be put to death; their blood is upon them. <b class="verse-num" id="v03020014-1">14 </b>If a man takes a woman and her mother also, it is depravity; he and they shall be burned with fire, that there may be no depravity among you. <b class="verse-num" id="v03020015-1">15 </b>If a man lies with an animal, he shall surely be put to death, and you shall kill the animal. <b class="verse-num" id="v03020016-1">16 </b>If a woman approaches any animal and lies with it, you shall kill the woman and the animal; they shall surely be put to death; their blood is upon them.</p>
+<p id="p03020016_23-1"><b class="verse-num" id="v03020017-1">17 </b>“If a man takes his sister, a daughter of his father or a daughter of his mother, and sees her nakedness, and she sees his nakedness, it is a disgrace, and they shall be cut off in the sight of the children of their people. He has uncovered his sister’s nakedness, and he shall bear his iniquity. <b class="verse-num" id="v03020018-1">18 </b>If a man lies with a woman during her menstrual period and uncovers her nakedness, he has made naked her fountain, and she has uncovered the fountain of her blood. Both of them shall be cut off from among their people. <b class="verse-num" id="v03020019-1">19 </b>You shall not uncover the nakedness of your mother’s sister or of your father’s sister, for that is to make naked one’s relative; they shall bear their iniquity. <b class="verse-num" id="v03020020-1">20 </b>If a man lies with his uncle’s wife, he has uncovered his uncle’s nakedness; they shall bear their sin; they shall die childless. <b class="verse-num" id="v03020021-1">21 </b>If a man takes his brother’s wife, it is impurity.<sup class="footnote"><a class="fn" href="#f5-1" id="fb5-1" title='&lt;note class="translation" sub-class="original"&gt;Hebrew &lt;i&gt;menstrual impurity&lt;/i&gt;&lt;/note&gt;'>5</a></sup> He has uncovered his brother’s nakedness; they shall be childless.</p>
 <h3 id="p03020021_23-1">You Shall Be Holy</h3>
-<p id="p03020021_27-1"><b class="verse-num" id="v03020022-1">22&nbsp;</b>“You shall therefore keep all my statutes and all my rules and do them, that the land where I am bringing you to live may not vomit you out. <b class="verse-num" id="v03020023-1">23&nbsp;</b>And you shall not walk in the customs of the nation that I am driving out before you, for they did all these things, and therefore I detested them. <b class="verse-num" id="v03020024-1">24&nbsp;</b>But I have said to you, ‘You shall inherit their land, and I will give it to you to possess, a land flowing with milk and honey.’ I am the LORD your God, who has separated you from the peoples. <b class="verse-num" id="v03020025-1">25&nbsp;</b>You shall therefore separate the clean beast from the unclean, and the unclean bird from the clean. You shall not make yourselves detestable by beast or by bird or by anything with which the ground crawls, which I have set apart for you to hold unclean. <b class="verse-num" id="v03020026-1">26&nbsp;</b>You shall be holy to me, for I the LORD am holy and have separated you from the peoples, that you should be mine.</p>
-<p id="p03020026_27-1"><b class="verse-num" id="v03020027-1">27&nbsp;</b>“A man or a woman who is a medium or a necromancer shall surely be put to death. They shall be stoned with stones; their blood shall be upon them.”</p>
+<p id="p03020021_27-1"><b class="verse-num" id="v03020022-1">22 </b>“You shall therefore keep all my statutes and all my rules and do them, that the land where I am bringing you to live may not vomit you out. <b class="verse-num" id="v03020023-1">23 </b>And you shall not walk in the customs of the nation that I am driving out before you, for they did all these things, and therefore I detested them. <b class="verse-num" id="v03020024-1">24 </b>But I have said to you, ‘You shall inherit their land, and I will give it to you to possess, a land flowing with milk and honey.’ I am the LORD your God, who has separated you from the peoples. <b class="verse-num" id="v03020025-1">25 </b>You shall therefore separate the clean beast from the unclean, and the unclean bird from the clean. You shall not make yourselves detestable by beast or by bird or by anything with which the ground crawls, which I have set apart for you to hold unclean. <b class="verse-num" id="v03020026-1">26 </b>You shall be holy to me, for I the LORD am holy and have separated you from the peoples, that you should be mine.</p>
+<p id="p03020026_27-1"><b class="verse-num" id="v03020027-1">27 </b>“A man or a woman who is a medium or a necromancer shall surely be put to death. They shall be stoned with stones; their blood shall be upon them.”</p>
 <div class="footnotes extra_text">
 <h3>Footnotes</h3>
 <p><span class="footnote"><a href="#fb1-1" id="f1-1">[1]</a></span> <span class="footnote-ref">19:16</span> <note class="translation" sub-class="original">Hebrew <i>blood</i></note>
-<br />
+<br/>
 <span class="footnote"><a href="#fb2-1" id="f2-1">[2]</a></span> <span class="footnote-ref">19:23</span> <note class="translation" sub-class="original">Hebrew <i><span class="catch-word">as</span> its uncircumcision</i></note>
-<br />
+<br/>
 <span class="footnote"><a href="#fb3-1" id="f3-1">[3]</a></span> <span class="footnote-ref">19:36</span> <note class="background" sub-class="measurement">An <i class="catch-word">ephah</i> was about 3/5 bushel or 22 liters; a <i class="catch-word">hin</i> was about 4 quarts or 3.5 liters</note>
-<br />
+<br/>
 <span class="footnote"><a href="#fb4-1" id="f4-1">[4]</a></span> <span class="footnote-ref">20:10</span> <note class="translation">Hebrew repeats <i>if a man commits adultery with the wife of</i></note>
-<br />
+<br/>
 <span class="footnote"><a href="#fb5-1" id="f5-1">[5]</a></span> <span class="footnote-ref">20:21</span> <note class="translation" sub-class="original">Hebrew <i>menstrual impurity</i></note>
 </p>
 </div>
-<a href="http://www.esv.org" class="copyright">ESV</a>
-<hr class='passage-divider'>
-
+<a class="copyright" href="http://www.esv.org">ESV</a>
+<hr class="passage-divider"/>
 <h3 id="p41009030_01-1">Jesus Again Foretells Death, Resurrection</h3>
-<p id="p41009030_06-1"><b class="verse-num" id="v41009030-1">30&nbsp;</b>They went on from there and passed through Galilee. And he did not want anyone to know, <b class="verse-num" id="v41009031-1">31&nbsp;</b>for he was teaching his disciples, saying to them, <span class="woc">“The Son of Man is going to be delivered into the hands of men, and they will kill him. And when he is killed, after three days he will rise.”</span> <b class="verse-num" id="v41009032-1">32&nbsp;</b>But they did not understand the saying, and were afraid to ask him.</p>
+<p id="p41009030_06-1"><b class="verse-num" id="v41009030-1">30 </b>They went on from there and passed through Galilee. And he did not want anyone to know, <b class="verse-num" id="v41009031-1">31 </b>for he was teaching his disciples, saying to them, <span class="woc">“The Son of Man is going to be delivered into the hands of men, and they will kill him. And when he is killed, after three days he will rise.”</span> <b class="verse-num" id="v41009032-1">32 </b>But they did not understand the saying, and were afraid to ask him.</p>
 <h3 id="p41009032_06-1">Who Is the Greatest?</h3>
-<p id="p41009032_10-1"><b class="verse-num" id="v41009033-1">33&nbsp;</b>And they came to Capernaum. And when he was in the house he asked them, <span class="woc">“What were you discussing on the way?”</span> <b class="verse-num" id="v41009034-1">34&nbsp;</b>But they kept silent, for on the way they had argued with one another about who was the greatest. <b class="verse-num" id="v41009035-1">35&nbsp;</b>And he sat down and called the twelve. And he said to them, <span class="woc">“If anyone would be first, he must be last of all and servant of all.”</span> <b class="verse-num" id="v41009036-1">36&nbsp;</b>And he took a child and put him in the midst of them, and taking him in his arms, he said to them, <b class="verse-num woc" id="v41009037-1">37&nbsp;</b><span class="woc">“Whoever receives one such child in my name receives me, and whoever receives me, receives not me but him who sent me.”</span></p>
+<p id="p41009032_10-1"><b class="verse-num" id="v41009033-1">33 </b>And they came to Capernaum. And when he was in the house he asked them, <span class="woc">“What were you discussing on the way?”</span> <b class="verse-num" id="v41009034-1">34 </b>But they kept silent, for on the way they had argued with one another about who was the greatest. <b class="verse-num" id="v41009035-1">35 </b>And he sat down and called the twelve. And he said to them, <span class="woc">“If anyone would be first, he must be last of all and servant of all.”</span> <b class="verse-num" id="v41009036-1">36 </b>And he took a child and put him in the midst of them, and taking him in his arms, he said to them, <b class="verse-num woc" id="v41009037-1">37 </b><span class="woc">“Whoever receives one such child in my name receives me, and whoever receives me, receives not me but him who sent me.”</span></p>
 <h3 id="p41009037_10-1">Anyone Not Against Us Is for Us</h3>
-<p id="p41009037_17-1"><b class="verse-num" id="v41009038-1">38&nbsp;</b>John said to him, “Teacher, we saw someone casting out demons in your name,<sup class="footnote"><a class="fn" href="#f1-1" id="fb1-1" title="&lt;note class=&quot;variant&quot; sub-class=&quot;variant-adds&quot;&gt;Some manuscripts add &lt;i&gt;who does not follow us&lt;/i&gt;&lt;/note&gt;">1</a></sup> and we tried to stop him, because he was not following us.” <b class="verse-num" id="v41009039-1">39&nbsp;</b>But Jesus said, <span class="woc">“Do not stop him, for no one who does a mighty work in my name will be able soon afterward to speak evil of me.</span> <b class="verse-num woc" id="v41009040-1">40&nbsp;</b><span class="woc">For the one who is not against us is for us.</span> <b class="verse-num woc" id="v41009041-1">41&nbsp;</b><span class="woc">For truly, I say to you, whoever gives you a cup of water to drink because<sup class="footnote"><a class="fn" href="#f2-1" id="fb2-1" title="&lt;note class=&quot;translation&quot; sub-class=&quot;original&quot;&gt;Greek &lt;i&gt;in name that&lt;/i&gt;&lt;/note&gt;">2</a></sup> you belong to Christ will by no means lose his reward.</span></p>
+<p id="p41009037_17-1"><b class="verse-num" id="v41009038-1">38 </b>John said to him, “Teacher, we saw someone casting out demons in your name,<sup class="footnote"><a class="fn" href="#f1-1" id="fb1-1" title='&lt;note class="variant" sub-class="variant-adds"&gt;Some manuscripts add &lt;i&gt;who does not follow us&lt;/i&gt;&lt;/note&gt;'>1</a></sup> and we tried to stop him, because he was not following us.” <b class="verse-num" id="v41009039-1">39 </b>But Jesus said, <span class="woc">“Do not stop him, for no one who does a mighty work in my name will be able soon afterward to speak evil of me.</span> <b class="verse-num woc" id="v41009040-1">40 </b><span class="woc">For the one who is not against us is for us.</span> <b class="verse-num woc" id="v41009041-1">41 </b><span class="woc">For truly, I say to you, whoever gives you a cup of water to drink because<sup class="footnote"><a class="fn" href="#f2-1" id="fb2-1" title='&lt;note class="translation" sub-class="original"&gt;Greek &lt;i&gt;in name that&lt;/i&gt;&lt;/note&gt;'>2</a></sup> you belong to Christ will by no means lose his reward.</span></p>
 <h3 id="p41009041_17-1">Temptations to Sin</h3>
-<p id="p41009041_20-1"><b class="verse-num woc" id="v41009042-1">42&nbsp;</b><span class="woc">“Whoever causes one of these little ones who believe in me to sin,<sup class="footnote"><a class="fn" href="#f3-1" id="fb3-1" title="&lt;note class=&quot;translation&quot; sub-class=&quot;original&quot;&gt;Greek &lt;i&gt;&lt;span class=&quot;catch-word&quot;&gt;to&lt;/span&gt; stumble&lt;/i&gt;; also verses 43, 45, 47&lt;/note&gt;">3</a></sup> it would be better for him if a great millstone were hung around his neck and he were thrown into the sea.</span> <b class="verse-num woc" id="v41009043-1">43&nbsp;</b><span class="woc">And if your hand causes you to sin, cut it off. It is better for you to enter life crippled than with two hands to go to hell,<sup class="footnote"><a class="fn" href="#f4-1" id="fb4-1" title="&lt;note class=&quot;translation&quot; sub-class=&quot;original&quot;&gt;Greek &lt;i language=&quot;Greek&quot;&gt;Gehenna&lt;/i&gt;; also verse 47&lt;/note&gt;">4</a></sup> to the unquenchable fire.<sup class="footnote"><a class="fn" href="#f5-1" id="fb5-1" title="&lt;note class=&quot;variant&quot; sub-class=&quot;variant-adds&quot;&gt;Some manuscripts add verses 44 and 46 (which are identical with verse 48)&lt;/note&gt;">5</a></sup></span> <b class="verse-num woc" id="v41009045-1">45&nbsp;</b><span class="woc">And if your foot causes you to sin, cut it off. It is better for you to enter life lame than with two feet to be thrown into hell.</span> <b class="verse-num woc" id="v41009047-1">47&nbsp;</b><span class="woc">And if your eye causes you to sin, tear it out. It is better for you to enter the kingdom of God with one eye than with two eyes to be thrown into hell,</span> <b class="verse-num woc" id="v41009048-1">48&nbsp;</b><span class="woc">‘where their worm does not die and the fire is not quenched.’</span> <b class="verse-num woc" id="v41009049-1">49&nbsp;</b><span class="woc">For everyone will be salted with fire.<sup class="footnote"><a class="fn" href="#f6-1" id="fb6-1" title="&lt;note class=&quot;variant&quot; sub-class=&quot;variant-adds&quot;&gt;Some manuscripts add &lt;i&gt;and every sacrifice will be salted with salt&lt;/i&gt;&lt;/note&gt;">6</a></sup></span> <b class="verse-num woc" id="v41009050-1">50&nbsp;</b><span class="woc">Salt is good, but if the salt has lost its saltiness, how will you make it salty again? Have salt in yourselves, and be at peace with one another.”</span></p>
+<p id="p41009041_20-1"><b class="verse-num woc" id="v41009042-1">42 </b><span class="woc">“Whoever causes one of these little ones who believe in me to sin,<sup class="footnote"><a class="fn" href="#f3-1" id="fb3-1" title='&lt;note class="translation" sub-class="original"&gt;Greek &lt;i&gt;&lt;span class="catch-word"&gt;to&lt;/span&gt; stumble&lt;/i&gt;; also verses 43, 45, 47&lt;/note&gt;'>3</a></sup> it would be better for him if a great millstone were hung around his neck and he were thrown into the sea.</span> <b class="verse-num woc" id="v41009043-1">43 </b><span class="woc">And if your hand causes you to sin, cut it off. It is better for you to enter life crippled than with two hands to go to hell,<sup class="footnote"><a class="fn" href="#f4-1" id="fb4-1" title='&lt;note class="translation" sub-class="original"&gt;Greek &lt;i language="Greek"&gt;Gehenna&lt;/i&gt;; also verse 47&lt;/note&gt;'>4</a></sup> to the unquenchable fire.<sup class="footnote"><a class="fn" href="#f5-1" id="fb5-1" title='&lt;note class="variant" sub-class="variant-adds"&gt;Some manuscripts add verses 44 and 46 (which are identical with verse 48)&lt;/note&gt;'>5</a></sup></span> <b class="verse-num woc" id="v41009045-1">45 </b><span class="woc">And if your foot causes you to sin, cut it off. It is better for you to enter life lame than with two feet to be thrown into hell.</span> <b class="verse-num woc" id="v41009047-1">47 </b><span class="woc">And if your eye causes you to sin, tear it out. It is better for you to enter the kingdom of God with one eye than with two eyes to be thrown into hell,</span> <b class="verse-num woc" id="v41009048-1">48 </b><span class="woc">‘where their worm does not die and the fire is not quenched.’</span> <b class="verse-num woc" id="v41009049-1">49 </b><span class="woc">For everyone will be salted with fire.<sup class="footnote"><a class="fn" href="#f6-1" id="fb6-1" title='&lt;note class="variant" sub-class="variant-adds"&gt;Some manuscripts add &lt;i&gt;and every sacrifice will be salted with salt&lt;/i&gt;&lt;/note&gt;'>6</a></sup></span> <b class="verse-num woc" id="v41009050-1">50 </b><span class="woc">Salt is good, but if the salt has lost its saltiness, how will you make it salty again? Have salt in yourselves, and be at peace with one another.”</span></p>
 <div class="footnotes extra_text">
 <h3>Footnotes</h3>
 <p><span class="footnote"><a href="#fb1-1" id="f1-1">[1]</a></span> <span class="footnote-ref">9:38</span> <note class="variant" sub-class="variant-adds">Some manuscripts add <i>who does not follow us</i></note>
-<br />
+<br/>
 <span class="footnote"><a href="#fb2-1" id="f2-1">[2]</a></span> <span class="footnote-ref">9:41</span> <note class="translation" sub-class="original">Greek <i>in name that</i></note>
-<br />
+<br/>
 <span class="footnote"><a href="#fb3-1" id="f3-1">[3]</a></span> <span class="footnote-ref">9:42</span> <note class="translation" sub-class="original">Greek <i><span class="catch-word">to</span> stumble</i>; also verses 43, 45, 47</note>
-<br />
+<br/>
 <span class="footnote"><a href="#fb4-1" id="f4-1">[4]</a></span> <span class="footnote-ref">9:43</span> <note class="translation" sub-class="original">Greek <i language="Greek">Gehenna</i>; also verse 47</note>
-<br />
+<br/>
 <span class="footnote"><a href="#fb5-1" id="f5-1">[5]</a></span> <span class="footnote-ref">9:43</span> <note class="variant" sub-class="variant-adds">Some manuscripts add verses 44 and 46 (which are identical with verse 48)</note>
-<br />
+<br/>
 <span class="footnote"><a href="#fb6-1" id="f6-1">[6]</a></span> <span class="footnote-ref">9:49</span> <note class="variant" sub-class="variant-adds">Some manuscripts add <i>and every sacrifice will be salted with salt</i></note>
 </p>
 </div>
-<a href="http://www.esv.org" class="copyright">ESV</a>
-        </div>
-
-    </div>
-
+<a class="copyright" href="http://www.esv.org">ESV</a>
+</div>
+</div>
 </div>

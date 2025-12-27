@@ -1,142 +1,126 @@
-<div class="daily-reading-container"
-     data-passage="Psalm 4-6; John 7:1-27"
-     data-has-commentary="false"
-     data-has-devotional="false"
-     data-is-verse-card="false">
-
-    <!-- Header -->
-    <div class="reading-header">
-        <h1 class="reading-title">Psalm 4-6; John 7:1-27</h1>
-        <div class="reading-date">May 21, 2026</div>
-    </div>
-
-
-    <!-- Audio Player -->
-    <div class="audio-section" id="audioSection">
-        <audio controls preload="metadata" class="bible-audio">
-            <source src="https://audio.esv.org/david-cochran-heath/mq/19004001-19006010.mp3" type="audio/mpeg">
-        </audio>
-    </div>
-
-    <!-- Bible Content Container -->
-    <div class="bible-content-container">
-
-        <!-- Settings Wrapper -->
-        <div class="settings-wrapper">
-            <!-- Floating Copy Button (FAB) for Verse Selection -->
-            <div class="copy-fab" id="copyFab">
-                <button class="clear-selection-button" id="clearSelectionBtn" title="Clear selection">×</button>
-                <button class="copy-button" id="copyVerseBtn" title="Copy selected verses">
+<div class="daily-reading-container" data-has-commentary="false" data-has-devotional="false" data-is-verse-card="false" data-passage="Psalm 4-6; John 7:1-27">
+<!-- Header -->
+<div class="reading-header">
+<h1 class="reading-title">Psalm 4-6; John 7:1-27</h1>
+<div class="reading-date">May 21, 2026</div>
+</div>
+<!-- Audio Player -->
+<div class="audio-section" id="audioSection">
+<audio class="bible-audio" controls="" preload="metadata">
+<source src="https://audio.esv.org/david-cochran-heath/mq/19004001-19006010.mp3" type="audio/mpeg"/>
+</audio>
+</div>
+<!-- Bible Content Container -->
+<div class="bible-content-container">
+<!-- Settings Wrapper -->
+<div class="settings-wrapper">
+<!-- Floating Copy Button (FAB) for Verse Selection -->
+<div class="copy-fab" id="copyFab">
+<button class="clear-selection-button" id="clearSelectionBtn" title="Clear selection">×</button>
+<button class="copy-button" id="copyVerseBtn" title="Copy selected verses">
                     📋
                     <span class="verse-count-badge" id="verseCountBadge">0</span>
-                </button>
-            </div>
+</button>
+</div>
+<!-- Settings Button -->
+<button class="settings-btn" id="settingsBtn" title="Display Settings">⚙️</button>
+<!-- Settings Menu -->
+<div class="settings-menu" id="settingsMenu">
+<h4>Display Settings</h4>
+<label>
+<input checked="" id="toggleImage" type="checkbox"/>
+<span>Image</span>
+</label>
+<label>
+<input checked="" id="toggleAudio" type="checkbox"/>
+<span>Audio Player</span>
+</label>
+<label>
+<input checked="" id="toggleFootnotes" type="checkbox"/>
+<span>Footnotes</span>
+</label>
+<label>
+<input checked="" id="toggleCrossrefs" type="checkbox"/>
+<span>Cross-References</span>
+</label>
+</div>
+</div>
+<!-- Share Button -->
+<div class="share-section">
+<button class="share-btn" id="shareBtn" title="Share this reading">
+<img alt="Share" class="share-icon" src="/assets/share.png"/>
 
-            <!-- Settings Button -->
-            <button class="settings-btn" id="settingsBtn" title="Display Settings">⚙️</button>
-
-            <!-- Settings Menu -->
-            <div class="settings-menu" id="settingsMenu">
-                <h4>Display Settings</h4>
-                <label>
-                    <input type="checkbox" id="toggleImage" checked>
-                    <span>Image</span>
-                </label>
-                <label>
-                    <input type="checkbox" id="toggleAudio" checked>
-                    <span>Audio Player</span>
-                </label>
-                <label>
-                    <input type="checkbox" id="toggleFootnotes" checked>
-                    <span>Footnotes</span>
-                </label>
-                <label>
-                    <input type="checkbox" id="toggleCrossrefs" checked>
-                    <span>Cross-References</span>
-                </label>
-            </div>
-        </div>
-
-        <!-- Share Button -->
-        <div class="share-section">
-            <button class="share-btn" id="shareBtn" title="Share this reading">
-                <span class="share-icon">↱</span>
-                <span class="share-text">Share</span>
-            </button>
-        </div>
-
-        <!-- Bible Content -->
-        <div class="bible-content" id="bibleContent">
+</button>
+</div>
+<!-- Bible Content -->
+<div class="bible-content" id="bibleContent">
 <h3 id="p19004001_01-1">Answer Me When I Call</h3>
-<h4 id="p19004001_06-1" class="psalm-title">To the choirmaster: with stringed instruments. A Psalm of David.</h4>
+<h4 class="psalm-title" id="p19004001_06-1">To the choirmaster: with stringed instruments. A Psalm of David.</h4>
 <p class="block-indent"><span class="begin-line-group"></span>
-<span id="p19004001_06-1" class="line"><b class="chapter-num" id="v19004001-1">4&nbsp;</b>&nbsp;&nbsp;Answer me when I call, O God of my righteousness!</span><br /><span id="p19004001_06-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;You have given me relief when I was in distress.</span><br /><span id="p19004001_06-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;Be gracious to me and hear my prayer!</span><br /><span class="end-line-group"></span>
+<span class="line" id="p19004001_06-1"><b class="chapter-num" id="v19004001-1">4 </b>  Answer me when I call, O God of my righteousness!</span><br/><span class="indent line" id="p19004001_06-1">    You have given me relief when I was in distress.</span><br/><span class="indent line" id="p19004001_06-1">    Be gracious to me and hear my prayer!</span><br/><span class="end-line-group"></span>
 <span class="begin-line-group"></span>
-<span id="p19004002_06-1" class="line"><b class="verse-num inline" id="v19004002-1">2&nbsp;</b>&nbsp;&nbsp;O men,<sup class="footnote"><a class="fn" href="#f1-1" id="fb1-1" title="&lt;note class=&quot;alternative&quot;&gt;Or &lt;i&gt;&lt;span class=&quot;catch-word&quot;&gt;O&lt;/span&gt; men of rank&lt;/i&gt;&lt;/note&gt;">1</a></sup> how long shall my honor be turned into shame?</span><br /><span id="p19004002_06-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;How long will you love vain words and seek after lies? <span class="selah">Selah</span></span><br /><span id="p19004003_06-1" class="line"><b class="verse-num inline" id="v19004003-1">3&nbsp;</b>&nbsp;&nbsp;But know that the LORD has set apart the godly for himself;</span><br /><span id="p19004003_06-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;the LORD hears when I call to him.</span><br /><span class="end-line-group"></span>
+<span class="line" id="p19004002_06-1"><b class="verse-num inline" id="v19004002-1">2 </b>  O men,<sup class="footnote"><a class="fn" href="#f1-1" id="fb1-1" title='&lt;note class="alternative"&gt;Or &lt;i&gt;&lt;span class="catch-word"&gt;O&lt;/span&gt; men of rank&lt;/i&gt;&lt;/note&gt;'>1</a></sup> how long shall my honor be turned into shame?</span><br/><span class="indent line" id="p19004002_06-1">    How long will you love vain words and seek after lies? <span class="selah">Selah</span></span><br/><span class="line" id="p19004003_06-1"><b class="verse-num inline" id="v19004003-1">3 </b>  But know that the LORD has set apart the godly for himself;</span><br/><span class="indent line" id="p19004003_06-1">    the LORD hears when I call to him.</span><br/><span class="end-line-group"></span>
 <span class="begin-line-group"></span>
-<span id="p19004004_06-1" class="line"><b class="verse-num inline" id="v19004004-1">4&nbsp;</b>&nbsp;&nbsp;Be angry,<sup class="footnote"><a class="fn" href="#f2-1" id="fb2-1" title="&lt;note class=&quot;alternative&quot;&gt;Or &lt;i&gt;&lt;span class=&quot;catch-word&quot;&gt;Be&lt;/span&gt; agitated&lt;/i&gt;&lt;/note&gt;">2</a></sup> and do not sin;</span><br /><span id="p19004004_06-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;ponder in your own hearts on your beds, and be silent. <span class="selah">Selah</span></span><br /><span id="p19004005_06-1" class="line"><b class="verse-num inline" id="v19004005-1">5&nbsp;</b>&nbsp;&nbsp;Offer right sacrifices,</span><br /><span id="p19004005_06-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;and put your trust in the LORD.</span><br /><span class="end-line-group"></span>
+<span class="line" id="p19004004_06-1"><b class="verse-num inline" id="v19004004-1">4 </b>  Be angry,<sup class="footnote"><a class="fn" href="#f2-1" id="fb2-1" title='&lt;note class="alternative"&gt;Or &lt;i&gt;&lt;span class="catch-word"&gt;Be&lt;/span&gt; agitated&lt;/i&gt;&lt;/note&gt;'>2</a></sup> and do not sin;</span><br/><span class="indent line" id="p19004004_06-1">    ponder in your own hearts on your beds, and be silent. <span class="selah">Selah</span></span><br/><span class="line" id="p19004005_06-1"><b class="verse-num inline" id="v19004005-1">5 </b>  Offer right sacrifices,</span><br/><span class="indent line" id="p19004005_06-1">    and put your trust in the LORD.</span><br/><span class="end-line-group"></span>
 <span class="begin-line-group"></span>
-<span id="p19004006_06-1" class="line"><b class="verse-num inline" id="v19004006-1">6&nbsp;</b>&nbsp;&nbsp;There are many who say, “Who will show us some good?</span><br /><span id="p19004006_06-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;Lift up the light of your face upon us, O LORD!”</span><br /><span id="p19004007_06-1" class="line"><b class="verse-num inline" id="v19004007-1">7&nbsp;</b>&nbsp;&nbsp;You have put more joy in my heart</span><br /><span id="p19004007_06-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;than they have when their grain and wine abound.</span><br /><span class="end-line-group"></span>
+<span class="line" id="p19004006_06-1"><b class="verse-num inline" id="v19004006-1">6 </b>  There are many who say, “Who will show us some good?</span><br/><span class="indent line" id="p19004006_06-1">    Lift up the light of your face upon us, O LORD!”</span><br/><span class="line" id="p19004007_06-1"><b class="verse-num inline" id="v19004007-1">7 </b>  You have put more joy in my heart</span><br/><span class="indent line" id="p19004007_06-1">    than they have when their grain and wine abound.</span><br/><span class="end-line-group"></span>
 <span class="begin-line-group"></span>
-<span id="p19004008_06-1" class="line"><b class="verse-num inline" id="v19004008-1">8&nbsp;</b>&nbsp;&nbsp;In peace I will both lie down and sleep;</span><br /><span id="p19004008_06-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;for you alone, O LORD, make me dwell in safety.</span><br /><span class="end-line-group"></span>
+<span class="line" id="p19004008_06-1"><b class="verse-num inline" id="v19004008-1">8 </b>  In peace I will both lie down and sleep;</span><br/><span class="indent line" id="p19004008_06-1">    for you alone, O LORD, make me dwell in safety.</span><br/><span class="end-line-group"></span>
 </p><h3 id="p19005001_06-1">Lead Me in Your Righteousness</h3>
-<h4 id="p19005001_11-1" class="psalm-title">To the choirmaster: for the flutes. A Psalm of David.</h4>
+<h4 class="psalm-title" id="p19005001_11-1">To the choirmaster: for the flutes. A Psalm of David.</h4>
 <p class="block-indent"><span class="begin-line-group"></span>
-<span id="p19005001_11-1" class="line"><b class="chapter-num" id="v19005001-1">5&nbsp;</b>&nbsp;&nbsp;Give ear to my words, O LORD;</span><br /><span id="p19005001_11-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;consider my groaning.</span><br /><span id="p19005002_11-1" class="line"><b class="verse-num inline" id="v19005002-1">2&nbsp;</b>&nbsp;&nbsp;Give attention to the sound of my cry,</span><br /><span id="p19005002_11-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;my King and my God,</span><br /><span id="p19005002_11-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;for to you do I pray.</span><br /><span id="p19005003_11-1" class="line"><b class="verse-num inline" id="v19005003-1">3&nbsp;</b>&nbsp;&nbsp;O LORD, in the morning you hear my voice;</span><br /><span id="p19005003_11-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;in the morning I prepare a sacrifice for you<sup class="footnote"><a class="fn" href="#f3-1" id="fb3-1" title="&lt;note class=&quot;alternative&quot;&gt;Or &lt;i&gt;&lt;span class=&quot;catch-word&quot;&gt;I&lt;/span&gt; direct my prayer to you&lt;/i&gt;&lt;/note&gt;">3</a></sup> and watch.</span><br /><span class="end-line-group"></span>
+<span class="line" id="p19005001_11-1"><b class="chapter-num" id="v19005001-1">5 </b>  Give ear to my words, O LORD;</span><br/><span class="indent line" id="p19005001_11-1">    consider my groaning.</span><br/><span class="line" id="p19005002_11-1"><b class="verse-num inline" id="v19005002-1">2 </b>  Give attention to the sound of my cry,</span><br/><span class="indent line" id="p19005002_11-1">    my King and my God,</span><br/><span class="indent line" id="p19005002_11-1">    for to you do I pray.</span><br/><span class="line" id="p19005003_11-1"><b class="verse-num inline" id="v19005003-1">3 </b>  O LORD, in the morning you hear my voice;</span><br/><span class="indent line" id="p19005003_11-1">    in the morning I prepare a sacrifice for you<sup class="footnote"><a class="fn" href="#f3-1" id="fb3-1" title='&lt;note class="alternative"&gt;Or &lt;i&gt;&lt;span class="catch-word"&gt;I&lt;/span&gt; direct my prayer to you&lt;/i&gt;&lt;/note&gt;'>3</a></sup> and watch.</span><br/><span class="end-line-group"></span>
 <span class="begin-line-group"></span>
-<span id="p19005004_11-1" class="line"><b class="verse-num inline" id="v19005004-1">4&nbsp;</b>&nbsp;&nbsp;For you are not a God who delights in wickedness;</span><br /><span id="p19005004_11-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;evil may not dwell with you.</span><br /><span id="p19005005_11-1" class="line"><b class="verse-num inline" id="v19005005-1">5&nbsp;</b>&nbsp;&nbsp;The boastful shall not stand before your eyes;</span><br /><span id="p19005005_11-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;you hate all evildoers.</span><br /><span id="p19005006_11-1" class="line"><b class="verse-num inline" id="v19005006-1">6&nbsp;</b>&nbsp;&nbsp;You destroy those who speak lies;</span><br /><span id="p19005006_11-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;the LORD abhors the bloodthirsty and deceitful man.</span><br /><span class="end-line-group"></span>
+<span class="line" id="p19005004_11-1"><b class="verse-num inline" id="v19005004-1">4 </b>  For you are not a God who delights in wickedness;</span><br/><span class="indent line" id="p19005004_11-1">    evil may not dwell with you.</span><br/><span class="line" id="p19005005_11-1"><b class="verse-num inline" id="v19005005-1">5 </b>  The boastful shall not stand before your eyes;</span><br/><span class="indent line" id="p19005005_11-1">    you hate all evildoers.</span><br/><span class="line" id="p19005006_11-1"><b class="verse-num inline" id="v19005006-1">6 </b>  You destroy those who speak lies;</span><br/><span class="indent line" id="p19005006_11-1">    the LORD abhors the bloodthirsty and deceitful man.</span><br/><span class="end-line-group"></span>
 <span class="begin-line-group"></span>
-<span id="p19005007_11-1" class="line"><b class="verse-num inline" id="v19005007-1">7&nbsp;</b>&nbsp;&nbsp;But I, through the abundance of your steadfast love,</span><br /><span id="p19005007_11-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;will enter your house.</span><br /><span id="p19005007_11-1" class="line">&nbsp;&nbsp;I will bow down toward your holy temple</span><br /><span id="p19005007_11-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;in the fear of you.</span><br /><span id="p19005008_11-1" class="line"><b class="verse-num inline" id="v19005008-1">8&nbsp;</b>&nbsp;&nbsp;Lead me, O LORD, in your righteousness</span><br /><span id="p19005008_11-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;because of my enemies;</span><br /><span id="p19005008_11-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;make your way straight before me.</span><br /><span class="end-line-group"></span>
+<span class="line" id="p19005007_11-1"><b class="verse-num inline" id="v19005007-1">7 </b>  But I, through the abundance of your steadfast love,</span><br/><span class="indent line" id="p19005007_11-1">    will enter your house.</span><br/><span class="line" id="p19005007_11-1">  I will bow down toward your holy temple</span><br/><span class="indent line" id="p19005007_11-1">    in the fear of you.</span><br/><span class="line" id="p19005008_11-1"><b class="verse-num inline" id="v19005008-1">8 </b>  Lead me, O LORD, in your righteousness</span><br/><span class="indent line" id="p19005008_11-1">    because of my enemies;</span><br/><span class="indent line" id="p19005008_11-1">    make your way straight before me.</span><br/><span class="end-line-group"></span>
 <span class="begin-line-group"></span>
-<span id="p19005009_11-1" class="line"><b class="verse-num inline" id="v19005009-1">9&nbsp;</b>&nbsp;&nbsp;For there is no truth in their mouth;</span><br /><span id="p19005009_11-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;their inmost self is destruction;</span><br /><span id="p19005009_11-1" class="line">&nbsp;&nbsp;their throat is an open grave;</span><br /><span id="p19005009_11-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;they flatter with their tongue.</span><br /><span id="p19005010_11-1" class="line"><b class="verse-num inline" id="v19005010-1">10&nbsp;</b>&nbsp;&nbsp;Make them bear their guilt, O God;</span><br /><span id="p19005010_11-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;let them fall by their own counsels;</span><br /><span id="p19005010_11-1" class="line">&nbsp;&nbsp;because of the abundance of their transgressions cast them out,</span><br /><span id="p19005010_11-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;for they have rebelled against you.</span><br /><span class="end-line-group"></span>
+<span class="line" id="p19005009_11-1"><b class="verse-num inline" id="v19005009-1">9 </b>  For there is no truth in their mouth;</span><br/><span class="indent line" id="p19005009_11-1">    their inmost self is destruction;</span><br/><span class="line" id="p19005009_11-1">  their throat is an open grave;</span><br/><span class="indent line" id="p19005009_11-1">    they flatter with their tongue.</span><br/><span class="line" id="p19005010_11-1"><b class="verse-num inline" id="v19005010-1">10 </b>  Make them bear their guilt, O God;</span><br/><span class="indent line" id="p19005010_11-1">    let them fall by their own counsels;</span><br/><span class="line" id="p19005010_11-1">  because of the abundance of their transgressions cast them out,</span><br/><span class="indent line" id="p19005010_11-1">    for they have rebelled against you.</span><br/><span class="end-line-group"></span>
 <span class="begin-line-group"></span>
-<span id="p19005011_11-1" class="line"><b class="verse-num inline" id="v19005011-1">11&nbsp;</b>&nbsp;&nbsp;But let all who take refuge in you rejoice;</span><br /><span id="p19005011_11-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;let them ever sing for joy,</span><br /><span id="p19005011_11-1" class="line">&nbsp;&nbsp;and spread your protection over them,</span><br /><span id="p19005011_11-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;that those who love your name may exult in you.</span><br /><span id="p19005012_11-1" class="line"><b class="verse-num inline" id="v19005012-1">12&nbsp;</b>&nbsp;&nbsp;For you bless the righteous, O LORD;</span><br /><span id="p19005012_11-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;you cover him with favor as with a shield.</span><br /><span class="end-line-group"></span>
+<span class="line" id="p19005011_11-1"><b class="verse-num inline" id="v19005011-1">11 </b>  But let all who take refuge in you rejoice;</span><br/><span class="indent line" id="p19005011_11-1">    let them ever sing for joy,</span><br/><span class="line" id="p19005011_11-1">  and spread your protection over them,</span><br/><span class="indent line" id="p19005011_11-1">    that those who love your name may exult in you.</span><br/><span class="line" id="p19005012_11-1"><b class="verse-num inline" id="v19005012-1">12 </b>  For you bless the righteous, O LORD;</span><br/><span class="indent line" id="p19005012_11-1">    you cover him with favor as with a shield.</span><br/><span class="end-line-group"></span>
 </p><h3 id="p19006001_11-1">O <span class="divine-name">Lord</span>, Deliver My Life</h3>
-<h4 id="p19006001_16-1" class="psalm-title">To the choirmaster: with stringed instruments; according to The Sheminith.<sup class="footnote"><a class="fn" href="#f4-1" id="fb4-1" title="&lt;note class=&quot;explanation&quot; sub-class=&quot;musical-term&quot;&gt;Probably a musical or liturgical term&lt;/note&gt;">4</a></sup> A Psalm of David.</h4>
+<h4 class="psalm-title" id="p19006001_16-1">To the choirmaster: with stringed instruments; according to The Sheminith.<sup class="footnote"><a class="fn" href="#f4-1" id="fb4-1" title='&lt;note class="explanation" sub-class="musical-term"&gt;Probably a musical or liturgical term&lt;/note&gt;'>4</a></sup> A Psalm of David.</h4>
 <p class="block-indent"><span class="begin-line-group"></span>
-<span id="p19006001_16-1" class="line"><b class="chapter-num" id="v19006001-1">6&nbsp;</b>&nbsp;&nbsp;O LORD, rebuke me not in your anger,</span><br /><span id="p19006001_16-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;nor discipline me in your wrath.</span><br /><span id="p19006002_16-1" class="line"><b class="verse-num inline" id="v19006002-1">2&nbsp;</b>&nbsp;&nbsp;Be gracious to me, O LORD, for I am languishing;</span><br /><span id="p19006002_16-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;heal me, O LORD, for my bones are troubled.</span><br /><span id="p19006003_16-1" class="line"><b class="verse-num inline" id="v19006003-1">3&nbsp;</b>&nbsp;&nbsp;My soul also is greatly troubled.</span><br /><span id="p19006003_16-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;But you, O LORD—how long?</span><br /><span class="end-line-group"></span>
+<span class="line" id="p19006001_16-1"><b class="chapter-num" id="v19006001-1">6 </b>  O LORD, rebuke me not in your anger,</span><br/><span class="indent line" id="p19006001_16-1">    nor discipline me in your wrath.</span><br/><span class="line" id="p19006002_16-1"><b class="verse-num inline" id="v19006002-1">2 </b>  Be gracious to me, O LORD, for I am languishing;</span><br/><span class="indent line" id="p19006002_16-1">    heal me, O LORD, for my bones are troubled.</span><br/><span class="line" id="p19006003_16-1"><b class="verse-num inline" id="v19006003-1">3 </b>  My soul also is greatly troubled.</span><br/><span class="indent line" id="p19006003_16-1">    But you, O LORD—how long?</span><br/><span class="end-line-group"></span>
 <span class="begin-line-group"></span>
-<span id="p19006004_16-1" class="line"><b class="verse-num inline" id="v19006004-1">4&nbsp;</b>&nbsp;&nbsp;Turn, O LORD, deliver my life;</span><br /><span id="p19006004_16-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;save me for the sake of your steadfast love.</span><br /><span id="p19006005_16-1" class="line"><b class="verse-num inline" id="v19006005-1">5&nbsp;</b>&nbsp;&nbsp;For in death there is no remembrance of you;</span><br /><span id="p19006005_16-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;in Sheol who will give you praise?</span><br /><span class="end-line-group"></span>
+<span class="line" id="p19006004_16-1"><b class="verse-num inline" id="v19006004-1">4 </b>  Turn, O LORD, deliver my life;</span><br/><span class="indent line" id="p19006004_16-1">    save me for the sake of your steadfast love.</span><br/><span class="line" id="p19006005_16-1"><b class="verse-num inline" id="v19006005-1">5 </b>  For in death there is no remembrance of you;</span><br/><span class="indent line" id="p19006005_16-1">    in Sheol who will give you praise?</span><br/><span class="end-line-group"></span>
 <span class="begin-line-group"></span>
-<span id="p19006006_16-1" class="line"><b class="verse-num inline" id="v19006006-1">6&nbsp;</b>&nbsp;&nbsp;I am weary with my moaning;</span><br /><span id="p19006006_16-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;every night I flood my bed with tears;</span><br /><span id="p19006006_16-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;I drench my couch with my weeping.</span><br /><span id="p19006007_16-1" class="line"><b class="verse-num inline" id="v19006007-1">7&nbsp;</b>&nbsp;&nbsp;My eye wastes away because of grief;</span><br /><span id="p19006007_16-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;it grows weak because of all my foes.</span><br /><span class="end-line-group"></span>
+<span class="line" id="p19006006_16-1"><b class="verse-num inline" id="v19006006-1">6 </b>  I am weary with my moaning;</span><br/><span class="indent line" id="p19006006_16-1">    every night I flood my bed with tears;</span><br/><span class="indent line" id="p19006006_16-1">    I drench my couch with my weeping.</span><br/><span class="line" id="p19006007_16-1"><b class="verse-num inline" id="v19006007-1">7 </b>  My eye wastes away because of grief;</span><br/><span class="indent line" id="p19006007_16-1">    it grows weak because of all my foes.</span><br/><span class="end-line-group"></span>
 <span class="begin-line-group"></span>
-<span id="p19006008_16-1" class="line"><b class="verse-num inline" id="v19006008-1">8&nbsp;</b>&nbsp;&nbsp;Depart from me, all you workers of evil,</span><br /><span id="p19006008_16-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;for the LORD has heard the sound of my weeping.</span><br /><span id="p19006009_16-1" class="line"><b class="verse-num inline" id="v19006009-1">9&nbsp;</b>&nbsp;&nbsp;The LORD has heard my plea;</span><br /><span id="p19006009_16-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;the LORD accepts my prayer.</span><br /><span id="p19006010_16-1" class="line"><b class="verse-num inline" id="v19006010-1">10&nbsp;</b>&nbsp;&nbsp;All my enemies shall be ashamed and greatly troubled;</span><br /><span id="p19006010_16-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;they shall turn back and be put to shame in a moment.</span><br /></p><span class="end-line-group"></span>
+<span class="line" id="p19006008_16-1"><b class="verse-num inline" id="v19006008-1">8 </b>  Depart from me, all you workers of evil,</span><br/><span class="indent line" id="p19006008_16-1">    for the LORD has heard the sound of my weeping.</span><br/><span class="line" id="p19006009_16-1"><b class="verse-num inline" id="v19006009-1">9 </b>  The LORD has heard my plea;</span><br/><span class="indent line" id="p19006009_16-1">    the LORD accepts my prayer.</span><br/><span class="line" id="p19006010_16-1"><b class="verse-num inline" id="v19006010-1">10 </b>  All my enemies shall be ashamed and greatly troubled;</span><br/><span class="indent line" id="p19006010_16-1">    they shall turn back and be put to shame in a moment.</span><br/></p><span class="end-line-group"></span>
 <div class="footnotes extra_text">
 <h3>Footnotes</h3>
 <p><span class="footnote"><a href="#fb1-1" id="f1-1">[1]</a></span> <span class="footnote-ref">4:2</span> <note class="alternative">Or <i><span class="catch-word">O</span> men of rank</i></note>
-<br />
+<br/>
 <span class="footnote"><a href="#fb2-1" id="f2-1">[2]</a></span> <span class="footnote-ref">4:4</span> <note class="alternative">Or <i><span class="catch-word">Be</span> agitated</i></note>
-<br />
+<br/>
 <span class="footnote"><a href="#fb3-1" id="f3-1">[3]</a></span> <span class="footnote-ref">5:3</span> <note class="alternative">Or <i><span class="catch-word">I</span> direct my prayer to you</i></note>
-<br />
+<br/>
 <span class="footnote"><a href="#fb4-1" id="f4-1">[4]</a></span> <span class="footnote-ref">6:1</span> <note class="explanation" sub-class="musical-term">Probably a musical or liturgical term</note>
 </p>
 </div>
-<a href="http://www.esv.org" class="copyright">ESV</a>
-<hr class='passage-divider'>
-
+<a class="copyright" href="http://www.esv.org">ESV</a>
+<hr class="passage-divider"/>
 <h3 id="p43007001_01-1">Jesus at the Feast of Booths</h3>
-<p id="p43007001_07-1" class="starts-chapter"><b class="chapter-num" id="v43007001-1">7&nbsp;</b>After this Jesus went about in Galilee. He would not go about in Judea, because the Jews<sup class="footnote"><a class="fn" href="#f1-1" id="fb1-1" title="&lt;note class=&quot;alternative&quot;&gt;Or &lt;i&gt;Judeans&lt;/i&gt;; Greek &lt;i language=&quot;Greek&quot;&gt;Ioudaioi&lt;/i&gt; probably refers here to Jewish religious leaders, and others under their influence, in that time&lt;/note&gt;">1</a></sup> were seeking to kill him. <b class="verse-num" id="v43007002-1">2&nbsp;</b>Now the Jews’ Feast of Booths was at hand. <b class="verse-num" id="v43007003-1">3&nbsp;</b>So his brothers<sup class="footnote"><a class="fn" href="#f2-1" id="fb2-1" title="&lt;note class=&quot;translation&quot; sub-class=&quot;gender-neutral&quot;&gt;Or &lt;i&gt;&lt;span class=&quot;catch-word&quot;&gt;brothers&lt;/span&gt; and sisters&lt;/i&gt;; also verses 5, 10&lt;/note&gt;">2</a></sup> said to him, “Leave here and go to Judea, that your disciples also may see the works you are doing. <b class="verse-num" id="v43007004-1">4&nbsp;</b>For no one works in secret if he seeks to be known openly. If you do these things, show yourself to the world.” <b class="verse-num" id="v43007005-1">5&nbsp;</b>For not even his brothers believed in him. <b class="verse-num" id="v43007006-1">6&nbsp;</b>Jesus said to them, <span class="woc">“My time has not yet come, but your time is always here.</span> <b class="verse-num woc" id="v43007007-1">7&nbsp;</b><span class="woc">The world cannot hate you, but it hates me because I testify about it that its works are evil.</span> <b class="verse-num woc" id="v43007008-1">8&nbsp;</b><span class="woc">You go up to the feast. I am not<sup class="footnote"><a class="fn" href="#f3-1" id="fb3-1" title="&lt;note class=&quot;variant&quot; sub-class=&quot;variant-adds&quot;&gt;Some manuscripts add &lt;i&gt;yet&lt;/i&gt;&lt;/note&gt;">3</a></sup> going up to this feast, for my time has not yet fully come.”</span> <b class="verse-num" id="v43007009-1">9&nbsp;</b>After saying this, he remained in Galilee.</p>
-<p id="p43007009_07-1"><b class="verse-num" id="v43007010-1">10&nbsp;</b>But after his brothers had gone up to the feast, then he also went up, not publicly but in private. <b class="verse-num" id="v43007011-1">11&nbsp;</b>The Jews were looking for him at the feast, and saying, “Where is he?” <b class="verse-num" id="v43007012-1">12&nbsp;</b>And there was much muttering about him among the people. While some said, “He is a good man,” others said, “No, he is leading the people astray.” <b class="verse-num" id="v43007013-1">13&nbsp;</b>Yet for fear of the Jews no one spoke openly of him.</p>
-<p id="p43007013_07-1"><b class="verse-num" id="v43007014-1">14&nbsp;</b>About the middle of the feast Jesus went up into the temple and began teaching. <b class="verse-num" id="v43007015-1">15&nbsp;</b>The Jews therefore marveled, saying, “How is it that this man has learning,<sup class="footnote"><a class="fn" href="#f4-1" id="fb4-1" title="&lt;note class=&quot;alternative&quot;&gt;Or &lt;i&gt;&lt;span class=&quot;catch-word&quot;&gt;this man&lt;/span&gt; knows his letters&lt;/i&gt;&lt;/note&gt;">4</a></sup> when he has never studied?” <b class="verse-num" id="v43007016-1">16&nbsp;</b>So Jesus answered them, <span class="woc">“My teaching is not mine, but his who sent me.</span> <b class="verse-num woc" id="v43007017-1">17&nbsp;</b><span class="woc">If anyone’s will is to do God’s<sup class="footnote"><a class="fn" href="#f5-1" id="fb5-1" title="&lt;note class=&quot;translation&quot; sub-class=&quot;original&quot;&gt;Greek &lt;i&gt;his&lt;/i&gt;&lt;/note&gt;">5</a></sup> will, he will know whether the teaching is from God or whether I am speaking on my own authority.</span> <b class="verse-num woc" id="v43007018-1">18&nbsp;</b><span class="woc">The one who speaks on his own authority seeks his own glory; but the one who seeks the glory of him who sent him is true, and in him there is no falsehood.</span> <b class="verse-num woc" id="v43007019-1">19&nbsp;</b><span class="woc">Has not Moses given you the law? Yet none of you keeps the law. Why do you seek to kill me?”</span> <b class="verse-num" id="v43007020-1">20&nbsp;</b>The crowd answered, “You have a demon! Who is seeking to kill you?” <b class="verse-num" id="v43007021-1">21&nbsp;</b>Jesus answered them, <span class="woc">“I did one work, and you all marvel at it.</span> <b class="verse-num woc" id="v43007022-1">22&nbsp;</b><span class="woc">Moses gave you circumcision (not that it is from Moses, but from the fathers), and you circumcise a man on the Sabbath.</span> <b class="verse-num woc" id="v43007023-1">23&nbsp;</b><span class="woc">If on the Sabbath a man receives circumcision, so that the law of Moses may not be broken, are you angry with me because on the Sabbath I made a man’s whole body well?</span> <b class="verse-num woc" id="v43007024-1">24&nbsp;</b><span class="woc">Do not judge by appearances, but judge with right judgment.”</span></p>
+<p class="starts-chapter" id="p43007001_07-1"><b class="chapter-num" id="v43007001-1">7 </b>After this Jesus went about in Galilee. He would not go about in Judea, because the Jews<sup class="footnote"><a class="fn" href="#f1-1" id="fb1-1" title='&lt;note class="alternative"&gt;Or &lt;i&gt;Judeans&lt;/i&gt;; Greek &lt;i language="Greek"&gt;Ioudaioi&lt;/i&gt; probably refers here to Jewish religious leaders, and others under their influence, in that time&lt;/note&gt;'>1</a></sup> were seeking to kill him. <b class="verse-num" id="v43007002-1">2 </b>Now the Jews’ Feast of Booths was at hand. <b class="verse-num" id="v43007003-1">3 </b>So his brothers<sup class="footnote"><a class="fn" href="#f2-1" id="fb2-1" title='&lt;note class="translation" sub-class="gender-neutral"&gt;Or &lt;i&gt;&lt;span class="catch-word"&gt;brothers&lt;/span&gt; and sisters&lt;/i&gt;; also verses 5, 10&lt;/note&gt;'>2</a></sup> said to him, “Leave here and go to Judea, that your disciples also may see the works you are doing. <b class="verse-num" id="v43007004-1">4 </b>For no one works in secret if he seeks to be known openly. If you do these things, show yourself to the world.” <b class="verse-num" id="v43007005-1">5 </b>For not even his brothers believed in him. <b class="verse-num" id="v43007006-1">6 </b>Jesus said to them, <span class="woc">“My time has not yet come, but your time is always here.</span> <b class="verse-num woc" id="v43007007-1">7 </b><span class="woc">The world cannot hate you, but it hates me because I testify about it that its works are evil.</span> <b class="verse-num woc" id="v43007008-1">8 </b><span class="woc">You go up to the feast. I am not<sup class="footnote"><a class="fn" href="#f3-1" id="fb3-1" title='&lt;note class="variant" sub-class="variant-adds"&gt;Some manuscripts add &lt;i&gt;yet&lt;/i&gt;&lt;/note&gt;'>3</a></sup> going up to this feast, for my time has not yet fully come.”</span> <b class="verse-num" id="v43007009-1">9 </b>After saying this, he remained in Galilee.</p>
+<p id="p43007009_07-1"><b class="verse-num" id="v43007010-1">10 </b>But after his brothers had gone up to the feast, then he also went up, not publicly but in private. <b class="verse-num" id="v43007011-1">11 </b>The Jews were looking for him at the feast, and saying, “Where is he?” <b class="verse-num" id="v43007012-1">12 </b>And there was much muttering about him among the people. While some said, “He is a good man,” others said, “No, he is leading the people astray.” <b class="verse-num" id="v43007013-1">13 </b>Yet for fear of the Jews no one spoke openly of him.</p>
+<p id="p43007013_07-1"><b class="verse-num" id="v43007014-1">14 </b>About the middle of the feast Jesus went up into the temple and began teaching. <b class="verse-num" id="v43007015-1">15 </b>The Jews therefore marveled, saying, “How is it that this man has learning,<sup class="footnote"><a class="fn" href="#f4-1" id="fb4-1" title='&lt;note class="alternative"&gt;Or &lt;i&gt;&lt;span class="catch-word"&gt;this man&lt;/span&gt; knows his letters&lt;/i&gt;&lt;/note&gt;'>4</a></sup> when he has never studied?” <b class="verse-num" id="v43007016-1">16 </b>So Jesus answered them, <span class="woc">“My teaching is not mine, but his who sent me.</span> <b class="verse-num woc" id="v43007017-1">17 </b><span class="woc">If anyone’s will is to do God’s<sup class="footnote"><a class="fn" href="#f5-1" id="fb5-1" title='&lt;note class="translation" sub-class="original"&gt;Greek &lt;i&gt;his&lt;/i&gt;&lt;/note&gt;'>5</a></sup> will, he will know whether the teaching is from God or whether I am speaking on my own authority.</span> <b class="verse-num woc" id="v43007018-1">18 </b><span class="woc">The one who speaks on his own authority seeks his own glory; but the one who seeks the glory of him who sent him is true, and in him there is no falsehood.</span> <b class="verse-num woc" id="v43007019-1">19 </b><span class="woc">Has not Moses given you the law? Yet none of you keeps the law. Why do you seek to kill me?”</span> <b class="verse-num" id="v43007020-1">20 </b>The crowd answered, “You have a demon! Who is seeking to kill you?” <b class="verse-num" id="v43007021-1">21 </b>Jesus answered them, <span class="woc">“I did one work, and you all marvel at it.</span> <b class="verse-num woc" id="v43007022-1">22 </b><span class="woc">Moses gave you circumcision (not that it is from Moses, but from the fathers), and you circumcise a man on the Sabbath.</span> <b class="verse-num woc" id="v43007023-1">23 </b><span class="woc">If on the Sabbath a man receives circumcision, so that the law of Moses may not be broken, are you angry with me because on the Sabbath I made a man’s whole body well?</span> <b class="verse-num woc" id="v43007024-1">24 </b><span class="woc">Do not judge by appearances, but judge with right judgment.”</span></p>
 <h3 id="p43007024_07-1">Can This Be the Christ?</h3>
-<p id="p43007024_12-1"><b class="verse-num" id="v43007025-1">25&nbsp;</b>Some of the people of Jerusalem therefore said, “Is not this the man whom they seek to kill? <b class="verse-num" id="v43007026-1">26&nbsp;</b>And here he is, speaking openly, and they say nothing to him! Can it be that the authorities really know that this is the Christ? <b class="verse-num" id="v43007027-1">27&nbsp;</b>But we know where this man comes from, and when the Christ appears, no one will know where he comes from.”</p>
+<p id="p43007024_12-1"><b class="verse-num" id="v43007025-1">25 </b>Some of the people of Jerusalem therefore said, “Is not this the man whom they seek to kill? <b class="verse-num" id="v43007026-1">26 </b>And here he is, speaking openly, and they say nothing to him! Can it be that the authorities really know that this is the Christ? <b class="verse-num" id="v43007027-1">27 </b>But we know where this man comes from, and when the Christ appears, no one will know where he comes from.”</p>
 <div class="footnotes extra_text">
 <h3>Footnotes</h3>
 <p><span class="footnote"><a href="#fb1-1" id="f1-1">[1]</a></span> <span class="footnote-ref">7:1</span> <note class="alternative">Or <i>Judeans</i>; Greek <i language="Greek">Ioudaioi</i> probably refers here to Jewish religious leaders, and others under their influence, in that time</note>
-<br />
+<br/>
 <span class="footnote"><a href="#fb2-1" id="f2-1">[2]</a></span> <span class="footnote-ref">7:3</span> <note class="translation" sub-class="gender-neutral">Or <i><span class="catch-word">brothers</span> and sisters</i>; also verses 5, 10</note>
-<br />
+<br/>
 <span class="footnote"><a href="#fb3-1" id="f3-1">[3]</a></span> <span class="footnote-ref">7:8</span> <note class="variant" sub-class="variant-adds">Some manuscripts add <i>yet</i></note>
-<br />
+<br/>
 <span class="footnote"><a href="#fb4-1" id="f4-1">[4]</a></span> <span class="footnote-ref">7:15</span> <note class="alternative">Or <i><span class="catch-word">this man</span> knows his letters</i></note>
-<br />
+<br/>
 <span class="footnote"><a href="#fb5-1" id="f5-1">[5]</a></span> <span class="footnote-ref">7:17</span> <note class="translation" sub-class="original">Greek <i>his</i></note>
 </p>
 </div>
-<a href="http://www.esv.org" class="copyright">ESV</a>
-        </div>
-
-    </div>
-
+<a class="copyright" href="http://www.esv.org">ESV</a>
+</div>
+</div>
 </div>
