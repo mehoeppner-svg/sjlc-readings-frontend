@@ -791,7 +791,9 @@
 
                 e.preventDefault();
                 const platform = option.dataset.platform;
-                const url = window.location.href;
+                // Get URL to share - prefer canonical URL for proper OG tags
+                const canonicalLink = document.querySelector('link[rel="canonical"]');
+                const url = canonicalLink ? canonicalLink.href : window.location.href;
                 const encodedUrl = encodeURIComponent(url);
                 const passage = document.querySelector('.reading-title')?.textContent || 'Daily Reading';
                 const verseCardImage = document.querySelector('.verse-card-image');
@@ -909,7 +911,9 @@
         }
 
         async function handleNativeShare() {
-            const url = window.location.href;
+            // Get URL to share - prefer canonical URL for proper OG tags
+            const canonicalLink = document.querySelector('link[rel="canonical"]');
+            const url = canonicalLink ? canonicalLink.href : window.location.href;
 
             try {
                 // Only pass URL - OG tags handle preview (title, description, image)
