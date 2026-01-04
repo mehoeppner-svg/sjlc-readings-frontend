@@ -63,12 +63,20 @@ permalink: /reading_test.html
                 const parser = new DOMParser();
                 const doc = parser.parseFromString(html, 'text/html');
 
-                // Extract the reading content
+                // Extract the navigation and reading content
+                const nav = doc.querySelector('.day-nav');
                 const content = doc.querySelector('.daily-reading-container');
 
                 if (content) {
+                    // Build HTML with navigation + content
+                    let fullHTML = '';
+                    if (nav) {
+                        fullHTML += nav.outerHTML;
+                    }
+                    fullHTML += content.outerHTML;
+
                     // Replace loading message with actual content
-                    document.getElementById('reading-container').innerHTML = content.outerHTML;
+                    document.getElementById('reading-container').innerHTML = fullHTML;
 
                     // Update page title
                     const title = doc.querySelector('title');
