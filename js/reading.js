@@ -1131,4 +1131,7 @@
         init();
     }
 
+    // Expose init function globally for dynamic content loading (e.g., reading_test.html)
+    window.sjlcReadingInit = init;
+
 })();

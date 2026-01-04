@@ -76,9 +76,10 @@ permalink: /reading_test.html
                         document.title = title.textContent;
                     }
 
-                    // Re-run any scripts that need to initialize (audio player, settings, etc.)
-                    if (typeof initializeReading === 'function') {
-                        initializeReading();
+                    // Reinitialize JavaScript for the dynamically loaded content
+                    // reading.js exposes window.sjlcReadingInit for this purpose
+                    if (typeof window.sjlcReadingInit === 'function') {
+                        window.sjlcReadingInit();
                     }
                 }
             })
