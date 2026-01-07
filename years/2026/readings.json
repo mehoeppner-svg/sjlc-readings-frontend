@@ -1,6 +1,6 @@
 {
   "year": 2026,
-  "lastUpdated": "2026-01-07T19:19:30Z",
+  "lastUpdated": "2026-01-07T19:29:03Z",
   "collections": [
     {
       "id": "christmas-2025",
@@ -166,11 +166,11 @@
     },
     {
       "date": "2026-01-18",
-      "passage": "Job 25:1-27:23",
+      "passage": "Exodus 15:1-13",
       "title": null,
-      "collection": "daily-lectionary",
+      "collection": "gospel-project-year-one",
       "theme": null,
-      "isFallback": true
+      "isFallback": false
     },
     {
       "date": "2026-01-19",
