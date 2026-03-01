@@ -110,11 +110,11 @@
     },
     {
       "date": "2026-01-11",
-      "passage": "Job 5:1-7:21",
+      "passage": "Exodus 12:12-13",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "God's Miraculous Passover",
+      "isFallback": false
     },
     {
       "date": "2026-01-12",
@@ -166,11 +166,11 @@
     },
     {
       "date": "2026-01-18",
-      "passage": "Job 25:1-27:23",
+      "passage": "Exodus 15:1-13",
       "title": null,
-      "collection": "daily-lectionary",
+      "collection": "gospel-project-year-one",
       "theme": null,
-      "isFallback": true
+      "isFallback": false
     },
     {
       "date": "2026-01-19",
