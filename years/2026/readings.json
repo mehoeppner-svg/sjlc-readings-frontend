@@ -1,6 +1,6 @@
 {
   "year": 2026,
-  "lastUpdated": "2026-03-01T04:39:35Z",
+  "lastUpdated": "2026-03-01T04:44:17Z",
   "collections": [
     {
       "id": "christmas-2025",
@@ -110,11 +110,11 @@
     },
     {
       "date": "2026-01-11",
-      "passage": "Exodus 12:12-13",
+      "passage": "Job 5:1-7:21",
       "title": null,
-      "collection": "gospel-project-year-one",
-      "theme": "God's Miraculous Passover",
-      "isFallback": false
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
     },
     {
       "date": "2026-01-12",
@@ -166,11 +166,11 @@
     },
     {
       "date": "2026-01-18",
-      "passage": "Exodus 15:1-13",
+      "passage": "Job 25:1-27:23",
       "title": null,
-      "collection": "gospel-project-year-one",
+      "collection": "daily-lectionary",
       "theme": null,
-      "isFallback": false
+      "isFallback": true
     },
     {
       "date": "2026-01-19",
