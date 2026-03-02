@@ -1,6 +1,6 @@
 {
   "year": 2026,
-  "lastUpdated": "2026-03-01T05:04:02Z",
+  "lastUpdated": "2026-03-02T21:00:53Z",
   "collections": [
     {
       "id": "christmas-2025",
@@ -510,51 +510,51 @@
     },
     {
       "date": "2026-03-02",
-      "passage": "Leviticus 14:1-57",
+      "passage": "Leviticus 1:1-7:38",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "God Provision for Redemption",
+      "isFallback": false
     },
     {
       "date": "2026-03-03",
-      "passage": "Leviticus 15:1-16:34",
+      "passage": "Leviticus 8:1-10:20",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "God Provision for Redemption",
+      "isFallback": false
     },
     {
       "date": "2026-03-04",
-      "passage": "Leviticus 17:1-18:30",
+      "passage": "Leviticus 11:1-15:33",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "God Provision for Redemption",
+      "isFallback": false
     },
     {
       "date": "2026-03-05",
-      "passage": "Leviticus 19:1-20:27",
+      "passage": "Leviticus 16:1-22:33",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "God Provision for Redemption",
+      "isFallback": false
     },
     {
       "date": "2026-03-06",
-      "passage": "Leviticus 21:1-22:33",
+      "passage": "Leviticus 23:1-27:34",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "God Provision for Redemption",
+      "isFallback": false
     },
     {
       "date": "2026-03-07",
-      "passage": "Leviticus 23:1-24:23",
+      "passage": "Psalms 32:1-11",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "God Provision for Redemption",
+      "isFallback": false
     },
     {
       "date": "2026-03-08",
@@ -566,51 +566,51 @@
     },
     {
       "date": "2026-03-09",
-      "passage": "Leviticus 26:1-27:34",
+      "passage": "Numbers 1:1-4:49",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Complaints of the Ungrateful",
+      "isFallback": false
     },
     {
       "date": "2026-03-10",
-      "passage": "Numbers 1:1-2:34",
+      "passage": "Numbers 5:1-6:27",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Complaints of the Ungrateful",
+      "isFallback": false
     },
     {
       "date": "2026-03-11",
-      "passage": "Numbers 3:1-4:49",
+      "passage": "Numbers 7:1-9:14",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Complaints of the Ungrateful",
+      "isFallback": false
     },
     {
       "date": "2026-03-12",
-      "passage": "Numbers 5:1-6:27",
+      "passage": "Numbers 9:15-10:36",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Complaints of the Ungrateful",
+      "isFallback": false
     },
     {
       "date": "2026-03-13",
-      "passage": "Numbers 7:1-8:26",
+      "passage": "Numbers 11:1-12:16",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Complaints of the Ungrateful",
+      "isFallback": false
     },
     {
       "date": "2026-03-14",
-      "passage": "Numbers 9:1-11:35",
+      "passage": "Psalms 78:1-72",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Complaints of the Ungrateful",
+      "isFallback": false
     },
     {
       "date": "2026-03-15",
@@ -622,51 +622,51 @@
     },
     {
       "date": "2026-03-16",
-      "passage": "Numbers 15:1-16:50",
+      "passage": "Numbers 13:1-14:45",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Consequences for the Faithless",
+      "isFallback": false
     },
     {
       "date": "2026-03-17",
-      "passage": "Numbers 17:1-19:22",
+      "passage": "Numbers 15:1-41",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Consequences for the Faithless",
+      "isFallback": false
     },
     {
       "date": "2026-03-18",
-      "passage": "Numbers 20:1-22:41",
+      "passage": "Numbers 16:1-50",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Consequences for the Faithless",
+      "isFallback": false
     },
     {
       "date": "2026-03-19",
-      "passage": "Numbers 23:1-25:18",
+      "passage": "Numbers 17:1-18:32",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Consequences for the Faithless",
+      "isFallback": false
     },
     {
       "date": "2026-03-20",
-      "passage": "Numbers 26:1-27:23",
+      "passage": "Numbers 19:1-22",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Consequences for the Faithless",
+      "isFallback": false
     },
     {
       "date": "2026-03-21",
-      "passage": "Numbers 28:1-30:16",
+      "passage": "Psalms 86:1-17",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Consequences for the Faithless",
+      "isFallback": false
     },
     {
       "date": "2026-03-22",
@@ -678,51 +678,51 @@
     },
     {
       "date": "2026-03-23",
-      "passage": "Numbers 34:1-36:13",
+      "passage": "Numbers 20:1-21:35",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Healing of the Impatient",
+      "isFallback": false
     },
     {
       "date": "2026-03-24",
-      "passage": "Deuteronomy 1:1-2:37",
+      "passage": "Numbers 22:1-26:65",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Healing of the Impatient",
+      "isFallback": false
     },
     {
       "date": "2026-03-25",
-      "passage": "Deuteronomy 3:1-4:49",
+      "passage": "Numbers 27:1-30:16",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Healing of the Impatient",
+      "isFallback": false
     },
     {
       "date": "2026-03-26",
-      "passage": "Deuteronomy 5:1-7:26",
+      "passage": "Numbers 31:1-32:42",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Healing of the Impatient",
+      "isFallback": false
     },
     {
       "date": "2026-03-27",
-      "passage": "Deuteronomy 8:1-10:22",
+      "passage": "Numbers 33:1-36:13",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Healing of the Impatient",
+      "isFallback": false
     },
     {
       "date": "2026-03-28",
-      "passage": "Deuteronomy 11:1-13:18",
+      "passage": "Psalms 103:1-22",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Healing of the Impatient",
+      "isFallback": false
     },
     {
       "date": "2026-03-29",
