@@ -1,90 +1,100 @@
-<div class="daily-reading-container" data-has-commentary="false" data-has-devotional="false" data-is-verse-card="false" data-passage="Psalm 64; Psalm 70; John 6:1-21">
-<!-- Header -->
-<div class="reading-header">
-<h1 class="reading-title">Psalm 64; Psalm 70; John 6:1-21</h1>
-<div class="reading-date">May 18, 2026</div>
-</div>
-<!-- Audio Player -->
-<div class="audio-section" id="audioSection">
-<audio class="bible-audio" controls="" preload="metadata">
-<source src="https://audio.esv.org/david-cochran-heath/mq/19064001-19064010.mp3" type="audio/mpeg"/>
-</audio>
-</div>
-<!-- Bible Content Container -->
-<div class="bible-content-container">
-<!-- Settings Wrapper -->
-<div class="settings-wrapper">
-<!-- Floating Copy Button (FAB) for Verse Selection -->
-<div class="copy-fab" id="copyFab">
-<button class="clear-selection-button" id="clearSelectionBtn" title="Clear selection">×</button>
-<button class="copy-button" id="copyVerseBtn" title="Copy selected verses">
+---
+layout: reading
+extra_js: /js/reading.js
+extra_css: /css/reading.css
+permalink: /readings/2026-05-18/
+date: 2026-05-18
+title: "Psalms 64:1-10"
+og_title: "Daily Reading: Psalms 64:1-10"
+og_description: "Read Psalms 64:1-10 from the ESV Bible. Join St. John Lutheran Church's daily Bible reading program and grow in faith through Scripture."
+og_type: article
+prev_date: 2026-05-17
+next_date: 2026-05-19
+---
+
+<div class="daily-reading-container"
+     data-passage="Psalms 64:1-10"
+     data-has-commentary="false"
+     data-has-devotional="false"
+     data-is-verse-card="false">
+
+    <!-- Header -->
+    <div class="reading-header">
+        <h1 class="reading-title">Psalms 64:1-10</h1>
+    </div>
+
+
+    <!-- Audio Player -->
+    <div class="audio-section" id="audioSection">
+        <audio controls preload="metadata" class="bible-audio">
+            <source src="https://audio.esv.org/david-cochran-heath/mq/19064001-19064010.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <!-- Bible Content Container -->
+    <div class="bible-content-container">
+
+        <!-- Settings Wrapper -->
+        <div class="settings-wrapper">
+            <!-- Floating Copy Button (FAB) for Verse Selection -->
+            <div class="copy-fab" id="copyFab">
+                <button class="clear-selection-button" id="clearSelectionBtn" title="Clear selection">×</button>
+                <button class="copy-button" id="copyVerseBtn" title="Copy selected verses">
                     📋
                     <span class="verse-count-badge" id="verseCountBadge">0</span>
-</button>
-</div>
-<!-- Settings Button -->
-<button class="settings-btn" id="settingsBtn" title="Display Settings">⚙️</button>
-<!-- Settings Menu -->
-<div class="settings-menu" id="settingsMenu">
-<h4>Display Settings</h4>
-<label>
-<input checked="" id="toggleImage" type="checkbox"/>
-<span>Image</span>
-</label>
-<label>
-<input checked="" id="toggleAudio" type="checkbox"/>
-<span>Audio Player</span>
-</label>
-<label>
-<input checked="" id="toggleFootnotes" type="checkbox"/>
-<span>Footnotes</span>
-</label>
-<label>
-<input checked="" id="toggleCrossrefs" type="checkbox"/>
-<span>Cross-References</span>
-</label>
-</div>
-</div>
-<!-- Share Button -->
-<div class="share-section">
-<button class="share-btn" id="shareBtn" title="Share this reading">
-<img alt="Share" class="share-icon" src="/assets/share.png"/>
+                </button>
+            </div>
 
-</button>
-</div>
-<!-- Bible Content -->
-<div class="bible-content" id="bibleContent">
+            <!-- Settings Button -->
+            <button class="settings-btn" id="settingsBtn" title="Display Settings">⚙️</button>
+
+            <!-- Settings Menu -->
+            <div class="settings-menu" id="settingsMenu">
+                <h4>Display Settings</h4>
+                <label>
+                    <input type="checkbox" id="toggleImage" checked>
+                    <span>Image</span>
+                </label>
+                <label>
+                    <input type="checkbox" id="toggleAudio" checked>
+                    <span>Audio Player</span>
+                </label>
+                <label>
+                    <input type="checkbox" id="toggleFootnotes" checked>
+                    <span>Footnotes</span>
+                </label>
+                <label>
+                    <input type="checkbox" id="toggleCrossrefs" checked>
+                    <span>Cross-References</span>
+                </label>
+            </div>
+        </div>
+
+        <!-- Share Button -->
+        <div class="share-section">
+            <button class="share-btn" id="shareBtn" title="Share this reading">
+                <img src="/assets/share.png" alt="Share" class="share-icon">
+            </button>
+        </div>
+
+        <!-- Bible Content -->
+        <div class="bible-content" id="bibleContent">
 <h3 id="p19064001_01-1">Hide Me from the Wicked</h3>
-<h4 class="psalm-title" id="p19064001_06-1">To the choirmaster. A Psalm of David.</h4>
+<h4 id="p19064001_06-1" class="psalm-title">To the choirmaster. A Psalm of David.</h4>
 <p class="block-indent"><span class="begin-line-group"></span>
-<span class="line" id="p19064001_06-1"><b class="chapter-num" id="v19064001-1">64 </b>  Hear my voice, O God, in my complaint;</span><br/><span class="indent line" id="p19064001_06-1">    preserve my life from dread of the enemy.</span><br/><span class="line" id="p19064002_06-1"><b class="verse-num inline" id="v19064002-1">2 </b>  Hide me from the secret plots of the wicked,</span><br/><span class="indent line" id="p19064002_06-1">    from the throng of evildoers,</span><br/><span class="line" id="p19064003_06-1"><b class="verse-num inline" id="v19064003-1">3 </b>  who whet their tongues like swords,</span><br/><span class="indent line" id="p19064003_06-1">    who aim bitter words like arrows,</span><br/><span class="line" id="p19064004_06-1"><b class="verse-num inline" id="v19064004-1">4 </b>  shooting from ambush at the blameless,</span><br/><span class="indent line" id="p19064004_06-1">    shooting at him suddenly and without fear.</span><br/><span class="line" id="p19064005_06-1"><b class="verse-num inline" id="v19064005-1">5 </b>  They hold fast to their evil purpose;</span><br/><span class="indent line" id="p19064005_06-1">    they talk of laying snares secretly,</span><br/><span class="line" id="p19064005_06-1">  thinking, “Who can see them?”</span><br/><span class="indent line" id="p19064006_06-1"><b class="verse-num inline" id="v19064006-1">6 </b>    They search out injustice,</span><br/><span class="line" id="p19064006_06-1">  saying, “We have accomplished a diligent search.”</span><br/><span class="indent line" id="p19064006_06-1">    For the inward mind and heart of a man are deep.</span><br/><span class="end-line-group"></span>
+<span id="p19064001_06-1" class="line"><b class="chapter-num" id="v19064001-1">64&nbsp;</b>&nbsp;&nbsp;Hear my voice, O God, in my <sup><a class="cf" data-crossrefs="[{&quot;reference&quot;: &quot;Psalm 55:2&quot;, &quot;text&quot;: &quot;Attend unto me, and answer me: am restless in my complaint, and moan,&quot;, &quot;esv_url&quot;: &quot;https://www.esv.org/Psalm+55%3A2&quot;}]" title="Ps. 55:2">m</a></sup>complaint;</span><br /><span id="p19064001_06-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;preserve my life from dread of the enemy.</span><br /><span id="p19064002_06-1" class="line"><b class="verse-num inline" id="v19064002-1">2&nbsp;</b>&nbsp;&nbsp;Hide me from <sup><a class="cf" data-crossrefs="[{&quot;reference&quot;: &quot;Psalm 55:14&quot;, &quot;text&quot;: &quot;We took sweet counsel together; in the house of God with the throng.&quot;, &quot;esv_url&quot;: &quot;https://www.esv.org/Psalm+55%3A14&quot;}]" title="[Ps. 55:14]">n</a></sup>the secret plots of the wicked,</span><br /><span id="p19064002_06-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;from the throng of evildoers,</span><br /><span id="p19064003_06-1" class="line"><b class="verse-num inline" id="v19064003-1">3&nbsp;</b>&nbsp;&nbsp;who <sup><a class="cf" data-crossrefs="[{&quot;reference&quot;: &quot;Psalm 57:4&quot;, &quot;text&quot;: &quot;My soul is among lions; I lie among them that are set on fire, the sons of men, whose teeth are spears and arrows, And their tongue a sharp sword.&quot;, &quot;esv_url&quot;: &quot;https://www.esv.org/Psalm+57%3A4&quot;}]" title="See Ps. 57:4">o</a></sup>whet their tongues like swords,</span><br /><span id="p19064003_06-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;who <sup><a class="cf" data-crossrefs="[{&quot;reference&quot;: &quot;Psalm 11:2&quot;, &quot;text&quot;: &quot;For, lo, the wicked bend the bow, They make ready their arrow upon the string, That they may shoot in darkness at the upright in heart;&quot;, &quot;esv_url&quot;: &quot;https://www.esv.org/Psalm+11%3A2&quot;}]" title="See Ps. 11:2">p</a></sup>aim bitter words like arrows,</span><br /><span id="p19064004_06-1" class="line"><b class="verse-num inline" id="v19064004-1">4&nbsp;</b>&nbsp;&nbsp;shooting from <sup><a class="cf" data-crossrefs="[{&quot;reference&quot;: &quot;Psalm 10:8&quot;, &quot;text&quot;: &quot;He sitteth in the lurking-places of the villages; In the secret places doth he murder the innocent; His eyes are privily set against the helpless.&quot;, &quot;esv_url&quot;: &quot;https://www.esv.org/Psalm+10%3A8&quot;}]" title="[Ps. 10:8]">q</a></sup>ambush at the blameless,</span><br /><span id="p19064004_06-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;shooting at him suddenly and <sup><a class="cf" data-crossrefs="[{&quot;reference&quot;: &quot;Psalm 55:19&quot;, &quot;text&quot;: &quot;God will hear, and answer them, Even he that abideth of old, who have no changes, And who fear not God.&quot;, &quot;esv_url&quot;: &quot;https://www.esv.org/Psalm+55%3A19&quot;}]" title="Ps. 55:19">r</a></sup>without fear.</span><br /><span id="p19064005_06-1" class="line"><b class="verse-num inline" id="v19064005-1">5&nbsp;</b>&nbsp;&nbsp;They <sup><a class="cf" data-crossrefs="[{&quot;reference&quot;: &quot;Jeremiah 23:14&quot;, &quot;text&quot;: &quot;In the prophets of Jerusalem also I have seen a horrible thing: they commit adultery, and walk in lies; and they strengthen the hands of evil-doers, so that none doth return from his wickedness: they are all of them become unto me as Sodom, and the inhabitants thereof as Gomorrah.&quot;, &quot;esv_url&quot;: &quot;https://www.esv.org/Jeremiah+23%3A14&quot;}, {&quot;reference&quot;: &quot;Ezekiel 13:22&quot;, &quot;text&quot;: &quot;Because with lies ye have grieved the heart of the righteous, whom I have not made sad, and strengthened the hands of the wicked, that he should not return from his wicked way, and be saved alive;&quot;, &quot;esv_url&quot;: &quot;https://www.esv.org/Ezekiel+13%3A22&quot;}]" title="Jer. 23:14; Ezek. 13:22">s</a></sup>hold fast to their evil purpose;</span><br /><span id="p19064005_06-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;they talk of <sup><a class="cf" data-crossrefs="[{&quot;reference&quot;: &quot;Psalm 140:5&quot;, &quot;text&quot;: &quot;The proud have hid a snare for me, and cords; They have spread a net by the wayside; They have set gins for me.&quot;, &quot;esv_url&quot;: &quot;https://www.esv.org/Psalm+140%3A5&quot;}]" title="See Ps. 140:5">t</a></sup>laying snares secretly,</span><br /><span id="p19064005_06-1" class="line">&nbsp;&nbsp;thinking, <sup><a class="cf" data-crossrefs="[{&quot;reference&quot;: &quot;Job 22:13&quot;, &quot;text&quot;: &quot;And thou sayest, What doth God know? Can he judge through the thick darkness?&quot;, &quot;esv_url&quot;: &quot;https://www.esv.org/Job+22%3A13&quot;}]" title="See Job 22:13">u</a></sup>“Who can see them?”</span><br /><span id="p19064006_06-1" class="indent line"><b class="verse-num inline" id="v19064006-1">6&nbsp;</b>&nbsp;&nbsp;&nbsp;&nbsp;They search out injustice,</span><br /><span id="p19064006_06-1" class="line">&nbsp;&nbsp;saying, “We have accomplished a diligent search.”</span><br /><span id="p19064006_06-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;For <sup><a class="cf" data-crossrefs="[{&quot;reference&quot;: &quot;Psalm 49:11&quot;, &quot;text&quot;: &quot;Their inward thought is, their houses for ever, their dwelling-places to all generations; They call their lands after their own names.&quot;, &quot;esv_url&quot;: &quot;https://www.esv.org/Psalm+49%3A11&quot;}]" title="Ps. 49:11">v</a></sup>the inward mind and heart of a man are deep.</span><br /><span class="end-line-group"></span>
 <span class="begin-line-group"></span>
-<span class="line" id="p19064007_06-1"><b class="verse-num inline" id="v19064007-1">7 </b>  But God shoots his arrow at them;</span><br/><span class="indent line" id="p19064007_06-1">    they are wounded suddenly.</span><br/><span class="line" id="p19064008_06-1"><b class="verse-num inline" id="v19064008-1">8 </b>  They are brought to ruin, with their own tongues turned against them;</span><br/><span class="indent line" id="p19064008_06-1">    all who see them will wag their heads.</span><br/><span class="line" id="p19064009_06-1"><b class="verse-num inline" id="v19064009-1">9 </b>  Then all mankind fears;</span><br/><span class="indent line" id="p19064009_06-1">    they tell what God has brought about</span><br/><span class="indent line" id="p19064009_06-1">    and ponder what he has done.</span><br/><span class="end-line-group"></span>
+<span id="p19064007_06-1" class="line"><b class="verse-num inline" id="v19064007-1">7&nbsp;</b>&nbsp;&nbsp;<sup><a class="cf" data-crossrefs="[{&quot;reference&quot;: &quot;Psalm 7:12–13&quot;, &quot;text&quot;: &quot;If a man turn not, he will whet his sword; He hath bent his bow, and made it ready;&quot;, &quot;esv_url&quot;: &quot;https://www.esv.org/Psalm+7%3A12–13&quot;}, {&quot;reference&quot;: &quot;Psalm 58:7&quot;, &quot;text&quot;: &quot;Let them melt away as water that runneth apace: When he aimeth his arrows, let them be as though they were cut off.&quot;, &quot;esv_url&quot;: &quot;https://www.esv.org/Psalm+58%3A7&quot;}]" title="Ps. 7:12, 13; [Ps. 58:7]">w</a></sup>But God shoots his arrow at them;</span><br /><span id="p19064007_06-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;they are wounded suddenly.</span><br /><span id="p19064008_06-1" class="line"><b class="verse-num inline" id="v19064008-1">8&nbsp;</b>&nbsp;&nbsp;They are brought to ruin, with their own <sup><a class="cf" data-crossrefs="[{&quot;reference&quot;: &quot;Proverbs 12:13&quot;, &quot;text&quot;: &quot;In the transgression of the lips is a snare to the evil man; But the righteous shall come out of trouble.&quot;, &quot;esv_url&quot;: &quot;https://www.esv.org/Proverbs+12%3A13&quot;}, {&quot;reference&quot;: &quot;Proverbs 18:7&quot;, &quot;text&quot;: &quot;A fool’s mouth is his destruction, And his lips are the snare of his soul.&quot;, &quot;esv_url&quot;: &quot;https://www.esv.org/Proverbs+18%3A7&quot;}]" title="See Prov. 12:13; 18:7">x</a></sup>tongues turned against them;</span><br /><span id="p19064008_06-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;all who <sup><a class="cf" data-crossrefs="[{&quot;reference&quot;: &quot;Psalm 40:3&quot;, &quot;text&quot;: &quot;And he hath put a new song in my mouth, even praise unto our God: it, and fear, And shall trust in Jehovah.&quot;, &quot;esv_url&quot;: &quot;https://www.esv.org/Psalm+40%3A3&quot;}]" title="See Ps. 40:3">y</a></sup>see them will <sup><a class="cf" data-crossrefs="[{&quot;reference&quot;: &quot;Jeremiah 18:16&quot;, &quot;text&quot;: &quot;to make their land an astonishment, and a perpetual hissing; every one that passeth thereby shall be astonished, and shake his head.&quot;, &quot;esv_url&quot;: &quot;https://www.esv.org/Jeremiah+18%3A16&quot;}, {&quot;reference&quot;: &quot;Jeremiah 48:27&quot;, &quot;text&quot;: &quot;For was not Israel a derision unto thee? was he found among thieves? for as often as thou speakest of him, thou waggest the head.&quot;, &quot;esv_url&quot;: &quot;https://www.esv.org/Jeremiah+48%3A27&quot;}, {&quot;reference&quot;: &quot;Psalm 22:7&quot;, &quot;text&quot;: &quot;All they that see me laugh me to scorn: They shoot out the lip, they shake the head, saying,&quot;, &quot;esv_url&quot;: &quot;https://www.esv.org/Psalm+22%3A7&quot;}]" title="Jer. 18:16; 48:27; See Ps. 22:7">z</a></sup>wag their heads.</span><br /><span id="p19064009_06-1" class="line"><b class="verse-num inline" id="v19064009-1">9&nbsp;</b>&nbsp;&nbsp;Then all mankind <sup><a class="cf" data-crossrefs="[{&quot;reference&quot;: &quot;Psalm 64:8&quot;, &quot;text&quot;: &quot;So they shall be made to stumble, their own tongue being against them: that see them shall wag the head.&quot;, &quot;esv_url&quot;: &quot;https://www.esv.org/Psalm+64%3A8&quot;}]" title="[See ver. 8 above]">y</a></sup>fears;</span><br /><span id="p19064009_06-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;they <sup><a class="cf" data-crossrefs="[{&quot;reference&quot;: &quot;Jeremiah 50:28&quot;, &quot;text&quot;: &quot;The voice of them that flee and escape out of the land of Babylon, to declare in Zion the vengeance of Jehovah our God, the vengeance of his temple.&quot;, &quot;esv_url&quot;: &quot;https://www.esv.org/Jeremiah+50%3A28&quot;}, {&quot;reference&quot;: &quot;Jeremiah 51:10&quot;, &quot;text&quot;: &quot;Jehovah hath brought forth our righteousness: come, and let us declare in Zion the work of Jehovah our God.&quot;, &quot;esv_url&quot;: &quot;https://www.esv.org/Jeremiah+51%3A10&quot;}]" title="Jer. 50:28; 51:10">a</a></sup>tell what God has brought about</span><br /><span id="p19064009_06-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;and ponder what he has done.</span><br /><span class="end-line-group"></span>
 <span class="begin-line-group"></span>
-<span class="line" id="p19064010_06-1"><b class="verse-num inline" id="v19064010-1">10 </b>  Let the righteous one rejoice in the LORD</span><br/><span class="indent line" id="p19064010_06-1">    and take refuge in him!</span><br/><span class="line" id="p19064010_06-1">  Let all the upright in heart exult!</span><br/></p><span class="end-line-group"></span>
-<a class="copyright" href="http://www.esv.org">ESV</a>
-<hr class="passage-divider"/>
-<h3 id="p19070001_01-1">O <span class="divine-name">Lord</span>, Do Not Delay</h3>
-<h4 class="psalm-title" id="p19070001_06-1">To the choirmaster. Of David, for the memorial offering.</h4>
-<p class="block-indent"><span class="begin-line-group"></span>
-<span class="line" id="p19070001_06-1"><b class="chapter-num" id="v19070001-1">70 </b>  Make haste, O God, to deliver me!</span><br/><span class="indent line" id="p19070001_06-1">    O LORD, make haste to help me!</span><br/><span class="line" id="p19070002_06-1"><b class="verse-num inline" id="v19070002-1">2 </b>  Let them be put to shame and confusion</span><br/><span class="indent line" id="p19070002_06-1">    who seek my life!</span><br/><span class="line" id="p19070002_06-1">  Let them be turned back and brought to dishonor</span><br/><span class="indent line" id="p19070002_06-1">    who delight in my hurt!</span><br/><span class="line" id="p19070003_06-1"><b class="verse-num inline" id="v19070003-1">3 </b>  Let them turn back because of their shame</span><br/><span class="indent line" id="p19070003_06-1">    who say, “Aha, Aha!”</span><br/><span class="end-line-group"></span>
-<span class="begin-line-group"></span>
-<span class="line" id="p19070004_06-1"><b class="verse-num inline" id="v19070004-1">4 </b>  May all who seek you</span><br/><span class="indent line" id="p19070004_06-1">    rejoice and be glad in you!</span><br/><span class="line" id="p19070004_06-1">  May those who love your salvation</span><br/><span class="indent line" id="p19070004_06-1">    say evermore, “God is great!”</span><br/><span class="line" id="p19070005_06-1"><b class="verse-num inline" id="v19070005-1">5 </b>  But I am poor and needy;</span><br/><span class="indent line" id="p19070005_06-1">    hasten to me, O God!</span><br/><span class="line" id="p19070005_06-1">  You are my help and my deliverer;</span><br/><span class="indent line" id="p19070005_06-1">    O LORD, do not delay!</span><br/></p><span class="end-line-group"></span>
-<a class="copyright" href="http://www.esv.org">ESV</a>
-<hr class="passage-divider"/>
-<h3 id="p43006001_01-1">Jesus Feeds the Five Thousand</h3>
-<p class="starts-chapter" id="p43006001_06-1"><b class="chapter-num" id="v43006001-1">6 </b>After this Jesus went away to the other side of the Sea of Galilee, which is the Sea of Tiberias. <b class="verse-num" id="v43006002-1">2 </b>And a large crowd was following him, because they saw the signs that he was doing on the sick. <b class="verse-num" id="v43006003-1">3 </b>Jesus went up on the mountain, and there he sat down with his disciples. <b class="verse-num" id="v43006004-1">4 </b>Now the Passover, the feast of the Jews, was at hand. <b class="verse-num" id="v43006005-1">5 </b>Lifting up his eyes, then, and seeing that a large crowd was coming toward him, Jesus said to Philip, <span class="woc">“Where are we to buy bread, so that these people may eat?”</span> <b class="verse-num" id="v43006006-1">6 </b>He said this to test him, for he himself knew what he would do. <b class="verse-num" id="v43006007-1">7 </b>Philip answered him, “Two hundred denarii<sup class="footnote"><a class="fn" href="#f1-1" id="fb1-1" title='&lt;note class="background" sub-class="measurement"&gt;A &lt;i class="catch-word-plural"&gt;denarius&lt;/i&gt; was a day’s wage for a laborer&lt;/note&gt;'>1</a></sup> worth of bread would not be enough for each of them to get a little.” <b class="verse-num" id="v43006008-1">8 </b>One of his disciples, Andrew, Simon Peter’s brother, said to him, <b class="verse-num" id="v43006009-1">9 </b>“There is a boy here who has five barley loaves and two fish, but what are they for so many?” <b class="verse-num" id="v43006010-1">10 </b>Jesus said, <span class="woc">“Have the people sit down.”</span> Now there was much grass in the place. So the men sat down, about five thousand in number. <b class="verse-num" id="v43006011-1">11 </b>Jesus then took the loaves, and when he had given thanks, he distributed them to those who were seated. So also the fish, as much as they wanted. <b class="verse-num" id="v43006012-1">12 </b>And when they had eaten their fill, he told his disciples, <span class="woc">“Gather up the leftover fragments, that nothing may be lost.”</span> <b class="verse-num" id="v43006013-1">13 </b>So they gathered them up and filled twelve baskets with fragments from the five barley loaves left by those who had eaten. <b class="verse-num" id="v43006014-1">14 </b>When the people saw the sign that he had done, they said, “This is indeed the Prophet who is to come into the world!”</p>
-<p id="p43006014_06-1"><b class="verse-num" id="v43006015-1">15 </b>Perceiving then that they were about to come and take him by force to make him king, Jesus withdrew again to the mountain by himself.</p>
-<h3 id="p43006015_06-1">Jesus Walks on Water</h3>
-<p id="p43006015_10-1"><b class="verse-num" id="v43006016-1">16 </b>When evening came, his disciples went down to the sea, <b class="verse-num" id="v43006017-1">17 </b>got into a boat, and started across the sea to Capernaum. It was now dark, and Jesus had not yet come to them. <b class="verse-num" id="v43006018-1">18 </b>The sea became rough because a strong wind was blowing. <b class="verse-num" id="v43006019-1">19 </b>When they had rowed about three or four miles,<sup class="footnote"><a class="fn" href="#f2-1" id="fb2-1" title='&lt;note class="background" sub-class="measurement"&gt;Greek &lt;i&gt;twenty-five or thirty stadia&lt;/i&gt;; a &lt;i language="Greek"&gt;stadion&lt;/i&gt; was about 607 feet or 185 meters&lt;/note&gt;'>2</a></sup> they saw Jesus walking on the sea and coming near the boat, and they were frightened. <b class="verse-num" id="v43006020-1">20 </b>But he said to them, <span class="woc">“It is I; do not be afraid.”</span> <b class="verse-num" id="v43006021-1">21 </b>Then they were glad to take him into the boat, and immediately the boat was at the land to which they were going.</p>
-<div class="footnotes extra_text">
-<h3>Footnotes</h3>
-<p><span class="footnote"><a href="#fb1-1" id="f1-1">[1]</a></span> <span class="footnote-ref">6:7</span> <note class="background" sub-class="measurement">A <i class="catch-word-plural">denarius</i> was a day’s wage for a laborer</note>
-<br/>
-<span class="footnote"><a href="#fb2-1" id="f2-1">[2]</a></span> <span class="footnote-ref">6:19</span> <note class="background" sub-class="measurement">Greek <i>twenty-five or thirty stadia</i>; a <i language="Greek">stadion</i> was about 607 feet or 185 meters</note>
-</p>
+<span id="p19064010_06-1" class="line"><b class="verse-num inline" id="v19064010-1">10&nbsp;</b>&nbsp;&nbsp;Let <sup><a class="cf" data-crossrefs="[{&quot;reference&quot;: &quot;Psalm 32:11&quot;, &quot;text&quot;: &quot;Be glad in Jehovah, and rejoice, ye righteous; And shout for joy, all ye that are upright in heart.&quot;, &quot;esv_url&quot;: &quot;https://www.esv.org/Psalm+32%3A11&quot;}, {&quot;reference&quot;: &quot;Job 22:19&quot;, &quot;text&quot;: &quot;The righteous see it, and are glad; And the innocent laugh them to scorn,&quot;, &quot;esv_url&quot;: &quot;https://www.esv.org/Job+22%3A19&quot;}]" title="See Ps. 32:11; Job 22:19">b</a></sup>the righteous one rejoice in the LORD</span><br /><span id="p19064010_06-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;and <sup><a class="cf" data-crossrefs="[{&quot;reference&quot;: &quot;Psalm 11:1&quot;, &quot;text&quot;: &quot;In Jehovah do I take refuge: How say ye to my soul, Flee a bird to your mountain;&quot;, &quot;esv_url&quot;: &quot;https://www.esv.org/Psalm+11%3A1&quot;}]" title="See Ps. 11:1">c</a></sup>take refuge in him!</span><br /><span id="p19064010_06-1" class="line">&nbsp;&nbsp;Let all <sup><a class="cf" data-crossrefs="[{&quot;reference&quot;: &quot;Psalm 7:10&quot;, &quot;text&quot;: &quot;My shield is with God, Who saveth the upright in heart.&quot;, &quot;esv_url&quot;: &quot;https://www.esv.org/Psalm+7%3A10&quot;}]" title="See Ps. 7:10">d</a></sup>the upright in heart exult!</span><br /></p><span class="end-line-group"></span>
+<div class="crossrefs extra_text" id="crossrefsSection">
+<h3>Cross-References</h3>
+<p><a href="https://www.esv.org/Psalm+55%3A2" target="_blank" rel="noopener" class="crossref-link">Psalm 55:2</a>, <a href="https://www.esv.org/Psalm+55%3A14" target="_blank" rel="noopener" class="crossref-link">Psalm 55:14</a>, <a href="https://www.esv.org/Psalm+57%3A4" target="_blank" rel="noopener" class="crossref-link">Psalm 57:4</a>, <a href="https://www.esv.org/Psalm+11%3A2" target="_blank" rel="noopener" class="crossref-link">Psalm 11:2</a>, <a href="https://www.esv.org/Psalm+10%3A8" target="_blank" rel="noopener" class="crossref-link">Psalm 10:8</a>, <a href="https://www.esv.org/Psalm+55%3A19" target="_blank" rel="noopener" class="crossref-link">Psalm 55:19</a>, <a href="https://www.esv.org/Jeremiah+23%3A14" target="_blank" rel="noopener" class="crossref-link">Jeremiah 23:14</a>, <a href="https://www.esv.org/Ezekiel+13%3A22" target="_blank" rel="noopener" class="crossref-link">Ezekiel 13:22</a>, <a href="https://www.esv.org/Psalm+140%3A5" target="_blank" rel="noopener" class="crossref-link">Psalm 140:5</a>, <a href="https://www.esv.org/Job+22%3A13" target="_blank" rel="noopener" class="crossref-link">Job 22:13</a>, <a href="https://www.esv.org/Psalm+49%3A11" target="_blank" rel="noopener" class="crossref-link">Psalm 49:11</a>, <a href="https://www.esv.org/Psalm+7%3A12–13" target="_blank" rel="noopener" class="crossref-link">Psalm 7:12–13</a>, <a href="https://www.esv.org/Psalm+58%3A7" target="_blank" rel="noopener" class="crossref-link">Psalm 58:7</a>, <a href="https://www.esv.org/Proverbs+12%3A13" target="_blank" rel="noopener" class="crossref-link">Proverbs 12:13</a>, <a href="https://www.esv.org/Proverbs+18%3A7" target="_blank" rel="noopener" class="crossref-link">Proverbs 18:7</a>, <a href="https://www.esv.org/Psalm+40%3A3" target="_blank" rel="noopener" class="crossref-link">Psalm 40:3</a>, <a href="https://www.esv.org/Jeremiah+18%3A16" target="_blank" rel="noopener" class="crossref-link">Jeremiah 18:16</a>, <a href="https://www.esv.org/Jeremiah+48%3A27" target="_blank" rel="noopener" class="crossref-link">Jeremiah 48:27</a>, <a href="https://www.esv.org/Psalm+22%3A7" target="_blank" rel="noopener" class="crossref-link">Psalm 22:7</a>, <a href="https://www.esv.org/Psalm+64%3A8" target="_blank" rel="noopener" class="crossref-link">Psalm 64:8</a>, <a href="https://www.esv.org/Jeremiah+50%3A28" target="_blank" rel="noopener" class="crossref-link">Jeremiah 50:28</a>, <a href="https://www.esv.org/Jeremiah+51%3A10" target="_blank" rel="noopener" class="crossref-link">Jeremiah 51:10</a>, <a href="https://www.esv.org/Psalm+32%3A11" target="_blank" rel="noopener" class="crossref-link">Psalm 32:11</a>, <a href="https://www.esv.org/Job+22%3A19" target="_blank" rel="noopener" class="crossref-link">Job 22:19</a>, <a href="https://www.esv.org/Psalm+11%3A1" target="_blank" rel="noopener" class="crossref-link">Psalm 11:1</a>, <a href="https://www.esv.org/Psalm+7%3A10" target="_blank" rel="noopener" class="crossref-link">Psalm 7:10</a></p>
 </div>
-<a class="copyright" href="http://www.esv.org">ESV</a>
+<a href="http://www.esv.org" class="copyright">ESV</a>
+        </div>
+
+    </div>
+
 </div>
-</div>
-</div>
+
