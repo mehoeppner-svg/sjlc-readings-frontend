@@ -1,6 +1,6 @@
 {
   "year": 2026,
-  "lastUpdated": "2026-03-28T16:32:11Z",
+  "lastUpdated": "2026-04-13T19:05:34Z",
   "collections": [
     {
       "id": "christmas-2025",
@@ -854,51 +854,51 @@
     },
     {
       "date": "2026-04-13",
-      "passage": "Joshua 22:1-24:33",
+      "passage": "Joshua 1:1-9",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Crossing the Jordan",
+      "isFallback": false
     },
     {
       "date": "2026-04-14",
-      "passage": "Judges 1:1-3:31",
+      "passage": "Joshua 1:10-18",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Crossing the Jordan",
+      "isFallback": false
     },
     {
       "date": "2026-04-15",
-      "passage": "Judges 4:1-6:40",
+      "passage": "Joshua 2:1-24",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Crossing the Jordan",
+      "isFallback": false
     },
     {
       "date": "2026-04-16",
-      "passage": "Judges 7:1-8:35",
+      "passage": "Joshua 3:1-17",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Crossing the Jordan",
+      "isFallback": false
     },
     {
       "date": "2026-04-17",
-      "passage": "Judges 9:1-10:18",
+      "passage": "Joshua 4:1-24",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Crossing the Jordan",
+      "isFallback": false
     },
     {
       "date": "2026-04-18",
-      "passage": "Judges 11:1-12:15",
+      "passage": "Psalms 16:1-11",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Crossing the Jordan",
+      "isFallback": false
     },
     {
       "date": "2026-04-19",
@@ -910,51 +910,51 @@
     },
     {
       "date": "2026-04-20",
-      "passage": "Judges 16:1-18:31",
+      "passage": "Joshua 5:1-12",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Conquering Jericho",
+      "isFallback": false
     },
     {
       "date": "2026-04-21",
-      "passage": "Judges 19:1-21:25",
+      "passage": "Joshua 5:13-6:5",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Conquering Jericho",
+      "isFallback": false
     },
     {
       "date": "2026-04-22",
-      "passage": "Ruth 1:1-4:22",
+      "passage": "Joshua 6:6-14",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Conquering Jericho",
+      "isFallback": false
     },
     {
       "date": "2026-04-23",
-      "passage": "I Samuel 1:1-3:21",
+      "passage": "Joshua 6:15-21",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Conquering Jericho",
+      "isFallback": false
     },
     {
       "date": "2026-04-24",
-      "passage": "I Samuel 4:1-6:21",
+      "passage": "Joshua 6:22-27",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Conquering Jericho",
+      "isFallback": false
     },
     {
       "date": "2026-04-25",
-      "passage": "I Samuel 7:1-9:27",
+      "passage": "Psalms 144:1-15",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Conquering Jericho",
+      "isFallback": false
     },
     {
       "date": "2026-04-26",
@@ -966,51 +966,51 @@
     },
     {
       "date": "2026-04-27",
-      "passage": "I Samuel 13:1-14:52",
+      "passage": "Joshua 7:1-15",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Sin in the Camp",
+      "isFallback": false
     },
     {
       "date": "2026-04-28",
-      "passage": "I Samuel 15:1-16:23",
+      "passage": "Joshua 7:16-26",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Sin in the Camp",
+      "isFallback": false
     },
     {
       "date": "2026-04-29",
-      "passage": "I Samuel 17:1-18:30",
+      "passage": "Joshua 8:1-35",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Sin in the Camp",
+      "isFallback": false
     },
     {
       "date": "2026-04-30",
-      "passage": "I Samuel 19:1-24",
+      "passage": "Joshua 9:1-27",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Sin in the Camp",
+      "isFallback": false
     },
     {
       "date": "2026-05-01",
-      "passage": "I Samuel 20:1-21:15",
+      "passage": "Joshua 10:1-43",
       "title": null,
-      "collection": "daily-lectionary",
+      "collection": "gospel-project-year-one",
       "theme": null,
-      "isFallback": true
+      "isFallback": false
     },
     {
       "date": "2026-05-02",
-      "passage": "I Samuel 22:1-23",
+      "passage": "Psalms 7:1-17",
       "title": null,
-      "collection": "daily-lectionary",
+      "collection": "gospel-project-year-one",
       "theme": null,
-      "isFallback": true
+      "isFallback": false
     },
     {
       "date": "2026-05-03",
@@ -1022,51 +1022,51 @@
     },
     {
       "date": "2026-05-04",
-      "passage": "I Samuel 23:1-29",
+      "passage": "Joshua 11:1-23",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "The Conquest",
+      "isFallback": false
     },
     {
       "date": "2026-05-05",
-      "passage": "I Samuel 24:1-27:12",
+      "passage": "Joshua 12:1-24",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "The Conquest",
+      "isFallback": false
     },
     {
       "date": "2026-05-06",
-      "passage": "I Samuel 28:1-29:11",
+      "passage": "Joshua 13:1-14:5",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "The Conquest",
+      "isFallback": false
     },
     {
       "date": "2026-05-07",
-      "passage": "I Samuel 30:1-31:13",
+      "passage": "Joshua 14:6-15:63",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "The Conquest",
+      "isFallback": false
     },
     {
       "date": "2026-05-08",
-      "passage": "II Samuel 1:1-2:32",
+      "passage": "Joshua 16:1-17:18",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "The Conquest",
+      "isFallback": false
     },
     {
       "date": "2026-05-09",
-      "passage": "II Samuel 3:1-5:25",
+      "passage": "Psalms 50:1-23",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "The Conquest",
+      "isFallback": false
     },
     {
       "date": "2026-05-10",
@@ -1078,51 +1078,51 @@
     },
     {
       "date": "2026-05-11",
-      "passage": "II Samuel 8:1-9:13",
+      "passage": "Joshua 18:1-19:51",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Joshua's Farewell",
+      "isFallback": false
     },
     {
       "date": "2026-05-12",
-      "passage": "II Samuel 10:1-12:31",
+      "passage": "Joshua 20:1-21:45",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Joshua's Farewell",
+      "isFallback": false
     },
     {
       "date": "2026-05-13",
-      "passage": "Psalms 32:1-11",
+      "passage": "Joshua 22:1-34",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Joshua's Farewell",
+      "isFallback": false
     },
     {
       "date": "2026-05-14",
-      "passage": "II Samuel 13:1-14:33",
+      "passage": "Joshua 23:1-16",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Joshua's Farewell",
+      "isFallback": false
     },
     {
       "date": "2026-05-15",
-      "passage": "II Samuel 15:1-37",
+      "passage": "Joshua 24:1-33",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Joshua's Farewell",
+      "isFallback": false
     },
     {
       "date": "2026-05-16",
-      "passage": "II Samuel 16:1-18:33",
+      "passage": "Psalms 136:1-26",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Joshua's Farewell",
+      "isFallback": false
     },
     {
       "date": "2026-05-17",
@@ -1134,51 +1134,51 @@
     },
     {
       "date": "2026-05-18",
-      "passage": "Psalms 64:1-10",
+      "passage": "Judges 1:1-36",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Rinse and Repeat",
+      "isFallback": false
     },
     {
       "date": "2026-05-19",
-      "passage": "II Samuel 21:1-22:51",
+      "passage": "Judges 2:1-5",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Rinse and Repeat",
+      "isFallback": false
     },
     {
       "date": "2026-05-20",
-      "passage": "II Samuel 23:1-24:25",
+      "passage": "Judges 2:6-23",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Rinse and Repeat",
+      "isFallback": false
     },
     {
       "date": "2026-05-21",
-      "passage": "Psalms 4:1-6:10",
+      "passage": "Judges 3:1-6",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Rinse and Repeat",
+      "isFallback": false
     },
     {
       "date": "2026-05-22",
-      "passage": "Psalms 7:1-8:9",
+      "passage": "Judges 3:7-11",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Rinse and Repeat",
+      "isFallback": false
     },
     {
       "date": "2026-05-23",
-      "passage": "Psalms 9:1-11:7",
+      "passage": "Psalms 107:1-43",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Rinse and Repeat",
+      "isFallback": false
     },
     {
       "date": "2026-05-24",
@@ -1190,51 +1190,51 @@
     },
     {
       "date": "2026-05-25",
-      "passage": "Psalms 15:1-16:11",
+      "passage": "Judges 3:12-31",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Deborah",
+      "isFallback": false
     },
     {
       "date": "2026-05-26",
-      "passage": "Psalms 17:1-19:14",
+      "passage": "Judges 4:1-10",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Deborah",
+      "isFallback": false
     },
     {
       "date": "2026-05-27",
-      "passage": "Psalms 20:1-22:31",
+      "passage": "Judges 4:11-16",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Deborah",
+      "isFallback": false
     },
     {
       "date": "2026-05-28",
-      "passage": "Psalms 24:1-26:12",
+      "passage": "Judges 4:17-24",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Deborah",
+      "isFallback": false
     },
     {
       "date": "2026-05-29",
-      "passage": "Psalms 27:1-29:11",
+      "passage": "Judges 5:1-31",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Deborah",
+      "isFallback": false
     },
     {
       "date": "2026-05-30",
-      "passage": "Psalms 31:1-35:28",
+      "passage": "Psalms 77:1-20",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Deborah",
+      "isFallback": false
     },
     {
       "date": "2026-05-31",
