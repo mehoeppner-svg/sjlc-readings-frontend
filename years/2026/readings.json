@@ -1,6 +1,6 @@
 {
   "year": 2026,
-  "lastUpdated": "2026-06-03T22:49:21Z",
+  "lastUpdated": "2026-06-24T19:47:48Z",
   "collections": [
     {
       "id": "christmas-2025",
@@ -24,6 +24,14 @@
       "color": "#800080",
       "description": "",
       "url": "collections/gospel-project-year-one.html",
+      "isFallback": false
+    },
+    {
+      "id": "holy-week",
+      "name": "Holy Week",
+      "color": "#e2e600",
+      "description": "",
+      "url": "collections/holy-week.html",
       "isFallback": false
     }
   ],
@@ -510,107 +518,107 @@
     },
     {
       "date": "2026-03-02",
-      "passage": "Leviticus 14:1-57",
+      "passage": "Leviticus 1:1-7:38",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "God Provision for Redemption",
+      "isFallback": false
     },
     {
       "date": "2026-03-03",
-      "passage": "Leviticus 15:1-16:34",
+      "passage": "Leviticus 8:1-10:20",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "God Provision for Redemption",
+      "isFallback": false
     },
     {
       "date": "2026-03-04",
-      "passage": "Leviticus 17:1-18:30",
+      "passage": "Leviticus 11:1-15:33",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "God Provision for Redemption",
+      "isFallback": false
     },
     {
       "date": "2026-03-05",
-      "passage": "Leviticus 19:1-20:27",
+      "passage": "Leviticus 16:1-22:33",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "God Provision for Redemption",
+      "isFallback": false
     },
     {
       "date": "2026-03-06",
-      "passage": "Leviticus 21:1-22:33",
+      "passage": "Leviticus 23:1-27:34",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "God Provision for Redemption",
+      "isFallback": false
     },
     {
       "date": "2026-03-07",
-      "passage": "Leviticus 23:1-24:23",
+      "passage": "Psalms 32:1-11",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "God Provision for Redemption",
+      "isFallback": false
     },
     {
       "date": "2026-03-08",
-      "passage": "Leviticus 25:1-55",
+      "passage": "Numbers 11:4-15",
       "title": null,
-      "collection": "daily-lectionary",
+      "collection": "gospel-project-year-one",
       "theme": null,
-      "isFallback": true
+      "isFallback": false
     },
     {
       "date": "2026-03-09",
-      "passage": "Leviticus 26:1-27:34",
+      "passage": "Numbers 1:1-4:49",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Complaints of the Ungrateful",
+      "isFallback": false
     },
     {
       "date": "2026-03-10",
-      "passage": "Numbers 1:1-2:34",
+      "passage": "Numbers 5:1-6:27",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Complaints of the Ungrateful",
+      "isFallback": false
     },
     {
       "date": "2026-03-11",
-      "passage": "Numbers 3:1-4:49",
+      "passage": "Numbers 7:1-9:14",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Complaints of the Ungrateful",
+      "isFallback": false
     },
     {
       "date": "2026-03-12",
-      "passage": "Numbers 5:1-6:27",
+      "passage": "Numbers 9:15-10:36",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Complaints of the Ungrateful",
+      "isFallback": false
     },
     {
       "date": "2026-03-13",
-      "passage": "Numbers 7:1-8:26",
+      "passage": "Numbers 11:1-12:16",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Complaints of the Ungrateful",
+      "isFallback": false
     },
     {
       "date": "2026-03-14",
-      "passage": "Numbers 9:1-11:35",
+      "passage": "Psalms 78:1-72",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Complaints of the Ungrateful",
+      "isFallback": false
     },
     {
       "date": "2026-03-15",
@@ -622,51 +630,51 @@
     },
     {
       "date": "2026-03-16",
-      "passage": "Numbers 15:1-16:50",
+      "passage": "Numbers 13:1-14:45",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Consequences for the Faithless",
+      "isFallback": false
     },
     {
       "date": "2026-03-17",
-      "passage": "Numbers 17:1-19:22",
+      "passage": "Numbers 15:1-41",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Consequences for the Faithless",
+      "isFallback": false
     },
     {
       "date": "2026-03-18",
-      "passage": "Numbers 20:1-22:41",
+      "passage": "Numbers 16:1-50",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Consequences for the Faithless",
+      "isFallback": false
     },
     {
       "date": "2026-03-19",
-      "passage": "Numbers 23:1-25:18",
+      "passage": "Numbers 17:1-18:32",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Consequences for the Faithless",
+      "isFallback": false
     },
     {
       "date": "2026-03-20",
-      "passage": "Numbers 26:1-27:23",
+      "passage": "Numbers 19:1-22",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Consequences for the Faithless",
+      "isFallback": false
     },
     {
       "date": "2026-03-21",
-      "passage": "Numbers 28:1-30:16",
+      "passage": "Psalms 86:1-17",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Consequences for the Faithless",
+      "isFallback": false
     },
     {
       "date": "2026-03-22",
@@ -678,115 +686,115 @@
     },
     {
       "date": "2026-03-23",
-      "passage": "Numbers 34:1-36:13",
+      "passage": "Numbers 20:1-21:35",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Healing of the Impatient",
+      "isFallback": false
     },
     {
       "date": "2026-03-24",
-      "passage": "Deuteronomy 1:1-2:37",
+      "passage": "Numbers 22:1-26:65",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Healing of the Impatient",
+      "isFallback": false
     },
     {
       "date": "2026-03-25",
-      "passage": "Deuteronomy 3:1-4:49",
+      "passage": "Numbers 27:1-30:16",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Healing of the Impatient",
+      "isFallback": false
     },
     {
       "date": "2026-03-26",
-      "passage": "Deuteronomy 5:1-7:26",
+      "passage": "Numbers 31:1-32:42",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Healing of the Impatient",
+      "isFallback": false
     },
     {
       "date": "2026-03-27",
-      "passage": "Deuteronomy 8:1-10:22",
+      "passage": "Numbers 33:1-36:13",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Healing of the Impatient",
+      "isFallback": false
     },
     {
       "date": "2026-03-28",
-      "passage": "Deuteronomy 11:1-13:18",
+      "passage": "Psalms 103:1-22",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Healing of the Impatient",
+      "isFallback": false
     },
     {
       "date": "2026-03-29",
-      "passage": "Deuteronomy 14:1-16:22",
+      "passage": "Matthew 21:1-11",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "holy-week",
+      "theme": "Holy Week",
+      "isFallback": false
     },
     {
       "date": "2026-03-30",
-      "passage": "Deuteronomy 17:1-19:21",
+      "passage": "Mark 11:15-19",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "holy-week",
+      "theme": "Holy Week",
+      "isFallback": false
     },
     {
       "date": "2026-03-31",
-      "passage": "Deuteronomy 20:1-22:30",
+      "passage": "Zechariah 9:9-17",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "holy-week",
+      "theme": "Holy Week",
+      "isFallback": false
     },
     {
       "date": "2026-04-01",
-      "passage": "Deuteronomy 23:1-25:19",
+      "passage": "Zechariah 11:4-13",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "holy-week",
+      "theme": "Holy Week",
+      "isFallback": false
     },
     {
       "date": "2026-04-02",
-      "passage": "Deuteronomy 26:1-27:26",
+      "passage": "Isaiah 53:1-12",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "holy-week",
+      "theme": "Holy Week",
+      "isFallback": false
     },
     {
       "date": "2026-04-03",
-      "passage": "Deuteronomy 28:1-29:29",
+      "passage": "John 19:16-37",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "holy-week",
+      "theme": "Holy Week",
+      "isFallback": false
     },
     {
       "date": "2026-04-04",
-      "passage": "Deuteronomy 30:1-31:30",
+      "passage": "Psalms 22:1-31",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "holy-week",
+      "theme": "Holy Week",
+      "isFallback": false
     },
     {
       "date": "2026-04-05",
-      "passage": "Deuteronomy 32:1-34:12",
+      "passage": "John 20:1-18",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "holy-week",
+      "theme": "Holy Week",
+      "isFallback": false
     },
     {
       "date": "2026-04-06",
@@ -846,51 +854,51 @@
     },
     {
       "date": "2026-04-13",
-      "passage": "Joshua 22:1-24:33",
+      "passage": "Joshua 1:1-9",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Crossing the Jordan",
+      "isFallback": false
     },
     {
       "date": "2026-04-14",
-      "passage": "Judges 1:1-3:31",
+      "passage": "Joshua 1:10-18",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Crossing the Jordan",
+      "isFallback": false
     },
     {
       "date": "2026-04-15",
-      "passage": "Judges 4:1-6:40",
+      "passage": "Joshua 2:1-24",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Crossing the Jordan",
+      "isFallback": false
     },
     {
       "date": "2026-04-16",
-      "passage": "Judges 7:1-8:35",
+      "passage": "Joshua 3:1-17",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Crossing the Jordan",
+      "isFallback": false
     },
     {
       "date": "2026-04-17",
-      "passage": "Judges 9:1-10:18",
+      "passage": "Joshua 4:1-24",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Crossing the Jordan",
+      "isFallback": false
     },
     {
       "date": "2026-04-18",
-      "passage": "Judges 11:1-12:15",
+      "passage": "Psalms 16:1-11",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Crossing the Jordan",
+      "isFallback": false
     },
     {
       "date": "2026-04-19",
@@ -902,51 +910,51 @@
     },
     {
       "date": "2026-04-20",
-      "passage": "Judges 16:1-18:31",
+      "passage": "Joshua 5:1-12",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Conquering Jericho",
+      "isFallback": false
     },
     {
       "date": "2026-04-21",
-      "passage": "Judges 19:1-21:25",
+      "passage": "Joshua 5:13-6:5",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Conquering Jericho",
+      "isFallback": false
     },
     {
       "date": "2026-04-22",
-      "passage": "Ruth 1:1-4:22",
+      "passage": "Joshua 6:6-14",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Conquering Jericho",
+      "isFallback": false
     },
     {
       "date": "2026-04-23",
-      "passage": "I Samuel 1:1-3:21",
+      "passage": "Joshua 6:15-21",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Conquering Jericho",
+      "isFallback": false
     },
     {
       "date": "2026-04-24",
-      "passage": "I Samuel 4:1-6:21",
+      "passage": "Joshua 6:22-27",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Conquering Jericho",
+      "isFallback": false
     },
     {
       "date": "2026-04-25",
-      "passage": "I Samuel 7:1-9:27",
+      "passage": "Psalms 144:1-15",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Conquering Jericho",
+      "isFallback": false
     },
     {
       "date": "2026-04-26",
@@ -958,51 +966,51 @@
     },
     {
       "date": "2026-04-27",
-      "passage": "I Samuel 13:1-14:52",
+      "passage": "Joshua 7:1-15",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Sin in the Camp",
+      "isFallback": false
     },
     {
       "date": "2026-04-28",
-      "passage": "I Samuel 15:1-16:23",
+      "passage": "Joshua 7:16-26",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Sin in the Camp",
+      "isFallback": false
     },
     {
       "date": "2026-04-29",
-      "passage": "I Samuel 17:1-18:30",
+      "passage": "Joshua 8:1-35",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Sin in the Camp",
+      "isFallback": false
     },
     {
       "date": "2026-04-30",
-      "passage": "I Samuel 19:1-24",
+      "passage": "Joshua 9:1-27",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Sin in the Camp",
+      "isFallback": false
     },
     {
       "date": "2026-05-01",
-      "passage": "I Samuel 20:1-21:15",
+      "passage": "Joshua 10:1-43",
       "title": null,
-      "collection": "daily-lectionary",
+      "collection": "gospel-project-year-one",
       "theme": null,
-      "isFallback": true
+      "isFallback": false
     },
     {
       "date": "2026-05-02",
-      "passage": "I Samuel 22:1-23",
+      "passage": "Psalms 7:1-17",
       "title": null,
-      "collection": "daily-lectionary",
+      "collection": "gospel-project-year-one",
       "theme": null,
-      "isFallback": true
+      "isFallback": false
     },
     {
       "date": "2026-05-03",
@@ -1014,51 +1022,51 @@
     },
     {
       "date": "2026-05-04",
-      "passage": "I Samuel 23:1-29",
+      "passage": "Joshua 11:1-23",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "The Conquest",
+      "isFallback": false
     },
     {
       "date": "2026-05-05",
-      "passage": "I Samuel 24:1-27:12",
+      "passage": "Joshua 12:1-24",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "The Conquest",
+      "isFallback": false
     },
     {
       "date": "2026-05-06",
-      "passage": "I Samuel 28:1-29:11",
+      "passage": "Joshua 13:1-14:5",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "The Conquest",
+      "isFallback": false
     },
     {
       "date": "2026-05-07",
-      "passage": "I Samuel 30:1-31:13",
+      "passage": "Joshua 14:6-15:63",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "The Conquest",
+      "isFallback": false
     },
     {
       "date": "2026-05-08",
-      "passage": "II Samuel 1:1-2:32",
+      "passage": "Joshua 16:1-17:18",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "The Conquest",
+      "isFallback": false
     },
     {
       "date": "2026-05-09",
-      "passage": "II Samuel 3:1-5:25",
+      "passage": "Psalms 50:1-23",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "The Conquest",
+      "isFallback": false
     },
     {
       "date": "2026-05-10",
@@ -1070,51 +1078,51 @@
     },
     {
       "date": "2026-05-11",
-      "passage": "II Samuel 8:1-9:13",
+      "passage": "Joshua 18:1-19:51",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Joshua's Farewell",
+      "isFallback": false
     },
     {
       "date": "2026-05-12",
-      "passage": "II Samuel 10:1-12:31",
+      "passage": "Joshua 20:1-21:45",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Joshua's Farewell",
+      "isFallback": false
     },
     {
       "date": "2026-05-13",
-      "passage": "Psalms 32:1-11",
+      "passage": "Joshua 22:1-34",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Joshua's Farewell",
+      "isFallback": false
     },
     {
       "date": "2026-05-14",
-      "passage": "II Samuel 13:1-14:33",
+      "passage": "Joshua 23:1-16",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Joshua's Farewell",
+      "isFallback": false
     },
     {
       "date": "2026-05-15",
-      "passage": "II Samuel 15:1-37",
+      "passage": "Joshua 24:1-33",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Joshua's Farewell",
+      "isFallback": false
     },
     {
       "date": "2026-05-16",
-      "passage": "II Samuel 16:1-18:33",
+      "passage": "Psalms 136:1-26",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Joshua's Farewell",
+      "isFallback": false
     },
     {
       "date": "2026-05-17",
@@ -1126,51 +1134,51 @@
     },
     {
       "date": "2026-05-18",
-      "passage": "Psalms 64:1-10",
+      "passage": "Judges 1:1-36",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Rinse and Repeat",
+      "isFallback": false
     },
     {
       "date": "2026-05-19",
-      "passage": "II Samuel 21:1-22:51",
+      "passage": "Judges 2:1-5",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Rinse and Repeat",
+      "isFallback": false
     },
     {
       "date": "2026-05-20",
-      "passage": "II Samuel 23:1-24:25",
+      "passage": "Judges 2:6-23",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Rinse and Repeat",
+      "isFallback": false
     },
     {
       "date": "2026-05-21",
-      "passage": "Psalms 4:1-6:10",
+      "passage": "Judges 3:1-6",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Rinse and Repeat",
+      "isFallback": false
     },
     {
       "date": "2026-05-22",
-      "passage": "Psalms 7:1-8:9",
+      "passage": "Judges 3:7-11",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Rinse and Repeat",
+      "isFallback": false
     },
     {
       "date": "2026-05-23",
-      "passage": "Psalms 9:1-11:7",
+      "passage": "Psalms 107:1-43",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Rinse and Repeat",
+      "isFallback": false
     },
     {
       "date": "2026-05-24",
@@ -1182,51 +1190,51 @@
     },
     {
       "date": "2026-05-25",
-      "passage": "Psalms 15:1-16:11",
+      "passage": "Judges 3:12-31",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Deborah",
+      "isFallback": false
     },
     {
       "date": "2026-05-26",
-      "passage": "Psalms 17:1-19:14",
+      "passage": "Judges 4:1-10",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Deborah",
+      "isFallback": false
     },
     {
       "date": "2026-05-27",
-      "passage": "Psalms 20:1-22:31",
+      "passage": "Judges 4:11-16",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Deborah",
+      "isFallback": false
     },
     {
       "date": "2026-05-28",
-      "passage": "Psalms 24:1-26:12",
+      "passage": "Judges 4:17-24",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Deborah",
+      "isFallback": false
     },
     {
       "date": "2026-05-29",
-      "passage": "Psalms 27:1-29:11",
+      "passage": "Judges 5:1-31",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Deborah",
+      "isFallback": false
     },
     {
       "date": "2026-05-30",
-      "passage": "Psalms 31:1-35:28",
+      "passage": "Psalms 77:1-20",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Deborah",
+      "isFallback": false
     },
     {
       "date": "2026-05-31",
@@ -1341,6 +1349,14 @@
       "isFallback": false
     },
     {
+      "date": "2026-06-14",
+      "passage": "Proverbs 10:1-12:28",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
       "date": "2026-06-15",
       "passage": "Ruth 1:1-22",
       "title": null,
@@ -1387,6 +1403,14 @@
       "collection": "gospel-project-year-one",
       "theme": "Ruth",
       "isFallback": false
+    },
+    {
+      "date": "2026-06-21",
+      "passage": "Proverbs 30:1-31:31",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
     },
     {
       "date": "2026-06-22",
@@ -1437,6 +1461,14 @@
       "isFallback": false
     },
     {
+      "date": "2026-06-28",
+      "passage": "Ecclesiastes 1:1-3:22",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
       "date": "2026-06-29",
       "passage": "I Samuel 4:1-5",
       "title": null,
@@ -1483,6 +1515,1262 @@
       "collection": "gospel-project-year-one",
       "theme": "God Judges Eli",
       "isFallback": false
+    },
+    {
+      "date": "2026-07-05",
+      "passage": "I Kings 19:1-20:43",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-07-06",
+      "passage": "I Kings 21:1-22:53",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-07-07",
+      "passage": "II Kings 1:1-3:27",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-07-08",
+      "passage": "II Kings 4:1-6:33",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-07-09",
+      "passage": "II Kings 7:1-9:37",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-07-10",
+      "passage": "II Kings 10:1-12:21",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-07-11",
+      "passage": "II Kings 13:1-14:29",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-07-12",
+      "passage": "Jonah 1:1-4:11",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-07-13",
+      "passage": "Amos 1:1-3:15",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-07-14",
+      "passage": "Amos 4:1-6:14",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-07-15",
+      "passage": "Amos 7:1-9:15",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-07-16",
+      "passage": "II Kings 15:1-16:20",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-07-17",
+      "passage": "II Kings 17:1-18:37",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-07-18",
+      "passage": "II Kings 19:1-21:26",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-07-19",
+      "passage": "II Kings 22:1-23:37",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-07-20",
+      "passage": "II Kings 24:1-25:30",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-07-21",
+      "passage": "Psalms 1:1-2:12",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-07-22",
+      "passage": "Psalms 33:1-22",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-07-23",
+      "passage": "Psalms 67:1-71:24",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-07-24",
+      "passage": "Psalms 89:1-92:15",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-07-25",
+      "passage": "Psalms 93:1-95:11",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-07-26",
+      "passage": "Psalms 96:1-98:9",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-07-27",
+      "passage": "Psalms 99:1-100:5",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-07-28",
+      "passage": "Psalms 104:1-105:45",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-07-29",
+      "passage": "Psalms 106:1-112:10",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-07-30",
+      "passage": "Psalms 113:1-115:18",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-07-31",
+      "passage": "Psalms 116:1-118:29",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-08-01",
+      "passage": "Psalms 119:1-88",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-08-02",
+      "passage": "Psalms 119:89-176",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-08-03",
+      "passage": "Psalms 120:1-122:9",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-08-04",
+      "passage": "Psalms 123:1-125:5",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-08-05",
+      "passage": "Psalms 127:1-129:8",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-08-06",
+      "passage": "Psalms 130:1-132:18",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-08-07",
+      "passage": "Psalms 133:1-135:21",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-08-08",
+      "passage": "Psalms 136:1-146:10",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-08-09",
+      "passage": "Psalms 147:1-148:14",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-08-10",
+      "passage": "Psalms 149:1-150:6",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-08-11",
+      "passage": "I Chronicles 1:1-3:24",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-08-12",
+      "passage": "I Chronicles 4:1-6:81",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-08-13",
+      "passage": "I Chronicles 7:1-9:44",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-08-14",
+      "passage": "I Chronicles 10:1-12:40",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-08-15",
+      "passage": "I Chronicles 13:1-15:29",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-08-16",
+      "passage": "I Chronicles 16:1-43",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-08-17",
+      "passage": "Psalms 45:1-47:9",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-08-18",
+      "passage": "Psalms 48:1-50:23",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-08-19",
+      "passage": "Psalms 73:1-85:13",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-08-20",
+      "passage": "Psalms 87:1-88:18",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-08-21",
+      "passage": "I Chronicles 17:1-19:19",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-08-22",
+      "passage": "I Chronicles 20:1-22:19",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-08-23",
+      "passage": "I Chronicles 23:1-25:31",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-08-24",
+      "passage": "I Chronicles 26:1-27:34",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-08-25",
+      "passage": "I Chronicles 28:1-29:30",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-08-26",
+      "passage": "II Chronicles 1:1-3:17",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-08-27",
+      "passage": "II Chronicles 4:1-6:42",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-08-28",
+      "passage": "II Chronicles 7:1-9:31",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-08-29",
+      "passage": "II Chronicles 10:1-12:16",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-08-30",
+      "passage": "II Chronicles 13:1-14:15",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-08-31",
+      "passage": "II Chronicles 15:1-16:14",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-09-01",
+      "passage": "II Chronicles 17:1-18:34",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-09-02",
+      "passage": "II Chronicles 19:1-20:37",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-09-03",
+      "passage": "II Chronicles 21:1-20",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-09-04",
+      "passage": "II Chronicles 22:1-12",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-09-05",
+      "passage": "II Chronicles 23:1-21",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-09-06",
+      "passage": "II Chronicles 24:1-26:23",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-09-07",
+      "passage": "Isaiah 1:1-2:22",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-09-08",
+      "passage": "Isaiah 3:1-4:6",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-09-09",
+      "passage": "Isaiah 5:1-6:13",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-09-10",
+      "passage": "II Chronicles 27:1-28:27",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-09-11",
+      "passage": "II Chronicles 29:1-30:27",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-09-12",
+      "passage": "II Chronicles 31:1-32:33",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-09-13",
+      "passage": "Isaiah 7:1-8:22",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-09-14",
+      "passage": "Isaiah 9:1-10:34",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-09-15",
+      "passage": "Isaiah 11:1-13:22",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-09-16",
+      "passage": "Isaiah 14:1-16:14",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-09-17",
+      "passage": "Isaiah 17:1-19:25",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-09-18",
+      "passage": "Isaiah 20:1-22:25",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-09-19",
+      "passage": "Isaiah 23:1-25:12",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-09-20",
+      "passage": "Isaiah 26:1-27:13",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-09-21",
+      "passage": "Isaiah 28:1-29:24",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-09-22",
+      "passage": "Isaiah 30:1-31:9",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-09-23",
+      "passage": "Isaiah 32:1-33:24",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-09-24",
+      "passage": "Isaiah 34:1-36:22",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-09-25",
+      "passage": "Isaiah 37:1-38:22",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-09-26",
+      "passage": "Isaiah 39:1-40:31",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-09-27",
+      "passage": "Isaiah 41:1-42:25",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-09-28",
+      "passage": "Isaiah 43:1-44:28",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-09-29",
+      "passage": "Isaiah 45:1-46:13",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-09-30",
+      "passage": "Isaiah 47:1-49:26",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-10-01",
+      "passage": "Isaiah 50:1-52:15",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-10-02",
+      "passage": "Isaiah 53:1-55:13",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-10-03",
+      "passage": "Isaiah 56:1-58:14",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-10-04",
+      "passage": "Isaiah 59:1-61:11",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-10-05",
+      "passage": "Isaiah 62:1-64:12",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-10-06",
+      "passage": "Isaiah 65:1-66:24",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-10-07",
+      "passage": "Hosea 1:1-4:19",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-10-08",
+      "passage": "Hosea 5:1-8:14",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-10-09",
+      "passage": "Hosea 9:1-11:12",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-10-10",
+      "passage": "Hosea 12:1-14:9",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-10-11",
+      "passage": "Micah 1:1-3:12",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-10-12",
+      "passage": "Micah 4:1-5:15",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-10-13",
+      "passage": "Micah 6:1-7:20",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-10-14",
+      "passage": "Nahum 1:1-3:19",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-10-15",
+      "passage": "II Chronicles 33:1-34:33",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-10-16",
+      "passage": "Zephaniah 1:1-3:20",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-10-17",
+      "passage": "II Chronicles 35:1-27",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-10-18",
+      "passage": "Jeremiah 1:1-2:37",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-10-19",
+      "passage": "Jeremiah 3:1-5:31",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-10-20",
+      "passage": "Jeremiah 6:1-30",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-10-21",
+      "passage": "Jeremiah 7:1-8:22",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-10-22",
+      "passage": "Jeremiah 9:1-10:25",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-10-23",
+      "passage": "Jeremiah 15:1-17:27",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-10-24",
+      "passage": "Jeremiah 18:1-19:15",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-10-25",
+      "passage": "Jeremiah 20:1-18",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-10-26",
+      "passage": "Jeremiah 25:1-38",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-10-27",
+      "passage": "Jeremiah 47:1-48:47",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-10-28",
+      "passage": "Jeremiah 49:1-39",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-10-29",
+      "passage": "Jeremiah 23:1-24:10",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-10-30",
+      "passage": "Jeremiah 27:1-29:32",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-10-31",
+      "passage": "Jeremiah 50:1-46",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-11-01",
+      "passage": "Jeremiah 51:1-64",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-11-02",
+      "passage": "Jeremiah 31:1-32:44",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-11-03",
+      "passage": "Jeremiah 33:1-26",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-11-04",
+      "passage": "Jeremiah 34:1-22",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-11-05",
+      "passage": "Jeremiah 39:1-18",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-11-06",
+      "passage": "Jeremiah 41:1-42:22",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-11-07",
+      "passage": "Jeremiah 43:1-44:30",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-11-08",
+      "passage": "Lamentations 1:1-2:22",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-11-09",
+      "passage": "Lamentations 3:1-5:22",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-11-10",
+      "passage": "II Chronicles 36:1-23",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-11-11",
+      "passage": "Daniel 3:1-4:37",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-11-12",
+      "passage": "Daniel 5:1-7:28",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-11-13",
+      "passage": "Daniel 8:1-10:21",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-11-14",
+      "passage": "Daniel 11:1-12:13",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-11-15",
+      "passage": "Psalms 137:1-9",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-11-16",
+      "passage": "Ezekiel 3:1-4:17",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-11-17",
+      "passage": "Ezekiel 5:1-7:27",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-11-18",
+      "passage": "Ezekiel 8:1-10:22",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-11-19",
+      "passage": "Ezekiel 11:1-13:23",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-11-20",
+      "passage": "Ezekiel 14:1-15:8",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-11-21",
+      "passage": "Ezekiel 16:1-17:24",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-11-22",
+      "passage": "Ezekiel 18:1-19:14",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-11-23",
+      "passage": "Ezekiel 20:1-21:32",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-11-24",
+      "passage": "Ezekiel 22:1-23:49",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-11-25",
+      "passage": "Ezekiel 24:1-26:21",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-11-26",
+      "passage": "Ezekiel 27:1-29:21",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-11-27",
+      "passage": "Ezekiel 30:1-32:32",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-11-28",
+      "passage": "Ezekiel 33:1-34:31",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-11-29",
+      "passage": "Ezekiel 35:1-36:38",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-11-30",
+      "passage": "Ezekiel 37:1-39:29",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-12-01",
+      "passage": "Ezekiel 40:1-41:26",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-12-02",
+      "passage": "Ezekiel 42:1-44:31",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-12-03",
+      "passage": "Ezekiel 45:1-46:24",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-12-04",
+      "passage": "Ezekiel 47:1-48:35",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-12-05",
+      "passage": "Ezra 1:1-2:70",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-12-06",
+      "passage": "Ezra 3:1-4:24",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-12-07",
+      "passage": "Haggai 1:1-2:23",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
+    },
+    {
+      "date": "2026-12-08",
+      "passage": "Zechariah 1:1-4:14",
+      "title": null,
+      "collection": "daily-lectionary",
+      "theme": null,
+      "isFallback": true
     }
   ]
 }
