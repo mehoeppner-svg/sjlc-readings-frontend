@@ -1,6 +1,6 @@
 {
   "year": 2026,
-  "lastUpdated": "2026-06-24T19:53:24Z",
+  "lastUpdated": "2026-07-08T20:24:26Z",
   "collections": [
     {
       "id": "christmas-2025",
@@ -1542,11 +1542,11 @@
     },
     {
       "date": "2026-07-08",
-      "passage": "II Kings 4:1-6:33",
+      "passage": "I Samuel 6:17-7:1",
       "title": null,
-      "collection": "daily-lectionary",
+      "collection": "gospel-project-year-one",
       "theme": null,
-      "isFallback": true
+      "isFallback": false
     },
     {
       "date": "2026-07-09",
