@@ -1,6 +1,6 @@
 {
   "year": 2026,
-  "lastUpdated": "2026-07-08T20:24:26Z",
+  "lastUpdated": "2026-07-10T19:34:26Z",
   "collections": [
     {
       "id": "christmas-2025",
@@ -1526,51 +1526,51 @@
     },
     {
       "date": "2026-07-06",
-      "passage": "I Kings 21:1-22:53",
+      "passage": "I Samuel 6:1-6",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Freedom!",
+      "isFallback": false
     },
     {
       "date": "2026-07-07",
-      "passage": "II Kings 1:1-3:27",
+      "passage": "I Samuel 6:7-16",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Freedom!",
+      "isFallback": false
     },
     {
       "date": "2026-07-08",
       "passage": "I Samuel 6:17-7:1",
       "title": null,
       "collection": "gospel-project-year-one",
-      "theme": null,
+      "theme": "Freedom!",
       "isFallback": false
     },
     {
       "date": "2026-07-09",
-      "passage": "II Kings 7:1-9:37",
+      "passage": "I Samuel 7:2-6",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Freedom!",
+      "isFallback": false
     },
     {
       "date": "2026-07-10",
-      "passage": "II Kings 10:1-12:21",
+      "passage": "I Samuel 7:7-17",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Freedom!",
+      "isFallback": false
     },
     {
       "date": "2026-07-11",
-      "passage": "II Kings 13:1-14:29",
+      "passage": "Psalms 38:1-22",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Freedom!",
+      "isFallback": false
     },
     {
       "date": "2026-07-12",
@@ -1582,51 +1582,51 @@
     },
     {
       "date": "2026-07-13",
-      "passage": "Amos 1:1-3:15",
+      "passage": "I Samuel 8:1-22",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Israel Wants a King",
+      "isFallback": false
     },
     {
       "date": "2026-07-14",
-      "passage": "Amos 4:1-6:14",
+      "passage": "I Samuel 9:1-10:16",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Israel Wants a King",
+      "isFallback": false
     },
     {
       "date": "2026-07-15",
-      "passage": "Amos 7:1-9:15",
+      "passage": "I Samuel 10:17-27",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Israel Wants a King",
+      "isFallback": false
     },
     {
       "date": "2026-07-16",
-      "passage": "II Kings 15:1-16:20",
+      "passage": "I Samuel 11:1-15",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Israel Wants a King",
+      "isFallback": false
     },
     {
       "date": "2026-07-17",
-      "passage": "II Kings 17:1-18:37",
+      "passage": "I Samuel 12:1-25",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Israel Wants a King",
+      "isFallback": false
     },
     {
       "date": "2026-07-18",
-      "passage": "II Kings 19:1-21:26",
+      "passage": "Psalms 37:1-40",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Israel Wants a King",
+      "isFallback": false
     },
     {
       "date": "2026-07-19",
@@ -1638,51 +1638,51 @@
     },
     {
       "date": "2026-07-20",
-      "passage": "II Kings 24:1-25:30",
+      "passage": "I Samuel 13:1-9",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Saul Rescues Israel",
+      "isFallback": false
     },
     {
       "date": "2026-07-21",
-      "passage": "Psalms 1:1-2:12",
+      "passage": "I Samuel 13:10-15",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Saul Rescues Israel",
+      "isFallback": false
     },
     {
       "date": "2026-07-22",
-      "passage": "Psalms 33:1-22",
+      "passage": "I Samuel 13:16-22",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Saul Rescues Israel",
+      "isFallback": false
     },
     {
       "date": "2026-07-23",
-      "passage": "Psalms 67:1-71:24",
+      "passage": "I Samuel 13:23-14:46",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Saul Rescues Israel",
+      "isFallback": false
     },
     {
       "date": "2026-07-24",
-      "passage": "Psalms 89:1-92:15",
+      "passage": "I Samuel 14:47-52",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Saul Rescues Israel",
+      "isFallback": false
     },
     {
       "date": "2026-07-25",
-      "passage": "Psalms 93:1-95:11",
+      "passage": "Psalms 33:1-22",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Saul Rescues Israel",
+      "isFallback": false
     },
     {
       "date": "2026-07-26",
@@ -1694,51 +1694,51 @@
     },
     {
       "date": "2026-07-27",
-      "passage": "Psalms 99:1-100:5",
+      "passage": "I Samuel 15:1-6",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Saul Disobeys God",
+      "isFallback": false
     },
     {
       "date": "2026-07-28",
-      "passage": "Psalms 104:1-105:45",
+      "passage": "I Samuel 15:7-9",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Saul Disobeys God",
+      "isFallback": false
     },
     {
       "date": "2026-07-29",
-      "passage": "Psalms 106:1-112:10",
+      "passage": "I Samuel 15:10-15",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Saul Disobeys God",
+      "isFallback": false
     },
     {
       "date": "2026-07-30",
-      "passage": "Psalms 113:1-115:18",
+      "passage": "I Samuel 15:16-23",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Saul Disobeys God",
+      "isFallback": false
     },
     {
       "date": "2026-07-31",
-      "passage": "Psalms 116:1-118:29",
+      "passage": "I Samuel 15:24-25",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Saul Disobeys God",
+      "isFallback": false
     },
     {
       "date": "2026-08-01",
-      "passage": "Psalms 119:1-88",
+      "passage": "Psalms 26:1-12",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Saul Disobeys God",
+      "isFallback": false
     },
     {
       "date": "2026-08-02",
@@ -1750,51 +1750,51 @@
     },
     {
       "date": "2026-08-03",
-      "passage": "Psalms 120:1-122:9",
+      "passage": "I Samuel 16:1-5",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Samuel Anoints David",
+      "isFallback": false
     },
     {
       "date": "2026-08-04",
-      "passage": "Psalms 123:1-125:5",
+      "passage": "I Samuel 16:6-10",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Samuel Anoints David",
+      "isFallback": false
     },
     {
       "date": "2026-08-05",
-      "passage": "Psalms 127:1-129:8",
+      "passage": "I Samuel 16:11-13",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Samuel Anoints David",
+      "isFallback": false
     },
     {
       "date": "2026-08-06",
-      "passage": "Psalms 130:1-132:18",
+      "passage": "I Samuel 16:14-17",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Samuel Anoints David",
+      "isFallback": false
     },
     {
       "date": "2026-08-07",
-      "passage": "Psalms 133:1-135:21",
+      "passage": "I Samuel 16:18-23",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Samuel Anoints David",
+      "isFallback": false
     },
     {
       "date": "2026-08-08",
-      "passage": "Psalms 136:1-146:10",
+      "passage": "Psalms 63:1-11",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "Samuel Anoints David",
+      "isFallback": false
     },
     {
       "date": "2026-08-09",
@@ -1806,51 +1806,51 @@
     },
     {
       "date": "2026-08-10",
-      "passage": "Psalms 149:1-150:6",
+      "passage": "I Samuel 17:1-11",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "David the Musician",
+      "isFallback": false
     },
     {
       "date": "2026-08-11",
-      "passage": "I Chronicles 1:1-3:24",
+      "passage": "I Samuel 17:12-23",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "David the Musician",
+      "isFallback": false
     },
     {
       "date": "2026-08-12",
-      "passage": "I Chronicles 4:1-6:81",
+      "passage": "I Samuel 17:24-30",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "David the Musician",
+      "isFallback": false
     },
     {
       "date": "2026-08-13",
-      "passage": "I Chronicles 7:1-9:44",
+      "passage": "I Samuel 17:31-40",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "David the Musician",
+      "isFallback": false
     },
     {
       "date": "2026-08-14",
-      "passage": "I Chronicles 10:1-12:40",
+      "passage": "I Samuel 17:41-54",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "David the Musician",
+      "isFallback": false
     },
     {
       "date": "2026-08-15",
-      "passage": "I Chronicles 13:1-15:29",
+      "passage": "I Samuel 17:55-58",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "David the Musician",
+      "isFallback": false
     },
     {
       "date": "2026-08-16",
@@ -1862,51 +1862,51 @@
     },
     {
       "date": "2026-08-17",
-      "passage": "Psalms 45:1-47:9",
+      "passage": "I Samuel 18:1-20:42",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "David and Goliath",
+      "isFallback": false
     },
     {
       "date": "2026-08-18",
-      "passage": "Psalms 48:1-50:23",
+      "passage": "I Samuel 21:1-22:23",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "David and Goliath",
+      "isFallback": false
     },
     {
       "date": "2026-08-19",
-      "passage": "Psalms 73:1-85:13",
+      "passage": "I Samuel 23:1-24:22",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "David and Goliath",
+      "isFallback": false
     },
     {
       "date": "2026-08-20",
-      "passage": "Psalms 87:1-88:18",
+      "passage": "I Samuel 25:1-26:25",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "David and Goliath",
+      "isFallback": false
     },
     {
       "date": "2026-08-21",
-      "passage": "I Chronicles 17:1-19:19",
+      "passage": "I Samuel 27:1-29:11",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "David and Goliath",
+      "isFallback": false
     },
     {
       "date": "2026-08-22",
-      "passage": "I Chronicles 20:1-22:19",
+      "passage": "I Samuel 30:1-31:13",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "David and Goliath",
+      "isFallback": false
     },
     {
       "date": "2026-08-23",
@@ -1918,51 +1918,51 @@
     },
     {
       "date": "2026-08-24",
-      "passage": "I Chronicles 26:1-27:34",
+      "passage": "II Samuel 1:1-2:32",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "David Shows Mercy",
+      "isFallback": false
     },
     {
       "date": "2026-08-25",
-      "passage": "I Chronicles 28:1-29:30",
+      "passage": "II Samuel 3:1-4:12",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "David Shows Mercy",
+      "isFallback": false
     },
     {
       "date": "2026-08-26",
-      "passage": "II Chronicles 1:1-3:17",
+      "passage": "II Samuel 5:1-6:23",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "David Shows Mercy",
+      "isFallback": false
     },
     {
       "date": "2026-08-27",
-      "passage": "II Chronicles 4:1-6:42",
+      "passage": "II Samuel 7:1-8:18",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "David Shows Mercy",
+      "isFallback": false
     },
     {
       "date": "2026-08-28",
-      "passage": "II Chronicles 7:1-9:31",
+      "passage": "II Samuel 9:1-10:19",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "David Shows Mercy",
+      "isFallback": false
     },
     {
       "date": "2026-08-29",
-      "passage": "II Chronicles 10:1-12:16",
+      "passage": "Psalms 115:1-18",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "David Shows Mercy",
+      "isFallback": false
     },
     {
       "date": "2026-08-30",
@@ -1974,11 +1974,11 @@
     },
     {
       "date": "2026-08-31",
-      "passage": "II Chronicles 15:1-16:14",
+      "passage": "II Samuel 11:1-12:31",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-one",
+      "theme": "David the King",
+      "isFallback": false
     },
     {
       "date": "2026-09-01",
