@@ -1,6 +1,6 @@
 {
   "year": 2026,
-  "lastUpdated": "2026-07-20T19:39:08Z",
+  "lastUpdated": "2026-08-31T01:27:19Z",
   "collections": [
     {
       "id": "christmas-2025",
@@ -24,6 +24,14 @@
       "color": "#800080",
       "description": "",
       "url": "collections/gospel-project-year-one.html",
+      "isFallback": false
+    },
+    {
+      "id": "gospel-project-year-two",
+      "name": "Gospel Project Year Two",
+      "color": "#72c077",
+      "description": "",
+      "url": "collections/gospel-project-year-two.html",
       "isFallback": false
     },
     {
@@ -1976,49 +1984,49 @@
       "date": "2026-08-31",
       "passage": "II Samuel 11:1-12:31",
       "title": null,
-      "collection": "gospel-project-year-one",
-      "theme": "David the King",
+      "collection": "gospel-project-year-two",
+      "theme": "David and Bathsheba",
       "isFallback": false
     },
     {
       "date": "2026-09-01",
-      "passage": "II Chronicles 17:1-18:34",
+      "passage": "II Samuel 13:1-14:33",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-two",
+      "theme": "David and Bathsheba",
+      "isFallback": false
     },
     {
       "date": "2026-09-02",
-      "passage": "II Chronicles 19:1-20:37",
+      "passage": "II Samuel 15:1-16:23",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-two",
+      "theme": "David and Bathsheba",
+      "isFallback": false
     },
     {
       "date": "2026-09-03",
-      "passage": "II Chronicles 21:1-20",
+      "passage": "II Samuel 17:1-18:33",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-two",
+      "theme": "David and Bathsheba",
+      "isFallback": false
     },
     {
       "date": "2026-09-04",
-      "passage": "II Chronicles 22:1-12",
+      "passage": "II Samuel 19:1-21:22",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-two",
+      "theme": "David and Bathsheba",
+      "isFallback": false
     },
     {
       "date": "2026-09-05",
-      "passage": "II Chronicles 23:1-21",
+      "passage": "Psalms 51:1-19",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-two",
+      "theme": "David and Bathsheba",
+      "isFallback": false
     },
     {
       "date": "2026-09-06",
@@ -2030,51 +2038,51 @@
     },
     {
       "date": "2026-09-07",
-      "passage": "Isaiah 1:1-2:22",
+      "passage": "II Samuel 22:1-24:25",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-two",
+      "theme": "Wise King Solomon",
+      "isFallback": false
     },
     {
       "date": "2026-09-08",
-      "passage": "Isaiah 3:1-4:6",
+      "passage": "I Chronicles 28:1-29:30",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-two",
+      "theme": "Wise King Solomon",
+      "isFallback": false
     },
     {
       "date": "2026-09-09",
-      "passage": "Isaiah 5:1-6:13",
+      "passage": "I Kings 1:1-2:46",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-two",
+      "theme": "Wise King Solomon",
+      "isFallback": false
     },
     {
       "date": "2026-09-10",
-      "passage": "II Chronicles 27:1-28:27",
+      "passage": "I Kings 3:1-28",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-two",
+      "theme": "Wise King Solomon",
+      "isFallback": false
     },
     {
       "date": "2026-09-11",
-      "passage": "II Chronicles 29:1-30:27",
+      "passage": "I Kings 4:1-5:18",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-two",
+      "theme": "Wise King Solomon",
+      "isFallback": false
     },
     {
       "date": "2026-09-12",
-      "passage": "II Chronicles 31:1-32:33",
+      "passage": "II Chronicles 1:1-2:18",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-two",
+      "theme": "Wise King Solomon",
+      "isFallback": false
     },
     {
       "date": "2026-09-13",
@@ -2086,51 +2094,51 @@
     },
     {
       "date": "2026-09-14",
-      "passage": "Isaiah 9:1-10:34",
+      "passage": "I Kings 6:1-38",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-two",
+      "theme": "Solomon's Temple",
+      "isFallback": false
     },
     {
       "date": "2026-09-15",
-      "passage": "Isaiah 11:1-13:22",
+      "passage": "I Kings 7:1-51",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-two",
+      "theme": "Solomon's Temple",
+      "isFallback": false
     },
     {
       "date": "2026-09-16",
-      "passage": "Isaiah 14:1-16:14",
+      "passage": "I Kings 8:1-21",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-two",
+      "theme": "Solomon's Temple",
+      "isFallback": false
     },
     {
       "date": "2026-09-17",
-      "passage": "Isaiah 17:1-19:25",
+      "passage": "I Kings 8:22-53",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-two",
+      "theme": "Solomon's Temple",
+      "isFallback": false
     },
     {
       "date": "2026-09-18",
-      "passage": "Isaiah 20:1-22:25",
+      "passage": "I Kings 8:54-9:9",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-two",
+      "theme": "Solomon's Temple",
+      "isFallback": false
     },
     {
       "date": "2026-09-19",
-      "passage": "Isaiah 23:1-25:12",
+      "passage": "Psalms 84:1-12",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-two",
+      "theme": "Solomon's Temple",
+      "isFallback": false
     },
     {
       "date": "2026-09-20",
@@ -2142,51 +2150,51 @@
     },
     {
       "date": "2026-09-21",
-      "passage": "Isaiah 28:1-29:24",
+      "passage": "Ecclesiastes 1:1-4:16",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-two",
+      "theme": "Wisdom of Solomon",
+      "isFallback": false
     },
     {
       "date": "2026-09-22",
-      "passage": "Isaiah 30:1-31:9",
+      "passage": "Ecclesiastes 5:1-8:17",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-two",
+      "theme": "Wisdom of Solomon",
+      "isFallback": false
     },
     {
       "date": "2026-09-23",
-      "passage": "Isaiah 32:1-33:24",
+      "passage": "Ecclesiastes 9:1-12:14",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-two",
+      "theme": "Wisdom of Solomon",
+      "isFallback": false
     },
     {
       "date": "2026-09-24",
-      "passage": "Isaiah 34:1-36:22",
+      "passage": "Song of Solomon 1:1-4:16",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-two",
+      "theme": "Wisdom of Solomon",
+      "isFallback": false
     },
     {
       "date": "2026-09-25",
-      "passage": "Isaiah 37:1-38:22",
+      "passage": "Song of Solomon 5:1-8:14",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-two",
+      "theme": "Wisdom of Solomon",
+      "isFallback": false
     },
     {
       "date": "2026-09-26",
-      "passage": "Isaiah 39:1-40:31",
+      "passage": "Psalms 34:1-22",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-two",
+      "theme": "Wisdom of Solomon",
+      "isFallback": false
     },
     {
       "date": "2026-09-27",
@@ -2198,27 +2206,27 @@
     },
     {
       "date": "2026-09-28",
-      "passage": "Isaiah 43:1-44:28",
+      "passage": "I Kings 9:10-28",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-two",
+      "theme": "Wisdom of Solomon",
+      "isFallback": false
     },
     {
       "date": "2026-09-29",
-      "passage": "Isaiah 45:1-46:13",
+      "passage": "II Chronicles 8:1-18",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-two",
+      "theme": "Wisdom of Solomon",
+      "isFallback": false
     },
     {
       "date": "2026-09-30",
-      "passage": "Isaiah 47:1-49:26",
+      "passage": "I Kings 10:1-13",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-two",
+      "theme": "Wisdom of Solomon",
+      "isFallback": false
     },
     {
       "date": "2026-10-01",
