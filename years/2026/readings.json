@@ -1,6 +1,6 @@
 {
   "year": 2026,
-  "lastUpdated": "2026-09-28T12:55:23Z",
+  "lastUpdated": "2026-09-28T13:20:37Z",
   "collections": [
     {
       "id": "christmas-2025",
@@ -2209,7 +2209,7 @@
       "passage": "I Kings 9:10-28",
       "title": null,
       "collection": "gospel-project-year-two",
-      "theme": "Wisdom of Solomon",
+      "theme": "Queen of Sheba",
       "isFallback": false
     },
     {
@@ -2217,7 +2217,7 @@
       "passage": "II Chronicles 8:1-18",
       "title": null,
       "collection": "gospel-project-year-two",
-      "theme": "Wisdom of Solomon",
+      "theme": "Queen of Sheba",
       "isFallback": false
     },
     {
@@ -2225,32 +2225,32 @@
       "passage": "I Kings 10:1-13",
       "title": null,
       "collection": "gospel-project-year-two",
-      "theme": "Wisdom of Solomon",
+      "theme": "Queen of Sheba",
       "isFallback": false
     },
     {
       "date": "2026-10-01",
-      "passage": "Isaiah 50:1-52:15",
+      "passage": "I Kings 10:14-29",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-two",
+      "theme": "Queen of Sheba",
+      "isFallback": false
     },
     {
       "date": "2026-10-02",
-      "passage": "Isaiah 53:1-55:13",
+      "passage": "II Chronicles 9:1-28",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-two",
+      "theme": "Queen of Sheba",
+      "isFallback": false
     },
     {
       "date": "2026-10-03",
-      "passage": "Isaiah 56:1-58:14",
+      "passage": "Psalms 67:1-7",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-two",
+      "theme": "Queen of Sheba",
+      "isFallback": false
     },
     {
       "date": "2026-10-04",
@@ -2262,51 +2262,51 @@
     },
     {
       "date": "2026-10-05",
-      "passage": "Isaiah 62:1-64:12",
+      "passage": "Proverbs 1:1-6:35",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-two",
+      "theme": "Proverbs",
+      "isFallback": false
     },
     {
       "date": "2026-10-06",
-      "passage": "Isaiah 65:1-66:24",
+      "passage": "Proverbs 7:1-13:25",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-two",
+      "theme": "Proverbs",
+      "isFallback": false
     },
     {
       "date": "2026-10-07",
-      "passage": "Hosea 1:1-4:19",
+      "passage": "Proverbs 14:1-18:24",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-two",
+      "theme": "Proverbs",
+      "isFallback": false
     },
     {
       "date": "2026-10-08",
-      "passage": "Hosea 5:1-8:14",
+      "passage": "Proverbs 19:1-24:34",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-two",
+      "theme": "Proverbs",
+      "isFallback": false
     },
     {
       "date": "2026-10-09",
-      "passage": "Hosea 9:1-11:12",
+      "passage": "Proverbs 25:1-29:27",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-two",
+      "theme": "Proverbs",
+      "isFallback": false
     },
     {
       "date": "2026-10-10",
-      "passage": "Hosea 12:1-14:9",
+      "passage": "Proverbs 30:1-31:31",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-two",
+      "theme": "Proverbs",
+      "isFallback": false
     },
     {
       "date": "2026-10-11",
@@ -2318,51 +2318,51 @@
     },
     {
       "date": "2026-10-12",
-      "passage": "Micah 4:1-5:15",
+      "passage": "I Kings 11:11-13",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-two",
+      "theme": "Kingdom Divided",
+      "isFallback": false
     },
     {
       "date": "2026-10-13",
-      "passage": "Micah 6:1-7:20",
+      "passage": "I Kings 11:14-43",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-two",
+      "theme": "Kingdom Divided",
+      "isFallback": false
     },
     {
       "date": "2026-10-14",
-      "passage": "Nahum 1:1-3:19",
+      "passage": "I Kings 12:1-19",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-two",
+      "theme": "Kingdom Divided",
+      "isFallback": false
     },
     {
       "date": "2026-10-15",
-      "passage": "II Chronicles 33:1-34:33",
+      "passage": "I Kings 12:20-24",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-two",
+      "theme": "Kingdom Divided",
+      "isFallback": false
     },
     {
       "date": "2026-10-16",
-      "passage": "Zephaniah 1:1-3:20",
+      "passage": "II Chronicles 9:29-11:4",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-two",
+      "theme": "Kingdom Divided",
+      "isFallback": false
     },
     {
       "date": "2026-10-17",
-      "passage": "II Chronicles 35:1-27",
+      "passage": "Psalms 72:1-20",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-two",
+      "theme": "Kingdom Divided",
+      "isFallback": false
     },
     {
       "date": "2026-10-18",
@@ -2374,51 +2374,51 @@
     },
     {
       "date": "2026-10-19",
-      "passage": "Jeremiah 3:1-5:31",
+      "passage": "I Kings 12:25-14:20",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-two",
+      "theme": "Evil Kings",
+      "isFallback": false
     },
     {
       "date": "2026-10-20",
-      "passage": "Jeremiah 6:1-30",
+      "passage": "I Kings 14:21-15:24",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-two",
+      "theme": "Evil Kings",
+      "isFallback": false
     },
     {
       "date": "2026-10-21",
-      "passage": "Jeremiah 7:1-8:22",
+      "passage": "I Kings 15:25-16:34",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-two",
+      "theme": "Evil Kings",
+      "isFallback": false
     },
     {
       "date": "2026-10-22",
-      "passage": "Jeremiah 9:1-10:25",
+      "passage": "II Chronicles 11:5-14:1",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-two",
+      "theme": "Evil Kings",
+      "isFallback": false
     },
     {
       "date": "2026-10-23",
-      "passage": "Jeremiah 15:1-17:27",
+      "passage": "II Chronicles 14:2-16:14",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-two",
+      "theme": "Evil Kings",
+      "isFallback": false
     },
     {
       "date": "2026-10-24",
-      "passage": "Jeremiah 18:1-19:15",
+      "passage": "Psalms 135:1-21",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-two",
+      "theme": "Evil Kings",
+      "isFallback": false
     },
     {
       "date": "2026-10-25",
@@ -2430,51 +2430,51 @@
     },
     {
       "date": "2026-10-26",
-      "passage": "Jeremiah 25:1-38",
+      "passage": "John 11:17-27",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-two",
+      "theme": "All Saints Sunday",
+      "isFallback": false
     },
     {
       "date": "2026-10-27",
-      "passage": "Jeremiah 47:1-48:47",
+      "passage": "John 14:1-7",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-two",
+      "theme": "All Saints Sunday",
+      "isFallback": false
     },
     {
       "date": "2026-10-28",
-      "passage": "Jeremiah 49:1-39",
+      "passage": "I Thessalonians 4:13-18",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-two",
+      "theme": "All Saints Sunday",
+      "isFallback": false
     },
     {
       "date": "2026-10-29",
-      "passage": "Jeremiah 23:1-24:10",
+      "passage": "Revelation of Jesus Christ 7:9-17",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-two",
+      "theme": "All Saints Sunday",
+      "isFallback": false
     },
     {
       "date": "2026-10-30",
-      "passage": "Jeremiah 27:1-29:32",
+      "passage": "Revelation of Jesus Christ 21:1-7",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-two",
+      "theme": "All Saints Sunday",
+      "isFallback": false
     },
     {
       "date": "2026-10-31",
-      "passage": "Jeremiah 50:1-46",
+      "passage": "Psalms 16:1-11",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-two",
+      "theme": "All Saints Sunday",
+      "isFallback": false
     },
     {
       "date": "2026-11-01",
@@ -2486,51 +2486,51 @@
     },
     {
       "date": "2026-11-02",
-      "passage": "Jeremiah 31:1-32:44",
+      "passage": "I Kings 17:1-24",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-two",
+      "theme": "Elijah",
+      "isFallback": false
     },
     {
       "date": "2026-11-03",
-      "passage": "Jeremiah 33:1-26",
+      "passage": "I Kings 18:1-19",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-two",
+      "theme": "Elijah",
+      "isFallback": false
     },
     {
       "date": "2026-11-04",
-      "passage": "Jeremiah 34:1-22",
+      "passage": "I Kings 18:20-46",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-two",
+      "theme": "Elijah",
+      "isFallback": false
     },
     {
       "date": "2026-11-05",
-      "passage": "Jeremiah 39:1-18",
+      "passage": "I Kings 19:1-21",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-two",
+      "theme": "Elijah",
+      "isFallback": false
     },
     {
       "date": "2026-11-06",
-      "passage": "Jeremiah 41:1-42:22",
+      "passage": "I Kings 20:1-43",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-two",
+      "theme": "Elijah",
+      "isFallback": false
     },
     {
       "date": "2026-11-07",
-      "passage": "Jeremiah 43:1-44:30",
+      "passage": "Psalms 97:1-12",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-two",
+      "theme": "Elijah",
+      "isFallback": false
     },
     {
       "date": "2026-11-08",
@@ -2542,51 +2542,51 @@
     },
     {
       "date": "2026-11-09",
-      "passage": "Lamentations 3:1-5:22",
+      "passage": "I Kings 21:1-29",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-two",
+      "theme": "Ahab",
+      "isFallback": false
     },
     {
       "date": "2026-11-10",
-      "passage": "II Chronicles 36:1-23",
+      "passage": "I Kings 22:1-53",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-two",
+      "theme": "Ahab",
+      "isFallback": false
     },
     {
       "date": "2026-11-11",
-      "passage": "Daniel 3:1-4:37",
+      "passage": "II Chronicles 17:1-18:34",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-two",
+      "theme": "Ahab",
+      "isFallback": false
     },
     {
       "date": "2026-11-12",
-      "passage": "Daniel 5:1-7:28",
+      "passage": "II Chronicles 19:1-20:37",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-two",
+      "theme": "Ahab",
+      "isFallback": false
     },
     {
       "date": "2026-11-13",
-      "passage": "Daniel 8:1-10:21",
+      "passage": "II Kings 1:1-18",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-two",
+      "theme": "Ahab",
+      "isFallback": false
     },
     {
       "date": "2026-11-14",
-      "passage": "Daniel 11:1-12:13",
+      "passage": "Psalms 58:1-11",
       "title": null,
-      "collection": "daily-lectionary",
-      "theme": null,
-      "isFallback": true
+      "collection": "gospel-project-year-two",
+      "theme": "Ahab",
+      "isFallback": false
     },
     {
       "date": "2026-11-15",
